@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">SimCLR framework</title><desc id="svg-desc">Two augmented views, shared encoder, projection head, and contrastive objective</desc><metadata>Source: A Simple Framework for Contrastive Learning, Figure 2; semantic redraw.</metadata>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
+    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
+    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <style>
+    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
+    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
+    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
+    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
+    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="675"/>
+  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >SimCLR framework</text><text x="52" y="86" class="subtitle" text-anchor="start" >Two augmented views, shared encoder, projection head, and contrastive objective</text></g>
+  <text x="1125" y="103" class="paper-note" text-anchor="middle" >SEMANTIC REDRAW</text><g id="simclr-image" >
+<rect x="50" y="280" width="130" height="100" rx="18" class="card slate"/>
+<text x="115" y="323" class="label strong" text-anchor="middle" >Image</text>
+<text x="115" y="351" class="small muted" text-anchor="middle" >x</text>
+</g><g id="simclr-aug-a" >
+<rect x="270" y="165" width="160" height="90" rx="18" class="card blue"/>
+<text x="350" y="203" class="label strong" text-anchor="middle" >Augment t</text>
+<text x="350" y="231" class="small muted" text-anchor="middle" >xᵢ</text>
+</g><g id="simclr-aug-b" >
+<rect x="270" y="410" width="160" height="90" rx="18" class="card violet"/>
+<text x="350" y="448" class="label strong" text-anchor="middle" >Augment t′</text>
+<text x="350" y="476" class="small muted" text-anchor="middle" >xⱼ</text>
+</g><g id="simclr-encoder-a" >
+<rect x="525" y="165" width="170" height="90" rx="18" class="card green"/>
+<text x="610" y="203" class="label strong" text-anchor="middle" >Encoder f</text>
+<text x="610" y="231" class="small muted" text-anchor="middle" >hᵢ</text>
+</g><g id="simclr-encoder-b" >
+<rect x="525" y="410" width="170" height="90" rx="18" class="card green"/>
+<text x="610" y="448" class="label strong" text-anchor="middle" >Encoder f</text>
+<text x="610" y="476" class="small muted" text-anchor="middle" >hⱼ</text>
+</g><g id="simclr-project-a" >
+<rect x="790" y="165" width="170" height="90" rx="18" class="card gold"/>
+<text x="875" y="203" class="label strong" text-anchor="middle" >Project g</text>
+<text x="875" y="231" class="small muted" text-anchor="middle" >zᵢ</text>
+</g><g id="simclr-project-b" >
+<rect x="790" y="410" width="170" height="90" rx="18" class="card gold"/>
+<text x="875" y="448" class="label strong" text-anchor="middle" >Project g</text>
+<text x="875" y="476" class="small muted" text-anchor="middle" >zⱼ</text>
+</g><g id="simclr-loss" >
+<rect x="1030" y="285" width="130" height="100" rx="18" class="card red"/>
+<text x="1095" y="328" class="label strong" text-anchor="middle" >NT-Xent</text>
+<text x="1095" y="356" class="small muted" text-anchor="middle" >maximize sim</text>
+</g><g id="simclr-input-a" >
+<path d="M180,330 Q225,225 270,210" class="wire" marker-end="url(#arrow)"/>
+</g><g id="simclr-input-b" >
+<path d="M180,330 Q225,437.5 270,455" class="wire" marker-end="url(#arrow)"/>
+</g><g id="simclr-ae" >
+<line x1="430" y1="210" x2="525" y2="210" class="wire" marker-end="url(#arrow)"/>
+</g><g id="simclr-be" >
+<line x1="430" y1="455" x2="525" y2="455" class="wire" marker-end="url(#arrow)"/>
+</g><g id="simclr-ap" >
+<line x1="695" y1="210" x2="790" y2="210" class="wire" marker-end="url(#arrow)"/>
+</g><g id="simclr-bp" >
+<line x1="695" y1="455" x2="790" y2="455" class="wire" marker-end="url(#arrow)"/>
+</g><g id="simclr-al" >
+<path d="M960,210 Q995,295 1030,330" class="wire" marker-end="url(#arrow)"/>
+</g><g id="simclr-bl" >
+<path d="M960,455 Q995,377.5 1030,350" class="wire" marker-end="url(#arrow)"/>
+</g>
+</svg>

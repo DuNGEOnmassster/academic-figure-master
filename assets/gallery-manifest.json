@@ -1,0 +1,683 @@
+{
+  "schema_version": 1,
+  "license": "Generator code and generic primitives are MIT. Paper-inspired semantic redraws include citations; source papers retain their rights, and downstream reuse requirements must be checked.",
+  "assets": [
+    {
+      "id": "attention-heads",
+      "title": "Multi-head attention",
+      "category": "primitive",
+      "path": "primitives/attention-heads.svg",
+      "tags": [
+        "attention",
+        "transformer",
+        "heads"
+      ],
+      "reproduction": "original",
+      "source": null,
+      "note": "Original editable SVG authored for academic-figure-master.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only attention-heads"
+    },
+    {
+      "id": "convolution-pyramid",
+      "title": "Convolutional feature pyramid",
+      "category": "primitive",
+      "path": "primitives/convolution-pyramid.svg",
+      "tags": [
+        "cnn",
+        "feature-map",
+        "pyramid"
+      ],
+      "reproduction": "original",
+      "source": null,
+      "note": "Original editable SVG authored for academic-figure-master.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only convolution-pyramid"
+    },
+    {
+      "id": "graph-message-passing",
+      "title": "Graph message passing",
+      "category": "primitive",
+      "path": "primitives/graph-message-passing.svg",
+      "tags": [
+        "gnn",
+        "graph",
+        "aggregation"
+      ],
+      "reproduction": "original",
+      "source": null,
+      "note": "Original editable SVG authored for academic-figure-master.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only graph-message-passing"
+    },
+    {
+      "id": "causal-dag",
+      "title": "Causal DAG",
+      "category": "primitive",
+      "path": "primitives/causal-dag.svg",
+      "tags": [
+        "causal",
+        "dag",
+        "intervention"
+      ],
+      "reproduction": "original",
+      "source": null,
+      "note": "Original editable SVG authored for academic-figure-master.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only causal-dag"
+    },
+    {
+      "id": "optimization-landscape",
+      "title": "Optimization landscape",
+      "category": "primitive",
+      "path": "primitives/optimization-landscape.svg",
+      "tags": [
+        "optimization",
+        "loss",
+        "trajectory"
+      ],
+      "reproduction": "original",
+      "source": null,
+      "note": "Original editable SVG authored for academic-figure-master.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only optimization-landscape"
+    },
+    {
+      "id": "uncertainty-bands",
+      "title": "Predictive uncertainty",
+      "category": "primitive",
+      "path": "primitives/uncertainty-bands.svg",
+      "tags": [
+        "uncertainty",
+        "confidence",
+        "prediction"
+      ],
+      "reproduction": "original",
+      "source": null,
+      "note": "Original editable SVG authored for academic-figure-master.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only uncertainty-bands"
+    },
+    {
+      "id": "dataset-pipeline",
+      "title": "Dataset pipeline",
+      "category": "primitive",
+      "path": "primitives/dataset-pipeline.svg",
+      "tags": [
+        "data",
+        "pipeline",
+        "validation"
+      ],
+      "reproduction": "original",
+      "source": null,
+      "note": "Original editable SVG authored for academic-figure-master.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only dataset-pipeline"
+    },
+    {
+      "id": "training-loop",
+      "title": "Training loop",
+      "category": "primitive",
+      "path": "primitives/training-loop.svg",
+      "tags": [
+        "training",
+        "gradient",
+        "evaluation"
+      ],
+      "reproduction": "original",
+      "source": null,
+      "note": "Original editable SVG authored for academic-figure-master.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only training-loop"
+    },
+    {
+      "id": "ensemble-voting",
+      "title": "Model ensemble",
+      "category": "primitive",
+      "path": "primitives/ensemble-voting.svg",
+      "tags": [
+        "ensemble",
+        "voting",
+        "uncertainty"
+      ],
+      "reproduction": "original",
+      "source": null,
+      "note": "Original editable SVG authored for academic-figure-master.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only ensemble-voting"
+    },
+    {
+      "id": "bayesian-inference",
+      "title": "Bayesian inference",
+      "category": "primitive",
+      "path": "primitives/bayesian-inference.svg",
+      "tags": [
+        "bayesian",
+        "posterior",
+        "predictive"
+      ],
+      "reproduction": "original",
+      "source": null,
+      "note": "Original editable SVG authored for academic-figure-master.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only bayesian-inference"
+    },
+    {
+      "id": "multimodal-fusion",
+      "title": "Multimodal fusion",
+      "category": "primitive",
+      "path": "primitives/multimodal-fusion.svg",
+      "tags": [
+        "multimodal",
+        "fusion",
+        "cross-attention"
+      ],
+      "reproduction": "original",
+      "source": null,
+      "note": "Original editable SVG authored for academic-figure-master.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only multimodal-fusion"
+    },
+    {
+      "id": "ablation-matrix",
+      "title": "Ablation matrix",
+      "category": "primitive",
+      "path": "primitives/ablation-matrix.svg",
+      "tags": [
+        "ablation",
+        "experiment",
+        "matrix"
+      ],
+      "reproduction": "original",
+      "source": null,
+      "note": "Original editable SVG authored for academic-figure-master.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only ablation-matrix"
+    },
+    {
+      "id": "lenet-5",
+      "title": "LeNet-5 architecture",
+      "category": "paper",
+      "path": "paper-redraws/lenet-5.svg",
+      "tags": [
+        "cnn",
+        "architecture",
+        "classic"
+      ],
+      "reproduction": "semantic-redraw",
+      "source": {
+        "title": "Gradient-Based Learning Applied to Document Recognition",
+        "url": "https://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf",
+        "figure": "Figure 2"
+      },
+      "note": "Modern semantic redraw; no original artwork or measured data copied.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only lenet-5"
+    },
+    {
+      "id": "alexnet",
+      "title": "AlexNet architecture",
+      "category": "paper",
+      "path": "paper-redraws/alexnet.svg",
+      "tags": [
+        "cnn",
+        "imagenet",
+        "architecture"
+      ],
+      "reproduction": "semantic-redraw",
+      "source": {
+        "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+        "url": "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
+        "figure": null
+      },
+      "note": "Compact semantic redraw of the reported five-convolution/three-fully-connected architecture.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only alexnet"
+    },
+    {
+      "id": "vae",
+      "title": "Variational autoencoder",
+      "category": "paper",
+      "path": "paper-redraws/vae.svg",
+      "tags": [
+        "vae",
+        "latent",
+        "reparameterization"
+      ],
+      "reproduction": "semantic-redraw",
+      "source": {
+        "title": "Auto-Encoding Variational Bayes",
+        "url": "https://arxiv.org/abs/1312.6114",
+        "figure": null
+      },
+      "note": "Original diagram of the paper's inference, reparameterization, and generative semantics.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only vae"
+    },
+    {
+      "id": "gan",
+      "title": "Generative adversarial network",
+      "category": "paper",
+      "path": "paper-redraws/gan.svg",
+      "tags": [
+        "gan",
+        "generator",
+        "discriminator"
+      ],
+      "reproduction": "semantic-redraw",
+      "source": {
+        "title": "Generative Adversarial Networks",
+        "url": "https://arxiv.org/abs/1406.2661",
+        "figure": null
+      },
+      "note": "Original diagram of the paper's two-player minimax framework.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only gan"
+    },
+    {
+      "id": "resnet-block",
+      "title": "Residual learning block",
+      "category": "paper",
+      "path": "paper-redraws/resnet-block.svg",
+      "tags": [
+        "resnet",
+        "residual",
+        "skip"
+      ],
+      "reproduction": "semantic-redraw",
+      "source": {
+        "title": "Deep Residual Learning for Image Recognition",
+        "url": "https://arxiv.org/abs/1512.03385",
+        "figure": "Figure 2"
+      },
+      "note": "Modern editable redraw of the residual building-block semantics.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only resnet-block"
+    },
+    {
+      "id": "unet",
+      "title": "U-Net architecture",
+      "category": "paper",
+      "path": "paper-redraws/unet.svg",
+      "tags": [
+        "unet",
+        "segmentation",
+        "skip"
+      ],
+      "reproduction": "semantic-redraw",
+      "source": {
+        "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+        "url": "https://arxiv.org/abs/1505.04597",
+        "figure": "Figure 1"
+      },
+      "note": "Simplified semantic redraw of contracting, expanding, and skip paths.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only unet"
+    },
+    {
+      "id": "transformer",
+      "title": "Transformer encoder–decoder",
+      "category": "paper",
+      "path": "paper-redraws/transformer.svg",
+      "tags": [
+        "transformer",
+        "attention",
+        "encoder-decoder"
+      ],
+      "reproduction": "semantic-redraw",
+      "source": {
+        "title": "Attention Is All You Need",
+        "url": "https://arxiv.org/abs/1706.03762",
+        "figure": "Figure 1"
+      },
+      "note": "Compact semantic redraw preserving block order and cross-attention.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only transformer"
+    },
+    {
+      "id": "neural-ode",
+      "title": "Neural ODE",
+      "category": "paper",
+      "path": "paper-redraws/neural-ode.svg",
+      "tags": [
+        "ode",
+        "continuous-depth",
+        "solver"
+      ],
+      "reproduction": "semantic-redraw",
+      "source": {
+        "title": "Neural Ordinary Differential Equations",
+        "url": "https://arxiv.org/abs/1806.07366",
+        "figure": null
+      },
+      "note": "Original comparison of discrete residual updates and continuous dynamics.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only neural-ode"
+    },
+    {
+      "id": "simclr",
+      "title": "SimCLR framework",
+      "category": "paper",
+      "path": "paper-redraws/simclr.svg",
+      "tags": [
+        "contrastive",
+        "augmentation",
+        "representation"
+      ],
+      "reproduction": "semantic-redraw",
+      "source": {
+        "title": "A Simple Framework for Contrastive Learning of Visual Representations",
+        "url": "https://arxiv.org/abs/2002.05709",
+        "figure": "Figure 2"
+      },
+      "note": "Semantic redraw preserving paired augmentation, shared encoder, projection, and loss.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only simclr"
+    },
+    {
+      "id": "ddpm",
+      "title": "Denoising diffusion process",
+      "category": "paper",
+      "path": "paper-redraws/ddpm.svg",
+      "tags": [
+        "diffusion",
+        "denoising",
+        "markov"
+      ],
+      "reproduction": "semantic-redraw",
+      "source": {
+        "title": "Denoising Diffusion Probabilistic Models",
+        "url": "https://arxiv.org/abs/2006.11239",
+        "figure": null
+      },
+      "note": "Original particle-based depiction of the paper's forward and reverse processes.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only ddpm"
+    },
+    {
+      "id": "vit",
+      "title": "Vision Transformer",
+      "category": "paper",
+      "path": "paper-redraws/vit.svg",
+      "tags": [
+        "vit",
+        "patches",
+        "transformer"
+      ],
+      "reproduction": "semantic-redraw",
+      "source": {
+        "title": "An Image is Worth 16x16 Words",
+        "url": "https://arxiv.org/abs/2010.11929",
+        "figure": "Figure 1"
+      },
+      "note": "Simplified semantic redraw of patchification, token encoding, and classification.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only vit"
+    },
+    {
+      "id": "double-descent",
+      "title": "Double descent",
+      "category": "curve",
+      "path": "curves/double-descent.svg",
+      "tags": [
+        "double-descent",
+        "capacity",
+        "generalization"
+      ],
+      "reproduction": "illustrative-normalized",
+      "source": {
+        "title": "Reconciling modern machine learning practice and the bias-variance trade-off",
+        "url": "https://arxiv.org/abs/1812.11118",
+        "figure": null
+      },
+      "note": "Analytic normalized trend; not digitized or claimed as original measurements.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only double-descent"
+    },
+    {
+      "id": "scaling-law",
+      "title": "Neural scaling laws",
+      "category": "curve",
+      "path": "curves/scaling-law.svg",
+      "tags": [
+        "scaling-law",
+        "power-law",
+        "loss"
+      ],
+      "reproduction": "illustrative-normalized",
+      "source": {
+        "title": "Scaling Laws for Neural Language Models",
+        "url": "https://arxiv.org/abs/2001.08361",
+        "figure": null
+      },
+      "note": "Normalized log-log trends; slopes are illustrative, not fitted paper values.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only scaling-law"
+    },
+    {
+      "id": "cyclical-lr",
+      "title": "Cyclical learning rate",
+      "category": "curve",
+      "path": "curves/cyclical-lr.svg",
+      "tags": [
+        "learning-rate",
+        "schedule",
+        "triangular"
+      ],
+      "reproduction": "formula-derived",
+      "source": {
+        "title": "Cyclical Learning Rates for Training Neural Networks",
+        "url": "https://arxiv.org/abs/1506.01186",
+        "figure": null
+      },
+      "note": "Generated directly from a triangular cyclical schedule.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only cyclical-lr"
+    },
+    {
+      "id": "cosine-restarts",
+      "title": "Cosine warm restarts",
+      "category": "curve",
+      "path": "curves/cosine-restarts.svg",
+      "tags": [
+        "learning-rate",
+        "cosine",
+        "restart"
+      ],
+      "reproduction": "formula-derived",
+      "source": {
+        "title": "SGDR: Stochastic Gradient Descent with Warm Restarts",
+        "url": "https://arxiv.org/abs/1608.03983",
+        "figure": null
+      },
+      "note": "Generated from cosine annealing with increasing restart periods.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only cosine-restarts"
+    },
+    {
+      "id": "diffusion-schedules",
+      "title": "Diffusion schedules",
+      "category": "curve",
+      "path": "curves/diffusion-schedules.svg",
+      "tags": [
+        "diffusion",
+        "noise-schedule",
+        "cosine"
+      ],
+      "reproduction": "formula-derived",
+      "source": {
+        "title": "Improved Denoising Diffusion Probabilistic Models",
+        "url": "https://arxiv.org/abs/2102.09672",
+        "figure": null
+      },
+      "note": "Cosine cumulative signal curve generated from the published schedule form.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only diffusion-schedules"
+    },
+    {
+      "id": "grokking",
+      "title": "Grokking dynamics",
+      "category": "curve",
+      "path": "curves/grokking.svg",
+      "tags": [
+        "grokking",
+        "generalization",
+        "training"
+      ],
+      "reproduction": "illustrative-normalized",
+      "source": {
+        "title": "Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets",
+        "url": "https://arxiv.org/abs/2201.02177",
+        "figure": null
+      },
+      "note": "Normalized conceptual timing; not digitized or claimed as experiment data.",
+      "editable": {
+        "format": "svg",
+        "text_as_text": true,
+        "named_groups": true,
+        "embedded_raster": false
+      },
+      "reproduce": "python scripts/generate_gallery.py --only grokking"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Denoising diffusion process</title><desc id="svg-desc">Forward noising and learned reverse transitions after Ho et al. (2020)</desc><metadata>Source: Denoising Diffusion Probabilistic Models; semantic redraw.</metadata>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
+    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
+    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <style>
+    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
+    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
+    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
+    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
+    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="675"/>
+  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >Denoising diffusion process</text><text x="52" y="86" class="subtitle" text-anchor="start" >Forward noising and learned reverse transitions after Ho et al. (2020)</text></g>
+  <text x="1125" y="103" class="paper-note" text-anchor="middle" >SEMANTIC REDRAW</text><g id="ddpm-state-0" >
+<rect x="85" y="250" width="150" height="140" rx="18" class="card blue"/>
+<text x="160" y="313" class="label strong" text-anchor="middle" >x0</text>
+<text x="160" y="341" class="small muted" text-anchor="middle" >noise 0%</text>
+</g><g id="ddpm-particles-0" >
+<circle cx="110" cy="290" r="5" fill="#3972d5" opacity="1.00"/>
+<circle cx="143" cy="290" r="5" fill="#3972d5" opacity="1.00"/>
+<circle cx="176" cy="290" r="5" fill="#3972d5" opacity="1.00"/>
+<circle cx="209" cy="290" r="5" fill="#3972d5" opacity="1.00"/>
+<circle cx="110" cy="322" r="5" fill="#3972d5" opacity="1.00"/>
+<circle cx="143" cy="322" r="5" fill="#3972d5" opacity="1.00"/>
+<circle cx="176" cy="322" r="5" fill="#3972d5" opacity="1.00"/>
+<circle cx="209" cy="322" r="5" fill="#3972d5" opacity="1.00"/>
+<circle cx="110" cy="354" r="5" fill="#3972d5" opacity="1.00"/>
+<circle cx="143" cy="354" r="5" fill="#3972d5" opacity="1.00"/>
+<circle cx="176" cy="354" r="5" fill="#3972d5" opacity="1.00"/>
+<circle cx="209" cy="354" r="5" fill="#3972d5" opacity="1.00"/>
+</g><g id="ddpm-state-1" >
+<rect x="300" y="250" width="150" height="140" rx="18" class="card cyan"/>
+<text x="375" y="313" class="label strong" text-anchor="middle" >x1</text>
+<text x="375" y="341" class="small muted" text-anchor="middle" >noise 25%</text>
+</g><g id="ddpm-particles-1" >
+<circle cx="325" cy="290" r="5" fill="#3972d5" opacity="0.82"/>
+<circle cx="358" cy="290" r="5" fill="#3972d5" opacity="0.82"/>
+<circle cx="391" cy="290" r="5" fill="#3972d5" opacity="0.82"/>
+<circle cx="424" cy="290" r="5" fill="#3972d5" opacity="0.82"/>
+<circle cx="325" cy="322" r="5" fill="#3972d5" opacity="0.82"/>
+<circle cx="358" cy="322" r="5" fill="#3972d5" opacity="0.82"/>
+<circle cx="391" cy="322" r="5" fill="#3972d5" opacity="0.82"/>
+<circle cx="424" cy="322" r="5" fill="#3972d5" opacity="0.82"/>
+<circle cx="325" cy="354" r="5" fill="#3972d5" opacity="0.82"/>
+<circle cx="358" cy="354" r="5" fill="#3972d5" opacity="0.82"/>
+<circle cx="391" cy="354" r="5" fill="#3972d5" opacity="0.82"/>
+<circle cx="424" cy="354" r="5" fill="#3972d5" opacity="0.82"/>
+</g><g id="ddpm-forward-1" >
+<line x1="235" y1="285" x2="300" y2="285" class="red-line" marker-end="url(#arrow)"/>
+<text x="267.5" y="273" class="tiny muted" text-anchor="middle" >q</text>
+</g><g id="ddpm-reverse-1" >
+<line x1="300" y1="365" x2="235" y2="365" class="violet-line" marker-end="url(#arrow-violet)"/>
+<text x="267.5" y="353" class="tiny muted" text-anchor="middle" >pθ</text>
+</g><g id="ddpm-state-2" >
+<rect x="515" y="250" width="150" height="140" rx="18" class="card violet"/>
+<text x="590" y="313" class="label strong" text-anchor="middle" >x2</text>
+<text x="590" y="341" class="small muted" text-anchor="middle" >noise 50%</text>
+</g><g id="ddpm-particles-2" >
+<circle cx="540" cy="290" r="5" fill="#3972d5" opacity="0.64"/>
+<circle cx="573" cy="290" r="5" fill="#3972d5" opacity="0.64"/>
+<circle cx="606" cy="290" r="5" fill="#3972d5" opacity="0.64"/>
+<circle cx="639" cy="290" r="5" fill="#3972d5" opacity="0.64"/>
+<circle cx="540" cy="322" r="5" fill="#3972d5" opacity="0.64"/>
+<circle cx="573" cy="322" r="5" fill="#3972d5" opacity="0.64"/>
+<circle cx="606" cy="322" r="5" fill="#3972d5" opacity="0.64"/>
+<circle cx="639" cy="322" r="5" fill="#3972d5" opacity="0.64"/>
+<circle cx="540" cy="354" r="5" fill="#3972d5" opacity="0.64"/>
+<circle cx="573" cy="354" r="5" fill="#3972d5" opacity="0.64"/>
+<circle cx="606" cy="354" r="5" fill="#3972d5" opacity="0.64"/>
+<circle cx="639" cy="354" r="5" fill="#3972d5" opacity="0.64"/>
+</g><g id="ddpm-forward-2" >
+<line x1="450" y1="285" x2="515" y2="285" class="red-line" marker-end="url(#arrow)"/>
+<text x="482.5" y="273" class="tiny muted" text-anchor="middle" >q</text>
+</g><g id="ddpm-reverse-2" >
+<line x1="515" y1="365" x2="450" y2="365" class="violet-line" marker-end="url(#arrow-violet)"/>
+<text x="482.5" y="353" class="tiny muted" text-anchor="middle" >pθ</text>
+</g><g id="ddpm-state-3" >
+<rect x="730" y="250" width="150" height="140" rx="18" class="card red"/>
+<text x="805" y="313" class="label strong" text-anchor="middle" >x3</text>
+<text x="805" y="341" class="small muted" text-anchor="middle" >noise 75%</text>
+</g><g id="ddpm-particles-3" >
+<circle cx="755" cy="290" r="5" fill="#3972d5" opacity="0.46"/>
+<circle cx="788" cy="290" r="5" fill="#3972d5" opacity="0.46"/>
+<circle cx="821" cy="290" r="5" fill="#3972d5" opacity="0.46"/>
+<circle cx="854" cy="290" r="5" fill="#3972d5" opacity="0.46"/>
+<circle cx="755" cy="322" r="5" fill="#3972d5" opacity="0.46"/>
+<circle cx="788" cy="322" r="5" fill="#3972d5" opacity="0.46"/>
+<circle cx="821" cy="322" r="5" fill="#3972d5" opacity="0.46"/>
+<circle cx="854" cy="322" r="5" fill="#3972d5" opacity="0.46"/>
+<circle cx="755" cy="354" r="5" fill="#3972d5" opacity="0.46"/>
+<circle cx="788" cy="354" r="5" fill="#3972d5" opacity="0.46"/>
+<circle cx="821" cy="354" r="5" fill="#3972d5" opacity="0.46"/>
+<circle cx="854" cy="354" r="5" fill="#3972d5" opacity="0.46"/>
+</g><g id="ddpm-forward-3" >
+<line x1="665" y1="285" x2="730" y2="285" class="red-line" marker-end="url(#arrow)"/>
+<text x="697.5" y="273" class="tiny muted" text-anchor="middle" >q</text>
+</g><g id="ddpm-reverse-3" >
+<line x1="730" y1="365" x2="665" y2="365" class="violet-line" marker-end="url(#arrow-violet)"/>
+<text x="697.5" y="353" class="tiny muted" text-anchor="middle" >pθ</text>
+</g><g id="ddpm-state-4" >
+<rect x="945" y="250" width="150" height="140" rx="18" class="card slate"/>
+<text x="1020" y="313" class="label strong" text-anchor="middle" >xT</text>
+<text x="1020" y="341" class="small muted" text-anchor="middle" >noise 100%</text>
+</g><g id="ddpm-particles-4" >
+<circle cx="970" cy="290" r="5" fill="#3972d5" opacity="0.28"/>
+<circle cx="1003" cy="290" r="5" fill="#3972d5" opacity="0.28"/>
+<circle cx="1036" cy="290" r="5" fill="#3972d5" opacity="0.28"/>
+<circle cx="1069" cy="290" r="5" fill="#3972d5" opacity="0.28"/>
+<circle cx="970" cy="322" r="5" fill="#3972d5" opacity="0.28"/>
+<circle cx="1003" cy="322" r="5" fill="#3972d5" opacity="0.28"/>
+<circle cx="1036" cy="322" r="5" fill="#3972d5" opacity="0.28"/>
+<circle cx="1069" cy="322" r="5" fill="#3972d5" opacity="0.28"/>
+<circle cx="970" cy="354" r="5" fill="#3972d5" opacity="0.28"/>
+<circle cx="1003" cy="354" r="5" fill="#3972d5" opacity="0.28"/>
+<circle cx="1036" cy="354" r="5" fill="#3972d5" opacity="0.28"/>
+<circle cx="1069" cy="354" r="5" fill="#3972d5" opacity="0.28"/>
+</g><g id="ddpm-forward-4" >
+<line x1="880" y1="285" x2="945" y2="285" class="red-line" marker-end="url(#arrow)"/>
+<text x="912.5" y="273" class="tiny muted" text-anchor="middle" >q</text>
+</g><g id="ddpm-reverse-4" >
+<line x1="945" y1="365" x2="880" y2="365" class="violet-line" marker-end="url(#arrow-violet)"/>
+<text x="912.5" y="353" class="tiny muted" text-anchor="middle" >pθ</text>
+</g><text x="600" y="180" class="small strong" text-anchor="middle" >forward diffusion: add Gaussian noise</text><text x="600" y="470" class="small strong" text-anchor="middle" >learned reverse process: denoise step by step</text>
+</svg>

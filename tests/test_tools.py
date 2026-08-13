@@ -6,6 +6,7 @@ import unittest
 from datetime import UTC, datetime
 from pathlib import Path
 
+from scripts.generate_gallery import ASSETS, generate
 from scripts.install_skill import install
 from scripts.sync_catalog import passes_discovery_filter, render_markdown, sync_catalog
 from scripts.validate_repo import ROOT, validate
@@ -78,7 +79,21 @@ class ToolTests(unittest.TestCase):
             self.assertEqual(result["status"], "installed")
             self.assertTrue((destination / "SKILL.md").exists())
             self.assertTrue((destination / "assets" / "examples" / "figure-spec.json").exists())
+            self.assertTrue((destination / "assets" / "gallery-manifest.json").exists())
             json.loads((destination / "references" / "catalog-sources.json").read_text(encoding="utf-8"))
+
+    def test_gallery_is_deterministic_and_complete(self) -> None:
+        self.assertEqual(len(ASSETS), 29)
+        with tempfile.TemporaryDirectory() as temporary:
+            output_root = Path(temporary) / "assets"
+            written = generate(output_root)
+            self.assertEqual(len(written), 30)
+            manifest = json.loads((output_root / "gallery-manifest.json").read_text(encoding="utf-8"))
+            self.assertEqual(len(manifest["assets"]), 29)
+            for asset in ASSETS:
+                generated = output_root / asset.relative_path
+                committed = ROOT / "assets" / asset.relative_path
+                self.assertEqual(generated.read_bytes(), committed.read_bytes(), asset.slug)
 
 
 if __name__ == "__main__":

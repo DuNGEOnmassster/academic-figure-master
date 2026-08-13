@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-labelledby="title desc">
   <title id="title">Editable manifold grid primitive</title>
   <desc id="desc">A curved two-dimensional manifold with coordinate grid, sample points, tangent arrows, and a geodesic.</desc>
+  <rect id="figure-background" width="100%" height="100%" fill="#FBFCFF"/>
   <defs>
     <linearGradient id="surface-gradient" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#E9F3FF"/>

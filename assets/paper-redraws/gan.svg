@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Generative adversarial network</title><desc id="svg-desc">Two-player minimax training after Goodfellow et al. (2014)</desc><metadata>Source: Generative Adversarial Networks; semantic redraw.</metadata>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
+    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
+    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <style>
+    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
+    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
+    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
+    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
+    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="675"/>
+  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >Generative adversarial network</text><text x="52" y="86" class="subtitle" text-anchor="start" >Two-player minimax training after Goodfellow et al. (2014)</text></g>
+  <text x="1125" y="103" class="paper-note" text-anchor="middle" >SEMANTIC REDRAW</text><g id="noise" >
+<rect x="70" y="205" width="150" height="100" rx="18" class="card violet"/>
+<text x="145" y="248" class="label strong" text-anchor="middle" >Noise</text>
+<text x="145" y="276" class="small muted" text-anchor="middle" >z ~ p(z)</text>
+</g><g id="generator" >
+<rect x="330" y="205" width="190" height="100" rx="18" class="card blue"/>
+<text x="425" y="248" class="label strong" text-anchor="middle" >Generator G</text>
+<text x="425" y="276" class="small muted" text-anchor="middle" >x̃ = G(z)</text>
+</g><g id="real" >
+<rect x="70" y="410" width="150" height="100" rx="18" class="card green"/>
+<text x="145" y="453" class="label strong" text-anchor="middle" >Real data</text>
+<text x="145" y="481" class="small muted" text-anchor="middle" >x ~ pdata</text>
+</g><g id="discriminator" >
+<rect x="700" y="285" width="210" height="140" rx="18" class="card red"/>
+<text x="805" y="348" class="label strong" text-anchor="middle" >Discriminator D</text>
+<text x="805" y="376" class="small muted" text-anchor="middle" >real probability</text>
+</g><g id="decision" >
+<rect x="1015" y="305" width="145" height="100" rx="18" class="card gold"/>
+<text x="1087.5" y="348" class="label strong" text-anchor="middle" >Decision</text>
+<text x="1087.5" y="376" class="small muted" text-anchor="middle" >real / fake</text>
+</g><g id="gan-zg" >
+<line x1="220" y1="255" x2="330" y2="255" class="wire" marker-end="url(#arrow)"/>
+</g><g id="gan-gd" >
+<line x1="520" y1="255" x2="700" y2="330" class="wire" marker-end="url(#arrow)"/>
+<text x="610" y="280.5" class="tiny muted" text-anchor="middle" >generated</text>
+</g><g id="gan-real-d" >
+<path d="M220,460 Q460,460 700,380" class="wire" marker-end="url(#arrow)"/>
+<text x="460" y="484" class="tiny muted" text-anchor="middle" >real</text>
+</g><g id="gan-out" >
+<line x1="910" y1="355" x2="1015" y2="355" class="wire" marker-end="url(#arrow)"/>
+</g><path d="M805,425 C805,555 425,555 425,305" class="violet-line dash" marker-end="url(#arrow-violet)"/><text x="620" y="585" class="small strong" text-anchor="middle" >min G  max D   E log D(x) + E log(1 − D(G(z)))</text>
+</svg>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">U-Net architecture</title><desc id="svg-desc">Contracting path, expanding path, and skip concatenations after Ronneberger et al. (2015)</desc><metadata>Source: U-Net, Figure 1; semantic redraw.</metadata>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
+    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
+    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <style>
+    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
+    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
+    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
+    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
+    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="675"/>
+  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >U-Net architecture</text><text x="52" y="86" class="subtitle" text-anchor="start" >Contracting path, expanding path, and skip concatenations after Ronneberger et al. (2015)</text></g>
+  <text x="1125" y="103" class="paper-note" text-anchor="middle" >SEMANTIC REDRAW</text><g id="unet-down-0" >
+<rect x="98" y="162" width="145" height="300" rx="12" class="card blue" opacity="0.82"/>
+<rect x="89" y="171" width="145" height="300" rx="12" class="card blue" opacity="0.91"/>
+<rect x="80" y="180" width="145" height="300" rx="12" class="card blue" opacity="1.00"/>
+<text x="152.5" y="336" class="label strong" text-anchor="middle" >64</text>
+</g><g id="unet-down-1" >
+<rect x="268" y="197" width="135" height="230" rx="12" class="card blue" opacity="0.82"/>
+<rect x="259" y="206" width="135" height="230" rx="12" class="card blue" opacity="0.91"/>
+<rect x="250" y="215" width="135" height="230" rx="12" class="card blue" opacity="1.00"/>
+<text x="317.5" y="336" class="label strong" text-anchor="middle" >128</text>
+</g><g id="unet-down-edge-1" >
+<line x1="237" y1="330" x2="242" y2="330" class="wire" marker-end="url(#arrow)"/>
+<text x="239.5" y="318" class="tiny muted" text-anchor="middle" >pool</text>
+</g><g id="unet-down-2" >
+<rect x="438" y="232" width="125" height="160" rx="12" class="card violet" opacity="0.82"/>
+<rect x="429" y="241" width="125" height="160" rx="12" class="card violet" opacity="0.91"/>
+<rect x="420" y="250" width="125" height="160" rx="12" class="card violet" opacity="1.00"/>
+<text x="482.5" y="336" class="label strong" text-anchor="middle" >256</text>
+</g><g id="unet-down-edge-2" >
+<line x1="397" y1="330" x2="412" y2="330" class="wire" marker-end="url(#arrow)"/>
+<text x="404.5" y="318" class="tiny muted" text-anchor="middle" >pool</text>
+</g><g id="unet-down-3" >
+<rect x="598" y="267" width="115" height="90" rx="12" class="card violet" opacity="0.82"/>
+<rect x="589" y="276" width="115" height="90" rx="12" class="card violet" opacity="0.91"/>
+<rect x="580" y="285" width="115" height="90" rx="12" class="card violet" opacity="1.00"/>
+<text x="637.5" y="336" class="label strong" text-anchor="middle" >512</text>
+</g><g id="unet-down-edge-3" >
+<line x1="557" y1="330" x2="572" y2="330" class="wire" marker-end="url(#arrow)"/>
+<text x="564.5" y="318" class="tiny muted" text-anchor="middle" >pool</text>
+</g><g id="unet-up-0" >
+<rect x="783" y="232" width="125" height="160" rx="12" class="card green" opacity="0.82"/>
+<rect x="774" y="241" width="125" height="160" rx="12" class="card green" opacity="0.91"/>
+<rect x="765" y="250" width="125" height="160" rx="12" class="card green" opacity="1.00"/>
+<text x="827.5" y="336" class="label strong" text-anchor="middle" >256</text>
+</g><g id="unet-up-edge-0" >
+<line x1="707" y1="330" x2="757" y2="330" class="wire" marker-end="url(#arrow)"/>
+<text x="732" y="318" class="tiny muted" text-anchor="middle" >up</text>
+</g><g id="unet-up-1" >
+<rect x="948" y="197" width="135" height="230" rx="12" class="card green" opacity="0.82"/>
+<rect x="939" y="206" width="135" height="230" rx="12" class="card green" opacity="0.91"/>
+<rect x="930" y="215" width="135" height="230" rx="12" class="card green" opacity="1.00"/>
+<text x="997.5" y="336" class="label strong" text-anchor="middle" >128</text>
+</g><g id="unet-up-edge-1" >
+<line x1="902" y1="330" x2="922" y2="330" class="wire" marker-end="url(#arrow)"/>
+<text x="912" y="318" class="tiny muted" text-anchor="middle" >up</text>
+</g><g id="unet-up-2" >
+<rect x="1108" y="162" width="80" height="300" rx="12" class="card gold" opacity="0.82"/>
+<rect x="1099" y="171" width="80" height="300" rx="12" class="card gold" opacity="0.91"/>
+<rect x="1090" y="180" width="80" height="300" rx="12" class="card gold" opacity="1.00"/>
+<text x="1130" y="336" class="label strong" text-anchor="middle" >64</text>
+</g><g id="unet-up-edge-2" >
+<line x1="1077" y1="330" x2="1082" y2="330" class="wire" marker-end="url(#arrow)"/>
+<text x="1079.5" y="318" class="tiny muted" text-anchor="middle" >up</text>
+</g><path d="M225,200 C315,125 1000,125 1090,200" class="violet-line dash" marker-end="url(#arrow-violet)"/><path d="M385,235 C475,143 840,143 930,235" class="violet-line dash" marker-end="url(#arrow-violet)"/><path d="M545,270 C635,161 675,161 765,270" class="violet-line dash" marker-end="url(#arrow-violet)"/><text x="390" y="130" class="small strong" text-anchor="middle" >copy &amp; concatenate</text><text x="600" y="555" class="small muted" text-anchor="middle" >contracting path</text><text x="940" y="555" class="small muted" text-anchor="middle" >expanding path</text>
+</svg>

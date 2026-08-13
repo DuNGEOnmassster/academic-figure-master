@@ -41,7 +41,7 @@ For nontrivial work, write a small scene manifest following [assets/examples/fig
 4. labels, equations, legends, and panel letters;
 5. annotations and review notes.
 
-Reuse original primitives from `assets/primitives/` when applicable. Their groups and IDs are deliberately editable:
+Reuse original primitives from `assets/primitives/` when applicable. Search `assets/gallery-manifest.json` by tags before drawing a common architecture, paper concept, or curve from scratch. Its generated entries include provenance, fidelity, editable-output guarantees, and a one-command reproduction recipe. Their groups and IDs are deliberately editable:
 
 - `manifold-grid.svg`: curved manifold, grid, samples, and geodesic;
 - `sde-ode-trajectories.svg`: deterministic and stochastic paths;
@@ -49,6 +49,8 @@ Reuse original primitives from `assets/primitives/` when applicable. Their group
 - `diffusion-process.svg`: forward noising and reverse denoising sequence;
 - `tensor-stack.svg`: matrices, feature stacks, and dimension labels;
 - `neural-modules.svg`: encoder, latent, decoder, attention, and merge blocks.
+
+The directory also contains attention, convolution, graph, causal, optimization, uncertainty, data, training, ensemble, Bayesian, multimodal, and ablation sheets. Rebuild the generated gallery with `python scripts/generate_gallery.py`, or pass `--only <asset-id>` to regenerate one asset.
 
 Copy only the needed groups into the deliverable; do not flatten the whole sheet into one image.
 
@@ -62,6 +64,12 @@ Copy only the needed groups into the deliverable; do not flatten the whole sheet
 
 Do not call an output editable when it is a single raster image embedded in SVG, PPTX, or draw.io. If an unavoidable crop remains raster, isolate and label it in the scene manifest.
 
+## Reproduce published figures and curves honestly
+
+Read the original paper before reconstructing a published visual. Classify the result as `semantic-redraw`, `formula-derived`, `data-recomputed`, `digitized`, or `illustrative-normalized`, and expose that class in the output metadata. Preserve scientific entities, topology, direction, equations, and technical labels, but create original geometry and styling instead of tracing paper artwork.
+
+For lines, prefer author-released data or code, then a published formula. If neither is available, generate only a normalized qualitative trend and label it illustrative. Never present synthetic or digitized points as reported measurements. Use the classic examples and source records in `assets/gallery-manifest.json` as patterns.
+
 ## Refine without collateral damage
 
 Translate each revision into an object-level patch such as `change connector:e3 route`, `replace label:t7`, or `recolor group:encoder`. Preserve stable IDs and untouched groups. Regenerate the full artifact only when the layout contract changes.
@@ -71,6 +79,7 @@ Translate each revision into an object-level patch such as `change connector:e3 
 Run:
 
 ```bash
+python scripts/generate_gallery.py
 python scripts/validate_repo.py
 ```
 

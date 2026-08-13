@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="title desc">
   <title id="title">Editable forward and reverse diffusion process</title>
   <desc id="desc">A sequence from structured data to noise with forward noising and reverse score-guided denoising arrows.</desc>
+  <rect id="figure-background" width="100%" height="100%" fill="#FBFCFF"/>
   <defs>
     <marker id="diffusion-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
       <path d="M0 0 L10 5 L0 10 z" fill="#33445F"/>

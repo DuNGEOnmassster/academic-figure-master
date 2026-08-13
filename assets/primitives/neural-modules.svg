@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" aria-labelledby="title desc">
   <title id="title">Editable neural network module kit</title>
   <desc id="desc">Encoder, attention, latent, decoder, merge, and typed port primitives with native labels and connectors.</desc>
+  <rect id="figure-background" width="100%" height="100%" fill="#FBFCFF"/>
   <defs>
     <marker id="module-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
       <path d="M0 0 L10 5 L0 10 z" fill="#34445E"/>
