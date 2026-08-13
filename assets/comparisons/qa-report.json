@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "method": "white-trimmed side-by-side review plus edge overlay",
+  "figures": [
+    {
+      "id": "lenet-5",
+      "paper": "Gradient-Based Learning Applied to Document Recognition",
+      "figure": "Figure 2",
+      "source_url": "https://leon.bottou.org/publications/pdf/ieee-1998.pdf",
+      "source_sha256": "1feae350d5cc9e118193241fa359f0f9c87799f3aa7f127e48ae9dd94cabc01a",
+      "comparison": "assets/comparisons/lenet-5.png",
+      "source_aspect_ratio": 3.3627,
+      "redraw_aspect_ratio": 3.4425,
+      "aspect_ratio_error": 0.0237,
+      "edge_iou": 0.3059
+    },
+    {
+      "id": "alexnet",
+      "paper": "ImageNet Classification with Deep Convolutional Neural Networks",
+      "figure": "Figure 2",
+      "source_url": "https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf",
+      "source_sha256": "2b762f3709e544d67d0fce5adab2cbe0bd13be89925897e86637fa1277a70470",
+      "comparison": "assets/comparisons/alexnet.png",
+      "source_aspect_ratio": 2.9443,
+      "redraw_aspect_ratio": 3.001,
+      "aspect_ratio_error": 0.0193,
+      "edge_iou": 0.298
+    },
+    {
+      "id": "vae",
+      "paper": "Auto-Encoding Variational Bayes",
+      "figure": "Figure 1",
+      "source_url": "https://arxiv.org/pdf/1312.6114",
+      "source_sha256": "e6f4b25ab01982c3abcbcbbd138923d4eee874f0aff43bc9367ba344fb043264",
+      "comparison": "assets/comparisons/vae.png",
+      "source_aspect_ratio": 0.9964,
+      "redraw_aspect_ratio": 0.9867,
+      "aspect_ratio_error": 0.0098,
+      "edge_iou": 0.2149
+    },
+    {
+      "id": "gan",
+      "paper": "Generative Adversarial Nets",
+      "figure": "Figure 1",
+      "source_url": "https://arxiv.org/pdf/1406.2661",
+      "source_sha256": "2c8b7d383bf1a84122901d2a415e121c6129395aed3f7e0612f8e22ea52d3754",
+      "comparison": "assets/comparisons/gan.png",
+      "source_aspect_ratio": 3.526,
+      "redraw_aspect_ratio": 3.8567,
+      "aspect_ratio_error": 0.0938,
+      "edge_iou": 0.2972
+    },
+    {
+      "id": "resnet-block",
+      "paper": "Deep Residual Learning for Image Recognition",
+      "figure": "Figure 2",
+      "source_url": "https://arxiv.org/pdf/1512.03385",
+      "source_sha256": "b715a11689300169aaed135e1c8f992157f818c890cdfb025c27f7c4edc1a82b",
+      "comparison": "assets/comparisons/resnet-block.png",
+      "source_aspect_ratio": 1.8213,
+      "redraw_aspect_ratio": 1.9261,
+      "aspect_ratio_error": 0.0576,
+      "edge_iou": 0.2287
+    },
+    {
+      "id": "unet",
+      "paper": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+      "figure": "Figure 1",
+      "source_url": "https://arxiv.org/pdf/1505.04597",
+      "source_sha256": "ba702062567035e78a5c32eff4471a4d0630c16878419f49374a45833a2650dc",
+      "comparison": "assets/comparisons/unet.png",
+      "source_aspect_ratio": 1.5836,
+      "redraw_aspect_ratio": 1.5955,
+      "aspect_ratio_error": 0.0075,
+      "edge_iou": 0.148
+    },
+    {
+      "id": "transformer",
+      "paper": "Attention Is All You Need",
+      "figure": "Figure 1",
+      "source_url": "https://arxiv.org/pdf/1706.03762",
+      "source_sha256": "aac1efaa75bd5a23b9ba3a02f64e979bbd19a102007752d44bb9d7dfe745c50c",
+      "comparison": "assets/comparisons/transformer.png",
+      "source_aspect_ratio": 0.5318,
+      "redraw_aspect_ratio": 0.532,
+      "aspect_ratio_error": 0.0005,
+      "edge_iou": 0.3522
+    },
+    {
+      "id": "neural-ode",
+      "paper": "Neural Ordinary Differential Equations",
+      "figure": "Figure 1",
+      "source_url": "https://arxiv.org/pdf/1806.07366",
+      "source_sha256": "ff96d4a0cff990ebbe085ecdf3a73761004d8ebd054585e60f23ccbae9f0a178",
+      "comparison": "assets/comparisons/neural-ode.png",
+      "source_aspect_ratio": 1.3266,
+      "redraw_aspect_ratio": 1.3899,
+      "aspect_ratio_error": 0.0477,
+      "edge_iou": 0.2913
+    },
+    {
+      "id": "simclr",
+      "paper": "A Simple Framework for Contrastive Learning of Visual Representations",
+      "figure": "Figure 2",
+      "source_url": "https://arxiv.org/pdf/2002.05709",
+      "source_sha256": "cc5801d001ef221d1e31439b747af8c26690495eac58192ec092948ac06e0be7",
+      "comparison": "assets/comparisons/simclr.png",
+      "source_aspect_ratio": 1.2489,
+      "redraw_aspect_ratio": 1.2551,
+      "aspect_ratio_error": 0.0049,
+      "edge_iou": 0.2732
+    },
+    {
+      "id": "ddpm",
+      "paper": "Denoising Diffusion Probabilistic Models",
+      "figure": "Figure 2",
+      "source_url": "https://arxiv.org/pdf/2006.11239",
+      "source_sha256": "ef49f4f80e222699e58e7a6b5e312419d2e49fec5d099e515e37d49ddbc9abc4",
+      "comparison": "assets/comparisons/ddpm.png",
+      "source_aspect_ratio": 8.1983,
+      "redraw_aspect_ratio": 7.4212,
+      "aspect_ratio_error": 0.0948,
+      "edge_iou": 0.2808
+    },
+    {
+      "id": "vit",
+      "paper": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+      "figure": "Figure 1",
+      "source_url": "https://arxiv.org/pdf/2010.11929",
+      "source_sha256": "f5a653f518c6e1ddfb44ee740947620a3c143d69b9c0a3df491d13c8144c61a3",
+      "comparison": "assets/comparisons/vit.png",
+      "source_aspect_ratio": 2.2304,
+      "redraw_aspect_ratio": 2.3512,
+      "aspect_ratio_error": 0.0541,
+      "edge_iou": 0.2811
+    }
+  ]
+}

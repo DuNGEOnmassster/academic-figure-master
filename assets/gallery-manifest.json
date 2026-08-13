@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "license": "Generator code and generic primitives are MIT. Paper-inspired semantic redraws include citations; source papers retain their rights, and downstream reuse requirements must be checked.",
+  "license": "Generator code and generic primitives are MIT. Source-faithful paper redraws include citations; source papers and review crops retain their rights, and downstream reuse requirements must be checked.",
   "assets": [
     {
       "id": "attention-heads",
@@ -264,13 +264,13 @@
         "architecture",
         "classic"
       ],
-      "reproduction": "semantic-redraw",
+      "reproduction": "faithful-redraw",
       "source": {
         "title": "Gradient-Based Learning Applied to Document Recognition",
-        "url": "https://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf",
+        "url": "https://leon.bottou.org/publications/pdf/ieee-1998.pdf",
         "figure": "Figure 2"
       },
-      "note": "Modern semantic redraw; no original artwork or measured data copied.",
+      "note": "Source-calibrated editable reconstruction; input glyph and all feature-map planes are native vectors.",
       "editable": {
         "format": "svg",
         "text_as_text": true,
@@ -289,13 +289,13 @@
         "imagenet",
         "architecture"
       ],
-      "reproduction": "semantic-redraw",
+      "reproduction": "faithful-redraw",
       "source": {
         "title": "ImageNet Classification with Deep Convolutional Neural Networks",
-        "url": "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
-        "figure": null
+        "url": "https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf",
+        "figure": "Figure 2"
       },
-      "note": "Compact semantic redraw of the reported five-convolution/three-fully-connected architecture.",
+      "note": "Source-calibrated editable reconstruction preserving the split-GPU topology.",
       "editable": {
         "format": "svg",
         "text_as_text": true,
@@ -306,21 +306,21 @@
     },
     {
       "id": "vae",
-      "title": "Variational autoencoder",
+      "title": "Variational graphical model",
       "category": "paper",
       "path": "paper-redraws/vae.svg",
       "tags": [
         "vae",
-        "latent",
-        "reparameterization"
+        "graphical-model",
+        "variational"
       ],
-      "reproduction": "semantic-redraw",
+      "reproduction": "faithful-redraw",
       "source": {
         "title": "Auto-Encoding Variational Bayes",
         "url": "https://arxiv.org/abs/1312.6114",
-        "figure": null
+        "figure": "Figure 1"
       },
-      "note": "Original diagram of the paper's inference, reparameterization, and generative semantics.",
+      "note": "Source-calibrated editable reconstruction of the paper's solid generative and dashed recognition edges.",
       "editable": {
         "format": "svg",
         "text_as_text": true,
@@ -331,21 +331,21 @@
     },
     {
       "id": "gan",
-      "title": "Generative adversarial network",
+      "title": "GAN training dynamics",
       "category": "paper",
       "path": "paper-redraws/gan.svg",
       "tags": [
         "gan",
-        "generator",
-        "discriminator"
+        "training-dynamics",
+        "distribution"
       ],
-      "reproduction": "semantic-redraw",
+      "reproduction": "faithful-redraw",
       "source": {
-        "title": "Generative Adversarial Networks",
+        "title": "Generative Adversarial Nets",
         "url": "https://arxiv.org/abs/1406.2661",
-        "figure": null
+        "figure": "Figure 1"
       },
-      "note": "Original diagram of the paper's two-player minimax framework.",
+      "note": "Source-calibrated editable four-stage training-dynamics reconstruction.",
       "editable": {
         "format": "svg",
         "text_as_text": true,
@@ -364,13 +364,13 @@
         "residual",
         "skip"
       ],
-      "reproduction": "semantic-redraw",
+      "reproduction": "faithful-redraw",
       "source": {
         "title": "Deep Residual Learning for Image Recognition",
         "url": "https://arxiv.org/abs/1512.03385",
         "figure": "Figure 2"
       },
-      "note": "Modern editable redraw of the residual building-block semantics.",
+      "note": "Source-calibrated editable reconstruction of the residual building block.",
       "editable": {
         "format": "svg",
         "text_as_text": true,
@@ -389,13 +389,13 @@
         "segmentation",
         "skip"
       ],
-      "reproduction": "semantic-redraw",
+      "reproduction": "faithful-redraw",
       "source": {
         "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
         "url": "https://arxiv.org/abs/1505.04597",
         "figure": "Figure 1"
       },
-      "note": "Simplified semantic redraw of contracting, expanding, and skip paths.",
+      "note": "Source-calibrated editable reconstruction with the original arrow color semantics and feature-map hierarchy.",
       "editable": {
         "format": "svg",
         "text_as_text": true,
@@ -414,13 +414,13 @@
         "attention",
         "encoder-decoder"
       ],
-      "reproduction": "semantic-redraw",
+      "reproduction": "faithful-redraw",
       "source": {
         "title": "Attention Is All You Need",
         "url": "https://arxiv.org/abs/1706.03762",
         "figure": "Figure 1"
       },
-      "note": "Compact semantic redraw preserving block order and cross-attention.",
+      "note": "Source-calibrated editable reconstruction preserving residual paths, cross-attention, and repeated stacks.",
       "editable": {
         "format": "svg",
         "text_as_text": true,
@@ -439,13 +439,13 @@
         "continuous-depth",
         "solver"
       ],
-      "reproduction": "semantic-redraw",
+      "reproduction": "faithful-redraw",
       "source": {
         "title": "Neural Ordinary Differential Equations",
         "url": "https://arxiv.org/abs/1806.07366",
-        "figure": null
+        "figure": "Figure 1"
       },
-      "note": "Original comparison of discrete residual updates and continuous dynamics.",
+      "note": "Source-calibrated editable reconstruction of discrete and continuous transformations.",
       "editable": {
         "format": "svg",
         "text_as_text": true,
@@ -464,13 +464,13 @@
         "augmentation",
         "representation"
       ],
-      "reproduction": "semantic-redraw",
+      "reproduction": "faithful-redraw",
       "source": {
         "title": "A Simple Framework for Contrastive Learning of Visual Representations",
         "url": "https://arxiv.org/abs/2002.05709",
         "figure": "Figure 2"
       },
-      "note": "Semantic redraw preserving paired augmentation, shared encoder, projection, and loss.",
+      "note": "Source-calibrated editable reconstruction of paired augmentation, encoder, projection, and objectives.",
       "editable": {
         "format": "svg",
         "text_as_text": true,
@@ -481,7 +481,7 @@
     },
     {
       "id": "ddpm",
-      "title": "Denoising diffusion process",
+      "title": "Denoising diffusion graphical model",
       "category": "paper",
       "path": "paper-redraws/ddpm.svg",
       "tags": [
@@ -489,13 +489,13 @@
         "denoising",
         "markov"
       ],
-      "reproduction": "semantic-redraw",
+      "reproduction": "faithful-redraw",
       "source": {
         "title": "Denoising Diffusion Probabilistic Models",
         "url": "https://arxiv.org/abs/2006.11239",
-        "figure": null
+        "figure": "Figure 2"
       },
-      "note": "Original particle-based depiction of the paper's forward and reverse processes.",
+      "note": "Source-calibrated editable reconstruction; paper thumbnails are replaced by native vector mosaics.",
       "editable": {
         "format": "svg",
         "text_as_text": true,
@@ -514,13 +514,13 @@
         "patches",
         "transformer"
       ],
-      "reproduction": "semantic-redraw",
+      "reproduction": "faithful-redraw",
       "source": {
         "title": "An Image is Worth 16x16 Words",
         "url": "https://arxiv.org/abs/2010.11929",
         "figure": "Figure 1"
       },
-      "note": "Simplified semantic redraw of patchification, token encoding, and classification.",
+      "note": "Source-calibrated editable reconstruction; the paper photograph is replaced by a native vector scene.",
       "editable": {
         "format": "svg",
         "text_as_text": true,

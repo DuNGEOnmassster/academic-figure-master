@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="svg-title svg-desc">
   <title id="svg-title">Training and evaluation loop</title><desc id="svg-desc">Forward pass, loss, gradients, update, and validation</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
@@ -14,9 +14,8 @@
     .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
     </style>
   </defs>
-  <rect class="bg" width="1200" height="675"/>
-  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >Training and evaluation loop</text><text x="52" y="86" class="subtitle" text-anchor="start" >Forward pass, loss, gradients, update, and validation</text></g>
-  <g id="loop-node-0" >
+  <rect class="bg" width="1200" height="600"/>
+  <g id="figure-body" transform="translate(0,-65)"><g id="loop-node-0" >
 <rect x="110" y="280" width="160" height="100" rx="18" class="card blue"/>
 <text x="190" y="323" class="label strong" text-anchor="middle" >Batch</text>
 <text x="190" y="351" class="small muted" text-anchor="middle" >x, y</text>
@@ -52,5 +51,5 @@
 <path d="M655,470 Q570,495 485,470" class="wire" marker-end="url(#arrow)"/>
 </g><g id="loop-edge-5" >
 <path d="M375,470 Q310,425 245,330" class="wire" marker-end="url(#arrow)"/>
-</g><text x="600" y="338" class="label strong" text-anchor="middle" >repeat until convergence</text>
+</g><text x="600" y="338" class="label strong" text-anchor="middle" >repeat until convergence</text></g>
 </svg>

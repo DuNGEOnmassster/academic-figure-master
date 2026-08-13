@@ -1,58 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
-  <title id="svg-title">Vision Transformer</title><desc id="svg-desc">Patchify, embed, encode, and classify after Dosovitskiy et al. (2020)</desc><metadata>Source: An Image is Worth 16x16 Words, Figure 1; semantic redraw.</metadata>
+<svg xmlns="http://www.w3.org/2000/svg" width="835" height="355" viewBox="0 0 835 355" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Vision Transformer model overview</title><desc id="svg-desc">Editable reconstruction of Dosovitskiy et al. (2020), Figure 1.</desc><metadata>Source-faithful redraw; source paper Figure 1; input scene is a native vector substitute for the source thumbnail.</metadata>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
-    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
-    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
-    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <marker id="paper-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#111"/></marker>
+    <marker id="paper-arrow-gray" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#777"/></marker>
     <style>
-    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
-    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
-    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
-    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
-    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    .sans{font-family:Arial,Helvetica,sans-serif;fill:#111}.serif{font-family:'Times New Roman',Times,serif;fill:#111}
+    .t9{font-size:9px}.t10{font-size:10px}.t11{font-size:11px}.t12{font-size:12px}.t13{font-size:13px}.t14{font-size:14px}.t16{font-size:16px}
+    .bold{font-weight:700}.italic{font-style:italic}.thin{fill:none;stroke:#111;stroke-width:1}.mid{fill:none;stroke:#111;stroke-width:1.5}
+    .thick{fill:none;stroke:#111;stroke-width:2}.gray{fill:#d7d7d7;stroke:#333;stroke-width:1}.light{fill:#f5f5f5;stroke:#111;stroke-width:1}
+    .blue{fill:#dbe9f6;stroke:#386a98;stroke-width:1}.green{fill:#dcebc8;stroke:#4e7a35;stroke-width:1}.yellow{fill:#f4e7a7;stroke:#826f24;stroke-width:1}
+    .orange{fill:#f4d0a3;stroke:#925c22;stroke-width:1}.pink{fill:#f2cdd0;stroke:#9b4b52;stroke-width:1}.violet{fill:#ddd4ed;stroke:#665283;stroke-width:1}
+    .cyan-stroke{fill:none;stroke:#42a3b8;stroke-width:1.5}.green-stroke{fill:none;stroke:#5a9e55;stroke-width:1.5}.black-dash{fill:none;stroke:#111;stroke-width:1.5;stroke-dasharray:3 3}
     </style>
   </defs>
-  <rect class="bg" width="1200" height="675"/>
-  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >Vision Transformer</text><text x="52" y="86" class="subtitle" text-anchor="start" >Patchify, embed, encode, and classify after Dosovitskiy et al. (2020)</text></g>
-  <text x="1125" y="103" class="paper-note" text-anchor="middle" >SEMANTIC REDRAW</text><g id="vit-image-patches" >
-<rect x="65" y="220" width="44" height="44" rx="5" fill="#d9e8ff" stroke="#71819a"/>
-<rect x="113" y="220" width="44" height="44" rx="5" fill="#e9e1ff" stroke="#71819a"/>
-<rect x="161" y="220" width="44" height="44" rx="5" fill="#dff4ed" stroke="#71819a"/>
-<rect x="209" y="220" width="44" height="44" rx="5" fill="#ffebe9" stroke="#71819a"/>
-<rect x="65" y="268" width="44" height="44" rx="5" fill="#e9e1ff" stroke="#71819a"/>
-<rect x="113" y="268" width="44" height="44" rx="5" fill="#dff4ed" stroke="#71819a"/>
-<rect x="161" y="268" width="44" height="44" rx="5" fill="#ffebe9" stroke="#71819a"/>
-<rect x="209" y="268" width="44" height="44" rx="5" fill="#d9e8ff" stroke="#71819a"/>
-<rect x="65" y="316" width="44" height="44" rx="5" fill="#dff4ed" stroke="#71819a"/>
-<rect x="113" y="316" width="44" height="44" rx="5" fill="#ffebe9" stroke="#71819a"/>
-<rect x="161" y="316" width="44" height="44" rx="5" fill="#d9e8ff" stroke="#71819a"/>
-<rect x="209" y="316" width="44" height="44" rx="5" fill="#e9e1ff" stroke="#71819a"/>
-<rect x="65" y="364" width="44" height="44" rx="5" fill="#ffebe9" stroke="#71819a"/>
-<rect x="113" y="364" width="44" height="44" rx="5" fill="#d9e8ff" stroke="#71819a"/>
-<rect x="161" y="364" width="44" height="44" rx="5" fill="#e9e1ff" stroke="#71819a"/>
-<rect x="209" y="364" width="44" height="44" rx="5" fill="#dff4ed" stroke="#71819a"/>
-</g><text x="160" y="445" class="small muted" text-anchor="middle" >image patches</text><g id="vit-patch-arrow" >
-<line x1="270" y1="315" x2="380" y2="315" class="wire" marker-end="url(#arrow)"/>
-</g><g id="vit-token-stack" >
-<rect x="426" y="189" width="145" height="180" rx="12" class="card violet" opacity="0.64"/>
-<rect x="417" y="198" width="145" height="180" rx="12" class="card violet" opacity="0.73"/>
-<rect x="408" y="207" width="145" height="180" rx="12" class="card violet" opacity="0.82"/>
-<rect x="399" y="216" width="145" height="180" rx="12" class="card violet" opacity="0.91"/>
-<rect x="390" y="225" width="145" height="180" rx="12" class="card violet" opacity="1.00"/>
-<text x="462.5" y="321" class="label strong" text-anchor="middle" >patch tokens</text>
-</g><text x="462" y="445" class="tiny muted" text-anchor="middle" >+ [class] + position</text><g id="vit-transformer-arrow" >
-<line x1="570" y1="315" x2="680" y2="315" class="wire" marker-end="url(#arrow)"/>
-</g><g id="vit-transformer" >
-<rect x="680" y="220" width="220" height="190" rx="18" class="card blue"/>
-<text x="790" y="308" class="label strong" text-anchor="middle" >Transformer</text>
-<text x="790" y="336" class="small muted" text-anchor="middle" >encoder × L</text>
-</g><g id="vit-head-arrow" >
-<line x1="900" y1="315" x2="995" y2="315" class="wire" marker-end="url(#arrow)"/>
-</g><g id="vit-head" >
-<rect x="995" y="265" width="165" height="100" rx="18" class="card gold"/>
-<text x="1077.5" y="308" class="label strong" text-anchor="middle" >MLP head</text>
-<text x="1077.5" y="336" class="small muted" text-anchor="middle" >class logits</text>
+  <rect width="835" height="355" fill="#fff"/>
+  <g id="class-and-head" >
+<rect x="18" y="18" width="50" height="76" rx="16" class="orange"/><text x="43" y="43" class="sans t10" text-anchor="middle">Class</text><text x="43" y="55" class="sans t10" text-anchor="middle">Bird</text><text x="43" y="67" class="sans t10" text-anchor="middle">Ball</text><text x="43" y="79" class="sans t10" text-anchor="middle">Car</text>
+<rect x="92" y="25" width="54" height="48" rx="6" class="orange"/><text x="119" y="45" class="sans t10" text-anchor="middle">MLP</text><text x="119" y="58" class="sans t10" text-anchor="middle">Head</text>
+<line x1="68" y1="56" x2="92" y2="50" class="mid" marker-end="url(#paper-arrow)"/>
+</g><g id="transformer-encoder" >
+<rect x="166" y="92" width="410" height="74" rx="5" fill="#eee" stroke="#111"/><text x="371" y="119" class="sans t12" text-anchor="middle">Transformer Encoder</text>
+<line x1="119" y1="73" x2="166" y2="115" class="mid" marker-end="url(#paper-arrow)"/>
+</g><g id="linear-projection" >
+<rect x="176" y="221" width="390" height="32" class="pink"/><text x="371" y="241" class="sans t11" text-anchor="middle">Linear Projection of Flattened Patches</text>
+</g><g id="patch-image" >
+<rect x="160" y="276" width="230" height="66" fill="#d8ecf4" stroke="#111"/>
+<polygon points="160,331 224,287 270,331" fill="#769ec1"/><polygon points="214,331 285,282 352,331" fill="#3e6e97"/><rect x="160" y="327" width="230" height="15" fill="#99b86d"/>
+<path d="M217 276 V342 M275 276 V342 M333 276 V342 M160 298 H390 M160 320 H390" stroke="#fff" stroke-width="1" opacity=".9"/>
+</g><g id="patch-label" >
+<text x="83" y="292" class="sans t10">Patch + Position</text><text x="83" y="304" class="sans t10">Embedding</text><text x="83" y="318" class="sans t9">(Extra learnable</text><text x="83" y="328" class="sans t9">[class] embedding)</text>
+</g><g id="encoder-detail" >
+<rect x="615" y="15" width="200" height="327" fill="none" stroke="#111" stroke-dasharray="5 4"/><text x="715" y="33" class="sans t12 bold" text-anchor="middle">Transformer Encoder</text><text x="626" y="63" class="sans t11">L×</text>
+<rect x="655" y="283" width="120" height="38" class="pink"/><text x="715" y="306" class="sans t11" text-anchor="middle">Embedded Patches</text>
+<rect x="655" y="239" width="120" height="28" class="yellow"/><text x="715" y="257" class="sans t11" text-anchor="middle">Norm</text>
+<rect x="655" y="174" width="120" height="48" class="green"/><text x="715" y="194" class="sans t10" text-anchor="middle">Multi-Head</text><text x="715" y="207" class="sans t10" text-anchor="middle">Attention</text>
+<rect x="655" y="130" width="120" height="28" class="yellow"/><text x="715" y="148" class="sans t11" text-anchor="middle">Norm</text>
+<rect x="655" y="72" width="120" height="42" class="blue"/><text x="715" y="97" class="sans t11" text-anchor="middle">MLP</text>
+<circle cx="715" cy="52" r="10" fill="#fff" stroke="#111"/><path d="M710 52 H720 M715 47 V57" class="thin"/>
+<circle cx="799" cy="162" r="9" fill="#fff" stroke="#111"/><path d="M794 162 H804 M799 157 V167" class="thin"/>
+<path d="M715 283 V267 M715 239 V222 M715 174 V158 M715 130 V114 M715 72 V62" class="mid" marker-end="url(#paper-arrow)"/>
+<path d="M715 239 C805 239 815 192 799 171" class="thin" marker-end="url(#paper-arrow)"/><path d="M799 153 C815 111 794 94 775 94" class="thin" marker-end="url(#paper-arrow)"/>
+</g><g id="patch-tokens" >
+<circle cx="182" cy="197" r="12" fill="#f4d0a3" stroke="#111"/>
+<text x="182" y="201" class="sans t9" text-anchor="middle">*</text>
+<line x1="182" y1="221" x2="182" y2="210" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="182" y1="185" x2="182" y2="166" class="thin" marker-end="url(#paper-arrow)"/>
+<circle cx="217" cy="197" r="12" fill="#eee" stroke="#111"/>
+<text x="217" y="201" class="sans t9" text-anchor="middle">1</text>
+<line x1="217" y1="221" x2="217" y2="210" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="217" y1="185" x2="217" y2="166" class="thin" marker-end="url(#paper-arrow)"/>
+<circle cx="252" cy="197" r="12" fill="#eee" stroke="#111"/>
+<text x="252" y="201" class="sans t9" text-anchor="middle">2</text>
+<line x1="252" y1="221" x2="252" y2="210" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="252" y1="185" x2="252" y2="166" class="thin" marker-end="url(#paper-arrow)"/>
+<circle cx="287" cy="197" r="12" fill="#eee" stroke="#111"/>
+<text x="287" y="201" class="sans t9" text-anchor="middle">3</text>
+<line x1="287" y1="221" x2="287" y2="210" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="287" y1="185" x2="287" y2="166" class="thin" marker-end="url(#paper-arrow)"/>
+<circle cx="322" cy="197" r="12" fill="#eee" stroke="#111"/>
+<text x="322" y="201" class="sans t9" text-anchor="middle">4</text>
+<line x1="322" y1="221" x2="322" y2="210" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="322" y1="185" x2="322" y2="166" class="thin" marker-end="url(#paper-arrow)"/>
+<circle cx="357" cy="197" r="12" fill="#eee" stroke="#111"/>
+<text x="357" y="201" class="sans t9" text-anchor="middle">5</text>
+<line x1="357" y1="221" x2="357" y2="210" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="357" y1="185" x2="357" y2="166" class="thin" marker-end="url(#paper-arrow)"/>
+<circle cx="392" cy="197" r="12" fill="#eee" stroke="#111"/>
+<text x="392" y="201" class="sans t9" text-anchor="middle">6</text>
+<line x1="392" y1="221" x2="392" y2="210" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="392" y1="185" x2="392" y2="166" class="thin" marker-end="url(#paper-arrow)"/>
+<circle cx="427" cy="197" r="12" fill="#eee" stroke="#111"/>
+<text x="427" y="201" class="sans t9" text-anchor="middle">7</text>
+<line x1="427" y1="221" x2="427" y2="210" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="427" y1="185" x2="427" y2="166" class="thin" marker-end="url(#paper-arrow)"/>
+<circle cx="462" cy="197" r="12" fill="#eee" stroke="#111"/>
+<text x="462" y="201" class="sans t9" text-anchor="middle">8</text>
+<line x1="462" y1="221" x2="462" y2="210" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="462" y1="185" x2="462" y2="166" class="thin" marker-end="url(#paper-arrow)"/>
+<circle cx="497" cy="197" r="12" fill="#eee" stroke="#111"/>
+<text x="497" y="201" class="sans t9" text-anchor="middle">9</text>
+<line x1="497" y1="221" x2="497" y2="210" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="497" y1="185" x2="497" y2="166" class="thin" marker-end="url(#paper-arrow)"/>
+<circle cx="532" cy="197" r="12" fill="#eee" stroke="#111"/>
+<text x="532" y="201" class="sans t9" text-anchor="middle">10</text>
+<line x1="532" y1="221" x2="532" y2="210" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="532" y1="185" x2="532" y2="166" class="thin" marker-end="url(#paper-arrow)"/>
 </g>
 </svg>

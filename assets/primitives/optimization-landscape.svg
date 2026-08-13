@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="svg-title svg-desc">
   <title id="svg-title">Optimization landscape</title><desc id="svg-desc">Editable contours, iterates, and convergence annotation</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
@@ -14,9 +14,8 @@
     .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
     </style>
   </defs>
-  <rect class="bg" width="1200" height="675"/>
-  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >Optimization landscape</text><text x="52" y="86" class="subtitle" text-anchor="start" >Editable contours, iterates, and convergence annotation</text></g>
-  <g id="loss-contours" >
+  <rect class="bg" width="1200" height="600"/>
+  <g id="figure-body" transform="translate(0,-65)"><g id="loss-contours" >
 <path d="M130,460 C220,280 390,230 520,330 C640,430 760,410 900,240" class="axis" />
 <path d="M180,480 C270,335 400,300 510,370 C620,445 760,445 960,270" class="axis" />
 <path d="M250,500 C340,410 430,385 520,425 C630,475 770,480 1020,330" class="axis" />
@@ -30,5 +29,5 @@
 <circle cx="690" cy="405" r="6" class="dot-violet" />
 <circle cx="790" cy="350" r="6" class="dot-violet" />
 <circle cx="875" cy="285" r="6" class="dot-violet" />
-</g><circle cx="900" cy="255" r="18" class="dot-red" /><text x="930" y="260" class="small muted" text-anchor="start" >local minimum</text><text x="145" y="535" class="small strong" text-anchor="middle" >θ₀</text>
+</g><circle cx="900" cy="255" r="18" class="dot-red" /><text x="930" y="260" class="small muted" text-anchor="start" >local minimum</text><text x="145" y="535" class="small strong" text-anchor="middle" >θ₀</text></g>
 </svg>

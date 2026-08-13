@@ -7,12 +7,12 @@ A lightweight Codex/Claude skill for publication-ready academic figures that sta
 The current version includes:
 
 - 18 reusable academic-figure primitive sheets;
-- 11 editable semantic redraws of classic ML papers;
+- 11 source-calibrated, editable redraws of exact classic-paper figures;
 - 6 reproducible curve templates with explicit fidelity labels;
 - a machine-readable provenance and reproduction manifest;
 - a surveyed catalog of vector models, scientific-figure systems, skills, editors, and asset libraries;
 - daily GitHub metadata, stars, activity, license, and discovery refreshes; and
-- dependency-free generation, validation, synchronization, and installation scripts.
+- dependency-free core generation, validation, synchronization, and installation scripts, plus an optional source/redraw/edge-overlay calibration harness.
 
 ## Install and invoke
 
@@ -69,32 +69,68 @@ Every sheet below is native SVG: text stays text, shapes stay shapes, and reusab
 </tr>
 </table>
 
-## Classic-paper figure redraws
+## Source-calibrated classic-paper redraws
 
-These are **semantic redraws**, not pixel-level copies. They preserve the scientific topology needed for explanation and editing while using this repository's own geometry, type, palette, and grouping. No original artwork, screenshots, or experimental data are embedded.
+Every paper redraw now uses the exact cited Figure rather than a modern concept diagram. Each review plate shows the source crop, editable SVG render, and edge overlay side by side. Magenta is the paper source, cyan is the redraw, and black is overlap. Click a plate to open its editable SVG.
 
-<table>
-<tr>
-<td width="33%"><a href="assets/paper-redraws/lenet-5.svg"><img src="assets/paper-redraws/lenet-5.svg" alt="LeNet-5 semantic redraw"></a><br><b>LeNet-5</b><br><sub>LeCun et al. (1998), Figure 2 · <a href="https://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf">paper</a></sub></td>
-<td width="33%"><a href="assets/paper-redraws/alexnet.svg"><img src="assets/paper-redraws/alexnet.svg" alt="AlexNet semantic redraw"></a><br><b>AlexNet</b><br><sub>Krizhevsky et al. (2012) · <a href="https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html">paper</a></sub></td>
-<td width="33%"><a href="assets/paper-redraws/vae.svg"><img src="assets/paper-redraws/vae.svg" alt="VAE semantic redraw"></a><br><b>Variational autoencoder</b><br><sub>Kingma & Welling (2013) · <a href="https://arxiv.org/abs/1312.6114">paper</a></sub></td>
-</tr>
-<tr>
-<td><a href="assets/paper-redraws/gan.svg"><img src="assets/paper-redraws/gan.svg" alt="GAN semantic redraw"></a><br><b>Generative adversarial network</b><br><sub>Goodfellow et al. (2014) · <a href="https://arxiv.org/abs/1406.2661">paper</a></sub></td>
-<td><a href="assets/paper-redraws/resnet-block.svg"><img src="assets/paper-redraws/resnet-block.svg" alt="ResNet block semantic redraw"></a><br><b>Residual learning block</b><br><sub>He et al. (2015), Figure 2 · <a href="https://arxiv.org/abs/1512.03385">paper</a></sub></td>
-<td><a href="assets/paper-redraws/unet.svg"><img src="assets/paper-redraws/unet.svg" alt="U-Net semantic redraw"></a><br><b>U-Net</b><br><sub>Ronneberger et al. (2015), Figure 1 · <a href="https://arxiv.org/abs/1505.04597">paper</a></sub></td>
-</tr>
-<tr>
-<td><a href="assets/paper-redraws/transformer.svg"><img src="assets/paper-redraws/transformer.svg" alt="Transformer semantic redraw"></a><br><b>Transformer</b><br><sub>Vaswani et al. (2017), Figure 1 · <a href="https://arxiv.org/abs/1706.03762">paper</a></sub></td>
-<td><a href="assets/paper-redraws/neural-ode.svg"><img src="assets/paper-redraws/neural-ode.svg" alt="Neural ODE semantic redraw"></a><br><b>Neural ODE</b><br><sub>Chen et al. (2018) · <a href="https://arxiv.org/abs/1806.07366">paper</a></sub></td>
-<td><a href="assets/paper-redraws/simclr.svg"><img src="assets/paper-redraws/simclr.svg" alt="SimCLR semantic redraw"></a><br><b>SimCLR</b><br><sub>Chen et al. (2020), Figure 2 · <a href="https://arxiv.org/abs/2002.05709">paper</a></sub></td>
-</tr>
-<tr>
-<td><a href="assets/paper-redraws/ddpm.svg"><img src="assets/paper-redraws/ddpm.svg" alt="DDPM semantic redraw"></a><br><b>Denoising diffusion</b><br><sub>Ho et al. (2020) · <a href="https://arxiv.org/abs/2006.11239">paper</a></sub></td>
-<td><a href="assets/paper-redraws/vit.svg"><img src="assets/paper-redraws/vit.svg" alt="Vision Transformer semantic redraw"></a><br><b>Vision Transformer</b><br><sub>Dosovitskiy et al. (2020), Figure 1 · <a href="https://arxiv.org/abs/2010.11929">paper</a></sub></td>
-<td><br><b>Use as a starting point</b><br><sub>Copy named groups, replace labels, then patch objects by stable ID. Cite the original paper rather than this redraw.</sub></td>
-</tr>
-</table>
+The original crop is included only as low-resolution review evidence in this private repository; the paper retains its rights. Deliverable SVGs contain no raster image. Where the source uses a photograph or face thumbnail, the SVG discloses and uses an editable vector substitute.
+
+<a href="assets/paper-redraws/lenet-5.svg"><img src="assets/comparisons/lenet-5.png" alt="LeNet-5 Figure 2 source, editable redraw, and edge overlay"></a>
+
+LeCun et al. (1998), Figure 2 · [paper](https://leon.bottou.org/publications/pdf/ieee-1998.pdf)
+
+<a href="assets/paper-redraws/alexnet.svg"><img src="assets/comparisons/alexnet.png" alt="AlexNet Figure 2 source, editable redraw, and edge overlay"></a>
+
+Krizhevsky et al. (2012), Figure 2 · [paper](https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
+
+<a href="assets/paper-redraws/vae.svg"><img src="assets/comparisons/vae.png" alt="VAE Figure 1 source, editable redraw, and edge overlay"></a>
+
+Kingma & Welling (2013), Figure 1 · [paper](https://arxiv.org/abs/1312.6114)
+
+<a href="assets/paper-redraws/gan.svg"><img src="assets/comparisons/gan.png" alt="GAN Figure 1 source, editable redraw, and edge overlay"></a>
+
+Goodfellow et al. (2014), Figure 1 · [paper](https://arxiv.org/abs/1406.2661)
+
+<a href="assets/paper-redraws/resnet-block.svg"><img src="assets/comparisons/resnet-block.png" alt="ResNet Figure 2 source, editable redraw, and edge overlay"></a>
+
+He et al. (2015), Figure 2 · [paper](https://arxiv.org/abs/1512.03385)
+
+<a href="assets/paper-redraws/unet.svg"><img src="assets/comparisons/unet.png" alt="U-Net Figure 1 source, editable redraw, and edge overlay"></a>
+
+Ronneberger et al. (2015), Figure 1 · [paper](https://arxiv.org/abs/1505.04597)
+
+<a href="assets/paper-redraws/transformer.svg"><img src="assets/comparisons/transformer.png" alt="Transformer Figure 1 source, editable redraw, and edge overlay"></a>
+
+Vaswani et al. (2017), Figure 1 · [paper](https://arxiv.org/abs/1706.03762)
+
+<a href="assets/paper-redraws/neural-ode.svg"><img src="assets/comparisons/neural-ode.png" alt="Neural ODE Figure 1 source, editable redraw, and edge overlay"></a>
+
+Chen et al. (2018), Figure 1 · [paper](https://arxiv.org/abs/1806.07366)
+
+<a href="assets/paper-redraws/simclr.svg"><img src="assets/comparisons/simclr.png" alt="SimCLR Figure 2 source, editable redraw, and edge overlay"></a>
+
+Chen et al. (2020), Figure 2 · [paper](https://arxiv.org/abs/2002.05709)
+
+<a href="assets/paper-redraws/ddpm.svg"><img src="assets/comparisons/ddpm.png" alt="DDPM Figure 2 source, editable redraw, and edge overlay"></a>
+
+Ho et al. (2020), Figure 2 · [paper](https://arxiv.org/abs/2006.11239)
+
+<a href="assets/paper-redraws/vit.svg"><img src="assets/comparisons/vit.png" alt="Vision Transformer Figure 1 source, editable redraw, and edge overlay"></a>
+
+Dosovitskiy et al. (2020), Figure 1 · [paper](https://arxiv.org/abs/2010.11929)
+
+### Reproduce the paper calibration plates
+
+The SVG gallery itself is dependency-free. Rebuilding the source comparison evidence is an optional QA step:
+
+```bash
+python scripts/generate_gallery.py
+python -m pip install Pillow
+npm install --no-save sharp
+python scripts/calibrate_paper_figures.py
+```
+
+The harness uses [`references/paper-figure-sources.json`](references/paper-figure-sources.json) for exact PDF URLs, pages, and crop boxes. It writes ignored working files under `tmp/paper-calibration/` and regenerates the committed plates and [`assets/comparisons/qa-report.json`](assets/comparisons/qa-report.json). The six calibration passes and 35-SVG acceptance rules are documented in [`references/fidelity-protocol.md`](references/fidelity-protocol.md).
 
 ## Reproducible classic curves
 
@@ -146,12 +182,12 @@ The generated output and its source/provenance record are in [`assets/gallery-ma
 ### Reproducing a new paper figure or line
 
 1. Read the original paper and identify the exact figure, equation, architecture, or experiment being represented.
-2. Choose and disclose one fidelity class: `semantic-redraw`, `formula-derived`, `data-recomputed`, or `illustrative-normalized`.
-3. For diagrams, preserve entities, topology, direction, repeated blocks, and exact technical labels; create new geometry and styling rather than tracing artwork.
+2. Choose and disclose one fidelity class: `faithful-redraw`, `semantic-redraw`, `formula-derived`, `data-recomputed`, or `illustrative-normalized`.
+3. For a `faithful-redraw`, keep source, redraw, and edge overlay together and calibrate crop/aspect, topology/count, geometry, typography, appearance, then small detail. For a semantic redraw, preserve entities, topology, direction, repeated blocks, and exact technical labels while disclosing that layout differs.
 4. For curves, prefer source data or an official implementation. If unavailable, use the stated formula. If only the trend is known, normalize it and label it illustrative.
 5. Never present synthetic points as reported measurements. A digitized line must identify the original panel, axes, extraction method, and expected error.
-6. Add the paper URL, figure number where applicable, fidelity, caveat, and one-command reproduction entry to the manifest.
-7. Render at final publication size and check labels, clipping, equations, directionality, grayscale readability, and editability.
+6. Add the paper URL, exact figure number, fidelity, caveat, and one-command reproduction entry to the manifest.
+7. Render at final publication size and repository-preview size; check the edge overlay, labels, clipping, equations, directionality, grayscale readability, and editability.
 
 ## Start here
 
@@ -161,6 +197,7 @@ The generated output and its source/provenance record are in [`assets/gallery-ma
 - [`references/landscape.md`](references/landscape.md) — vector-model and scientific-figure survey
 - [`references/catalog-latest.md`](references/catalog-latest.md) — latest curated repositories and discovered candidates
 - [`references/figure-ir.md`](references/figure-ir.md) — semantic intermediate representation
+- [`references/fidelity-protocol.md`](references/fidelity-protocol.md) — original/redraw/overlay calibration loop and 35-SVG acceptance rules
 - [`references/output-contracts.md`](references/output-contracts.md) — SVG, draw.io, and PPTX editability rules
 
 ## Refresh and verify
