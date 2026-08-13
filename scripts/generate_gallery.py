@@ -696,17 +696,17 @@ ASSETS: tuple[Asset, ...] = (
     Asset("bayesian-inference","Bayesian inference","primitive",("bayesian","posterior","predictive"),primitive_bayesian_inference),
     Asset("multimodal-fusion","Multimodal fusion","primitive",("multimodal","fusion","cross-attention"),primitive_multimodal_fusion),
     Asset("ablation-matrix","Ablation matrix","primitive",("ablation","experiment","matrix"),primitive_ablation_matrix),
-    Asset("lenet-5","LeNet-5 architecture","paper",("cnn","architecture","classic"),paper_lenet,"faithful-redraw","Gradient-Based Learning Applied to Document Recognition","https://leon.bottou.org/publications/pdf/ieee-1998.pdf","Figure 2","Source-calibrated editable reconstruction; input glyph and all feature-map planes are native vectors."),
-    Asset("alexnet","AlexNet architecture","paper",("cnn","imagenet","architecture"),paper_alexnet,"faithful-redraw","ImageNet Classification with Deep Convolutional Neural Networks","https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf","Figure 2","Source-calibrated editable reconstruction preserving the split-GPU topology."),
-    Asset("vae","Variational graphical model","paper",("vae","graphical-model","variational"),paper_vae,"faithful-redraw","Auto-Encoding Variational Bayes","https://arxiv.org/abs/1312.6114","Figure 1","Source-calibrated editable reconstruction of the paper's solid generative and dashed recognition edges."),
-    Asset("gan","GAN training dynamics","paper",("gan","training-dynamics","distribution"),paper_gan,"faithful-redraw","Generative Adversarial Nets","https://arxiv.org/abs/1406.2661","Figure 1","Source-calibrated editable four-stage training-dynamics reconstruction."),
-    Asset("resnet-block","Residual learning block","paper",("resnet","residual","skip"),paper_resnet,"faithful-redraw","Deep Residual Learning for Image Recognition","https://arxiv.org/abs/1512.03385","Figure 2","Source-calibrated editable reconstruction of the residual building block."),
-    Asset("unet","U-Net architecture","paper",("unet","segmentation","skip"),paper_unet,"faithful-redraw","U-Net: Convolutional Networks for Biomedical Image Segmentation","https://arxiv.org/abs/1505.04597","Figure 1","Source-calibrated editable reconstruction with the original arrow color semantics and feature-map hierarchy."),
-    Asset("transformer","Transformer encoder–decoder","paper",("transformer","attention","encoder-decoder"),paper_transformer,"faithful-redraw","Attention Is All You Need","https://arxiv.org/abs/1706.03762","Figure 1","Source-calibrated editable reconstruction preserving residual paths, cross-attention, and repeated stacks."),
-    Asset("neural-ode","Neural ODE","paper",("ode","continuous-depth","solver"),paper_neural_ode,"faithful-redraw","Neural Ordinary Differential Equations","https://arxiv.org/abs/1806.07366","Figure 1","Source-calibrated editable reconstruction of discrete and continuous transformations."),
-    Asset("simclr","SimCLR framework","paper",("contrastive","augmentation","representation"),paper_simclr,"faithful-redraw","A Simple Framework for Contrastive Learning of Visual Representations","https://arxiv.org/abs/2002.05709","Figure 2","Source-calibrated editable reconstruction of paired augmentation, encoder, projection, and objectives."),
-    Asset("ddpm","Denoising diffusion graphical model","paper",("diffusion","denoising","markov"),paper_ddpm,"faithful-redraw","Denoising Diffusion Probabilistic Models","https://arxiv.org/abs/2006.11239","Figure 2","Source-calibrated editable reconstruction; paper thumbnails are replaced by native vector mosaics."),
-    Asset("vit","Vision Transformer","paper",("vit","patches","transformer"),paper_vit,"faithful-redraw","An Image is Worth 16x16 Words","https://arxiv.org/abs/2010.11929","Figure 1","Source-calibrated editable reconstruction; the paper photograph is replaced by a native vector scene."),
+    Asset("lenet-5","LeNet-5 architecture","paper",("cnn","architecture","classic"),paper_lenet,"pixel-exact-dual-layer","Gradient-Based Learning Applied to Document Recognition","https://leon.bottou.org/publications/pdf/ieee-1998.pdf","Figure 2","Direct source-operator layer plus a hidden semantic editing layer."),
+    Asset("alexnet","AlexNet architecture","paper",("cnn","imagenet","architecture"),paper_alexnet,"pixel-exact-dual-layer","ImageNet Classification with Deep Convolutional Neural Networks","https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf","Figure 2","Direct source-operator layer plus a hidden semantic editing layer."),
+    Asset("vae","Variational graphical model","paper",("vae","graphical-model","variational"),paper_vae,"pixel-exact-dual-layer","Auto-Encoding Variational Bayes","https://arxiv.org/abs/1312.6114","Figure 1","Direct source-operator layer plus a hidden semantic editing layer."),
+    Asset("gan","GAN training dynamics","paper",("gan","training-dynamics","distribution"),paper_gan,"pixel-exact-dual-layer","Generative Adversarial Nets","https://arxiv.org/abs/1406.2661","Figure 1","Direct source-operator layer plus a hidden semantic editing layer."),
+    Asset("resnet-block","Residual learning block","paper",("resnet","residual","skip"),paper_resnet,"pixel-exact-dual-layer","Deep Residual Learning for Image Recognition","https://arxiv.org/abs/1512.03385","Figure 2","Direct source-operator layer plus a hidden semantic editing layer."),
+    Asset("unet","U-Net architecture","paper",("unet","segmentation","skip"),paper_unet,"pixel-exact-dual-layer","U-Net: Convolutional Networks for Biomedical Image Segmentation","https://arxiv.org/abs/1505.04597","Figure 1","Direct source-operator layer plus a hidden semantic editing layer."),
+    Asset("transformer","Transformer encoder–decoder","paper",("transformer","attention","encoder-decoder"),paper_transformer,"pixel-exact-dual-layer","Attention Is All You Need","https://arxiv.org/abs/1706.03762","Figure 1","Direct source-operator layer plus a hidden semantic editing layer."),
+    Asset("neural-ode","Neural ODE","paper",("ode","continuous-depth","solver"),paper_neural_ode,"pixel-exact-dual-layer","Neural Ordinary Differential Equations","https://arxiv.org/abs/1806.07366","Figure 1","Direct source-operator layer plus a hidden semantic editing layer."),
+    Asset("simclr","SimCLR framework","paper",("contrastive","augmentation","representation"),paper_simclr,"pixel-exact-dual-layer","A Simple Framework for Contrastive Learning of Visual Representations","https://arxiv.org/abs/2002.05709","Figure 2","Direct source-operator layer plus a hidden semantic editing layer."),
+    Asset("ddpm","Denoising diffusion graphical model","paper",("diffusion","denoising","markov"),paper_ddpm,"pixel-exact-dual-layer","Denoising Diffusion Probabilistic Models","https://arxiv.org/abs/2006.11239","Figure 2","Direct source-operator layer plus a hidden semantic editing layer; source thumbnails remain named embedded raster components."),
+    Asset("vit","Vision Transformer","paper",("vit","patches","transformer"),paper_vit,"pixel-exact-dual-layer","An Image is Worth 16x16 Words","https://arxiv.org/abs/2010.11929","Figure 1","Direct source-operator layer plus a hidden semantic editing layer; source photographs remain named embedded raster components."),
     Asset("double-descent","Double descent","curve",("double-descent","capacity","generalization"),curve_double_descent,"illustrative-normalized","Reconciling modern machine learning practice and the bias-variance trade-off","https://arxiv.org/abs/1812.11118",None,"Analytic normalized trend; not digitized or claimed as original measurements."),
     Asset("scaling-law","Neural scaling laws","curve",("scaling-law","power-law","loss"),curve_scaling_law,"illustrative-normalized","Scaling Laws for Neural Language Models","https://arxiv.org/abs/2001.08361",None,"Normalized log-log trends; slopes are illustrative, not fitted paper values."),
     Asset("cyclical-lr","Cyclical learning rate","curve",("learning-rate","schedule","triangular"),curve_cyclical_lr,"formula-derived","Cyclical Learning Rates for Training Neural Networks","https://arxiv.org/abs/1506.01186",None,"Generated directly from a triangular cyclical schedule."),
@@ -717,8 +717,14 @@ ASSETS: tuple[Asset, ...] = (
 
 
 def build_manifest(assets: Iterable[Asset]) -> dict[str, object]:
+    exact_path = ROOT / "assets" / "paper-redraws" / "pixel-exact-manifest.json"
+    exact_records = {}
+    if exact_path.exists():
+        exact_records = {item["id"]: item for item in json.loads(exact_path.read_text(encoding="utf-8"))["figures"]}
     records=[]
     for asset in assets:
+        exact = exact_records.get(asset.slug, {})
+        is_paper = asset.category == "paper"
         records.append({
             "id": asset.slug,
             "title": asset.title,
@@ -728,10 +734,19 @@ def build_manifest(assets: Iterable[Asset]) -> dict[str, object]:
             "reproduction": asset.reproduction,
             "source": None if asset.source_title is None else {"title":asset.source_title,"url":asset.source_url,"figure":asset.source_figure},
             "note": asset.note,
-            "editable": {"format":"svg","text_as_text":True,"named_groups":True,"embedded_raster":False},
-            "reproduce": f"python scripts/generate_gallery.py --only {asset.slug}",
+            "editable": {
+                "format":"svg",
+                "text_as_text": not is_paper,
+                "named_groups":True,
+                "embedded_raster": bool(exact.get("embedded_raster_components", 0)),
+                "embedded_raster_components": int(exact.get("embedded_raster_components", 0)),
+                "visible_layer": "source glyph outlines and source operators" if is_paper else "semantic vectors",
+                "semantic_edit_layer": bool(exact.get("semantic_edit_layer", False)) if is_paper else True,
+            },
+            "source_operator_sha256": exact.get("source_operator_sha256") if is_paper else None,
+            "reproduce": f"python scripts/extract_pixel_exact_paper_figures.py --only {asset.slug}" if is_paper else f"python scripts/generate_gallery.py --only {asset.slug}",
         })
-    return {"schema_version":1,"license":"Generator code and generic primitives are MIT. Source-faithful paper redraws include citations; source papers and review crops retain their rights, and downstream reuse requirements must be checked.","assets":records}
+    return {"schema_version":1,"license":"Generator code and generic primitives are MIT. Pixel-exact paper operator layers include citations; source papers and review crops retain their rights, and downstream reuse requirements must be checked.","assets":records}
 
 
 def generate(output_root: Path = DEFAULT_ASSET_ROOT, selected: set[str] | None = None) -> list[Path]:
@@ -740,6 +755,13 @@ def generate(output_root: Path = DEFAULT_ASSET_ROOT, selected: set[str] | None =
         unknown=selected-{asset.slug for asset in ASSETS}
         if unknown:
             raise ValueError(f"Unknown asset ids: {', '.join(sorted(unknown))}")
+        paper_ids = sorted(asset.slug for asset in chosen if asset.category == "paper")
+        if paper_ids:
+            raise ValueError(
+                "Paper figures use direct PDF operator extraction; run "
+                f"scripts/extract_pixel_exact_paper_figures.py for: {', '.join(paper_ids)}"
+            )
+    chosen = [asset for asset in chosen if asset.category != "paper"]
     written=[]
     for asset in chosen:
         target=output_root/asset.relative_path

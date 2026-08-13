@@ -15,13 +15,18 @@ try {
   process.exit(2);
 }
 
-const [inputDirectory = "assets/paper-redraws", outputDirectory = "tmp/paper-calibration/redraws"] = process.argv.slice(2);
+const [inputDirectory = "assets/paper-redraws", outputDirectory = "tmp/paper-calibration/redraws", densityValue = "220"] = process.argv.slice(2);
+const density = Number.parseInt(densityValue, 10);
+if (!Number.isFinite(density) || density < 72) {
+  console.error(`Invalid SVG render density: ${densityValue}`);
+  process.exit(2);
+}
 fs.mkdirSync(outputDirectory, { recursive: true });
 
 const files = fs.readdirSync(inputDirectory).filter((name) => name.endsWith(".svg")).sort();
 for (const name of files) {
   const input = path.join(inputDirectory, name);
   const output = path.join(outputDirectory, name.replace(/\.svg$/, ".png"));
-  await sharp(input, { density: 220 }).flatten({ background: "white" }).png().toFile(output);
+  await sharp(input, { density }).flatten({ background: "white" }).png().toFile(output);
   console.log(output);
 }

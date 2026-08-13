@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import tempfile
 import unittest
+import xml.etree.ElementTree as ET
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -87,13 +88,25 @@ class ToolTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             output_root = Path(temporary) / "assets"
             written = generate(output_root)
-            self.assertEqual(len(written), 30)
+            self.assertEqual(len(written), 19)
             manifest = json.loads((output_root / "gallery-manifest.json").read_text(encoding="utf-8"))
             self.assertEqual(len(manifest["assets"]), 29)
             for asset in ASSETS:
-                generated = output_root / asset.relative_path
                 committed = ROOT / "assets" / asset.relative_path
-                self.assertEqual(generated.read_bytes(), committed.read_bytes(), asset.slug)
+                if asset.category == "paper":
+                    root = ET.parse(committed).getroot()
+                    ids = {element.get("id") for element in root.iter() if element.get("id")}
+                    self.assertEqual(root.get("data-fidelity"), "pixel-exact-source-vector")
+                    self.assertIn("source-vector-operators", ids)
+                    self.assertIn("semantic-edit-layer", ids)
+                else:
+                    generated = output_root / asset.relative_path
+                    self.assertEqual(generated.read_bytes(), committed.read_bytes(), asset.slug)
+
+    def test_paper_gallery_requires_extraction_pipeline(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            with self.assertRaisesRegex(ValueError, "direct PDF operator extraction"):
+                generate(Path(temporary), {"resnet-block"})
 
 
 if __name__ == "__main__":
