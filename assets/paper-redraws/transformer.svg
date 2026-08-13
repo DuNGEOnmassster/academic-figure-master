@@ -1,88 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
-  <title id="svg-title">Transformer encoder–decoder</title><desc id="svg-desc">Compact semantic redraw after Vaswani et al. (2017), Figure 1</desc><metadata>Source: Attention Is All You Need, Figure 1; semantic redraw.</metadata>
+<svg xmlns="http://www.w3.org/2000/svg" width="334" height="628" viewBox="0 0 334 628" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Transformer model architecture</title><desc id="svg-desc">Editable reconstruction of Vaswani et al. (2017), Figure 1.</desc><metadata>Source-faithful redraw; source paper Figure 1; residual paths and cross-attention remain separate.</metadata>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
-    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
-    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
-    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <marker id="paper-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#111"/></marker>
+    <marker id="paper-arrow-gray" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#777"/></marker>
     <style>
-    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
-    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
-    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
-    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
-    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    .sans{font-family:Arial,Helvetica,sans-serif;fill:#111}.serif{font-family:'Times New Roman',Times,serif;fill:#111}
+    .t9{font-size:9px}.t10{font-size:10px}.t11{font-size:11px}.t12{font-size:12px}.t13{font-size:13px}.t14{font-size:14px}.t16{font-size:16px}
+    .bold{font-weight:700}.italic{font-style:italic}.thin{fill:none;stroke:#111;stroke-width:1}.mid{fill:none;stroke:#111;stroke-width:1.5}
+    .thick{fill:none;stroke:#111;stroke-width:2}.gray{fill:#d7d7d7;stroke:#333;stroke-width:1}.light{fill:#f5f5f5;stroke:#111;stroke-width:1}
+    .blue{fill:#dbe9f6;stroke:#386a98;stroke-width:1}.green{fill:#dcebc8;stroke:#4e7a35;stroke-width:1}.yellow{fill:#f4e7a7;stroke:#826f24;stroke-width:1}
+    .orange{fill:#f4d0a3;stroke:#925c22;stroke-width:1}.pink{fill:#f2cdd0;stroke:#9b4b52;stroke-width:1}.violet{fill:#ddd4ed;stroke:#665283;stroke-width:1}
+    .cyan-stroke{fill:none;stroke:#42a3b8;stroke-width:1.5}.green-stroke{fill:none;stroke:#5a9e55;stroke-width:1.5}.black-dash{fill:none;stroke:#111;stroke-width:1.5;stroke-dasharray:3 3}
     </style>
   </defs>
-  <rect class="bg" width="1200" height="675"/>
-  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >Transformer encoder–decoder</text><text x="52" y="86" class="subtitle" text-anchor="start" >Compact semantic redraw after Vaswani et al. (2017), Figure 1</text></g>
-  <text x="1125" y="103" class="paper-note" text-anchor="middle" >SEMANTIC REDRAW</text><text x="300" y="135" class="small strong" text-anchor="middle" >ENCODER × N</text><text x="860" y="135" class="small strong" text-anchor="middle" >DECODER × N</text><g id="transformer-enc-0" >
-<rect x="170" y="515" width="260" height="58" rx="12" class="card blue"/>
-<text x="300" y="537" class="small strong" text-anchor="middle" >Input embed</text>
-<text x="300" y="565" class="small muted" text-anchor="middle" >+ position</text>
-</g><g id="transformer-enc-1" >
-<rect x="170" y="437" width="260" height="58" rx="12" class="card violet"/>
-<text x="300" y="459" class="small strong" text-anchor="middle" >Self-attention</text>
-<text x="300" y="487" class="small muted" text-anchor="middle" >multi-head</text>
-</g><g id="transformer-enc-edge-1" >
-<line x1="300" y1="495" x2="300" y2="515" class="wire" marker-end="url(#arrow)"/>
-</g><g id="transformer-enc-2" >
-<rect x="170" y="359" width="260" height="58" rx="12" class="card slate"/>
-<text x="300" y="381" class="small strong" text-anchor="middle" >Add &amp; norm</text>
-<text x="300" y="409" class="small muted" text-anchor="middle" >residual</text>
-</g><g id="transformer-enc-edge-2" >
-<line x1="300" y1="417" x2="300" y2="437" class="wire" marker-end="url(#arrow)"/>
-</g><g id="transformer-enc-3" >
-<rect x="170" y="281" width="260" height="58" rx="12" class="card green"/>
-<text x="300" y="303" class="small strong" text-anchor="middle" >Feed forward</text>
-<text x="300" y="331" class="small muted" text-anchor="middle" >position-wise</text>
-</g><g id="transformer-enc-edge-3" >
-<line x1="300" y1="339" x2="300" y2="359" class="wire" marker-end="url(#arrow)"/>
-</g><g id="transformer-enc-4" >
-<rect x="170" y="203" width="260" height="58" rx="12" class="card slate"/>
-<text x="300" y="225" class="small strong" text-anchor="middle" >Add &amp; norm</text>
-<text x="300" y="253" class="small muted" text-anchor="middle" >residual</text>
-</g><g id="transformer-enc-edge-4" >
-<line x1="300" y1="261" x2="300" y2="281" class="wire" marker-end="url(#arrow)"/>
-</g><g id="transformer-dec-0" >
-<rect x="730" y="540" width="260" height="54" rx="12" class="card blue"/>
-<text x="860" y="560" class="small strong" text-anchor="middle" >Output embed</text>
-<text x="860" y="588" class="small muted" text-anchor="middle" >shifted right</text>
-</g><g id="transformer-dec-1" >
-<rect x="730" y="470" width="260" height="54" rx="12" class="card violet"/>
-<text x="860" y="490" class="small strong" text-anchor="middle" >Masked attention</text>
-<text x="860" y="518" class="small muted" text-anchor="middle" >causal</text>
-</g><g id="transformer-dec-edge-1" >
-<line x1="860" y1="524" x2="860" y2="540" class="wire" marker-end="url(#arrow)"/>
-</g><g id="transformer-dec-2" >
-<rect x="730" y="400" width="260" height="54" rx="12" class="card slate"/>
-<text x="860" y="420" class="small strong" text-anchor="middle" >Add &amp; norm</text>
-<text x="860" y="448" class="small muted" text-anchor="middle" >residual</text>
-</g><g id="transformer-dec-edge-2" >
-<line x1="860" y1="454" x2="860" y2="470" class="wire" marker-end="url(#arrow)"/>
-</g><g id="transformer-dec-3" >
-<rect x="730" y="330" width="260" height="54" rx="12" class="card gold"/>
-<text x="860" y="350" class="small strong" text-anchor="middle" >Cross-attention</text>
-<text x="860" y="378" class="small muted" text-anchor="middle" >encoder memory</text>
-</g><g id="transformer-dec-edge-3" >
-<line x1="860" y1="384" x2="860" y2="400" class="wire" marker-end="url(#arrow)"/>
-</g><g id="transformer-dec-4" >
-<rect x="730" y="260" width="260" height="54" rx="12" class="card slate"/>
-<text x="860" y="280" class="small strong" text-anchor="middle" >Add &amp; norm</text>
-<text x="860" y="308" class="small muted" text-anchor="middle" >residual</text>
-</g><g id="transformer-dec-edge-4" >
-<line x1="860" y1="314" x2="860" y2="330" class="wire" marker-end="url(#arrow)"/>
-</g><g id="transformer-dec-5" >
-<rect x="730" y="190" width="260" height="54" rx="12" class="card green"/>
-<text x="860" y="210" class="small strong" text-anchor="middle" >Feed forward</text>
-<text x="860" y="238" class="small muted" text-anchor="middle" >position-wise</text>
-</g><g id="transformer-dec-edge-5" >
-<line x1="860" y1="244" x2="860" y2="260" class="wire" marker-end="url(#arrow)"/>
-</g><path d="M430,220 C560,170 650,170 730,300" class="wire2" marker-end="url(#arrow-blue)"/><text x="590" y="170" class="tiny muted" text-anchor="middle" >K,V memory</text><g id="transformer-output" >
-<line x1="860" y1="190" x2="860" y2="135" class="wire" marker-end="url(#arrow)"/>
-</g><g id="transformer-linear" >
-<rect x="1030" y="150" width="130" height="100" rx="18" class="card red"/>
-<text x="1095" y="193" class="label strong" text-anchor="middle" >Linear</text>
-<text x="1095" y="221" class="small muted" text-anchor="middle" >softmax</text>
+  <rect width="334" height="628" fill="#fff"/>
+  <g id="transformer-content" transform="translate(0,18) scale(.62,1)">
+<g id="encoder-shell" >
+<rect x="38" y="154" width="184" height="278" rx="7" fill="none" stroke="#111" stroke-width="1.4"/>
+<text x="11" y="292" class="sans t12">N×</text>
+</g>
+<g id="enc-self-attention" >
+<rect x="64" y="347" width="132" height="44" rx="5" fill="#f3dda9" stroke="#111"/>
+<text x="130.0" y="373.0" class="sans t11" text-anchor="middle">Multi-Head Attention</text>
+</g>
+<g id="enc-addnorm-1" >
+<rect x="64" y="306" width="132" height="31" rx="5" fill="#dde7b9" stroke="#111"/>
+<text x="130.0" y="325.5" class="sans t11" text-anchor="middle">Add &amp; Norm</text>
+</g>
+<g id="enc-feed-forward" >
+<rect x="64" y="232" width="132" height="46" rx="5" fill="#bfe0ef" stroke="#111"/>
+<text x="130.0" y="259.0" class="sans t11" text-anchor="middle">Feed Forward</text>
+</g>
+<g id="enc-addnorm-2" >
+<rect x="64" y="187" width="132" height="31" rx="5" fill="#dde7b9" stroke="#111"/>
+<text x="130.0" y="206.5" class="sans t11" text-anchor="middle">Add &amp; Norm</text>
+</g>
+<g id="input-embedding" >
+<rect x="64" y="480" width="132" height="40" rx="5" fill="#e4b3b2" stroke="#111"/>
+<text x="130.0" y="504.0" class="sans t11" text-anchor="middle">Input Embedding</text>
+</g>
+<g id="encoder-positional" >
+<circle cx="126" cy="450" r="13" fill="#fff" stroke="#111"/><path d="M120 450 H132 M126 444 V456" class="thin"/>
+<path d="M8 450 L113 450" class="mid" marker-end="url(#paper-arrow)"/><text x="5" y="435" class="sans t10">Positional</text><text x="5" y="447" class="sans t10">Encoding</text>
+</g>
+<g id="encoder-flow" >
+<path d="M126 555 V520 M126 480 V463 M126 437 V391 M126 347 V337 M126 306 V278 M126 232 V218 M126 187 V132" class="mid" marker-end="url(#paper-arrow)"/>
+<text x="126" y="575" class="sans t12" text-anchor="middle">Inputs</text>
+</g>
+<g id="encoder-residuals" >
+<path d="M126 391 C36 391 36 321 64 321" class="thin" marker-end="url(#paper-arrow)"/>
+<path d="M126 278 C36 278 36 202 64 202" class="thin" marker-end="url(#paper-arrow)"/>
+</g>
+<g id="decoder-shell" >
+<rect x="282" y="109" width="190" height="349" rx="7" fill="none" stroke="#111" stroke-width="1.4"/>
+<text x="478" y="292" class="sans t12">N×</text>
+</g>
+<g id="dec-masked-attention" >
+<rect x="311" y="373" width="132" height="44" rx="5" fill="#f3dda9" stroke="#111"/>
+<text x="377.0" y="399.0" class="sans t11" text-anchor="middle">Masked Multi-Head</text>
+</g>
+<g id="dec-addnorm-1" >
+<rect x="311" y="334" width="132" height="29" rx="5" fill="#dde7b9" stroke="#111"/>
+<text x="377.0" y="352.5" class="sans t11" text-anchor="middle">Add &amp; Norm</text>
+</g>
+<g id="dec-cross-attention" >
+<rect x="311" y="268" width="132" height="44" rx="5" fill="#f3dda9" stroke="#111"/>
+<text x="377.0" y="294.0" class="sans t11" text-anchor="middle">Multi-Head Attention</text>
+</g>
+<g id="dec-addnorm-2" >
+<rect x="311" y="229" width="132" height="29" rx="5" fill="#dde7b9" stroke="#111"/>
+<text x="377.0" y="247.5" class="sans t11" text-anchor="middle">Add &amp; Norm</text>
+</g>
+<g id="dec-feed-forward" >
+<rect x="311" y="166" width="132" height="42" rx="5" fill="#bfe0ef" stroke="#111"/>
+<text x="377.0" y="191.0" class="sans t11" text-anchor="middle">Feed Forward</text>
+</g>
+<g id="dec-addnorm-3" >
+<rect x="311" y="128" width="132" height="28" rx="5" fill="#dde7b9" stroke="#111"/>
+<text x="377.0" y="146.0" class="sans t11" text-anchor="middle">Add &amp; Norm</text>
+</g>
+<g id="output-embedding" >
+<rect x="311" y="495" width="132" height="39" rx="5" fill="#e4b3b2" stroke="#111"/>
+<text x="377.0" y="518.5" class="sans t11" text-anchor="middle">Output Embedding</text>
+</g>
+<g id="decoder-positional" >
+<circle cx="377" cy="474" r="13" fill="#fff" stroke="#111"/><path d="M371 474 H383 M377 468 V480" class="thin"/>
+<path d="M487 474 L390 474" class="mid" marker-end="url(#paper-arrow)"/><text x="491" y="459" class="sans t10">Positional</text><text x="491" y="471" class="sans t10">Encoding</text>
+</g>
+<g id="decoder-flow" >
+<path d="M377 566 V534 M377 495 V487 M377 461 V417 M377 373 V363 M377 334 V312 M377 268 V258 M377 229 V208 M377 166 V156 M377 128 V93" class="mid" marker-end="url(#paper-arrow)"/>
+<text x="377" y="582" class="sans t12" text-anchor="middle">Outputs</text><text x="377" y="594" class="sans t10" text-anchor="middle">(shifted right)</text>
+</g>
+<g id="decoder-residuals" >
+<path d="M377 417 C466 417 466 348 443 348" class="thin" marker-end="url(#paper-arrow)"/>
+<path d="M377 312 C466 312 466 243 443 243" class="thin" marker-end="url(#paper-arrow)"/>
+<path d="M377 208 C466 208 466 142 443 142" class="thin" marker-end="url(#paper-arrow)"/>
+</g>
+<g id="cross-attention-memory" >
+<path d="M126 132 C126 96 274 96 274 290 L311 290" class="mid" marker-end="url(#paper-arrow)"/>
+</g>
+<g id="linear" >
+<rect x="320" y="49" width="114" height="31" rx="5" fill="#bfe0ef" stroke="#111"/>
+<text x="377.0" y="68.5" class="sans t11" text-anchor="middle">Linear</text>
+</g>
+<g id="softmax" >
+<rect x="320" y="9" width="114" height="29" rx="5" fill="#dde7b9" stroke="#111"/>
+<text x="377.0" y="27.5" class="sans t11" text-anchor="middle">Softmax</text>
+</g>
+<g id="output-probabilities" >
+<path d="M377 93 V80 M377 49 V38 M377 9 V1" class="mid" marker-end="url(#paper-arrow)"/>
+<text x="377" y="-4" class="sans t11" text-anchor="middle">Output Probabilities</text>
+</g>
 </g>
 </svg>

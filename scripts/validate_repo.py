@@ -72,6 +72,8 @@ def validate(root: Path = ROOT) -> list[str]:
                 errors.append(f"{display_path}: duplicate element ids")
             if not any(element.tag == f"{SVG_NS}g" and element.get("id") for element in svg.iter()):
                 errors.append(f"{display_path}: no named editable groups")
+            if any(element.get("id") == "figure-title" for element in svg.iter()):
+                errors.append(f"{display_path}: reusable assets must not contain a slide-style title banner")
         except (ET.ParseError, OSError) as exc:
             errors.append(f"{display_path}: invalid SVG: {exc}")
 
@@ -86,7 +88,7 @@ def validate(root: Path = ROOT) -> list[str]:
         gallery_ids = [item["id"] for item in gallery_assets]
         if len(gallery_ids) != len(set(gallery_ids)):
             errors.append("gallery-manifest.json contains duplicate asset ids")
-        allowed_reproduction = {"original", "semantic-redraw", "formula-derived", "illustrative-normalized"}
+        allowed_reproduction = {"original", "faithful-redraw", "semantic-redraw", "formula-derived", "illustrative-normalized"}
         for item in gallery_assets:
             relative = str(item["path"])
             if not (asset_root / relative).exists():
@@ -95,10 +97,26 @@ def validate(root: Path = ROOT) -> list[str]:
                 errors.append(f"{item.get('id')}: unsupported reproduction class")
             if f"assets/{relative}" not in readme:
                 errors.append(f"README does not display assets/{relative}")
+            if item.get("category") == "paper":
+                if item.get("reproduction") != "faithful-redraw":
+                    errors.append(f"{item.get('id')}: paper asset must use faithful-redraw after source calibration")
+                if not (item.get("source") or {}).get("figure"):
+                    errors.append(f"{item.get('id')}: faithful redraw is missing an exact source figure number")
+                comparison = asset_root / "comparisons" / f"{item.get('id')}.png"
+                if not comparison.exists():
+                    errors.append(f"{item.get('id')}: source/redraw/overlay comparison is missing")
         for item in starter_manifest["assets"]:
             relative = str(item["path"])
             if f"assets/{relative}" not in readme:
                 errors.append(f"README does not display assets/{relative}")
+        qa_report = json.loads((asset_root / "comparisons" / "qa-report.json").read_text(encoding="utf-8"))
+        qa_ids = [item["id"] for item in qa_report["figures"]]
+        paper_ids = [item["id"] for item in gallery_assets if item.get("category") == "paper"]
+        if sorted(qa_ids) != sorted(paper_ids):
+            errors.append("paper comparison QA report must cover every faithful redraw exactly once")
+        for item in qa_report["figures"]:
+            if float(item.get("aspect_ratio_error", 1.0)) > 0.12:
+                errors.append(f"{item.get('id')}: calibrated content aspect-ratio error exceeds 12%")
     except (OSError, json.JSONDecodeError, KeyError, TypeError) as exc:
         errors.append(f"asset manifests are invalid: {exc}")
     return errors

@@ -1,129 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
-  <title id="svg-title">Denoising diffusion process</title><desc id="svg-desc">Forward noising and learned reverse transitions after Ho et al. (2020)</desc><metadata>Source: Denoising Diffusion Probabilistic Models; semantic redraw.</metadata>
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="108" viewBox="0 0 820 108" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Diffusion graphical model</title><desc id="svg-desc">Editable reconstruction of Ho et al. (2020), Figure 2.</desc><metadata>Source-faithful redraw; source paper Figure 2; thumbnails are editable vector mosaics, not embedded paper art.</metadata>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
-    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
-    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
-    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <marker id="paper-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#111"/></marker>
+    <marker id="paper-arrow-gray" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#777"/></marker>
     <style>
-    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
-    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
-    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
-    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
-    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    .sans{font-family:Arial,Helvetica,sans-serif;fill:#111}.serif{font-family:'Times New Roman',Times,serif;fill:#111}
+    .t9{font-size:9px}.t10{font-size:10px}.t11{font-size:11px}.t12{font-size:12px}.t13{font-size:13px}.t14{font-size:14px}.t16{font-size:16px}
+    .bold{font-weight:700}.italic{font-style:italic}.thin{fill:none;stroke:#111;stroke-width:1}.mid{fill:none;stroke:#111;stroke-width:1.5}
+    .thick{fill:none;stroke:#111;stroke-width:2}.gray{fill:#d7d7d7;stroke:#333;stroke-width:1}.light{fill:#f5f5f5;stroke:#111;stroke-width:1}
+    .blue{fill:#dbe9f6;stroke:#386a98;stroke-width:1}.green{fill:#dcebc8;stroke:#4e7a35;stroke-width:1}.yellow{fill:#f4e7a7;stroke:#826f24;stroke-width:1}
+    .orange{fill:#f4d0a3;stroke:#925c22;stroke-width:1}.pink{fill:#f2cdd0;stroke:#9b4b52;stroke-width:1}.violet{fill:#ddd4ed;stroke:#665283;stroke-width:1}
+    .cyan-stroke{fill:none;stroke:#42a3b8;stroke-width:1.5}.green-stroke{fill:none;stroke:#5a9e55;stroke-width:1.5}.black-dash{fill:none;stroke:#111;stroke-width:1.5;stroke-dasharray:3 3}
     </style>
   </defs>
-  <rect class="bg" width="1200" height="675"/>
-  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >Denoising diffusion process</text><text x="52" y="86" class="subtitle" text-anchor="start" >Forward noising and learned reverse transitions after Ho et al. (2020)</text></g>
-  <text x="1125" y="103" class="paper-note" text-anchor="middle" >SEMANTIC REDRAW</text><g id="ddpm-state-0" >
-<rect x="85" y="250" width="150" height="140" rx="18" class="card blue"/>
-<text x="160" y="313" class="label strong" text-anchor="middle" >x0</text>
-<text x="160" y="341" class="small muted" text-anchor="middle" >noise 0%</text>
-</g><g id="ddpm-particles-0" >
-<circle cx="110" cy="290" r="5" fill="#3972d5" opacity="1.00"/>
-<circle cx="143" cy="290" r="5" fill="#3972d5" opacity="1.00"/>
-<circle cx="176" cy="290" r="5" fill="#3972d5" opacity="1.00"/>
-<circle cx="209" cy="290" r="5" fill="#3972d5" opacity="1.00"/>
-<circle cx="110" cy="322" r="5" fill="#3972d5" opacity="1.00"/>
-<circle cx="143" cy="322" r="5" fill="#3972d5" opacity="1.00"/>
-<circle cx="176" cy="322" r="5" fill="#3972d5" opacity="1.00"/>
-<circle cx="209" cy="322" r="5" fill="#3972d5" opacity="1.00"/>
-<circle cx="110" cy="354" r="5" fill="#3972d5" opacity="1.00"/>
-<circle cx="143" cy="354" r="5" fill="#3972d5" opacity="1.00"/>
-<circle cx="176" cy="354" r="5" fill="#3972d5" opacity="1.00"/>
-<circle cx="209" cy="354" r="5" fill="#3972d5" opacity="1.00"/>
-</g><g id="ddpm-state-1" >
-<rect x="300" y="250" width="150" height="140" rx="18" class="card cyan"/>
-<text x="375" y="313" class="label strong" text-anchor="middle" >x1</text>
-<text x="375" y="341" class="small muted" text-anchor="middle" >noise 25%</text>
-</g><g id="ddpm-particles-1" >
-<circle cx="325" cy="290" r="5" fill="#3972d5" opacity="0.82"/>
-<circle cx="358" cy="290" r="5" fill="#3972d5" opacity="0.82"/>
-<circle cx="391" cy="290" r="5" fill="#3972d5" opacity="0.82"/>
-<circle cx="424" cy="290" r="5" fill="#3972d5" opacity="0.82"/>
-<circle cx="325" cy="322" r="5" fill="#3972d5" opacity="0.82"/>
-<circle cx="358" cy="322" r="5" fill="#3972d5" opacity="0.82"/>
-<circle cx="391" cy="322" r="5" fill="#3972d5" opacity="0.82"/>
-<circle cx="424" cy="322" r="5" fill="#3972d5" opacity="0.82"/>
-<circle cx="325" cy="354" r="5" fill="#3972d5" opacity="0.82"/>
-<circle cx="358" cy="354" r="5" fill="#3972d5" opacity="0.82"/>
-<circle cx="391" cy="354" r="5" fill="#3972d5" opacity="0.82"/>
-<circle cx="424" cy="354" r="5" fill="#3972d5" opacity="0.82"/>
-</g><g id="ddpm-forward-1" >
-<line x1="235" y1="285" x2="300" y2="285" class="red-line" marker-end="url(#arrow)"/>
-<text x="267.5" y="273" class="tiny muted" text-anchor="middle" >q</text>
-</g><g id="ddpm-reverse-1" >
-<line x1="300" y1="365" x2="235" y2="365" class="violet-line" marker-end="url(#arrow-violet)"/>
-<text x="267.5" y="353" class="tiny muted" text-anchor="middle" >pθ</text>
-</g><g id="ddpm-state-2" >
-<rect x="515" y="250" width="150" height="140" rx="18" class="card violet"/>
-<text x="590" y="313" class="label strong" text-anchor="middle" >x2</text>
-<text x="590" y="341" class="small muted" text-anchor="middle" >noise 50%</text>
-</g><g id="ddpm-particles-2" >
-<circle cx="540" cy="290" r="5" fill="#3972d5" opacity="0.64"/>
-<circle cx="573" cy="290" r="5" fill="#3972d5" opacity="0.64"/>
-<circle cx="606" cy="290" r="5" fill="#3972d5" opacity="0.64"/>
-<circle cx="639" cy="290" r="5" fill="#3972d5" opacity="0.64"/>
-<circle cx="540" cy="322" r="5" fill="#3972d5" opacity="0.64"/>
-<circle cx="573" cy="322" r="5" fill="#3972d5" opacity="0.64"/>
-<circle cx="606" cy="322" r="5" fill="#3972d5" opacity="0.64"/>
-<circle cx="639" cy="322" r="5" fill="#3972d5" opacity="0.64"/>
-<circle cx="540" cy="354" r="5" fill="#3972d5" opacity="0.64"/>
-<circle cx="573" cy="354" r="5" fill="#3972d5" opacity="0.64"/>
-<circle cx="606" cy="354" r="5" fill="#3972d5" opacity="0.64"/>
-<circle cx="639" cy="354" r="5" fill="#3972d5" opacity="0.64"/>
-</g><g id="ddpm-forward-2" >
-<line x1="450" y1="285" x2="515" y2="285" class="red-line" marker-end="url(#arrow)"/>
-<text x="482.5" y="273" class="tiny muted" text-anchor="middle" >q</text>
-</g><g id="ddpm-reverse-2" >
-<line x1="515" y1="365" x2="450" y2="365" class="violet-line" marker-end="url(#arrow-violet)"/>
-<text x="482.5" y="353" class="tiny muted" text-anchor="middle" >pθ</text>
-</g><g id="ddpm-state-3" >
-<rect x="730" y="250" width="150" height="140" rx="18" class="card red"/>
-<text x="805" y="313" class="label strong" text-anchor="middle" >x3</text>
-<text x="805" y="341" class="small muted" text-anchor="middle" >noise 75%</text>
-</g><g id="ddpm-particles-3" >
-<circle cx="755" cy="290" r="5" fill="#3972d5" opacity="0.46"/>
-<circle cx="788" cy="290" r="5" fill="#3972d5" opacity="0.46"/>
-<circle cx="821" cy="290" r="5" fill="#3972d5" opacity="0.46"/>
-<circle cx="854" cy="290" r="5" fill="#3972d5" opacity="0.46"/>
-<circle cx="755" cy="322" r="5" fill="#3972d5" opacity="0.46"/>
-<circle cx="788" cy="322" r="5" fill="#3972d5" opacity="0.46"/>
-<circle cx="821" cy="322" r="5" fill="#3972d5" opacity="0.46"/>
-<circle cx="854" cy="322" r="5" fill="#3972d5" opacity="0.46"/>
-<circle cx="755" cy="354" r="5" fill="#3972d5" opacity="0.46"/>
-<circle cx="788" cy="354" r="5" fill="#3972d5" opacity="0.46"/>
-<circle cx="821" cy="354" r="5" fill="#3972d5" opacity="0.46"/>
-<circle cx="854" cy="354" r="5" fill="#3972d5" opacity="0.46"/>
-</g><g id="ddpm-forward-3" >
-<line x1="665" y1="285" x2="730" y2="285" class="red-line" marker-end="url(#arrow)"/>
-<text x="697.5" y="273" class="tiny muted" text-anchor="middle" >q</text>
-</g><g id="ddpm-reverse-3" >
-<line x1="730" y1="365" x2="665" y2="365" class="violet-line" marker-end="url(#arrow-violet)"/>
-<text x="697.5" y="353" class="tiny muted" text-anchor="middle" >pθ</text>
-</g><g id="ddpm-state-4" >
-<rect x="945" y="250" width="150" height="140" rx="18" class="card slate"/>
-<text x="1020" y="313" class="label strong" text-anchor="middle" >xT</text>
-<text x="1020" y="341" class="small muted" text-anchor="middle" >noise 100%</text>
-</g><g id="ddpm-particles-4" >
-<circle cx="970" cy="290" r="5" fill="#3972d5" opacity="0.28"/>
-<circle cx="1003" cy="290" r="5" fill="#3972d5" opacity="0.28"/>
-<circle cx="1036" cy="290" r="5" fill="#3972d5" opacity="0.28"/>
-<circle cx="1069" cy="290" r="5" fill="#3972d5" opacity="0.28"/>
-<circle cx="970" cy="322" r="5" fill="#3972d5" opacity="0.28"/>
-<circle cx="1003" cy="322" r="5" fill="#3972d5" opacity="0.28"/>
-<circle cx="1036" cy="322" r="5" fill="#3972d5" opacity="0.28"/>
-<circle cx="1069" cy="322" r="5" fill="#3972d5" opacity="0.28"/>
-<circle cx="970" cy="354" r="5" fill="#3972d5" opacity="0.28"/>
-<circle cx="1003" cy="354" r="5" fill="#3972d5" opacity="0.28"/>
-<circle cx="1036" cy="354" r="5" fill="#3972d5" opacity="0.28"/>
-<circle cx="1069" cy="354" r="5" fill="#3972d5" opacity="0.28"/>
-</g><g id="ddpm-forward-4" >
-<line x1="880" y1="285" x2="945" y2="285" class="red-line" marker-end="url(#arrow)"/>
-<text x="912.5" y="273" class="tiny muted" text-anchor="middle" >q</text>
-</g><g id="ddpm-reverse-4" >
-<line x1="945" y1="365" x2="880" y2="365" class="violet-line" marker-end="url(#arrow-violet)"/>
-<text x="912.5" y="353" class="tiny muted" text-anchor="middle" >pθ</text>
-</g><text x="600" y="180" class="small strong" text-anchor="middle" >forward diffusion: add Gaussian noise</text><text x="600" y="470" class="small strong" text-anchor="middle" >learned reverse process: denoise step by step</text>
+  <rect width="820" height="108" fill="#fff"/>
+  <g id="ddpm-content" transform="scale(1,.73)">
+<g id="state-0" >
+<circle cx="54" cy="42" r="27" fill="#bbb" stroke="#111" stroke-width="1.2"/>
+<text x="54" y="49" class="serif t14 italic" text-anchor="middle">x_T</text>
+</g>
+<text x="151" y="46" class="serif t16" text-anchor="middle">⋯</text>
+<g id="state-2" >
+<circle cx="247" cy="42" r="27" fill="#bbb" stroke="#111" stroke-width="1.2"/>
+<text x="247" y="49" class="serif t14 italic" text-anchor="middle">x_t</text>
+</g>
+<g id="state-3" >
+<circle cx="408" cy="42" r="27" fill="#bbb" stroke="#111" stroke-width="1.2"/>
+<text x="408" y="49" class="serif t14 italic" text-anchor="middle">xₜ₋₁</text>
+</g>
+<text x="570" y="46" class="serif t16" text-anchor="middle">⋯</text>
+<g id="state-5" >
+<circle cx="762" cy="42" r="27" fill="#fff" stroke="#111" stroke-width="1.2"/>
+<text x="762" y="49" class="serif t14 italic" text-anchor="middle">x_0</text>
+</g>
+<g id="markov-chain" >
+<line x1="83" y1="33" x2="136" y2="33" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="136" y1="55" x2="83" y2="55" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="166" y1="33" x2="218" y2="33" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="218" y1="55" x2="166" y2="55" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="276" y1="33" x2="379" y2="33" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="379" y1="55" x2="276" y2="55" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="437" y1="33" x2="555" y2="33" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="555" y1="55" x2="437" y2="55" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="585" y1="33" x2="733" y2="33" class="thin" marker-end="url(#paper-arrow)"/>
+<line x1="733" y1="55" x2="585" y2="55" class="thin" marker-end="url(#paper-arrow)"/>
+</g>
+<g id="transition-labels" >
+<text x="398" y="15" class="serif t12 italic" text-anchor="middle">pθ(xₜ₋₁|xₜ)</text>
+<text x="398" y="83" class="serif t12 italic" text-anchor="middle">q(xₜ|xₜ₋₁)</text>
+</g>
+<g id="state-thumbnails" >
+<rect x="36" y="92" width="38" height="38" fill="#ddd" stroke="#aaa"/>
+<rect x="36.0" y="92.0" width="6.4" height="6.4" fill="rgb(90,90,90)" stroke="none"/>
+<rect x="42.3" y="92.0" width="6.4" height="6.4" fill="rgb(119,119,119)" stroke="none"/>
+<rect x="48.7" y="92.0" width="6.4" height="6.4" fill="rgb(148,148,148)" stroke="none"/>
+<rect x="55.0" y="92.0" width="6.4" height="6.4" fill="rgb(177,177,177)" stroke="none"/>
+<rect x="61.3" y="92.0" width="6.4" height="6.4" fill="rgb(206,206,206)" stroke="none"/>
+<rect x="67.7" y="92.0" width="6.4" height="6.4" fill="rgb(115,115,115)" stroke="none"/>
+<rect x="36.0" y="98.3" width="6.4" height="6.4" fill="rgb(107,107,107)" stroke="none"/>
+<rect x="42.3" y="98.3" width="6.4" height="6.4" fill="rgb(136,136,136)" stroke="none"/>
+<rect x="48.7" y="98.3" width="6.4" height="6.4" fill="rgb(165,165,165)" stroke="none"/>
+<rect x="55.0" y="98.3" width="6.4" height="6.4" fill="rgb(194,194,194)" stroke="none"/>
+<rect x="61.3" y="98.3" width="6.4" height="6.4" fill="rgb(103,103,103)" stroke="none"/>
+<rect x="67.7" y="98.3" width="6.4" height="6.4" fill="rgb(132,132,132)" stroke="none"/>
+<rect x="36.0" y="104.7" width="6.4" height="6.4" fill="rgb(124,124,124)" stroke="none"/>
+<rect x="42.3" y="104.7" width="6.4" height="6.4" fill="rgb(153,153,153)" stroke="none"/>
+<rect x="48.7" y="104.7" width="6.4" height="6.4" fill="rgb(182,182,182)" stroke="none"/>
+<rect x="55.0" y="104.7" width="6.4" height="6.4" fill="rgb(91,91,91)" stroke="none"/>
+<rect x="61.3" y="104.7" width="6.4" height="6.4" fill="rgb(120,120,120)" stroke="none"/>
+<rect x="67.7" y="104.7" width="6.4" height="6.4" fill="rgb(149,149,149)" stroke="none"/>
+<rect x="36.0" y="111.0" width="6.4" height="6.4" fill="rgb(141,141,141)" stroke="none"/>
+<rect x="42.3" y="111.0" width="6.4" height="6.4" fill="rgb(170,170,170)" stroke="none"/>
+<rect x="48.7" y="111.0" width="6.4" height="6.4" fill="rgb(199,199,199)" stroke="none"/>
+<rect x="55.0" y="111.0" width="6.4" height="6.4" fill="rgb(108,108,108)" stroke="none"/>
+<rect x="61.3" y="111.0" width="6.4" height="6.4" fill="rgb(137,137,137)" stroke="none"/>
+<rect x="67.7" y="111.0" width="6.4" height="6.4" fill="rgb(166,166,166)" stroke="none"/>
+<rect x="36.0" y="117.3" width="6.4" height="6.4" fill="rgb(158,158,158)" stroke="none"/>
+<rect x="42.3" y="117.3" width="6.4" height="6.4" fill="rgb(187,187,187)" stroke="none"/>
+<rect x="48.7" y="117.3" width="6.4" height="6.4" fill="rgb(96,96,96)" stroke="none"/>
+<rect x="55.0" y="117.3" width="6.4" height="6.4" fill="rgb(125,125,125)" stroke="none"/>
+<rect x="61.3" y="117.3" width="6.4" height="6.4" fill="rgb(154,154,154)" stroke="none"/>
+<rect x="67.7" y="117.3" width="6.4" height="6.4" fill="rgb(183,183,183)" stroke="none"/>
+<rect x="36.0" y="123.7" width="6.4" height="6.4" fill="rgb(175,175,175)" stroke="none"/>
+<rect x="42.3" y="123.7" width="6.4" height="6.4" fill="rgb(204,204,204)" stroke="none"/>
+<rect x="48.7" y="123.7" width="6.4" height="6.4" fill="rgb(113,113,113)" stroke="none"/>
+<rect x="55.0" y="123.7" width="6.4" height="6.4" fill="rgb(142,142,142)" stroke="none"/>
+<rect x="61.3" y="123.7" width="6.4" height="6.4" fill="rgb(171,171,171)" stroke="none"/>
+<rect x="67.7" y="123.7" width="6.4" height="6.4" fill="rgb(200,200,200)" stroke="none"/>
+<rect x="229" y="92" width="38" height="38" fill="#ddd" stroke="#aaa"/>
+<rect x="229.0" y="92.0" width="6.4" height="6.4" fill="rgb(121,121,121)" stroke="none"/>
+<rect x="235.3" y="92.0" width="6.4" height="6.4" fill="rgb(150,150,150)" stroke="none"/>
+<rect x="241.7" y="92.0" width="6.4" height="6.4" fill="rgb(179,179,179)" stroke="none"/>
+<rect x="248.0" y="92.0" width="6.4" height="6.4" fill="rgb(208,208,208)" stroke="none"/>
+<rect x="254.3" y="92.0" width="6.4" height="6.4" fill="rgb(117,117,117)" stroke="none"/>
+<rect x="260.6" y="92.0" width="6.4" height="6.4" fill="rgb(146,146,146)" stroke="none"/>
+<rect x="229.0" y="98.3" width="6.4" height="6.4" fill="rgb(138,138,138)" stroke="none"/>
+<rect x="235.3" y="98.3" width="6.4" height="6.4" fill="rgb(167,167,167)" stroke="none"/>
+<rect x="241.7" y="98.3" width="6.4" height="6.4" fill="rgb(196,196,196)" stroke="none"/>
+<rect x="248.0" y="98.3" width="6.4" height="6.4" fill="rgb(105,105,105)" stroke="none"/>
+<rect x="254.3" y="98.3" width="6.4" height="6.4" fill="rgb(134,134,134)" stroke="none"/>
+<rect x="260.6" y="98.3" width="6.4" height="6.4" fill="rgb(163,163,163)" stroke="none"/>
+<rect x="229.0" y="104.7" width="6.4" height="6.4" fill="rgb(155,155,155)" stroke="none"/>
+<rect x="235.3" y="104.7" width="6.4" height="6.4" fill="rgb(184,184,184)" stroke="none"/>
+<rect x="241.7" y="104.7" width="6.4" height="6.4" fill="rgb(93,93,93)" stroke="none"/>
+<rect x="248.0" y="104.7" width="6.4" height="6.4" fill="rgb(122,122,122)" stroke="none"/>
+<rect x="254.3" y="104.7" width="6.4" height="6.4" fill="rgb(151,151,151)" stroke="none"/>
+<rect x="260.6" y="104.7" width="6.4" height="6.4" fill="rgb(180,180,180)" stroke="none"/>
+<rect x="229.0" y="111.0" width="6.4" height="6.4" fill="rgb(172,172,172)" stroke="none"/>
+<rect x="235.3" y="111.0" width="6.4" height="6.4" fill="rgb(201,201,201)" stroke="none"/>
+<rect x="241.7" y="111.0" width="6.4" height="6.4" fill="rgb(110,110,110)" stroke="none"/>
+<rect x="248.0" y="111.0" width="6.4" height="6.4" fill="rgb(139,139,139)" stroke="none"/>
+<rect x="254.3" y="111.0" width="6.4" height="6.4" fill="rgb(168,168,168)" stroke="none"/>
+<rect x="260.6" y="111.0" width="6.4" height="6.4" fill="rgb(197,197,197)" stroke="none"/>
+<rect x="229.0" y="117.3" width="6.4" height="6.4" fill="rgb(189,189,189)" stroke="none"/>
+<rect x="235.3" y="117.3" width="6.4" height="6.4" fill="rgb(98,98,98)" stroke="none"/>
+<rect x="241.7" y="117.3" width="6.4" height="6.4" fill="rgb(127,127,127)" stroke="none"/>
+<rect x="248.0" y="117.3" width="6.4" height="6.4" fill="rgb(156,156,156)" stroke="none"/>
+<rect x="254.3" y="117.3" width="6.4" height="6.4" fill="rgb(185,185,185)" stroke="none"/>
+<rect x="260.6" y="117.3" width="6.4" height="6.4" fill="rgb(94,94,94)" stroke="none"/>
+<rect x="229.0" y="123.7" width="6.4" height="6.4" fill="rgb(206,206,206)" stroke="none"/>
+<rect x="235.3" y="123.7" width="6.4" height="6.4" fill="rgb(115,115,115)" stroke="none"/>
+<rect x="241.7" y="123.7" width="6.4" height="6.4" fill="rgb(144,144,144)" stroke="none"/>
+<rect x="248.0" y="123.7" width="6.4" height="6.4" fill="rgb(173,173,173)" stroke="none"/>
+<rect x="254.3" y="123.7" width="6.4" height="6.4" fill="rgb(202,202,202)" stroke="none"/>
+<rect x="260.6" y="123.7" width="6.4" height="6.4" fill="rgb(111,111,111)" stroke="none"/>
+<rect x="390" y="92" width="38" height="38" fill="#ddd" stroke="#aaa"/>
+<rect x="390.0" y="92.0" width="6.4" height="6.4" fill="rgb(152,152,152)" stroke="none"/>
+<rect x="396.3" y="92.0" width="6.4" height="6.4" fill="rgb(181,181,181)" stroke="none"/>
+<rect x="402.7" y="92.0" width="6.4" height="6.4" fill="rgb(90,90,90)" stroke="none"/>
+<rect x="409.0" y="92.0" width="6.4" height="6.4" fill="rgb(119,119,119)" stroke="none"/>
+<rect x="415.3" y="92.0" width="6.4" height="6.4" fill="rgb(148,148,148)" stroke="none"/>
+<rect x="421.6" y="92.0" width="6.4" height="6.4" fill="rgb(177,177,177)" stroke="none"/>
+<rect x="390.0" y="98.3" width="6.4" height="6.4" fill="rgb(169,169,169)" stroke="none"/>
+<rect x="396.3" y="98.3" width="6.4" height="6.4" fill="rgb(198,198,198)" stroke="none"/>
+<rect x="402.7" y="98.3" width="6.4" height="6.4" fill="rgb(107,107,107)" stroke="none"/>
+<rect x="409.0" y="98.3" width="6.4" height="6.4" fill="rgb(136,136,136)" stroke="none"/>
+<rect x="415.3" y="98.3" width="6.4" height="6.4" fill="rgb(165,165,165)" stroke="none"/>
+<rect x="421.6" y="98.3" width="6.4" height="6.4" fill="rgb(194,194,194)" stroke="none"/>
+<rect x="390.0" y="104.7" width="6.4" height="6.4" fill="rgb(186,186,186)" stroke="none"/>
+<rect x="396.3" y="104.7" width="6.4" height="6.4" fill="rgb(95,95,95)" stroke="none"/>
+<rect x="402.7" y="104.7" width="6.4" height="6.4" fill="rgb(124,124,124)" stroke="none"/>
+<rect x="409.0" y="104.7" width="6.4" height="6.4" fill="rgb(153,153,153)" stroke="none"/>
+<rect x="415.3" y="104.7" width="6.4" height="6.4" fill="rgb(182,182,182)" stroke="none"/>
+<rect x="421.6" y="104.7" width="6.4" height="6.4" fill="rgb(91,91,91)" stroke="none"/>
+<rect x="390.0" y="111.0" width="6.4" height="6.4" fill="rgb(203,203,203)" stroke="none"/>
+<rect x="396.3" y="111.0" width="6.4" height="6.4" fill="rgb(112,112,112)" stroke="none"/>
+<rect x="402.7" y="111.0" width="6.4" height="6.4" fill="rgb(141,141,141)" stroke="none"/>
+<rect x="409.0" y="111.0" width="6.4" height="6.4" fill="rgb(170,170,170)" stroke="none"/>
+<rect x="415.3" y="111.0" width="6.4" height="6.4" fill="rgb(199,199,199)" stroke="none"/>
+<rect x="421.6" y="111.0" width="6.4" height="6.4" fill="rgb(108,108,108)" stroke="none"/>
+<rect x="390.0" y="117.3" width="6.4" height="6.4" fill="rgb(100,100,100)" stroke="none"/>
+<rect x="396.3" y="117.3" width="6.4" height="6.4" fill="rgb(129,129,129)" stroke="none"/>
+<rect x="402.7" y="117.3" width="6.4" height="6.4" fill="rgb(158,158,158)" stroke="none"/>
+<rect x="409.0" y="117.3" width="6.4" height="6.4" fill="rgb(187,187,187)" stroke="none"/>
+<rect x="415.3" y="117.3" width="6.4" height="6.4" fill="rgb(96,96,96)" stroke="none"/>
+<rect x="421.6" y="117.3" width="6.4" height="6.4" fill="rgb(125,125,125)" stroke="none"/>
+<rect x="390.0" y="123.7" width="6.4" height="6.4" fill="rgb(117,117,117)" stroke="none"/>
+<rect x="396.3" y="123.7" width="6.4" height="6.4" fill="rgb(146,146,146)" stroke="none"/>
+<rect x="402.7" y="123.7" width="6.4" height="6.4" fill="rgb(175,175,175)" stroke="none"/>
+<rect x="409.0" y="123.7" width="6.4" height="6.4" fill="rgb(204,204,204)" stroke="none"/>
+<rect x="415.3" y="123.7" width="6.4" height="6.4" fill="rgb(113,113,113)" stroke="none"/>
+<rect x="421.6" y="123.7" width="6.4" height="6.4" fill="rgb(142,142,142)" stroke="none"/>
+<rect x="744" y="92" width="38" height="38" fill="#ddd" stroke="#aaa"/>
+<rect x="744.0" y="92.0" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="750.3" y="92.0" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="756.7" y="92.0" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="763.0" y="92.0" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="769.3" y="92.0" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="775.6" y="92.0" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="744.0" y="98.3" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="750.3" y="98.3" width="6.4" height="6.4" fill="#d9b09b" stroke="none"/>
+<rect x="756.7" y="98.3" width="6.4" height="6.4" fill="#d9b09b" stroke="none"/>
+<rect x="763.0" y="98.3" width="6.4" height="6.4" fill="#d9b09b" stroke="none"/>
+<rect x="769.3" y="98.3" width="6.4" height="6.4" fill="#d9b09b" stroke="none"/>
+<rect x="775.6" y="98.3" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="744.0" y="104.7" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="750.3" y="104.7" width="6.4" height="6.4" fill="#d9b09b" stroke="none"/>
+<rect x="756.7" y="104.7" width="6.4" height="6.4" fill="#d9b09b" stroke="none"/>
+<rect x="763.0" y="104.7" width="6.4" height="6.4" fill="#d9b09b" stroke="none"/>
+<rect x="769.3" y="104.7" width="6.4" height="6.4" fill="#d9b09b" stroke="none"/>
+<rect x="775.6" y="104.7" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="744.0" y="111.0" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="750.3" y="111.0" width="6.4" height="6.4" fill="#d9b09b" stroke="none"/>
+<rect x="756.7" y="111.0" width="6.4" height="6.4" fill="#d9b09b" stroke="none"/>
+<rect x="763.0" y="111.0" width="6.4" height="6.4" fill="#d9b09b" stroke="none"/>
+<rect x="769.3" y="111.0" width="6.4" height="6.4" fill="#d9b09b" stroke="none"/>
+<rect x="775.6" y="111.0" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="744.0" y="117.3" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="750.3" y="117.3" width="6.4" height="6.4" fill="#d9b09b" stroke="none"/>
+<rect x="756.7" y="117.3" width="6.4" height="6.4" fill="#d9b09b" stroke="none"/>
+<rect x="763.0" y="117.3" width="6.4" height="6.4" fill="#d9b09b" stroke="none"/>
+<rect x="769.3" y="117.3" width="6.4" height="6.4" fill="#d9b09b" stroke="none"/>
+<rect x="775.6" y="117.3" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="744.0" y="123.7" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="750.3" y="123.7" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="756.7" y="123.7" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="763.0" y="123.7" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="769.3" y="123.7" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<rect x="775.6" y="123.7" width="6.4" height="6.4" fill="#eee" stroke="none"/>
+<circle cx="758" cy="108" r="1.5" fill="#333"/>
+<circle cx="769" cy="108" r="1.5" fill="#333"/>
+<path d="M758 119 Q764 123 770 118" class="thin"/>
+</g>
+</g>
 </svg>

@@ -1,40 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
-  <title id="svg-title">Residual learning block</title><desc id="svg-desc">Modern editable redraw of Figure 2 in He et al. (2015)</desc><metadata>Source: Deep Residual Learning for Image Recognition, Figure 2; semantic redraw.</metadata>
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="180" viewBox="0 0 340 180" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Residual learning building block</title><desc id="svg-desc">Editable reconstruction of He et al. (2015), Figure 2.</desc><metadata>Source-faithful redraw; source paper Figure 2.</metadata>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
-    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
-    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
-    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <marker id="paper-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#111"/></marker>
+    <marker id="paper-arrow-gray" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#777"/></marker>
     <style>
-    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
-    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
-    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
-    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
-    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    .sans{font-family:Arial,Helvetica,sans-serif;fill:#111}.serif{font-family:'Times New Roman',Times,serif;fill:#111}
+    .t9{font-size:9px}.t10{font-size:10px}.t11{font-size:11px}.t12{font-size:12px}.t13{font-size:13px}.t14{font-size:14px}.t16{font-size:16px}
+    .bold{font-weight:700}.italic{font-style:italic}.thin{fill:none;stroke:#111;stroke-width:1}.mid{fill:none;stroke:#111;stroke-width:1.5}
+    .thick{fill:none;stroke:#111;stroke-width:2}.gray{fill:#d7d7d7;stroke:#333;stroke-width:1}.light{fill:#f5f5f5;stroke:#111;stroke-width:1}
+    .blue{fill:#dbe9f6;stroke:#386a98;stroke-width:1}.green{fill:#dcebc8;stroke:#4e7a35;stroke-width:1}.yellow{fill:#f4e7a7;stroke:#826f24;stroke-width:1}
+    .orange{fill:#f4d0a3;stroke:#925c22;stroke-width:1}.pink{fill:#f2cdd0;stroke:#9b4b52;stroke-width:1}.violet{fill:#ddd4ed;stroke:#665283;stroke-width:1}
+    .cyan-stroke{fill:none;stroke:#42a3b8;stroke-width:1.5}.green-stroke{fill:none;stroke:#5a9e55;stroke-width:1.5}.black-dash{fill:none;stroke:#111;stroke-width:1.5;stroke-dasharray:3 3}
     </style>
   </defs>
-  <rect class="bg" width="1200" height="675"/>
-  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >Residual learning block</text><text x="52" y="86" class="subtitle" text-anchor="start" >Modern editable redraw of Figure 2 in He et al. (2015)</text></g>
-  <text x="1125" y="103" class="paper-note" text-anchor="middle" >SEMANTIC REDRAW</text><circle cx="120" cy="330" r="16" class="dot-blue" /><text x="120" y="380" class="label strong" text-anchor="middle" >x</text><g id="res-layer-1" >
-<rect x="300" y="225" width="210" height="90" rx="18" class="card blue"/>
-<text x="405" y="263" class="label strong" text-anchor="middle" >Weight layer</text>
-<text x="405" y="291" class="small muted" text-anchor="middle" >F₁(x)</text>
-</g><g id="res-layer-2" >
-<rect x="300" y="390" width="210" height="90" rx="18" class="card violet"/>
-<text x="405" y="428" class="label strong" text-anchor="middle" >Weight layer</text>
-<text x="405" y="456" class="small muted" text-anchor="middle" >F₂(·)</text>
-</g><circle cx="725" cy="390" r="29" class="node" /><text x="725" y="398" class="title" text-anchor="middle" >+</text><g id="res-activation" >
-<rect x="865" y="345" width="180" height="90" rx="18" class="card green"/>
-<text x="955" y="383" class="label strong" text-anchor="middle" >ReLU</text>
-<text x="955" y="411" class="small muted" text-anchor="middle" >F(x) + x</text>
-</g><g id="res-main-1" >
-<line x1="136" y1="330" x2="300" y2="270" class="wire" marker-end="url(#arrow)"/>
-</g><g id="res-main-2" >
-<line x1="405" y1="315" x2="405" y2="390" class="wire" marker-end="url(#arrow)"/>
-</g><g id="res-main-3" >
-<line x1="510" y1="435" x2="696" y2="400" class="wire" marker-end="url(#arrow)"/>
-</g><g id="res-main-4" >
-<line x1="754" y1="390" x2="865" y2="390" class="wire" marker-end="url(#arrow)"/>
-</g><path d="M135,320 C300,120 690,120 725,360" class="wire2" marker-end="url(#arrow-blue)"/><text x="430" y="145" class="small strong" text-anchor="middle" >identity shortcut</text><text x="590" y="470" class="small muted" text-anchor="middle" >F(x)</text>
+  <rect width="340" height="180" fill="#fff"/>
+  <g id="resnet-content" transform="scale(1,.68)">
+<g id="main-branch" >
+<text x="150" y="18" class="sans t13">x</text><line x1="160" y1="21" x2="160" y2="42" class="mid" marker-end="url(#paper-arrow)"/>
+<rect x="98" y="45" width="124" height="35" class="light"/><text x="160" y="67" class="sans t12" text-anchor="middle">weight layer</text>
+<text x="160" y="99" class="sans t12" text-anchor="middle">relu</text><line x1="160" y1="80" x2="160" y2="112" class="mid" marker-end="url(#paper-arrow)"/>
+<rect x="98" y="115" width="124" height="35" class="light"/><text x="160" y="137" class="sans t12" text-anchor="middle">weight layer</text>
+<line x1="160" y1="150" x2="160" y2="181" class="mid" marker-end="url(#paper-arrow)"/>
+<circle cx="160" cy="196" r="12" fill="#fff" stroke="#111" stroke-width="1.5"/><path d="M154 196 H166 M160 190 V202" class="thin"/>
+<line x1="160" y1="208" x2="160" y2="225" class="mid" marker-end="url(#paper-arrow)"/><text x="160" y="242" class="sans t12" text-anchor="middle">relu</text>
+</g>
+<g id="identity-shortcut" >
+<path d="M160 28 C260 28 270 54 270 105 L270 168 C270 190 246 196 173 196" class="mid" marker-end="url(#paper-arrow)"/>
+<text x="287" y="92" class="sans t12">x</text><text x="287" y="108" class="sans t12">identity</text>
+</g>
+<g id="function-labels" >
+<text x="24" y="125" class="serif t14 italic">F(x)</text>
+<text x="7" y="202" class="serif t14 italic">F(x) + x</text>
+</g>
+</g>
 </svg>

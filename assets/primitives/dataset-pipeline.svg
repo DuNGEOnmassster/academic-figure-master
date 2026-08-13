@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="svg-title svg-desc">
   <title id="svg-title">Dataset preparation pipeline</title><desc id="svg-desc">Quality gates, transforms, splits, and versioning</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
@@ -14,9 +14,8 @@
     .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
     </style>
   </defs>
-  <rect class="bg" width="1200" height="675"/>
-  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >Dataset preparation pipeline</text><text x="52" y="86" class="subtitle" text-anchor="start" >Quality gates, transforms, splits, and versioning</text></g>
-  <g id="pipeline-stage-0" >
+  <rect class="bg" width="1200" height="600"/>
+  <g id="figure-body" transform="translate(0,-65)"><g id="pipeline-stage-0" >
 <rect x="55" y="260" width="170" height="115" rx="18" class="card slate"/>
 <text x="140" y="310.5" class="label strong" text-anchor="middle" >Raw data</text>
 <text x="140" y="338.5" class="small muted" text-anchor="middle" >files + records</text>
@@ -44,5 +43,5 @@
 <text x="1060" y="338.5" class="small muted" text-anchor="middle" >manifest + hash</text>
 </g><g id="pipeline-arrow-4" >
 <line x1="915" y1="318" x2="975" y2="318" class="wire" marker-end="url(#arrow)"/>
-</g><path d="M600,375 L600,495 L370,495" class="red-line dash" marker-end="url(#arrow)"/><text x="485" y="525" class="small muted" text-anchor="middle" >failed checks return to transform</text>
+</g><path d="M600,375 L600,495 L370,495" class="red-line dash" marker-end="url(#arrow)"/><text x="485" y="525" class="small muted" text-anchor="middle" >failed checks return to transform</text></g>
 </svg>

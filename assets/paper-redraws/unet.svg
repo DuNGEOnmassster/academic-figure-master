@@ -1,73 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
-  <title id="svg-title">U-Net architecture</title><desc id="svg-desc">Contracting path, expanding path, and skip concatenations after Ronneberger et al. (2015)</desc><metadata>Source: U-Net, Figure 1; semantic redraw.</metadata>
+<svg xmlns="http://www.w3.org/2000/svg" width="670" height="430" viewBox="0 0 670 430" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">U-Net architecture</title><desc id="svg-desc">Editable reconstruction of Ronneberger et al. (2015), Figure 1.</desc><metadata>Source-faithful redraw; source paper Figure 1; arrows and feature maps remain independent objects.</metadata>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
-    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
-    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
-    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <marker id="paper-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#111"/></marker>
+    <marker id="paper-arrow-gray" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#777"/></marker>
     <style>
-    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
-    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
-    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
-    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
-    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    .sans{font-family:Arial,Helvetica,sans-serif;fill:#111}.serif{font-family:'Times New Roman',Times,serif;fill:#111}
+    .t9{font-size:9px}.t10{font-size:10px}.t11{font-size:11px}.t12{font-size:12px}.t13{font-size:13px}.t14{font-size:14px}.t16{font-size:16px}
+    .bold{font-weight:700}.italic{font-style:italic}.thin{fill:none;stroke:#111;stroke-width:1}.mid{fill:none;stroke:#111;stroke-width:1.5}
+    .thick{fill:none;stroke:#111;stroke-width:2}.gray{fill:#d7d7d7;stroke:#333;stroke-width:1}.light{fill:#f5f5f5;stroke:#111;stroke-width:1}
+    .blue{fill:#dbe9f6;stroke:#386a98;stroke-width:1}.green{fill:#dcebc8;stroke:#4e7a35;stroke-width:1}.yellow{fill:#f4e7a7;stroke:#826f24;stroke-width:1}
+    .orange{fill:#f4d0a3;stroke:#925c22;stroke-width:1}.pink{fill:#f2cdd0;stroke:#9b4b52;stroke-width:1}.violet{fill:#ddd4ed;stroke:#665283;stroke-width:1}
+    .cyan-stroke{fill:none;stroke:#42a3b8;stroke-width:1.5}.green-stroke{fill:none;stroke:#5a9e55;stroke-width:1.5}.black-dash{fill:none;stroke:#111;stroke-width:1.5;stroke-dasharray:3 3}
     </style>
   </defs>
-  <rect class="bg" width="1200" height="675"/>
-  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >U-Net architecture</text><text x="52" y="86" class="subtitle" text-anchor="start" >Contracting path, expanding path, and skip concatenations after Ronneberger et al. (2015)</text></g>
-  <text x="1125" y="103" class="paper-note" text-anchor="middle" >SEMANTIC REDRAW</text><g id="unet-down-0" >
-<rect x="98" y="162" width="145" height="300" rx="12" class="card blue" opacity="0.82"/>
-<rect x="89" y="171" width="145" height="300" rx="12" class="card blue" opacity="0.91"/>
-<rect x="80" y="180" width="145" height="300" rx="12" class="card blue" opacity="1.00"/>
-<text x="152.5" y="336" class="label strong" text-anchor="middle" >64</text>
-</g><g id="unet-down-1" >
-<rect x="268" y="197" width="135" height="230" rx="12" class="card blue" opacity="0.82"/>
-<rect x="259" y="206" width="135" height="230" rx="12" class="card blue" opacity="0.91"/>
-<rect x="250" y="215" width="135" height="230" rx="12" class="card blue" opacity="1.00"/>
-<text x="317.5" y="336" class="label strong" text-anchor="middle" >128</text>
-</g><g id="unet-down-edge-1" >
-<line x1="237" y1="330" x2="242" y2="330" class="wire" marker-end="url(#arrow)"/>
-<text x="239.5" y="318" class="tiny muted" text-anchor="middle" >pool</text>
-</g><g id="unet-down-2" >
-<rect x="438" y="232" width="125" height="160" rx="12" class="card violet" opacity="0.82"/>
-<rect x="429" y="241" width="125" height="160" rx="12" class="card violet" opacity="0.91"/>
-<rect x="420" y="250" width="125" height="160" rx="12" class="card violet" opacity="1.00"/>
-<text x="482.5" y="336" class="label strong" text-anchor="middle" >256</text>
-</g><g id="unet-down-edge-2" >
-<line x1="397" y1="330" x2="412" y2="330" class="wire" marker-end="url(#arrow)"/>
-<text x="404.5" y="318" class="tiny muted" text-anchor="middle" >pool</text>
-</g><g id="unet-down-3" >
-<rect x="598" y="267" width="115" height="90" rx="12" class="card violet" opacity="0.82"/>
-<rect x="589" y="276" width="115" height="90" rx="12" class="card violet" opacity="0.91"/>
-<rect x="580" y="285" width="115" height="90" rx="12" class="card violet" opacity="1.00"/>
-<text x="637.5" y="336" class="label strong" text-anchor="middle" >512</text>
-</g><g id="unet-down-edge-3" >
-<line x1="557" y1="330" x2="572" y2="330" class="wire" marker-end="url(#arrow)"/>
-<text x="564.5" y="318" class="tiny muted" text-anchor="middle" >pool</text>
-</g><g id="unet-up-0" >
-<rect x="783" y="232" width="125" height="160" rx="12" class="card green" opacity="0.82"/>
-<rect x="774" y="241" width="125" height="160" rx="12" class="card green" opacity="0.91"/>
-<rect x="765" y="250" width="125" height="160" rx="12" class="card green" opacity="1.00"/>
-<text x="827.5" y="336" class="label strong" text-anchor="middle" >256</text>
-</g><g id="unet-up-edge-0" >
-<line x1="707" y1="330" x2="757" y2="330" class="wire" marker-end="url(#arrow)"/>
-<text x="732" y="318" class="tiny muted" text-anchor="middle" >up</text>
-</g><g id="unet-up-1" >
-<rect x="948" y="197" width="135" height="230" rx="12" class="card green" opacity="0.82"/>
-<rect x="939" y="206" width="135" height="230" rx="12" class="card green" opacity="0.91"/>
-<rect x="930" y="215" width="135" height="230" rx="12" class="card green" opacity="1.00"/>
-<text x="997.5" y="336" class="label strong" text-anchor="middle" >128</text>
-</g><g id="unet-up-edge-1" >
-<line x1="902" y1="330" x2="922" y2="330" class="wire" marker-end="url(#arrow)"/>
-<text x="912" y="318" class="tiny muted" text-anchor="middle" >up</text>
-</g><g id="unet-up-2" >
-<rect x="1108" y="162" width="80" height="300" rx="12" class="card gold" opacity="0.82"/>
-<rect x="1099" y="171" width="80" height="300" rx="12" class="card gold" opacity="0.91"/>
-<rect x="1090" y="180" width="80" height="300" rx="12" class="card gold" opacity="1.00"/>
-<text x="1130" y="336" class="label strong" text-anchor="middle" >64</text>
-</g><g id="unet-up-edge-2" >
-<line x1="1077" y1="330" x2="1082" y2="330" class="wire" marker-end="url(#arrow)"/>
-<text x="1079.5" y="318" class="tiny muted" text-anchor="middle" >up</text>
-</g><path d="M225,200 C315,125 1000,125 1090,200" class="violet-line dash" marker-end="url(#arrow-violet)"/><path d="M385,235 C475,143 840,143 930,235" class="violet-line dash" marker-end="url(#arrow-violet)"/><path d="M545,270 C635,161 675,161 765,270" class="violet-line dash" marker-end="url(#arrow-violet)"/><text x="390" y="130" class="small strong" text-anchor="middle" >copy &amp; concatenate</text><text x="600" y="555" class="small muted" text-anchor="middle" >contracting path</text><text x="940" y="555" class="small muted" text-anchor="middle" >expanding path</text>
+  <rect width="670" height="430" fill="#fff"/>
+  <g id="unet-content" transform="scale(.58,1)">
+<g id="enc-1" >
+<rect x="55" y="38" width="10" height="118" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="60" y="33" class="sans t9" text-anchor="middle">64</text>
+<rect x="68" y="38" width="10" height="118" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="73" y="33" class="sans t9" text-anchor="middle">64</text>
+</g>
+<g id="enc-2" >
+<rect x="185" y="125" width="10" height="82" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="190" y="120" class="sans t9" text-anchor="middle">128</text>
+<rect x="198" y="125" width="10" height="82" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="203" y="120" class="sans t9" text-anchor="middle">128</text>
+</g>
+<g id="enc-3" >
+<rect x="315" y="205" width="10" height="56" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="320" y="200" class="sans t9" text-anchor="middle">256</text>
+<rect x="328" y="205" width="10" height="56" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="333" y="200" class="sans t9" text-anchor="middle">256</text>
+</g>
+<g id="enc-4" >
+<rect x="445" y="275" width="10" height="38" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="450" y="270" class="sans t9" text-anchor="middle">512</text>
+<rect x="458" y="275" width="10" height="38" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="463" y="270" class="sans t9" text-anchor="middle">512</text>
+</g>
+<g id="bottleneck" >
+<rect x="560" y="330" width="10" height="25" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="565" y="325" class="sans t9" text-anchor="middle">1024</text>
+<rect x="573" y="330" width="10" height="25" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="578" y="325" class="sans t9" text-anchor="middle">1024</text>
+</g>
+<g id="dec-4" >
+<rect x="675" y="275" width="10" height="38" fill="#eee" stroke="#244d73" stroke-width=".6"/>
+<text x="680" y="270" class="sans t9" text-anchor="middle">512</text>
+<rect x="688" y="275" width="10" height="38" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="693" y="270" class="sans t9" text-anchor="middle">512</text>
+<rect x="701" y="275" width="10" height="38" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="706" y="270" class="sans t9" text-anchor="middle">512</text>
+</g>
+<g id="dec-3" >
+<rect x="790" y="205" width="10" height="56" fill="#eee" stroke="#244d73" stroke-width=".6"/>
+<text x="795" y="200" class="sans t9" text-anchor="middle">256</text>
+<rect x="803" y="205" width="10" height="56" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="808" y="200" class="sans t9" text-anchor="middle">256</text>
+<rect x="816" y="205" width="10" height="56" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="821" y="200" class="sans t9" text-anchor="middle">256</text>
+</g>
+<g id="dec-2" >
+<rect x="900" y="125" width="10" height="82" fill="#eee" stroke="#244d73" stroke-width=".6"/>
+<text x="905" y="120" class="sans t9" text-anchor="middle">128</text>
+<rect x="913" y="125" width="10" height="82" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="918" y="120" class="sans t9" text-anchor="middle">128</text>
+<rect x="926" y="125" width="10" height="82" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="931" y="120" class="sans t9" text-anchor="middle">128</text>
+</g>
+<g id="dec-1" >
+<rect x="1005" y="38" width="10" height="118" fill="#eee" stroke="#244d73" stroke-width=".6"/>
+<text x="1010" y="33" class="sans t9" text-anchor="middle">64</text>
+<rect x="1018" y="38" width="10" height="118" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="1023" y="33" class="sans t9" text-anchor="middle">64</text>
+<rect x="1031" y="38" width="10" height="118" fill="#c6def1" stroke="#244d73" stroke-width=".6"/>
+<text x="1036" y="33" class="sans t9" text-anchor="middle">64</text>
+</g>
+<g id="output" >
+<rect x="1070" y="38" width="10" height="118" fill="#e8f2fa" stroke="#244d73" stroke-width=".6"/>
+<text x="1075" y="33" class="sans t9" text-anchor="middle">2</text>
+<rect x="1083" y="38" width="10" height="118" fill="#e8f2fa" stroke="#244d73" stroke-width=".6"/>
+<text x="1088" y="33" class="sans t9" text-anchor="middle"></text>
+</g>
+<g id="input-output-labels" >
+<text x="18" y="82" class="sans t10">input</text><text x="18" y="94" class="sans t10">image</text><text x="18" y="106" class="sans t10">tile</text>
+<line x1="40" y1="96" x2="54" y2="96" stroke="#193f74" stroke-width="2" marker-end="url(#paper-arrow)"/>
+<text x="1100" y="82" class="sans t10">output</text><text x="1100" y="94" class="sans t10">segmentation</text><text x="1100" y="106" class="sans t10">map</text>
+</g>
+<g id="convolution-arrows" >
+<line x1="81" y1="97" x2="151" y2="97" stroke="#183d82" stroke-width="2" marker-end="url(#paper-arrow)"/>
+<line x1="211" y1="166" x2="281" y2="166" stroke="#183d82" stroke-width="2" marker-end="url(#paper-arrow)"/>
+<line x1="341" y1="233" x2="411" y2="233" stroke="#183d82" stroke-width="2" marker-end="url(#paper-arrow)"/>
+<line x1="471" y1="294" x2="541" y2="294" stroke="#183d82" stroke-width="2" marker-end="url(#paper-arrow)"/>
+</g>
+<g id="pooling-arrows" >
+<line x1="160" y1="109" x2="160" y2="156" stroke="#b33d38" stroke-width="2" marker-end="url(#paper-arrow)"/>
+<line x1="290" y1="178" x2="290" y2="207" stroke="#b33d38" stroke-width="2" marker-end="url(#paper-arrow)"/>
+<line x1="420" y1="245" x2="420" y2="261" stroke="#b33d38" stroke-width="2" marker-end="url(#paper-arrow)"/>
+<line x1="550" y1="306" x2="550" y2="313" stroke="#b33d38" stroke-width="2" marker-end="url(#paper-arrow)"/>
+</g>
+<g id="upconvolution-arrows" >
+<line x1="586" y1="342" x2="675" y2="294" stroke="#4a9b3e" stroke-width="3" marker-end="url(#paper-arrow)"/>
+<line x1="714" y1="294" x2="790" y2="233" stroke="#4a9b3e" stroke-width="3" marker-end="url(#paper-arrow)"/>
+<line x1="829" y1="233" x2="900" y2="166" stroke="#4a9b3e" stroke-width="3" marker-end="url(#paper-arrow)"/>
+<line x1="939" y1="166" x2="1005" y2="97" stroke="#4a9b3e" stroke-width="3" marker-end="url(#paper-arrow)"/>
+</g>
+<g id="copy-crop-arrows" >
+<line x1="81" y1="54" x2="675" y2="54" stroke="#777" stroke-width="1.3" marker-end="url(#paper-arrow-gray)"/>
+<line x1="211" y1="140" x2="790" y2="140" stroke="#777" stroke-width="1.3" marker-end="url(#paper-arrow-gray)"/>
+<line x1="341" y1="219" x2="900" y2="219" stroke="#777" stroke-width="1.3" marker-end="url(#paper-arrow-gray)"/>
+<line x1="471" y1="288" x2="1005" y2="288" stroke="#777" stroke-width="1.3" marker-end="url(#paper-arrow-gray)"/>
+</g>
+<g id="legend" >
+<line x1="720" y1="374" x2="747" y2="374" stroke="#183d82" stroke-width="2" marker-end="url(#paper-arrow)"/><text x="755" y="378" class="sans t10">conv 3×3, ReLU</text>
+<line x1="720" y1="392" x2="747" y2="392" stroke="#777" stroke-width="1.3" marker-end="url(#paper-arrow-gray)"/><text x="755" y="396" class="sans t10">copy and crop</text>
+<line x1="720" y1="410" x2="747" y2="410" stroke="#b33d38" stroke-width="2" marker-end="url(#paper-arrow)"/><text x="755" y="414" class="sans t10">max pool 2×2</text>
+<line x1="900" y1="374" x2="927" y2="374" stroke="#4a9b3e" stroke-width="3" marker-end="url(#paper-arrow)"/><text x="935" y="378" class="sans t10">up-conv 2×2</text>
+<line x1="900" y1="392" x2="927" y2="392" stroke="#26a2aa" stroke-width="2" marker-end="url(#paper-arrow)"/><text x="935" y="396" class="sans t10">conv 1×1</text>
+</g>
+</g>
 </svg>

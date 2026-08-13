@@ -1,69 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
-  <title id="svg-title">AlexNet architecture</title><desc id="svg-desc">Compact concept redraw after Krizhevsky, Sutskever &amp; Hinton (2012)</desc><metadata>Source: ImageNet Classification with Deep Convolutional Neural Networks; semantic redraw.</metadata>
+<svg xmlns="http://www.w3.org/2000/svg" width="975" height="330" viewBox="0 0 975 330" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">AlexNet architecture</title><desc id="svg-desc">Editable reconstruction of Krizhevsky et al. (2012), Figure 2.</desc><metadata>Source-faithful redraw; source paper Figure 2; split-GPU topology preserved.</metadata>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
-    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
-    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
-    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <marker id="paper-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#111"/></marker>
+    <marker id="paper-arrow-gray" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#777"/></marker>
     <style>
-    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
-    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
-    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
-    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
-    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    .sans{font-family:Arial,Helvetica,sans-serif;fill:#111}.serif{font-family:'Times New Roman',Times,serif;fill:#111}
+    .t9{font-size:9px}.t10{font-size:10px}.t11{font-size:11px}.t12{font-size:12px}.t13{font-size:13px}.t14{font-size:14px}.t16{font-size:16px}
+    .bold{font-weight:700}.italic{font-style:italic}.thin{fill:none;stroke:#111;stroke-width:1}.mid{fill:none;stroke:#111;stroke-width:1.5}
+    .thick{fill:none;stroke:#111;stroke-width:2}.gray{fill:#d7d7d7;stroke:#333;stroke-width:1}.light{fill:#f5f5f5;stroke:#111;stroke-width:1}
+    .blue{fill:#dbe9f6;stroke:#386a98;stroke-width:1}.green{fill:#dcebc8;stroke:#4e7a35;stroke-width:1}.yellow{fill:#f4e7a7;stroke:#826f24;stroke-width:1}
+    .orange{fill:#f4d0a3;stroke:#925c22;stroke-width:1}.pink{fill:#f2cdd0;stroke:#9b4b52;stroke-width:1}.violet{fill:#ddd4ed;stroke:#665283;stroke-width:1}
+    .cyan-stroke{fill:none;stroke:#42a3b8;stroke-width:1.5}.green-stroke{fill:none;stroke:#5a9e55;stroke-width:1.5}.black-dash{fill:none;stroke:#111;stroke-width:1.5;stroke-dasharray:3 3}
     </style>
   </defs>
-  <rect class="bg" width="1200" height="675"/>
-  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >AlexNet architecture</text><text x="52" y="86" class="subtitle" text-anchor="start" >Compact concept redraw after Krizhevsky, Sutskever &amp; Hinton (2012)</text></g>
-  <text x="1125" y="103" class="paper-note" text-anchor="middle" >SEMANTIC REDRAW</text><g id="alexnet-stage-0" >
-<rect x="39" y="241" width="135" height="230" rx="12" class="card slate" opacity="0.91"/>
-<rect x="30" y="250" width="135" height="230" rx="12" class="card slate" opacity="1.00"/>
-<text x="97.5" y="371" class="label strong" text-anchor="middle" >Input</text>
-</g><text x="97.5" y="509" class="tiny muted" text-anchor="middle" >224²×3</text><g id="alexnet-stage-1" >
-<rect x="210" y="252" width="120" height="208" rx="12" class="card blue" opacity="0.91"/>
-<rect x="201" y="261" width="120" height="208" rx="12" class="card blue" opacity="1.00"/>
-<text x="261" y="371" class="label strong" text-anchor="middle" >Conv1</text>
-</g><text x="261" y="498" class="tiny muted" text-anchor="middle" >96@11²</text><g id="alexnet-edge-1" >
-<line x1="167" y1="365" x2="194" y2="365" class="wire" marker-end="url(#arrow)"/>
-</g><g id="alexnet-stage-2" >
-<rect x="366" y="263" width="110" height="186" rx="12" class="card cyan" opacity="0.91"/>
-<rect x="357" y="272" width="110" height="186" rx="12" class="card cyan" opacity="1.00"/>
-<text x="412" y="371" class="label strong" text-anchor="middle" >Conv2</text>
-</g><text x="412" y="487" class="tiny muted" text-anchor="middle" >256@5²</text><g id="alexnet-edge-2" >
-<line x1="323" y1="365" x2="350" y2="365" class="wire" marker-end="url(#arrow)"/>
-</g><g id="alexnet-stage-3" >
-<rect x="512" y="274" width="100" height="164" rx="12" class="card violet" opacity="0.91"/>
-<rect x="503" y="283" width="100" height="164" rx="12" class="card violet" opacity="1.00"/>
-<text x="553" y="371" class="label strong" text-anchor="middle" >Conv3</text>
-</g><text x="553" y="476" class="tiny muted" text-anchor="middle" >384@3²</text><g id="alexnet-edge-3" >
-<line x1="469" y1="365" x2="496" y2="365" class="wire" marker-end="url(#arrow)"/>
-</g><g id="alexnet-stage-4" >
-<rect x="648" y="285" width="90" height="142" rx="12" class="card violet" opacity="0.91"/>
-<rect x="639" y="294" width="90" height="142" rx="12" class="card violet" opacity="1.00"/>
-<text x="684" y="371" class="label strong" text-anchor="middle" >Conv4</text>
-</g><text x="684" y="465" class="tiny muted" text-anchor="middle" >384@3²</text><g id="alexnet-edge-4" >
-<line x1="605" y1="365" x2="632" y2="365" class="wire" marker-end="url(#arrow)"/>
-</g><g id="alexnet-stage-5" >
-<rect x="774" y="296" width="80" height="120" rx="12" class="card red" opacity="0.91"/>
-<rect x="765" y="305" width="80" height="120" rx="12" class="card red" opacity="1.00"/>
-<text x="805" y="371" class="label strong" text-anchor="middle" >Conv5</text>
-</g><text x="805" y="454" class="tiny muted" text-anchor="middle" >256@3²</text><g id="alexnet-edge-5" >
-<line x1="731" y1="365" x2="758" y2="365" class="wire" marker-end="url(#arrow)"/>
-</g><g id="alexnet-stage-6" >
-<rect x="881" y="324" width="70" height="82" rx="12" class="card gold" opacity="1.00"/>
-<text x="916" y="371" class="label strong" text-anchor="middle" >FC6</text>
-</g><text x="916" y="435" class="tiny muted" text-anchor="middle" >4096</text><g id="alexnet-edge-6" >
-<line x1="847" y1="365" x2="874" y2="365" class="wire" marker-end="url(#arrow)"/>
-</g><g id="alexnet-stage-7" >
-<rect x="987" y="324" width="70" height="82" rx="12" class="card gold" opacity="1.00"/>
-<text x="1022" y="371" class="label strong" text-anchor="middle" >FC7</text>
-</g><text x="1022" y="435" class="tiny muted" text-anchor="middle" >4096</text><g id="alexnet-edge-7" >
-<line x1="953" y1="365" x2="980" y2="365" class="wire" marker-end="url(#arrow)"/>
-</g><g id="alexnet-stage-8" >
-<rect x="1093" y="324" width="70" height="82" rx="12" class="card green" opacity="1.00"/>
-<text x="1128" y="371" class="label strong" text-anchor="middle" >FC8</text>
-</g><text x="1128" y="435" class="tiny muted" text-anchor="middle" >1000 + softmax</text><g id="alexnet-edge-8" >
-<line x1="1059" y1="365" x2="1086" y2="365" class="wire" marker-end="url(#arrow)"/>
-</g><text x="600" y="560" class="small muted" text-anchor="middle" >5 convolutional layers → 3 fully connected layers</text>
+  <rect width="975" height="330" fill="#fff"/>
+  <g id="alexnet-content" transform="scale(1,1.1)">
+<g id="input" >
+<polygon points="18,51 55,28 55,248 18,225" fill="#eee" stroke="#111"/>
+<path d="M25 93 L49 78 M25 116 L49 101 M25 139 L49 124" class="thin"/>
+</g>
+<g id="conv1" >
+<rect x="102" y="30" width="70" height="82" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="97" y="34" width="70" height="82" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="92" y="38" width="70" height="82" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="102" y="134" width="70" height="82" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="97" y="138" width="70" height="82" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="92" y="142" width="70" height="82" fill="#fff" stroke="#111" stroke-width=".8"/>
+</g>
+<g id="conv2" >
+<rect x="238" y="42" width="75" height="67" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="233" y="46" width="75" height="67" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="228" y="50" width="75" height="67" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="238" y="131" width="75" height="67" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="233" y="135" width="75" height="67" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="228" y="139" width="75" height="67" fill="#fff" stroke="#111" stroke-width=".8"/>
+</g>
+<g id="conv3" >
+<rect x="380" y="50" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="375" y="54" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="370" y="58" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="380" y="130" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="375" y="134" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="370" y="138" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+</g>
+<g id="conv4" >
+<rect x="510" y="50" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="505" y="54" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="500" y="58" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="510" y="130" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="505" y="134" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="500" y="138" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+</g>
+<g id="conv5" >
+<rect x="640" y="50" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="635" y="54" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="630" y="58" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="640" y="130" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="635" y="134" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="630" y="138" width="80" height="58" fill="#fff" stroke="#111" stroke-width=".8"/>
+</g>
+<g id="fc6" >
+<rect x="765" y="65" width="26" height="50" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="765" y="137" width="26" height="50" fill="#fff" stroke="#111" stroke-width=".8"/>
+</g>
+<g id="fc7" >
+<rect x="845" y="65" width="26" height="50" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="845" y="137" width="26" height="50" fill="#fff" stroke="#111" stroke-width=".8"/>
+</g>
+<g id="fc8" >
+<rect x="930" y="76" width="14" height="38" fill="#fff" stroke="#111" stroke-width=".8"/>
+<rect x="930" y="136" width="14" height="38" fill="#fff" stroke="#111" stroke-width=".8"/>
+</g>
+<g id="network-connections" >
+<line id="alexnet-link-0" x1="55" y1="86" x2="92" y2="78" class="thin"/>
+<line id="alexnet-link-1" x1="55" y1="202" x2="92" y2="180" class="thin"/>
+<line id="alexnet-link-2" x1="162" y1="78" x2="228" y2="82" class="thin"/>
+<line id="alexnet-link-3" x1="162" y1="180" x2="228" y2="182" class="thin"/>
+<line id="alexnet-link-4" x1="303" y1="82" x2="370" y2="86" class="thin"/>
+<line id="alexnet-link-5" x1="303" y1="182" x2="370" y2="186" class="thin"/>
+<line id="alexnet-link-6" x1="450" y1="86" x2="500" y2="86" class="thin"/>
+<line id="alexnet-link-7" x1="450" y1="186" x2="500" y2="186" class="thin"/>
+<line id="alexnet-link-8" x1="580" y1="86" x2="630" y2="86" class="thin"/>
+<line id="alexnet-link-9" x1="580" y1="186" x2="630" y2="186" class="thin"/>
+<line id="alexnet-link-10" x1="710" y1="86" x2="765" y2="87" class="thin"/>
+<line id="alexnet-link-11" x1="710" y1="186" x2="765" y2="187" class="thin"/>
+<line id="alexnet-link-12" x1="791" y1="87" x2="845" y2="87" class="thin"/>
+<line id="alexnet-link-13" x1="791" y1="187" x2="845" y2="187" class="thin"/>
+<line id="alexnet-link-14" x1="871" y1="87" x2="930" y2="93" class="thin"/>
+<line id="alexnet-link-15" x1="871" y1="187" x2="930" y2="193" class="thin"/>
+<line id="alexnet-cross-link-0" x1="162" y1="78" x2="228" y2="182" class="thin" stroke-dasharray="2 2"/>
+<line id="alexnet-cross-link-1" x1="162" y1="180" x2="228" y2="82" class="thin" stroke-dasharray="2 2"/>
+<line id="alexnet-cross-link-2" x1="303" y1="82" x2="370" y2="186" class="thin" stroke-dasharray="2 2"/>
+<line id="alexnet-cross-link-3" x1="303" y1="182" x2="370" y2="86" class="thin" stroke-dasharray="2 2"/>
+<line id="alexnet-cross-link-4" x1="710" y1="86" x2="765" y2="187" class="thin" stroke-dasharray="2 2"/>
+<line id="alexnet-cross-link-5" x1="710" y1="186" x2="765" y2="87" class="thin" stroke-dasharray="2 2"/>
+</g>
+<g id="neuron-counts" >
+<text x="35" y="266" class="sans t9" text-anchor="middle">224</text>
+<text x="113" y="267" class="sans t9" text-anchor="middle">55</text>
+<text x="251" y="267" class="sans t9" text-anchor="middle">27</text>
+<text x="394" y="267" class="sans t9" text-anchor="middle">13</text>
+<text x="524" y="267" class="sans t9" text-anchor="middle">13</text>
+<text x="654" y="267" class="sans t9" text-anchor="middle">13</text>
+<text x="777" y="267" class="sans t9" text-anchor="middle">2048</text>
+<text x="857" y="267" class="sans t9" text-anchor="middle">2048</text>
+<text x="937" y="267" class="sans t9" text-anchor="middle">1000</text>
+</g>
+<g id="filter-labels" >
+<text x="71" y="145" class="sans t9" text-anchor="middle">11</text><text x="75" y="158" class="sans t9">4</text>
+<text x="194" y="145" class="sans t9" text-anchor="middle">5</text>
+<text x="336" y="145" class="sans t9" text-anchor="middle">3</text>
+<text x="475" y="145" class="sans t9" text-anchor="middle">3</text>
+<text x="605" y="145" class="sans t9" text-anchor="middle">3</text>
+<text x="116" y="287" class="sans t9" text-anchor="middle">Stride 4</text>
+<text x="260" y="287" class="sans t9" text-anchor="middle">Max pooling</text>
+<text x="401" y="287" class="sans t9" text-anchor="middle">Max pooling</text>
+<text x="668" y="287" class="sans t9" text-anchor="middle">Max pooling</text>
+<text x="777" y="287" class="sans t9" text-anchor="middle">dense</text><text x="857" y="287" class="sans t9" text-anchor="middle">dense</text>
+</g>
+</g>
 </svg>

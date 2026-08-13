@@ -1,68 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
-  <title id="svg-title">SimCLR framework</title><desc id="svg-desc">Two augmented views, shared encoder, projection head, and contrastive objective</desc><metadata>Source: A Simple Framework for Contrastive Learning, Figure 2; semantic redraw.</metadata>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="270" viewBox="0 0 640 270" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">SimCLR framework</title><desc id="svg-desc">Editable reconstruction of Chen et al. (2020), Figure 2.</desc><metadata>Source-faithful redraw; source paper Figure 2; all views and operations are native vectors.</metadata>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
-    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
-    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
-    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <marker id="paper-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#111"/></marker>
+    <marker id="paper-arrow-gray" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#777"/></marker>
     <style>
-    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
-    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
-    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
-    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
-    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    .sans{font-family:Arial,Helvetica,sans-serif;fill:#111}.serif{font-family:'Times New Roman',Times,serif;fill:#111}
+    .t9{font-size:9px}.t10{font-size:10px}.t11{font-size:11px}.t12{font-size:12px}.t13{font-size:13px}.t14{font-size:14px}.t16{font-size:16px}
+    .bold{font-weight:700}.italic{font-style:italic}.thin{fill:none;stroke:#111;stroke-width:1}.mid{fill:none;stroke:#111;stroke-width:1.5}
+    .thick{fill:none;stroke:#111;stroke-width:2}.gray{fill:#d7d7d7;stroke:#333;stroke-width:1}.light{fill:#f5f5f5;stroke:#111;stroke-width:1}
+    .blue{fill:#dbe9f6;stroke:#386a98;stroke-width:1}.green{fill:#dcebc8;stroke:#4e7a35;stroke-width:1}.yellow{fill:#f4e7a7;stroke:#826f24;stroke-width:1}
+    .orange{fill:#f4d0a3;stroke:#925c22;stroke-width:1}.pink{fill:#f2cdd0;stroke:#9b4b52;stroke-width:1}.violet{fill:#ddd4ed;stroke:#665283;stroke-width:1}
+    .cyan-stroke{fill:none;stroke:#42a3b8;stroke-width:1.5}.green-stroke{fill:none;stroke:#5a9e55;stroke-width:1.5}.black-dash{fill:none;stroke:#111;stroke-width:1.5;stroke-dasharray:3 3}
     </style>
   </defs>
-  <rect class="bg" width="1200" height="675"/>
-  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >SimCLR framework</text><text x="52" y="86" class="subtitle" text-anchor="start" >Two augmented views, shared encoder, projection head, and contrastive objective</text></g>
-  <text x="1125" y="103" class="paper-note" text-anchor="middle" >SEMANTIC REDRAW</text><g id="simclr-image" >
-<rect x="50" y="280" width="130" height="100" rx="18" class="card slate"/>
-<text x="115" y="323" class="label strong" text-anchor="middle" >Image</text>
-<text x="115" y="351" class="small muted" text-anchor="middle" >x</text>
-</g><g id="simclr-aug-a" >
-<rect x="270" y="165" width="160" height="90" rx="18" class="card blue"/>
-<text x="350" y="203" class="label strong" text-anchor="middle" >Augment t</text>
-<text x="350" y="231" class="small muted" text-anchor="middle" >xᵢ</text>
-</g><g id="simclr-aug-b" >
-<rect x="270" y="410" width="160" height="90" rx="18" class="card violet"/>
-<text x="350" y="448" class="label strong" text-anchor="middle" >Augment t′</text>
-<text x="350" y="476" class="small muted" text-anchor="middle" >xⱼ</text>
-</g><g id="simclr-encoder-a" >
-<rect x="525" y="165" width="170" height="90" rx="18" class="card green"/>
-<text x="610" y="203" class="label strong" text-anchor="middle" >Encoder f</text>
-<text x="610" y="231" class="small muted" text-anchor="middle" >hᵢ</text>
-</g><g id="simclr-encoder-b" >
-<rect x="525" y="410" width="170" height="90" rx="18" class="card green"/>
-<text x="610" y="448" class="label strong" text-anchor="middle" >Encoder f</text>
-<text x="610" y="476" class="small muted" text-anchor="middle" >hⱼ</text>
-</g><g id="simclr-project-a" >
-<rect x="790" y="165" width="170" height="90" rx="18" class="card gold"/>
-<text x="875" y="203" class="label strong" text-anchor="middle" >Project g</text>
-<text x="875" y="231" class="small muted" text-anchor="middle" >zᵢ</text>
-</g><g id="simclr-project-b" >
-<rect x="790" y="410" width="170" height="90" rx="18" class="card gold"/>
-<text x="875" y="448" class="label strong" text-anchor="middle" >Project g</text>
-<text x="875" y="476" class="small muted" text-anchor="middle" >zⱼ</text>
-</g><g id="simclr-loss" >
-<rect x="1030" y="285" width="130" height="100" rx="18" class="card red"/>
-<text x="1095" y="328" class="label strong" text-anchor="middle" >NT-Xent</text>
-<text x="1095" y="356" class="small muted" text-anchor="middle" >maximize sim</text>
-</g><g id="simclr-input-a" >
-<path d="M180,330 Q225,225 270,210" class="wire" marker-end="url(#arrow)"/>
-</g><g id="simclr-input-b" >
-<path d="M180,330 Q225,437.5 270,455" class="wire" marker-end="url(#arrow)"/>
-</g><g id="simclr-ae" >
-<line x1="430" y1="210" x2="525" y2="210" class="wire" marker-end="url(#arrow)"/>
-</g><g id="simclr-be" >
-<line x1="430" y1="455" x2="525" y2="455" class="wire" marker-end="url(#arrow)"/>
-</g><g id="simclr-ap" >
-<line x1="695" y1="210" x2="790" y2="210" class="wire" marker-end="url(#arrow)"/>
-</g><g id="simclr-bp" >
-<line x1="695" y1="455" x2="790" y2="455" class="wire" marker-end="url(#arrow)"/>
-</g><g id="simclr-al" >
-<path d="M960,210 Q995,295 1030,330" class="wire" marker-end="url(#arrow)"/>
-</g><g id="simclr-bl" >
-<path d="M960,455 Q995,377.5 1030,350" class="wire" marker-end="url(#arrow)"/>
+  <rect width="640" height="270" fill="#fff"/>
+  <g id="input-x" >
+<circle cx="320" cy="240" r="23" fill="#eee" stroke="#111" stroke-width="1.2"/>
+<text x="320" y="245" class="serif t13 italic" text-anchor="middle">x</text>
+</g><g id="view-xi" >
+<circle cx="190" cy="182" r="23" fill="#eee" stroke="#111" stroke-width="1.2"/>
+<text x="190" y="187" class="serif t13 italic" text-anchor="middle">x̃ᵢ</text>
+</g><g id="view-xj" >
+<circle cx="450" cy="182" r="23" fill="#eee" stroke="#111" stroke-width="1.2"/>
+<text x="450" y="187" class="serif t13 italic" text-anchor="middle">x̃ⱼ</text>
+</g><g id="repr-hi" >
+<circle cx="190" cy="111" r="23" fill="#fff" stroke="#111" stroke-width="1.2"/>
+<text x="190" y="116" class="serif t13 italic" text-anchor="middle">hᵢ</text>
+</g><g id="repr-hj" >
+<circle cx="450" cy="111" r="23" fill="#fff" stroke="#111" stroke-width="1.2"/>
+<text x="450" y="116" class="serif t13 italic" text-anchor="middle">hⱼ</text>
+</g><g id="proj-zi" >
+<circle cx="190" cy="42" r="23" fill="#fff" stroke="#111" stroke-width="1.2"/>
+<text x="190" y="47" class="serif t13 italic" text-anchor="middle">zᵢ</text>
+</g><g id="proj-zj" >
+<circle cx="450" cy="42" r="23" fill="#fff" stroke="#111" stroke-width="1.2"/>
+<text x="450" y="47" class="serif t13 italic" text-anchor="middle">zⱼ</text>
+</g><g id="augmentation-edges" >
+<path d="M303 225 C268 204 242 190 214 184" class="mid" marker-end="url(#paper-arrow)"/>
+<path d="M337 225 C372 204 398 190 426 184" class="mid" marker-end="url(#paper-arrow)"/>
+<text x="250" y="219" class="serif t12 italic">t ~ T</text><text x="390" y="219" class="serif t12 italic">t′ ~ T</text>
+</g><g id="encoder-edges" >
+<line x1="190" y1="159" x2="190" y2="135" class="mid" marker-end="url(#paper-arrow)"/>
+<line x1="450" y1="159" x2="450" y2="135" class="mid" marker-end="url(#paper-arrow)"/>
+<text x="168" y="151" class="serif t12 italic">f(·)</text><text x="428" y="151" class="serif t12 italic">f(·)</text>
+</g><g id="projection-edges" >
+<line x1="190" y1="87" x2="190" y2="66" class="mid" marker-end="url(#paper-arrow)"/>
+<line x1="450" y1="87" x2="450" y2="66" class="mid" marker-end="url(#paper-arrow)"/>
+<text x="164" y="81" class="serif t12 italic">g(·)</text><text x="424" y="81" class="serif t12 italic">g(·)</text>
+</g><g id="objectives" >
+<line x1="216" y1="42" x2="424" y2="42" class="thin" marker-start="url(#paper-arrow)" marker-end="url(#paper-arrow)"/>
+<text x="320" y="29" class="serif t12" text-anchor="middle">Maximize agreement</text>
+<line x1="216" y1="111" x2="424" y2="111" class="thin" marker-start="url(#paper-arrow)" marker-end="url(#paper-arrow)"/>
+<text x="320" y="101" class="serif t12" text-anchor="middle">Representation</text>
 </g>
 </svg>

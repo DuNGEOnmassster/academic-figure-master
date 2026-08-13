@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "purpose": "Review-only source crops for calibrating editable paper redraws. Source papers retain all rights.",
+  "render_dpi": 220,
+  "figures": [
+    {
+      "id": "lenet-5",
+      "paper": "Gradient-Based Learning Applied to Document Recognition",
+      "figure": "Figure 2",
+      "url": "https://leon.bottou.org/publications/pdf/ieee-1998.pdf",
+      "pdf_page": 7,
+      "crop_normalized": [0.035, 0.055, 0.965, 0.26]
+    },
+    {
+      "id": "alexnet",
+      "paper": "ImageNet Classification with Deep Convolutional Neural Networks",
+      "figure": "Figure 2",
+      "url": "https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf",
+      "pdf_page": 5,
+      "crop_normalized": [0.13, 0.05, 0.87, 0.27]
+    },
+    {
+      "id": "vae",
+      "paper": "Auto-Encoding Variational Bayes",
+      "figure": "Figure 1",
+      "url": "https://arxiv.org/pdf/1312.6114",
+      "pdf_page": 2,
+      "crop_normalized": [0.31, 0.055, 0.69, 0.22]
+    },
+    {
+      "id": "gan",
+      "paper": "Generative Adversarial Nets",
+      "figure": "Figure 1",
+      "url": "https://arxiv.org/pdf/1406.2661",
+      "pdf_page": 3,
+      "crop_normalized": [0.10, 0.415, 0.91, 0.57]
+    },
+    {
+      "id": "resnet-block",
+      "paper": "Deep Residual Learning for Image Recognition",
+      "figure": "Figure 2",
+      "url": "https://arxiv.org/pdf/1512.03385",
+      "pdf_page": 2,
+      "crop_normalized": [0.10, 0.085, 0.47, 0.195]
+    },
+    {
+      "id": "unet",
+      "paper": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+      "figure": "Figure 1",
+      "url": "https://arxiv.org/pdf/1505.04597",
+      "pdf_page": 2,
+      "crop_normalized": [0.15, 0.045, 0.84, 0.39]
+    },
+    {
+      "id": "transformer",
+      "paper": "Attention Is All You Need",
+      "figure": "Figure 1",
+      "url": "https://arxiv.org/pdf/1706.03762",
+      "pdf_page": 3,
+      "crop_normalized": [0.22, 0.035, 0.60, 0.505]
+    },
+    {
+      "id": "neural-ode",
+      "paper": "Neural Ordinary Differential Equations",
+      "figure": "Figure 1",
+      "url": "https://arxiv.org/pdf/1806.07366",
+      "pdf_page": 1,
+      "crop_normalized": [0.54, 0.485, 0.91, 0.66]
+    },
+    {
+      "id": "simclr",
+      "paper": "A Simple Framework for Contrastive Learning of Visual Representations",
+      "figure": "Figure 2",
+      "url": "https://arxiv.org/pdf/2002.05709",
+      "pdf_page": 2,
+      "crop_normalized": [0.55, 0.075, 0.91, 0.27]
+    },
+    {
+      "id": "ddpm",
+      "paper": "Denoising Diffusion Probabilistic Models",
+      "figure": "Figure 2",
+      "url": "https://arxiv.org/pdf/2006.11239",
+      "pdf_page": 2,
+      "crop_normalized": [0.17, 0.028, 0.84, 0.13]
+    },
+    {
+      "id": "vit",
+      "paper": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+      "figure": "Figure 1",
+      "url": "https://arxiv.org/pdf/2010.11929",
+      "pdf_page": 3,
+      "crop_normalized": [0.14, 0.11, 0.86, 0.30]
+    }
+  ]
+}

@@ -1,50 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
-  <title id="svg-title">Generative adversarial network</title><desc id="svg-desc">Two-player minimax training after Goodfellow et al. (2014)</desc><metadata>Source: Generative Adversarial Networks; semantic redraw.</metadata>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="238" viewBox="0 0 900 238" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">GAN training dynamics</title><desc id="svg-desc">Editable reconstruction of Goodfellow et al. (2014), Figure 1.</desc><metadata>Source-faithful redraw; source paper Figure 1; distributions and mapping geometry are illustrative vectors.</metadata>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
-    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
-    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
-    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <marker id="paper-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#111"/></marker>
+    <marker id="paper-arrow-gray" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#777"/></marker>
     <style>
-    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
-    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
-    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
-    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
-    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    .sans{font-family:Arial,Helvetica,sans-serif;fill:#111}.serif{font-family:'Times New Roman',Times,serif;fill:#111}
+    .t9{font-size:9px}.t10{font-size:10px}.t11{font-size:11px}.t12{font-size:12px}.t13{font-size:13px}.t14{font-size:14px}.t16{font-size:16px}
+    .bold{font-weight:700}.italic{font-style:italic}.thin{fill:none;stroke:#111;stroke-width:1}.mid{fill:none;stroke:#111;stroke-width:1.5}
+    .thick{fill:none;stroke:#111;stroke-width:2}.gray{fill:#d7d7d7;stroke:#333;stroke-width:1}.light{fill:#f5f5f5;stroke:#111;stroke-width:1}
+    .blue{fill:#dbe9f6;stroke:#386a98;stroke-width:1}.green{fill:#dcebc8;stroke:#4e7a35;stroke-width:1}.yellow{fill:#f4e7a7;stroke:#826f24;stroke-width:1}
+    .orange{fill:#f4d0a3;stroke:#925c22;stroke-width:1}.pink{fill:#f2cdd0;stroke:#9b4b52;stroke-width:1}.violet{fill:#ddd4ed;stroke:#665283;stroke-width:1}
+    .cyan-stroke{fill:none;stroke:#42a3b8;stroke-width:1.5}.green-stroke{fill:none;stroke:#5a9e55;stroke-width:1.5}.black-dash{fill:none;stroke:#111;stroke-width:1.5;stroke-dasharray:3 3}
     </style>
   </defs>
-  <rect class="bg" width="1200" height="675"/>
-  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >Generative adversarial network</text><text x="52" y="86" class="subtitle" text-anchor="start" >Two-player minimax training after Goodfellow et al. (2014)</text></g>
-  <text x="1125" y="103" class="paper-note" text-anchor="middle" >SEMANTIC REDRAW</text><g id="noise" >
-<rect x="70" y="205" width="150" height="100" rx="18" class="card violet"/>
-<text x="145" y="248" class="label strong" text-anchor="middle" >Noise</text>
-<text x="145" y="276" class="small muted" text-anchor="middle" >z ~ p(z)</text>
-</g><g id="generator" >
-<rect x="330" y="205" width="190" height="100" rx="18" class="card blue"/>
-<text x="425" y="248" class="label strong" text-anchor="middle" >Generator G</text>
-<text x="425" y="276" class="small muted" text-anchor="middle" >x̃ = G(z)</text>
-</g><g id="real" >
-<rect x="70" y="410" width="150" height="100" rx="18" class="card green"/>
-<text x="145" y="453" class="label strong" text-anchor="middle" >Real data</text>
-<text x="145" y="481" class="small muted" text-anchor="middle" >x ~ pdata</text>
-</g><g id="discriminator" >
-<rect x="700" y="285" width="210" height="140" rx="18" class="card red"/>
-<text x="805" y="348" class="label strong" text-anchor="middle" >Discriminator D</text>
-<text x="805" y="376" class="small muted" text-anchor="middle" >real probability</text>
-</g><g id="decision" >
-<rect x="1015" y="305" width="145" height="100" rx="18" class="card gold"/>
-<text x="1087.5" y="348" class="label strong" text-anchor="middle" >Decision</text>
-<text x="1087.5" y="376" class="small muted" text-anchor="middle" >real / fake</text>
-</g><g id="gan-zg" >
-<line x1="220" y1="255" x2="330" y2="255" class="wire" marker-end="url(#arrow)"/>
-</g><g id="gan-gd" >
-<line x1="520" y1="255" x2="700" y2="330" class="wire" marker-end="url(#arrow)"/>
-<text x="610" y="280.5" class="tiny muted" text-anchor="middle" >generated</text>
-</g><g id="gan-real-d" >
-<path d="M220,460 Q460,460 700,380" class="wire" marker-end="url(#arrow)"/>
-<text x="460" y="484" class="tiny muted" text-anchor="middle" >real</text>
-</g><g id="gan-out" >
-<line x1="910" y1="355" x2="1015" y2="355" class="wire" marker-end="url(#arrow)"/>
-</g><path d="M805,425 C805,555 425,555 425,305" class="violet-line dash" marker-end="url(#arrow-violet)"/><text x="620" y="585" class="small strong" text-anchor="middle" >min G  max D   E log D(x) + E log(1 − D(G(z)))</text>
+  <rect width="900" height="238" fill="#fff"/>
+  <g id="training-stage-a" >
+<line x1="23" y1="92" x2="208" y2="92" class="thin"/>
+<path d="M28 91 C46 91 56 31 87 31 C116 31 123 91 143 91" class="black-dash"/>
+<path d="M95 91 C116 91 122 47 145 47 C170 47 176 91 199 91" class="green-stroke"/>
+<path d="M26 62 H204" fill="none" stroke="#667bb0" stroke-width="1.3" stroke-dasharray="2 2"/>
+<text x="25" y="108" class="serif t11 italic">x</text>
+<text x="116" y="224" class="serif t13" text-anchor="middle">(a)</text>
+<line x1="30" y1="180" x2="203" y2="180" class="thin"/>
+<text x="23" y="188" class="serif t11 italic">z</text>
+<line x1="36" y1="178" x2="154" y2="118" class="thin"/>
+<line x1="50" y1="178" x2="172" y2="118" class="thin"/>
+<line x1="64" y1="178" x2="151" y2="118" class="thin"/>
+<line x1="78" y1="178" x2="103" y2="118" class="thin"/>
+<line x1="92" y1="178" x2="56" y2="118" class="thin"/>
+<line x1="106" y1="178" x2="40" y2="118" class="thin"/>
+<line x1="120" y1="178" x2="64" y2="118" class="thin"/>
+<line x1="134" y1="178" x2="113" y2="118" class="thin"/>
+<line x1="148" y1="178" x2="159" y2="118" class="thin"/>
+<line x1="162" y1="178" x2="172" y2="118" class="thin"/>
+<line x1="176" y1="178" x2="145" y2="118" class="thin"/>
+<line x1="190" y1="178" x2="95" y2="118" class="thin"/>
+<line x1="23" y1="118" x2="208" y2="118" class="thin"/>
+</g><g id="training-stage-b" >
+<line x1="247" y1="92" x2="432" y2="92" class="thin"/>
+<path d="M255 91 C278 91 292 30 324 30 C351 30 357 91 374 91" class="black-dash"/>
+<path d="M318 91 C341 91 346 44 371 44 C394 44 403 91 423 91" class="green-stroke"/>
+<path d="M250 78 C292 78 313 46 344 49 C376 53 394 72 428 72" fill="none" stroke="#667bb0" stroke-width="1.3" stroke-dasharray="2 2"/>
+<text x="249" y="108" class="serif t11 italic">x</text>
+<text x="340" y="224" class="serif t13" text-anchor="middle">(b)</text>
+<line x1="254" y1="180" x2="427" y2="180" class="thin"/>
+<text x="247" y="188" class="serif t11 italic">z</text>
+<line x1="260" y1="178" x2="375" y2="118" class="thin"/>
+<line x1="274" y1="178" x2="394" y2="118" class="thin"/>
+<line x1="288" y1="178" x2="385" y2="118" class="thin"/>
+<line x1="302" y1="178" x2="353" y2="118" class="thin"/>
+<line x1="316" y1="178" x2="315" y2="118" class="thin"/>
+<line x1="330" y1="178" x2="288" y2="118" class="thin"/>
+<line x1="344" y1="178" x2="286" y2="118" class="thin"/>
+<line x1="358" y1="178" x2="312" y2="118" class="thin"/>
+<line x1="372" y1="178" x2="349" y2="118" class="thin"/>
+<line x1="386" y1="178" x2="383" y2="118" class="thin"/>
+<line x1="400" y1="178" x2="394" y2="118" class="thin"/>
+<line x1="414" y1="178" x2="378" y2="118" class="thin"/>
+<line x1="247" y1="118" x2="432" y2="118" class="thin"/>
+</g><g id="training-stage-c" >
+<line x1="471" y1="92" x2="656" y2="92" class="thin"/>
+<path d="M478 91 C505 91 520 27 554 27 C582 27 589 91 610 91" class="black-dash"/>
+<path d="M520 91 C543 91 553 44 577 44 C603 44 611 91 640 91" class="green-stroke"/>
+<path d="M474 75 C513 75 538 44 572 49 C608 54 624 70 652 70" fill="none" stroke="#667bb0" stroke-width="1.3" stroke-dasharray="2 2"/>
+<text x="473" y="108" class="serif t11 italic">x</text>
+<text x="564" y="224" class="serif t13" text-anchor="middle">(c)</text>
+<line x1="478" y1="180" x2="651" y2="180" class="thin"/>
+<text x="471" y="188" class="serif t11 italic">z</text>
+<line x1="484" y1="178" x2="591" y2="118" class="thin"/>
+<line x1="498" y1="178" x2="605" y2="118" class="thin"/>
+<line x1="512" y1="178" x2="606" y2="118" class="thin"/>
+<line x1="526" y1="178" x2="592" y2="118" class="thin"/>
+<line x1="540" y1="178" x2="569" y2="118" class="thin"/>
+<line x1="554" y1="178" x2="547" y2="118" class="thin"/>
+<line x1="568" y1="178" x2="531" y2="118" class="thin"/>
+<line x1="582" y1="178" x2="530" y2="118" class="thin"/>
+<line x1="596" y1="178" x2="543" y2="118" class="thin"/>
+<line x1="610" y1="178" x2="565" y2="118" class="thin"/>
+<line x1="624" y1="178" x2="588" y2="118" class="thin"/>
+<line x1="638" y1="178" x2="604" y2="118" class="thin"/>
+<line x1="471" y1="118" x2="656" y2="118" class="thin"/>
+</g><g id="training-stage-d" >
+<line x1="695" y1="92" x2="880" y2="92" class="thin"/>
+<path d="M704 91 C737 91 756 27 787 27 C818 27 836 91 867 91" class="black-dash"/>
+<path d="M704 91 C737 91 756 27 787 27 C818 27 836 91 867 91" class="green-stroke"/>
+<path d="M698 62 H876" fill="none" stroke="#667bb0" stroke-width="1.3" stroke-dasharray="2 2"/>
+<text x="697" y="108" class="serif t11 italic">x</text>
+<text x="788" y="224" class="serif t13" text-anchor="middle">(d)</text>
+<line x1="702" y1="180" x2="875" y2="180" class="thin"/>
+<text x="695" y="188" class="serif t11 italic">z</text>
+<line x1="708" y1="178" x2="807" y2="118" class="thin"/>
+<line x1="722" y1="178" x2="820" y2="118" class="thin"/>
+<line x1="736" y1="178" x2="820" y2="118" class="thin"/>
+<line x1="750" y1="178" x2="808" y2="118" class="thin"/>
+<line x1="764" y1="178" x2="788" y2="118" class="thin"/>
+<line x1="778" y1="178" x2="768" y2="118" class="thin"/>
+<line x1="792" y1="178" x2="755" y2="118" class="thin"/>
+<line x1="806" y1="178" x2="754" y2="118" class="thin"/>
+<line x1="820" y1="178" x2="765" y2="118" class="thin"/>
+<line x1="834" y1="178" x2="785" y2="118" class="thin"/>
+<line x1="848" y1="178" x2="804" y2="118" class="thin"/>
+<line x1="862" y1="178" x2="819" y2="118" class="thin"/>
+<line x1="695" y1="118" x2="880" y2="118" class="thin"/>
+</g>
 </svg>
