@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-13T03:23:29Z",
+  "generated_at": "2026-08-13T03:24:35Z",
   "created_since": "2025-12-16",
   "summary": {
     "curated": 42,
@@ -690,8 +690,8 @@
       "integration": "native draw.io editor and XML target",
       "why": "Primary editable diagram format and desktop/browser editor.",
       "curated": true,
-      "previous_stars": 7464,
-      "stars_delta": 1,
+      "previous_stars": 7465,
+      "stars_delta": 0,
       "is_new": false
     },
     {

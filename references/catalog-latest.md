@@ -1,6 +1,6 @@
 # Academic figure catalog — latest snapshot
 
-Generated: `2026-08-13T03:23:29Z`. Curated: **42**. Discovered candidates: **35** (0 new relative to the previous snapshot).
+Generated: `2026-08-13T03:24:35Z`. Curated: **42**. Discovered candidates: **35** (0 new relative to the previous snapshot).
 
 Stars are a discovery signal, not a quality score. A candidate is not executable or endorsed until its license, outputs, and edit behavior are reviewed.
 
@@ -28,7 +28,7 @@ Stars are a discovery signal, not a quality score. A candidate is not executable
 | [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) | editor-export | 129,459 | +0 | MIT | 2026-08-13 | reference |
 | [DayuanJiang/next-ai-draw-io](https://github.com/DayuanJiang/next-ai-draw-io) | editor-export | 34,771 | +0 | Apache-2.0 | 2026-08-12 | use-now |
 | [SVG-Edit/svgedit](https://github.com/SVG-Edit/svgedit) | editor-export | 7,777 | +0 | MIT | 2026-08-05 | use-now |
-| [jgraph/drawio](https://github.com/jgraph/drawio) | editor-export | 7,465 | +1 | Apache-2.0 | 2026-08-09 | use-now |
+| [jgraph/drawio](https://github.com/jgraph/drawio) | editor-export | 7,465 | +0 | Apache-2.0 | 2026-08-09 | use-now |
 | [gitbrent/PptxGenJS](https://github.com/gitbrent/PptxGenJS) | editor-export | 5,990 | +0 | MIT | 2025-11-28 | use-now |
 | [scanny/python-pptx](https://github.com/scanny/python-pptx) | editor-export | 3,487 | +0 | MIT | 2024-08-07 | use-now |
 | [ZJU-REAL/SVGenius](https://github.com/ZJU-REAL/SVGenius) | evaluation | 78 | +0 | Apache-2.0 | 2025-11-10 | use-now |
