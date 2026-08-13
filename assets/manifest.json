@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "license": "MIT",
+  "origin": "Original assets authored for academic-figure-master; no external artwork is embedded.",
+  "assets": [
+    {
+      "path": "primitives/manifold-grid.svg",
+      "tags": ["manifold", "geometry", "geodesic", "tangent-space"],
+      "editable_groups": ["manifold-surface", "geodesic", "sample-points", "tangent-basis", "manifold-labels"]
+    },
+    {
+      "path": "primitives/sde-ode-trajectories.svg",
+      "tags": ["sde", "ode", "trajectory", "uncertainty", "drift"],
+      "editable_groups": ["ode-panel", "ode-vector-field", "ode-trajectory", "sde-panel", "sde-samples", "sde-drift"]
+    },
+    {
+      "path": "primitives/hand-drawn-arrows.svg",
+      "tags": ["arrow", "hand-drawn", "loop", "feedback", "emphasis"],
+      "editable_groups": ["loose-right-arrow", "loop-arrow", "emphasis-arrow", "bidirectional-arrow"]
+    },
+    {
+      "path": "primitives/diffusion-process.svg",
+      "tags": ["diffusion", "score", "denoising", "forward-sde", "reverse-sde"],
+      "editable_groups": ["state-cards", "forward-process", "reverse-process", "process-labels"]
+    },
+    {
+      "path": "primitives/tensor-stack.svg",
+      "tags": ["tensor", "matrix", "feature-map", "tokens", "dimensions"],
+      "editable_groups": ["input-matrix", "feature-stack", "token-sequence", "tensor-flow", "dimension-braces"]
+    },
+    {
+      "path": "primitives/neural-modules.svg",
+      "tags": ["encoder", "decoder", "attention", "latent", "residual", "neural-network"],
+      "editable_groups": ["encoder-module", "attention-module", "latent-module", "decoder-module", "module-connectors", "skip-connection", "merge-module"]
+    }
+  ]
+}

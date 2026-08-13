@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="title desc">
+  <title id="title">Editable forward and reverse diffusion process</title>
+  <desc id="desc">A sequence from structured data to noise with forward noising and reverse score-guided denoising arrows.</desc>
+  <defs>
+    <marker id="diffusion-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#33445F"/>
+    </marker>
+  </defs>
+  <g id="state-cards" font-family="Arial, sans-serif">
+    <g id="state-x0">
+      <rect x="24" y="88" width="112" height="112" rx="18" fill="#EEF5FF" stroke="#7EA6DC" stroke-width="2"/>
+      <circle cx="66" cy="128" r="7" fill="#3972D6"/><circle cx="92" cy="122" r="6" fill="#3972D6"/><circle cx="105" cy="150" r="7" fill="#3972D6"/><circle cx="73" cy="165" r="6" fill="#3972D6"/><circle cx="48" cy="151" r="5" fill="#3972D6"/>
+      <text x="80" y="222" text-anchor="middle" font-size="15" fill="#33445F">x₀ ~ p(data)</text>
+    </g>
+    <g id="state-x1">
+      <rect x="171" y="88" width="112" height="112" rx="18" fill="#F1F3FC" stroke="#9A9FCE" stroke-width="2"/>
+      <circle cx="203" cy="126" r="6" fill="#5E7FC2"/><circle cx="246" cy="117" r="5" fill="#6E78B5"/><circle cx="254" cy="161" r="6" fill="#6978BB"/><circle cx="211" cy="170" r="5" fill="#6D83C6"/><circle cx="228" cy="145" r="5" fill="#7656C9"/>
+      <text x="227" y="222" text-anchor="middle" font-size="15" fill="#33445F">xₜ</text>
+    </g>
+    <g id="state-x2">
+      <rect x="318" y="88" width="112" height="112" rx="18" fill="#F5F1FB" stroke="#AD94D4" stroke-width="2"/>
+      <circle cx="340" cy="116" r="4" fill="#8C72C2"/><circle cx="397" cy="122" r="5" fill="#927ACC"/><circle cx="376" cy="146" r="4" fill="#7656C9"/><circle cx="350" cy="170" r="5" fill="#9B83CD"/><circle cx="411" cy="176" r="4" fill="#A28AD4"/>
+      <text x="374" y="222" text-anchor="middle" font-size="15" fill="#33445F">xₜ₊Δt</text>
+    </g>
+    <g id="state-noise">
+      <rect x="465" y="88" width="112" height="112" rx="18" fill="#FAF1F2" stroke="#D99098" stroke-width="2"/>
+      <g fill="#C86572" opacity="0.88">
+        <circle cx="486" cy="108" r="3"/><circle cx="512" cy="122" r="3"/><circle cx="553" cy="112" r="3"/><circle cx="532" cy="148" r="3"/><circle cx="480" cy="165" r="3"/><circle cx="560" cy="178" r="3"/><circle cx="507" cy="184" r="3"/><circle cx="545" cy="95" r="2"/><circle cx="493" cy="143" r="2"/>
+      </g>
+      <text x="521" y="222" text-anchor="middle" font-size="15" fill="#33445F">x_T ~ 𝒩(0,I)</text>
+    </g>
+  </g>
+  <g id="forward-process" fill="none" stroke="#33445F" stroke-width="2.5" marker-end="url(#diffusion-arrow)">
+    <path d="M137 119 C149 105 158 105 170 119"/>
+    <path d="M284 119 C296 105 305 105 317 119"/>
+    <path d="M431 119 C443 105 452 105 464 119"/>
+  </g>
+  <g id="reverse-process" fill="none" stroke="#7656C9" stroke-width="2.5" marker-end="url(#diffusion-arrow)">
+    <path d="M465 176 C452 190 444 190 431 176"/>
+    <path d="M318 176 C305 190 297 190 284 176"/>
+    <path d="M171 176 C158 190 150 190 137 176"/>
+  </g>
+  <g id="process-labels" font-family="Arial, sans-serif" fill="#33445F">
+    <text x="300" y="48" text-anchor="middle" font-size="17" font-weight="700">Forward SDE: add noise</text>
+    <text x="340" y="271" text-anchor="middle" font-size="17" font-weight="700" fill="#7656C9">Reverse-time SDE / probability-flow ODE</text>
+    <rect x="604" y="108" width="92" height="72" rx="15" fill="#FFF7E8" stroke="#D2A84D" stroke-width="2"/>
+    <text x="650" y="137" text-anchor="middle" font-size="13" font-weight="700">score net</text>
+    <text x="650" y="159" text-anchor="middle" font-size="13">sθ(x,t)</text>
+    <path d="M604 154 C592 159 586 165 576 176" fill="none" stroke="#D2A84D" stroke-width="2.2" marker-end="url(#diffusion-arrow)"/>
+  </g>
+</svg>

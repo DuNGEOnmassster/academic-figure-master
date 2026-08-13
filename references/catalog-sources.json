@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "lookback_days": 240,
+  "repositories": [
+    {
+      "repo": "joanrod/star-vector",
+      "category": "vector-model",
+      "readiness": "use-now",
+      "integration": "image-to-svg and text-to-svg model adapter",
+      "why": "Open multimodal SVG code generator with public weights and benchmarks."
+    },
+    {
+      "repo": "OmniSVG/OmniSVG",
+      "category": "vector-model",
+      "readiness": "use-now",
+      "integration": "multimodal SVG generator adapter",
+      "why": "Unified text/image-to-SVG family with released models, datasets, and evaluation."
+    },
+    {
+      "repo": "OpenVGLab/OmniSVG-train",
+      "category": "vector-model",
+      "readiness": "reference",
+      "integration": "training and fine-tuning reference",
+      "why": "Official training code for adapting OmniSVG."
+    },
+    {
+      "repo": "hmwang2002/InternSVG",
+      "category": "vector-model",
+      "readiness": "watch",
+      "integration": "unified understand-edit-generate model adapter",
+      "why": "Covers SVG understanding, editing, generation, chemistry, and animation tasks."
+    },
+    {
+      "repo": "ximinng/LLM4SVG",
+      "category": "vector-model",
+      "readiness": "reference",
+      "integration": "SVG language-model training reference",
+      "why": "Official CVPR implementation for complex SVG understanding and generation."
+    },
+    {
+      "repo": "kingnobro/Chat2SVG",
+      "category": "vector-model",
+      "readiness": "reference",
+      "integration": "text-to-svg staged generation reference",
+      "why": "Combines LLM planning with diffusion priors for text-guided vectors."
+    },
+    {
+      "repo": "SagiPolaczek/NeuralSVG",
+      "category": "vector-model",
+      "readiness": "reference",
+      "integration": "layered text-to-vector research adapter",
+      "why": "Produces layered SVG representations from text."
+    },
+    {
+      "repo": "ximinng/SVGDreamerV2",
+      "category": "vector-model",
+      "readiness": "reference",
+      "integration": "diffusion-guided vector refinement",
+      "why": "Editability- and diversity-oriented text-to-SVG optimization."
+    },
+    {
+      "repo": "BachiLi/diffvg",
+      "category": "vector-engine",
+      "readiness": "use-now",
+      "integration": "differentiable rendering and vector fitting",
+      "why": "Foundational differentiable rasterizer used by many vector optimization methods."
+    },
+    {
+      "repo": "visioncortex/vtracer",
+      "category": "vector-engine",
+      "readiness": "use-now",
+      "integration": "fast local raster tracing fallback",
+      "why": "Lightweight local raster-to-SVG converter; useful for isolated assets, not semantic diagrams."
+    },
+    {
+      "repo": "ZJU-REAL/SVGenius",
+      "category": "evaluation",
+      "readiness": "use-now",
+      "integration": "SVG understanding-editing-generation benchmark",
+      "why": "Provides a broad benchmark rather than another generator."
+    },
+    {
+      "repo": "mti-lab/SVGEditBench",
+      "category": "evaluation",
+      "readiness": "use-now",
+      "integration": "structured SVG edit evaluation",
+      "why": "Useful for testing whether local edits preserve unrelated content."
+    },
+    {
+      "repo": "ResearAI/AutoFigure-Edit",
+      "category": "scientific-figure-system",
+      "readiness": "use-now",
+      "integration": "text/reference-to-editable-SVG pipeline",
+      "why": "Open scientific illustration system with component editing and reference-guided style."
+    },
+    {
+      "repo": "ResearAI/AutoFigure",
+      "category": "scientific-figure-system",
+      "readiness": "reference",
+      "integration": "long-form paper-to-figure patterns and FigureBench",
+      "why": "Predecessor and benchmark source for long-context scientific illustration."
+    },
+    {
+      "repo": "HaozheZhao/Crafter",
+      "category": "scientific-figure-system",
+      "readiness": "watch",
+      "integration": "multi-agent generation and raster-to-editable-SVG harness",
+      "why": "Separates generation from CraftEditor reconstruction and adds editable-figure evaluation."
+    },
+    {
+      "repo": "llmsresearch/paperbanana",
+      "category": "scientific-figure-system",
+      "readiness": "use-now",
+      "integration": "community PaperBanana implementation",
+      "why": "Runnable multi-provider implementation; unofficial and should not be confused with Google Research."
+    },
+    {
+      "repo": "OpenDCAI/Paper2Any",
+      "category": "scientific-figure-system",
+      "readiness": "use-now",
+      "integration": "paper/image to PPTX, SVG, and draw.io",
+      "why": "Closest broad open implementation to the desired editable multi-format product surface."
+    },
+    {
+      "repo": "BIT-DataLab/Edit-Banana",
+      "category": "scientific-figure-system",
+      "readiness": "watch",
+      "integration": "image-to-editable-draw.io decomposition pipeline",
+      "why": "Directly targets SAM/OCR/formula-based component reconstruction; GitHub reports AGPL-3.0 while the README badge says Apache-2.0, so license status must be resolved before reuse."
+    },
+    {
+      "repo": "datawhalechina/happy-figure",
+      "category": "scientific-figure-system",
+      "readiness": "reference",
+      "integration": "scientific figure prompting and workflow knowledge",
+      "why": "Chinese-language practical figure playbook and examples."
+    },
+    {
+      "repo": "Agents365-ai/drawio-skill",
+      "category": "agent-skill",
+      "readiness": "use-now",
+      "integration": "draw.io generation, reconstruction, and QA patterns",
+      "why": "Mature native draw.io skill with image reconstruction and a large shape surface."
+    },
+    {
+      "repo": "Azhi-ss/academic-figure-skills",
+      "category": "agent-skill",
+      "readiness": "reference",
+      "integration": "figure planning, palette, JSON spec, and one-command distribution patterns",
+      "why": "Focused academic figure skill pack with benchmark examples and npx-based installation."
+    },
+    {
+      "repo": "Will-hxw/drawio-diagram-builder-skill",
+      "category": "agent-skill",
+      "readiness": "reference",
+      "integration": "research-style draw.io workflow",
+      "why": "Portable skill focused on research diagrams and screenshot-driven refinement."
+    },
+    {
+      "repo": "sxy1499894281/drawio-reconstruction-skill",
+      "category": "agent-skill",
+      "readiness": "watch",
+      "integration": "reference-image reconstruction patterns",
+      "why": "Narrowly targets component reconstruction into editable draw.io."
+    },
+    {
+      "repo": "pengjunchi0/codex-visio-paper-figure-skill",
+      "category": "agent-skill",
+      "readiness": "reference",
+      "integration": "paper figure to editable Visio/SVG workflow",
+      "why": "Strong market signal for image-to-editable research figure reconstruction."
+    },
+    {
+      "repo": "pengqianhan/codex-paper-figure-skill",
+      "category": "agent-skill",
+      "readiness": "reference",
+      "integration": "image-generation reference to native draw.io workflow",
+      "why": "Uses generated imagery only as reference, then rebuilds a native draw.io deliverable."
+    },
+    {
+      "repo": "entyro/paper-figure-to-svg-skill",
+      "category": "agent-skill",
+      "readiness": "watch",
+      "integration": "paper screenshot to editable SVG workflow",
+      "why": "Narrow reconstruction skill useful for comparing decomposition contracts."
+    },
+    {
+      "repo": "Yuan1z0825/nature-skills",
+      "category": "agent-skill",
+      "readiness": "reference",
+      "integration": "Nature-style academic figure and writing patterns",
+      "why": "Large, fast-moving academic skill repository with explicit figure positioning."
+    },
+    {
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "category": "agent-skill",
+      "readiness": "reference",
+      "integration": "scientific visualization and schematic workflows",
+      "why": "Broad scientific skill ecosystem and distribution model."
+    },
+    {
+      "repo": "DayuanJiang/next-ai-draw-io",
+      "category": "editor-export",
+      "readiness": "use-now",
+      "integration": "natural-language draw.io editing UI and MCP",
+      "why": "Large open AI-plus-draw.io editor with a usable interaction surface."
+    },
+    {
+      "repo": "jgraph/drawio",
+      "category": "editor-export",
+      "readiness": "use-now",
+      "integration": "native draw.io editor and XML target",
+      "why": "Primary editable diagram format and desktop/browser editor."
+    },
+    {
+      "repo": "SVG-Edit/svgedit",
+      "category": "editor-export",
+      "readiness": "use-now",
+      "integration": "embeddable browser SVG editor",
+      "why": "Lightweight open editor for element-level SVG refinement."
+    },
+    {
+      "repo": "scanny/python-pptx",
+      "category": "editor-export",
+      "readiness": "use-now",
+      "integration": "native PowerPoint compiler",
+      "why": "Python path for editable OOXML shapes, connectors, text, and charts."
+    },
+    {
+      "repo": "gitbrent/PptxGenJS",
+      "category": "editor-export",
+      "readiness": "use-now",
+      "integration": "native PowerPoint compiler",
+      "why": "JavaScript path for editable slides and figure canvases."
+    },
+    {
+      "repo": "duerrsimon/bioicons",
+      "category": "asset-library",
+      "readiness": "use-now",
+      "integration": "license-aware scientific SVG retrieval",
+      "why": "Searchable scientific vectors with per-icon licenses and attribution."
+    },
+    {
+      "repo": "dair-ai/ml-visuals",
+      "category": "asset-library",
+      "readiness": "use-now",
+      "integration": "editable machine-learning figure templates",
+      "why": "Open community figures and reusable ML components maintained in slides."
+    },
+    {
+      "repo": "garrettj403/SciencePlots",
+      "category": "asset-library",
+      "readiness": "use-now",
+      "integration": "publication plotting styles",
+      "why": "Consistent journal-style Matplotlib output for data panels."
+    },
+    {
+      "repo": "rough-stuff/rough",
+      "category": "asset-library",
+      "readiness": "use-now",
+      "integration": "hand-drawn vector rendering",
+      "why": "Small programmable primitive for controlled hand-drawn arrows and shapes."
+    },
+    {
+      "repo": "excalidraw/excalidraw",
+      "category": "editor-export",
+      "readiness": "reference",
+      "integration": "hand-drawn diagram interaction patterns",
+      "why": "Best-known lightweight sketch-diagram experience and editable scene model."
+    },
+    {
+      "repo": "tabler/tabler-icons",
+      "category": "asset-library",
+      "readiness": "use-now",
+      "integration": "general-purpose SVG icon fallback",
+      "why": "Large consistent MIT-licensed SVG icon set."
+    },
+    {
+      "repo": "lucide-icons/lucide",
+      "category": "asset-library",
+      "readiness": "use-now",
+      "integration": "general-purpose SVG icon fallback",
+      "why": "Consistent open icon system with simple editable strokes."
+    },
+    {
+      "repo": "hfg-gmuend/openmoji",
+      "category": "asset-library",
+      "readiness": "reference",
+      "integration": "human and object pictogram fallback",
+      "why": "Broad vector pictogram set; attribution and share-alike terms require care."
+    },
+    {
+      "repo": "keesey/phylopic",
+      "category": "asset-library",
+      "readiness": "reference",
+      "integration": "organism silhouette source",
+      "why": "Core repository behind reusable organism silhouettes with per-image licensing."
+    }
+  ],
+  "discovery_queries": [
+    {
+      "id": "new-svg-models",
+      "category": "vector-model",
+      "query": "SVG generation model in:name,description created:>={created_since} archived:false",
+      "limit": 15
+    },
+    {
+      "id": "image-to-svg",
+      "category": "vector-model",
+      "query": "image to SVG in:name,description stars:>20 archived:false",
+      "limit": 15
+    },
+    {
+      "id": "scientific-figures",
+      "category": "scientific-figure-system",
+      "query": "scientific figure in:name,description created:>={created_since} archived:false",
+      "limit": 15
+    },
+    {
+      "id": "editable-paper-figures",
+      "category": "scientific-figure-system",
+      "query": "editable paper figure in:name,description,readme archived:false",
+      "limit": 15
+    },
+    {
+      "id": "figure-skills",
+      "category": "agent-skill",
+      "query": "paper figure skill in:name,description created:>={created_since} archived:false",
+      "limit": 15
+    },
+    {
+      "id": "diagram-reconstruction",
+      "category": "agent-skill",
+      "query": "image drawio reconstruction in:name,description,readme archived:false",
+      "limit": 15
+    },
+    {
+      "id": "scientific-assets",
+      "category": "asset-library",
+      "query": "scientific SVG icons in:name,description stars:>5 archived:false",
+      "limit": 15
+    }
+  ]
+}

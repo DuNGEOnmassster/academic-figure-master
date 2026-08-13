@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-labelledby="title desc">
+  <title id="title">Editable tensor and feature stack primitives</title>
+  <desc id="desc">A matrix, feature-map stack, token sequence, and dimension annotations for machine learning figures.</desc>
+  <defs>
+    <marker id="tensor-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#34445E"/>
+    </marker>
+  </defs>
+  <g id="input-matrix">
+    <rect x="34" y="66" width="122" height="156" rx="10" fill="#EEF5FF" stroke="#5F88C6" stroke-width="2"/>
+    <g stroke="#9AB5DA" stroke-width="1">
+      <path d="M34 105 H156 M34 144 H156 M34 183 H156"/>
+      <path d="M64.5 66 V222 M95 66 V222 M125.5 66 V222"/>
+    </g>
+    <text x="95" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#34445E">input x ∈ ℝᴺˣᴰ</text>
+  </g>
+  <g id="feature-stack">
+    <rect x="261" y="86" width="128" height="128" rx="10" fill="#E9E3F7" stroke="#7656C9" stroke-width="2"/>
+    <rect x="247" y="75" width="128" height="128" rx="10" fill="#EFEAFA" stroke="#8B70CC" stroke-width="2"/>
+    <rect x="233" y="64" width="128" height="128" rx="10" fill="#F5F1FC" stroke="#9E86D4" stroke-width="2"/>
+    <g stroke="#B6A6DF" stroke-width="1">
+      <path d="M233 96 H361 M233 128 H361 M233 160 H361"/>
+      <path d="M265 64 V192 M297 64 V192 M329 64 V192"/>
+    </g>
+    <text x="311" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#34445E">H × W × C</text>
+  </g>
+  <g id="token-sequence" font-family="Arial, sans-serif" text-anchor="middle">
+    <g id="token-1"><rect x="466" y="72" width="52" height="48" rx="12" fill="#FFF2EF" stroke="#D97A6F" stroke-width="2"/><text x="492" y="102" font-size="14" fill="#73423D">t₁</text></g>
+    <g id="token-2"><rect x="526" y="72" width="52" height="48" rx="12" fill="#FFF2EF" stroke="#D97A6F" stroke-width="2"/><text x="552" y="102" font-size="14" fill="#73423D">t₂</text></g>
+    <g id="token-3"><rect x="466" y="132" width="52" height="48" rx="12" fill="#FFF7E8" stroke="#D2A84D" stroke-width="2"/><text x="492" y="162" font-size="14" fill="#705A27">t₃</text></g>
+    <g id="token-n"><rect x="526" y="132" width="52" height="48" rx="12" fill="#FFF7E8" stroke="#D2A84D" stroke-width="2"/><text x="552" y="162" font-size="14" fill="#705A27">tₙ</text></g>
+    <text x="522" y="211" font-size="15" fill="#34445E">token sequence</text>
+  </g>
+  <g id="tensor-flow" fill="none" stroke="#34445E" stroke-width="2.5" marker-end="url(#tensor-arrow)">
+    <path d="M169 144 H216"/>
+    <path d="M405 144 H449"/>
+  </g>
+  <g id="dimension-braces" fill="none" stroke="#60718A" stroke-width="1.7">
+    <path d="M25 66 C15 66 15 84 15 105 V183 C15 205 15 222 25 222"/>
+    <path d="M233 54 C233 44 250 44 270 44 H324 C344 44 361 44 361 54"/>
+  </g>
+</svg>

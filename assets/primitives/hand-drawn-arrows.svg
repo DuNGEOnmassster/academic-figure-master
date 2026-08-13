@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-labelledby="title desc">
+  <title id="title">Editable hand-drawn arrow set</title>
+  <desc id="desc">Original loose, looping, emphasis, and bidirectional arrows made from editable SVG paths.</desc>
+  <g id="loose-right-arrow" fill="none" stroke="#28364D" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M48 67 C104 54 166 60 229 49 C254 45 278 44 301 47" stroke-width="4"/>
+    <path d="M50 71 C106 59 166 65 230 54 C256 49 278 49 302 51" stroke-width="1.7" opacity="0.45"/>
+    <path d="M281 36 C294 41 303 48 311 52 C300 57 290 65 282 75" stroke-width="4"/>
+  </g>
+  <g id="loop-arrow" fill="none" stroke="#7656C9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M413 79 C369 40 337 68 352 105 C368 146 453 141 481 103 C508 67 472 39 443 53" stroke-width="4.5"/>
+    <path d="M411 84 C371 47 344 72 359 105 C377 139 448 135 475 101" stroke-width="1.5" opacity="0.42"/>
+    <path d="M452 42 C445 50 440 60 438 70 C449 66 459 65 470 68" stroke-width="4.5"/>
+  </g>
+  <g id="emphasis-arrow" fill="none" stroke="#D85663" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M63 224 C130 187 188 194 266 166" stroke-width="7"/>
+    <path d="M64 230 C135 194 190 200 269 171" stroke-width="2" opacity="0.4"/>
+    <path d="M239 158 C255 160 270 165 283 174 C268 181 257 192 247 205" stroke-width="7"/>
+    <path d="M111 163 L99 139 M134 158 L130 128 M158 159 L165 131" stroke-width="3"/>
+  </g>
+  <g id="bidirectional-arrow" fill="none" stroke="#3972D6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M386 230 C435 207 492 207 558 224" stroke-width="4"/>
+    <path d="M387 235 C438 213 492 212 558 229" stroke-width="1.5" opacity="0.45"/>
+    <path d="M405 213 C394 218 385 225 377 234 C389 238 400 244 410 252" stroke-width="4"/>
+    <path d="M539 208 C550 214 559 222 567 231 C555 235 545 241 535 249" stroke-width="4"/>
+  </g>
+  <g id="arrow-labels" font-family="Arial, sans-serif" font-size="13" fill="#60718A">
+    <text x="48" y="105">loose</text>
+    <text x="348" y="161">loop / feedback</text>
+    <text x="62" y="276">emphasis</text>
+    <text x="413" y="276">bidirectional</text>
+  </g>
+</svg>

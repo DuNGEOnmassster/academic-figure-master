@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "title": "Score-based diffusion overview",
+  "canvas": {
+    "width": 1200,
+    "height": 675,
+    "unit": "px",
+    "background": "#FFFFFF",
+    "final_width_mm": 178
+  },
+  "style": {
+    "font_family": "Arial",
+    "font_size": 18,
+    "stroke_width": 2,
+    "palette": {
+      "ink": "#172033",
+      "blue": "#3972D6",
+      "violet": "#7656C9",
+      "coral": "#E46F61",
+      "soft": "#EEF3FA"
+    }
+  },
+  "panels": [
+    {"id": "panel-a", "label": "a", "bounds": [40, 40, 530, 580], "order": 1},
+    {"id": "panel-b", "label": "b", "bounds": [630, 40, 530, 580], "order": 2}
+  ],
+  "objects": [
+    {"id": "data", "component": "distribution", "panel": "panel-a", "role": "observed data", "editable": true},
+    {"id": "noise", "component": "distribution", "panel": "panel-a", "role": "prior noise", "editable": true},
+    {"id": "score-net", "component": "neural-module", "panel": "panel-b", "role": "learned score", "editable": true}
+  ],
+  "connectors": [
+    {"id": "forward-sde", "source": "data", "target": "noise", "direction": "forward", "meaning": "noise injection", "route": "curve"},
+    {"id": "reverse-sde", "source": "noise", "target": "data", "direction": "reverse", "meaning": "score-guided denoising", "route": "curve"}
+  ],
+  "labels": [
+    {"id": "label-forward", "text": "Forward SDE", "anchor": "forward-sde", "editable": true},
+    {"id": "label-reverse", "text": "Reverse-time SDE / probability-flow ODE", "anchor": "reverse-sde", "editable": true}
+  ],
+  "provenance": {
+    "inputs": [],
+    "external_assets": [],
+    "uncertainties": []
+  }
+}

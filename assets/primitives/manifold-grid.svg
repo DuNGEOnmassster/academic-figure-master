@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-labelledby="title desc">
+  <title id="title">Editable manifold grid primitive</title>
+  <desc id="desc">A curved two-dimensional manifold with coordinate grid, sample points, tangent arrows, and a geodesic.</desc>
+  <defs>
+    <linearGradient id="surface-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E9F3FF"/>
+      <stop offset="0.55" stop-color="#D9E7FA"/>
+      <stop offset="1" stop-color="#EEE7FA"/>
+    </linearGradient>
+    <marker id="manifold-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#25334A"/>
+    </marker>
+  </defs>
+  <g id="manifold-surface">
+    <path id="surface-fill" d="M55 190 C115 88 205 62 291 84 C365 103 422 160 429 218 C356 260 272 272 184 258 C120 248 77 226 55 190 Z" fill="url(#surface-gradient)" stroke="#4D6485" stroke-width="2"/>
+    <g id="u-grid" fill="none" stroke="#7F99BC" stroke-width="1.2" opacity="0.8">
+      <path d="M76 204 C145 130 231 111 324 133 C367 143 400 166 421 196"/>
+      <path d="M98 225 C164 167 240 151 320 169 C355 177 384 193 407 216"/>
+      <path d="M132 244 C185 204 247 194 310 205 C338 210 364 220 384 235"/>
+    </g>
+    <g id="v-grid" fill="none" stroke="#9A89C7" stroke-width="1.2" opacity="0.78">
+      <path d="M116 130 C132 166 145 207 151 247"/>
+      <path d="M183 91 C192 137 200 196 201 262"/>
+      <path d="M255 76 C253 129 253 197 251 268"/>
+      <path d="M324 96 C310 142 303 205 302 264"/>
+      <path d="M382 139 C357 169 349 215 350 251"/>
+    </g>
+  </g>
+  <g id="geodesic" fill="none">
+    <path d="M102 214 C171 176 244 159 365 199" stroke="#D85663" stroke-width="4" stroke-linecap="round"/>
+    <path d="M102 214 C171 176 244 159 365 199" stroke="#FFFFFF" stroke-width="1.2" stroke-dasharray="5 7" opacity="0.9"/>
+  </g>
+  <g id="sample-points" stroke="#FFFFFF" stroke-width="2">
+    <circle id="sample-x0" cx="102" cy="214" r="6" fill="#3972D6"/>
+    <circle id="sample-x1" cx="214" cy="171" r="6" fill="#7656C9"/>
+    <circle id="sample-x2" cx="365" cy="199" r="6" fill="#D85663"/>
+  </g>
+  <g id="tangent-basis" fill="none" stroke="#25334A" stroke-width="2.4" marker-end="url(#manifold-arrow)">
+    <path id="basis-e1" d="M214 171 L271 158"/>
+    <path id="basis-e2" d="M214 171 L196 121"/>
+  </g>
+  <g id="manifold-labels" font-family="Arial, sans-serif" fill="#25334A">
+    <text x="274" y="153" font-size="15">e₁</text>
+    <text x="181" y="117" font-size="15">e₂</text>
+    <text x="374" y="198" font-size="15">x₁</text>
+    <text x="79" y="213" font-size="15">x₀</text>
+    <text x="344" y="271" font-size="16" font-style="italic">𝓜</text>
+  </g>
+</svg>

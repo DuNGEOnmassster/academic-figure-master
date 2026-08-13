@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Figure Master"
+  short_description: "Create editable, publication-ready academic figures"
+  default_prompt: "Use $academic-figure-master to turn this research content into an editable publication-ready figure."

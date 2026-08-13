@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-labelledby="title desc">
+  <title id="title">Editable ODE and SDE trajectories</title>
+  <desc id="desc">Side-by-side deterministic ODE and stochastic SDE trajectory primitives with drift, noise, and uncertainty.</desc>
+  <defs>
+    <marker id="trajectory-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#25334A"/>
+    </marker>
+    <linearGradient id="uncertainty-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#78A8E8" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#7656C9" stop-opacity="0.28"/>
+    </linearGradient>
+  </defs>
+  <g id="ode-panel">
+    <rect x="18" y="24" width="286" height="244" rx="18" fill="#F8FAFD" stroke="#D5DEEA"/>
+    <text x="42" y="57" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#25334A">ODE</text>
+    <text x="42" y="80" font-family="Arial, sans-serif" font-size="13" fill="#60718A">dx = f(x,t) dt</text>
+    <g id="ode-vector-field" stroke="#A8B8CD" stroke-width="1.2" marker-end="url(#trajectory-arrow)" opacity="0.72">
+      <path d="M58 122 C79 111 91 110 108 114"/>
+      <path d="M58 175 C77 160 94 156 112 159"/>
+      <path d="M119 222 C137 207 154 200 172 201"/>
+      <path d="M173 117 C195 106 213 104 232 108"/>
+      <path d="M201 178 C220 162 239 155 259 157"/>
+    </g>
+    <g id="ode-trajectory" fill="none">
+      <path d="M53 229 C85 213 98 182 125 170 C157 154 170 123 206 109 C232 99 259 104 279 119" stroke="#3972D6" stroke-width="5" stroke-linecap="round" marker-end="url(#trajectory-arrow)"/>
+      <circle cx="53" cy="229" r="6" fill="#3972D6" stroke="#FFFFFF" stroke-width="2"/>
+    </g>
+  </g>
+  <g id="sde-panel">
+    <rect x="336" y="24" width="286" height="244" rx="18" fill="#FBFAFE" stroke="#DED8EB"/>
+    <text x="360" y="57" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#25334A">SDE</text>
+    <text x="360" y="80" font-family="Arial, sans-serif" font-size="13" fill="#60718A">dx = f(x,t) dt + g(t) dW</text>
+    <path id="uncertainty-band" d="M369 229 C403 191 427 173 461 148 C499 118 537 94 598 92 L598 158 C552 148 516 162 480 183 C439 207 408 237 369 247 Z" fill="url(#uncertainty-gradient)"/>
+    <g id="sde-samples" fill="none" stroke-linecap="round">
+      <path d="M369 238 C390 211 402 219 418 193 C432 171 449 181 462 152 C476 126 495 145 512 117 C531 91 554 124 594 103" stroke="#7656C9" stroke-width="3.2" marker-end="url(#trajectory-arrow)"/>
+      <path d="M369 238 C393 226 403 199 428 200 C451 201 449 165 479 165 C506 165 513 132 543 139 C562 143 574 125 596 130" stroke="#A18BD4" stroke-width="2" opacity="0.72"/>
+      <path d="M369 238 C387 204 414 215 421 181 C427 151 457 166 472 136 C486 109 513 124 528 101 C548 76 569 103 597 83" stroke="#B8A7DE" stroke-width="2" opacity="0.62"/>
+    </g>
+    <g id="sde-drift" fill="none" stroke="#D85663" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#trajectory-arrow)">
+      <path d="M369 238 C420 195 454 165 493 141 C530 118 562 108 596 111"/>
+    </g>
+    <g id="sde-legend" font-family="Arial, sans-serif" font-size="12" fill="#60718A">
+      <line x1="390" y1="101" x2="420" y2="101" stroke="#D85663" stroke-width="2" stroke-dasharray="7 5"/>
+      <text x="428" y="105">drift</text>
+      <line x1="493" y1="101" x2="523" y2="101" stroke="#7656C9" stroke-width="3"/>
+      <text x="531" y="105">sample</text>
+    </g>
+  </g>
+</svg>

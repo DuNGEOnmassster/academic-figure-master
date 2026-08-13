@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" role="img" aria-labelledby="title desc">
+  <title id="title">Editable neural network module kit</title>
+  <desc id="desc">Encoder, attention, latent, decoder, merge, and typed port primitives with native labels and connectors.</desc>
+  <defs>
+    <marker id="module-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#34445E"/>
+    </marker>
+  </defs>
+  <g id="encoder-module" font-family="Arial, sans-serif">
+    <rect x="52" y="89" width="132" height="82" rx="17" fill="#EAF3FF" stroke="#3972D6" stroke-width="2.5"/>
+    <text x="118" y="123" text-anchor="middle" font-size="17" font-weight="700" fill="#264D86">Encoder</text>
+    <text x="118" y="147" text-anchor="middle" font-size="12" fill="#577397">fθ</text>
+    <circle id="encoder-in" cx="52" cy="130" r="5" fill="#3972D6"/>
+    <circle id="encoder-out" cx="184" cy="130" r="5" fill="#3972D6"/>
+  </g>
+  <g id="attention-module" font-family="Arial, sans-serif">
+    <rect x="239" y="75" width="150" height="110" rx="20" fill="#F2EDFB" stroke="#7656C9" stroke-width="2.5"/>
+    <text x="314" y="112" text-anchor="middle" font-size="17" font-weight="700" fill="#513B8F">Attention</text>
+    <g id="attention-heads" fill="none" stroke="#9B85D1" stroke-width="2">
+      <path d="M274 145 C289 127 303 127 318 145 C333 163 347 163 362 145"/>
+      <path d="M274 154 C289 136 303 136 318 154 C333 172 347 172 362 154" opacity="0.55"/>
+    </g>
+    <circle id="attention-in" cx="239" cy="130" r="5" fill="#7656C9"/>
+    <circle id="attention-out" cx="389" cy="130" r="5" fill="#7656C9"/>
+  </g>
+  <g id="latent-module" font-family="Arial, sans-serif">
+    <ellipse cx="470" cy="130" rx="48" ry="54" fill="#FFF7E8" stroke="#D2A84D" stroke-width="2.5"/>
+    <text x="470" y="126" text-anchor="middle" font-size="16" font-weight="700" fill="#705A27">Latent</text>
+    <text x="470" y="149" text-anchor="middle" font-size="13" fill="#866D37">z</text>
+    <circle id="latent-in" cx="422" cy="130" r="5" fill="#D2A84D"/>
+    <circle id="latent-out" cx="518" cy="130" r="5" fill="#D2A84D"/>
+  </g>
+  <g id="decoder-module" font-family="Arial, sans-serif">
+    <rect x="574" y="89" width="132" height="82" rx="17" fill="#FFF0EE" stroke="#D85663" stroke-width="2.5"/>
+    <text x="640" y="123" text-anchor="middle" font-size="17" font-weight="700" fill="#8A3540">Decoder</text>
+    <text x="640" y="147" text-anchor="middle" font-size="12" fill="#9A5D65">gφ</text>
+    <circle id="decoder-in" cx="574" cy="130" r="5" fill="#D85663"/>
+    <circle id="decoder-out" cx="706" cy="130" r="5" fill="#D85663"/>
+  </g>
+  <g id="module-connectors" fill="none" stroke="#34445E" stroke-width="2.5" marker-end="url(#module-arrow)">
+    <path id="edge-encoder-attention" d="M190 130 H232"/>
+    <path id="edge-attention-latent" d="M395 130 H415"/>
+    <path id="edge-latent-decoder" d="M524 130 H567"/>
+  </g>
+  <g id="skip-connection" fill="none" stroke="#6C819F" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#module-arrow)">
+    <path d="M118 178 V234 C118 253 134 265 154 265 H608 C628 265 640 249 640 228 V180"/>
+    <text x="376" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#60718A" stroke="none">skip / residual connection</text>
+  </g>
+  <g id="merge-module" font-family="Arial, sans-serif">
+    <circle cx="470" cy="242" r="25" fill="#FFFFFF" stroke="#34445E" stroke-width="2.2"/>
+    <path d="M458 242 H482 M470 230 V254" stroke="#34445E" stroke-width="2.2"/>
+    <text x="470" y="319" text-anchor="middle" font-size="13" fill="#60718A">merge / add</text>
+  </g>
+</svg>
