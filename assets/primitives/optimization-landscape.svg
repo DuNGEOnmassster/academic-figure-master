@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Optimization landscape</title><desc id="svg-desc">Editable contours, iterates, and convergence annotation</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
+    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
+    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <style>
+    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
+    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
+    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
+    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
+    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="675"/>
+  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >Optimization landscape</text><text x="52" y="86" class="subtitle" text-anchor="start" >Editable contours, iterates, and convergence annotation</text></g>
+  <g id="loss-contours" >
+<path d="M130,460 C220,280 390,230 520,330 C640,430 760,410 900,240" class="axis" />
+<path d="M180,480 C270,335 400,300 510,370 C620,445 760,445 960,270" class="axis" />
+<path d="M250,500 C340,410 430,385 520,425 C630,475 770,480 1020,330" class="axis" />
+</g><g id="optimizer-path" >
+<path d="M160,500 L250,390 L360,350 L470,405 L580,430 L690,405 L790,350 L875,285" class="violet-line" marker-end="url(#arrow-violet)"/>
+<circle cx="160" cy="500" r="6" class="dot-violet" />
+<circle cx="250" cy="390" r="6" class="dot-violet" />
+<circle cx="360" cy="350" r="6" class="dot-violet" />
+<circle cx="470" cy="405" r="6" class="dot-violet" />
+<circle cx="580" cy="430" r="6" class="dot-violet" />
+<circle cx="690" cy="405" r="6" class="dot-violet" />
+<circle cx="790" cy="350" r="6" class="dot-violet" />
+<circle cx="875" cy="285" r="6" class="dot-violet" />
+</g><circle cx="900" cy="255" r="18" class="dot-red" /><text x="930" y="260" class="small muted" text-anchor="start" >local minimum</text><text x="145" y="535" class="small strong" text-anchor="middle" >θ₀</text>
+</svg>

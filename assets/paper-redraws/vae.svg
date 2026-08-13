@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Variational autoencoder</title><desc id="svg-desc">Reparameterized inference and generative reconstruction after Kingma &amp; Welling (2013)</desc><metadata>Source: Auto-Encoding Variational Bayes; semantic redraw.</metadata>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
+    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
+    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <style>
+    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
+    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
+    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
+    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
+    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="675"/>
+  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >Variational autoencoder</text><text x="52" y="86" class="subtitle" text-anchor="start" >Reparameterized inference and generative reconstruction after Kingma &amp; Welling (2013)</text></g>
+  <text x="1125" y="103" class="paper-note" text-anchor="middle" >SEMANTIC REDRAW</text><g id="vae-input" >
+<rect x="65" y="270" width="145" height="100" rx="18" class="card slate"/>
+<text x="137.5" y="313" class="label strong" text-anchor="middle" >Data</text>
+<text x="137.5" y="341" class="small muted" text-anchor="middle" >x</text>
+</g><g id="vae-encoder" >
+<rect x="300" y="235" width="190" height="170" rx="18" class="card blue"/>
+<text x="395" y="313" class="label strong" text-anchor="middle" >Encoder qφ</text>
+<text x="395" y="341" class="small muted" text-anchor="middle" >μ(x), log σ²(x)</text>
+</g><g id="vae-noise" >
+<rect x="555" y="150" width="115" height="90" rx="18" class="card violet"/>
+<text x="612.5" y="188" class="label strong" text-anchor="middle" >Noise</text>
+<text x="612.5" y="216" class="small muted" text-anchor="middle" >ε ~ N(0,I)</text>
+</g><g id="vae-latent" >
+<rect x="555" y="330" width="115" height="90" rx="18" class="card gold"/>
+<text x="612.5" y="368" class="label strong" text-anchor="middle" >Latent</text>
+<text x="612.5" y="396" class="small muted" text-anchor="middle" >z = μ + σε</text>
+</g><g id="vae-decoder" >
+<rect x="760" y="235" width="190" height="170" rx="18" class="card green"/>
+<text x="855" y="313" class="label strong" text-anchor="middle" >Decoder pθ</text>
+<text x="855" y="341" class="small muted" text-anchor="middle" >pθ(x | z)</text>
+</g><g id="vae-output" >
+<rect x="1040" y="270" width="110" height="100" rx="18" class="card red"/>
+<text x="1095" y="313" class="label strong" text-anchor="middle" >Rebuild</text>
+<text x="1095" y="341" class="small muted" text-anchor="middle" >x̂</text>
+</g><g id="vae-e1" >
+<line x1="210" y1="320" x2="300" y2="320" class="wire" marker-end="url(#arrow)"/>
+</g><g id="vae-e2" >
+<line x1="490" y1="320" x2="555" y2="365" class="wire" marker-end="url(#arrow)"/>
+</g><g id="vae-noise-edge" >
+<line x1="612" y1="240" x2="612" y2="330" class="wire" marker-end="url(#arrow)"/>
+<text x="612" y="273" class="tiny muted" text-anchor="middle" >sample</text>
+</g><g id="vae-e3" >
+<line x1="670" y1="375" x2="760" y2="320" class="wire" marker-end="url(#arrow)"/>
+</g><g id="vae-e4" >
+<line x1="950" y1="320" x2="1040" y2="320" class="wire" marker-end="url(#arrow)"/>
+</g><path d="M395,405 C430,525 835,525 855,405" class="violet-line dash" marker-end="url(#arrow-violet)"/><text x="625" y="550" class="small strong" text-anchor="middle" >ELBO = reconstruction − KL(qφ(z|x) || p(z))</text>
+</svg>

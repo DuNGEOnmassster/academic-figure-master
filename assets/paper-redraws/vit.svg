@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Vision Transformer</title><desc id="svg-desc">Patchify, embed, encode, and classify after Dosovitskiy et al. (2020)</desc><metadata>Source: An Image is Worth 16x16 Words, Figure 1; semantic redraw.</metadata>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
+    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
+    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <style>
+    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
+    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
+    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
+    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
+    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="675"/>
+  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >Vision Transformer</text><text x="52" y="86" class="subtitle" text-anchor="start" >Patchify, embed, encode, and classify after Dosovitskiy et al. (2020)</text></g>
+  <text x="1125" y="103" class="paper-note" text-anchor="middle" >SEMANTIC REDRAW</text><g id="vit-image-patches" >
+<rect x="65" y="220" width="44" height="44" rx="5" fill="#d9e8ff" stroke="#71819a"/>
+<rect x="113" y="220" width="44" height="44" rx="5" fill="#e9e1ff" stroke="#71819a"/>
+<rect x="161" y="220" width="44" height="44" rx="5" fill="#dff4ed" stroke="#71819a"/>
+<rect x="209" y="220" width="44" height="44" rx="5" fill="#ffebe9" stroke="#71819a"/>
+<rect x="65" y="268" width="44" height="44" rx="5" fill="#e9e1ff" stroke="#71819a"/>
+<rect x="113" y="268" width="44" height="44" rx="5" fill="#dff4ed" stroke="#71819a"/>
+<rect x="161" y="268" width="44" height="44" rx="5" fill="#ffebe9" stroke="#71819a"/>
+<rect x="209" y="268" width="44" height="44" rx="5" fill="#d9e8ff" stroke="#71819a"/>
+<rect x="65" y="316" width="44" height="44" rx="5" fill="#dff4ed" stroke="#71819a"/>
+<rect x="113" y="316" width="44" height="44" rx="5" fill="#ffebe9" stroke="#71819a"/>
+<rect x="161" y="316" width="44" height="44" rx="5" fill="#d9e8ff" stroke="#71819a"/>
+<rect x="209" y="316" width="44" height="44" rx="5" fill="#e9e1ff" stroke="#71819a"/>
+<rect x="65" y="364" width="44" height="44" rx="5" fill="#ffebe9" stroke="#71819a"/>
+<rect x="113" y="364" width="44" height="44" rx="5" fill="#d9e8ff" stroke="#71819a"/>
+<rect x="161" y="364" width="44" height="44" rx="5" fill="#e9e1ff" stroke="#71819a"/>
+<rect x="209" y="364" width="44" height="44" rx="5" fill="#dff4ed" stroke="#71819a"/>
+</g><text x="160" y="445" class="small muted" text-anchor="middle" >image patches</text><g id="vit-patch-arrow" >
+<line x1="270" y1="315" x2="380" y2="315" class="wire" marker-end="url(#arrow)"/>
+</g><g id="vit-token-stack" >
+<rect x="426" y="189" width="145" height="180" rx="12" class="card violet" opacity="0.64"/>
+<rect x="417" y="198" width="145" height="180" rx="12" class="card violet" opacity="0.73"/>
+<rect x="408" y="207" width="145" height="180" rx="12" class="card violet" opacity="0.82"/>
+<rect x="399" y="216" width="145" height="180" rx="12" class="card violet" opacity="0.91"/>
+<rect x="390" y="225" width="145" height="180" rx="12" class="card violet" opacity="1.00"/>
+<text x="462.5" y="321" class="label strong" text-anchor="middle" >patch tokens</text>
+</g><text x="462" y="445" class="tiny muted" text-anchor="middle" >+ [class] + position</text><g id="vit-transformer-arrow" >
+<line x1="570" y1="315" x2="680" y2="315" class="wire" marker-end="url(#arrow)"/>
+</g><g id="vit-transformer" >
+<rect x="680" y="220" width="220" height="190" rx="18" class="card blue"/>
+<text x="790" y="308" class="label strong" text-anchor="middle" >Transformer</text>
+<text x="790" y="336" class="small muted" text-anchor="middle" >encoder × L</text>
+</g><g id="vit-head-arrow" >
+<line x1="900" y1="315" x2="995" y2="315" class="wire" marker-end="url(#arrow)"/>
+</g><g id="vit-head" >
+<rect x="995" y="265" width="165" height="100" rx="18" class="card gold"/>
+<text x="1077.5" y="308" class="label strong" text-anchor="middle" >MLP head</text>
+<text x="1077.5" y="336" class="small muted" text-anchor="middle" >class logits</text>
+</g>
+</svg>

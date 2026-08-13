@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Multimodal fusion</title><desc id="svg-desc">Separate encoders, shared fusion, and task head</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
+    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
+    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <style>
+    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
+    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
+    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
+    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
+    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="675"/>
+  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >Multimodal fusion</text><text x="52" y="86" class="subtitle" text-anchor="start" >Separate encoders, shared fusion, and task head</text></g>
+  <g id="modality-0" >
+<rect x="70" y="155" width="160" height="90" rx="18" class="card blue"/>
+<text x="150" y="193" class="label strong" text-anchor="middle" >Image</text>
+<text x="150" y="221" class="small muted" text-anchor="middle" >patches</text>
+</g><g id="modality-encoder-0" >
+<line x1="230" y1="200" x2="360" y2="200" class="wire" marker-end="url(#arrow)"/>
+</g><g id="encoder-0" >
+<rect x="360" y="155" width="170" height="90" rx="18" class="card blue"/>
+<text x="445" y="193" class="label strong" text-anchor="middle" >Encoder</text>
+<text x="445" y="221" class="small muted" text-anchor="middle" >z1</text>
+</g><g id="modality-1" >
+<rect x="70" y="290" width="160" height="90" rx="18" class="card violet"/>
+<text x="150" y="328" class="label strong" text-anchor="middle" >Text</text>
+<text x="150" y="356" class="small muted" text-anchor="middle" >tokens</text>
+</g><g id="modality-encoder-1" >
+<line x1="230" y1="335" x2="360" y2="335" class="wire" marker-end="url(#arrow)"/>
+</g><g id="encoder-1" >
+<rect x="360" y="290" width="170" height="90" rx="18" class="card violet"/>
+<text x="445" y="328" class="label strong" text-anchor="middle" >Encoder</text>
+<text x="445" y="356" class="small muted" text-anchor="middle" >z2</text>
+</g><g id="modality-2" >
+<rect x="70" y="425" width="160" height="90" rx="18" class="card green"/>
+<text x="150" y="463" class="label strong" text-anchor="middle" >Audio</text>
+<text x="150" y="491" class="small muted" text-anchor="middle" >frames</text>
+</g><g id="modality-encoder-2" >
+<line x1="230" y1="470" x2="360" y2="470" class="wire" marker-end="url(#arrow)"/>
+</g><g id="encoder-2" >
+<rect x="360" y="425" width="170" height="90" rx="18" class="card green"/>
+<text x="445" y="463" class="label strong" text-anchor="middle" >Encoder</text>
+<text x="445" y="491" class="small muted" text-anchor="middle" >z3</text>
+</g><g id="fusion" >
+<rect x="675" y="245" width="220" height="170" rx="18" class="card gold"/>
+<text x="785" y="323" class="label strong" text-anchor="middle" >Fusion</text>
+<text x="785" y="351" class="small muted" text-anchor="middle" >cross-attention</text>
+</g><g id="encoder-fusion-0" >
+<path d="M530,200 Q602.5,292 675,330" class="wire" marker-end="url(#arrow)"/>
+</g><g id="encoder-fusion-1" >
+<line x1="530" y1="335" x2="675" y2="330" class="wire" marker-end="url(#arrow)"/>
+</g><g id="encoder-fusion-2" >
+<path d="M530,470 Q602.5,373 675,330" class="wire" marker-end="url(#arrow)"/>
+</g><g id="fusion-head" >
+<line x1="895" y1="330" x2="1005" y2="330" class="wire" marker-end="url(#arrow)"/>
+</g><g id="task-head" >
+<rect x="1005" y="270" width="155" height="120" rx="18" class="card red"/>
+<text x="1082.5" y="323" class="label strong" text-anchor="middle" >Task head</text>
+<text x="1082.5" y="351" class="small muted" text-anchor="middle" >predict / generate</text>
+</g>
+</svg>

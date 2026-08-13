@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Neural ODE: discrete to continuous depth</title><desc id="svg-desc">Adaptive continuous-depth computation after Chen et al. (2018)</desc><metadata>Source: Neural Ordinary Differential Equations; semantic redraw.</metadata>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
+    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
+    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <style>
+    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
+    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
+    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
+    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
+    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="675"/>
+  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >Neural ODE: discrete to continuous depth</text><text x="52" y="86" class="subtitle" text-anchor="start" >Adaptive continuous-depth computation after Chen et al. (2018)</text></g>
+  <text x="1125" y="103" class="paper-note" text-anchor="middle" >SEMANTIC REDRAW</text><text x="230" y="145" class="small strong" text-anchor="middle" >DISCRETE DEPTH</text><text x="825" y="145" class="small strong" text-anchor="middle" >CONTINUOUS DEPTH</text><circle cx="105" cy="440" r="17" class="node" /><text x="105" y="446" class="tiny strong" text-anchor="middle" >h0</text><circle cx="180" cy="404.732" r="17" class="node" /><text x="180" y="410.732" class="tiny strong" text-anchor="middle" >h1</text><g id="ode-discrete-1" >
+<line x1="105" y1="440" x2="162" y2="414.732" class="wire" marker-end="url(#arrow)"/>
+</g><circle cx="255" cy="363.274" r="17" class="node" /><text x="255" y="369.274" class="tiny strong" text-anchor="middle" >h2</text><g id="ode-discrete-2" >
+<line x1="180" y1="404.732" x2="237" y2="373.274" class="wire" marker-end="url(#arrow)"/>
+</g><circle cx="330" cy="315.129" r="17" class="node" /><text x="330" y="321.129" class="tiny strong" text-anchor="middle" >h3</text><g id="ode-discrete-3" >
+<line x1="255" y1="363.274" x2="312" y2="325.129" class="wire" marker-end="url(#arrow)"/>
+</g><circle cx="405" cy="265.946" r="17" class="node" /><text x="405" y="271.946" class="tiny strong" text-anchor="middle" >h4</text><g id="ode-discrete-4" >
+<line x1="330" y1="315.129" x2="387" y2="275.946" class="wire" marker-end="url(#arrow)"/>
+</g><circle cx="480" cy="222.329" r="17" class="node" /><text x="480" y="228.329" class="tiny strong" text-anchor="middle" >h5</text><g id="ode-discrete-5" >
+<line x1="405" y1="265.946" x2="462" y2="232.329" class="wire" marker-end="url(#arrow)"/>
+</g><text x="295" y="505" class="small muted" text-anchor="middle" >hₜ₊₁ = hₜ + f(hₜ, θₜ)</text><path d="M650,455 C730,410 740,250 840,290 C940,330 980,210 1080,190" class="violet-line" marker-end="url(#arrow-violet)"/><circle cx="650" cy="455" r="17" class="dot-blue" /><circle cx="1080" cy="190" r="17" class="dot-red" /><text x="650" y="500" class="small strong" text-anchor="middle" >h(t₀)</text><text x="1080" y="160" class="small strong" text-anchor="middle" >h(t₁)</text><text x="850" y="505" class="small muted" text-anchor="middle" >dh/dt = f(h(t), t, θ)</text><g id="ode-evaluation-points" >
+<circle cx="715" cy="402" r="5" class="dot-violet" />
+<circle cx="765" cy="308" r="5" class="dot-violet" />
+<circle cx="835" cy="287" r="5" class="dot-violet" />
+<circle cx="905" cy="307" r="5" class="dot-violet" />
+<circle cx="970" cy="268" r="5" class="dot-violet" />
+<circle cx="1025" cy="218" r="5" class="dot-violet" />
+</g>
+</svg>

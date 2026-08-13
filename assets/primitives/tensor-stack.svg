@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-labelledby="title desc">
   <title id="title">Editable tensor and feature stack primitives</title>
   <desc id="desc">A matrix, feature-map stack, token sequence, and dimension annotations for machine learning figures.</desc>
+  <rect id="figure-background" width="100%" height="100%" fill="#FBFCFF"/>
   <defs>
     <marker id="tensor-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
       <path d="M0 0 L10 5 L0 10 z" fill="#34445E"/>

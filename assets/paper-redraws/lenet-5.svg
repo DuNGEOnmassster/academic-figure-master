@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">LeNet-5 architecture</title><desc id="svg-desc">Concept redraw after LeCun et al. (1998), Figure 2</desc><metadata>Source: Gradient-Based Learning Applied to Document Recognition; semantic redraw.</metadata>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#34445f"/></marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3972d5"/></marker>
+    <marker id="arrow-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7354cf"/></marker>
+    <linearGradient id="soft-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ff"/><stop offset="1" stop-color="#f1edff"/></linearGradient>
+    <style>
+    .bg{fill:#fbfcff}.title{font:700 30px Inter,Arial,sans-serif;fill:#17233b}.subtitle{font:400 15px Inter,Arial,sans-serif;fill:#66758f}
+    .label{font:500 19px Inter,Arial,sans-serif;fill:#263550}.strong{font-weight:700}.small{font:500 15px Inter,Arial,sans-serif}.tiny{font:500 13px Inter,Arial,sans-serif}.muted{fill:#66758f}
+    .card{stroke-width:2.5}.blue{fill:#eaf2ff;stroke:#3972d5}.violet{fill:#f1edff;stroke:#7354cf}.red{fill:#fff0f0;stroke:#dc5963}.gold{fill:#fff7e6;stroke:#d3a23f}.green{fill:#eaf8f2;stroke:#38a479}.slate{fill:#f2f5f9;stroke:#72819a}.cyan{fill:#e9f9fb;stroke:#2b9aa5}
+    .wire{fill:none;stroke:#34445f;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.wire2{fill:none;stroke:#3972d5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.violet-line{fill:none;stroke:#7354cf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.red-line{fill:none;stroke:#dc5963;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.green-line{fill:none;stroke:#38a479;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:10 9}
+    .axis{fill:none;stroke:#8b98ac;stroke-width:2}.grid{stroke:#dce3ed;stroke-width:1.5}.node{fill:#fff;stroke:#34445f;stroke-width:3}.dot-blue{fill:#3972d5}.dot-violet{fill:#7354cf}.dot-red{fill:#dc5963}.dot-green{fill:#38a479}.paper-note{font:600 12px Inter,Arial,sans-serif;fill:#7354cf;letter-spacing:.06em}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="675"/>
+  <g id="figure-title"><text x="52" y="58" class="title" text-anchor="start" >LeNet-5 architecture</text><text x="52" y="86" class="subtitle" text-anchor="start" >Concept redraw after LeCun et al. (1998), Figure 2</text></g>
+  <text x="1125" y="103" class="paper-note" text-anchor="middle" >SEMANTIC REDRAW</text><g id="lenet-stage-0" >
+<rect x="64" y="231" width="105" height="190" rx="12" class="card slate" opacity="0.91"/>
+<rect x="55" y="240" width="105" height="190" rx="12" class="card slate" opacity="1.00"/>
+<text x="107.5" y="341" class="label strong" text-anchor="middle" >Input</text>
+</g><text x="107.5" y="460" class="tiny muted" text-anchor="middle" >32×32</text><g id="lenet-stage-1" >
+<rect x="214" y="246" width="105" height="160" rx="12" class="card blue" opacity="0.91"/>
+<rect x="205" y="255" width="105" height="160" rx="12" class="card blue" opacity="1.00"/>
+<text x="257.5" y="341" class="label strong" text-anchor="middle" >C1</text>
+</g><text x="257.5" y="445" class="tiny muted" text-anchor="middle" >6@28×28</text><g id="lenet-edge-1" >
+<line x1="170" y1="335" x2="197" y2="335" class="wire" marker-end="url(#arrow)"/>
+</g><g id="lenet-stage-2" >
+<rect x="359" y="266" width="95" height="120" rx="12" class="card cyan" opacity="0.91"/>
+<rect x="350" y="275" width="95" height="120" rx="12" class="card cyan" opacity="1.00"/>
+<text x="397.5" y="341" class="label strong" text-anchor="middle" >S2</text>
+</g><text x="397.5" y="425" class="tiny muted" text-anchor="middle" >6@14×14</text><g id="lenet-edge-2" >
+<line x1="320" y1="335" x2="342" y2="335" class="wire" marker-end="url(#arrow)"/>
+</g><g id="lenet-stage-3" >
+<rect x="499" y="276" width="90" height="100" rx="12" class="card violet" opacity="0.91"/>
+<rect x="490" y="285" width="90" height="100" rx="12" class="card violet" opacity="1.00"/>
+<text x="535" y="341" class="label strong" text-anchor="middle" >C3</text>
+</g><text x="535" y="415" class="tiny muted" text-anchor="middle" >16@10×10</text><g id="lenet-edge-3" >
+<line x1="455" y1="335" x2="482" y2="335" class="wire" marker-end="url(#arrow)"/>
+</g><g id="lenet-stage-4" >
+<rect x="634" y="291" width="80" height="70" rx="12" class="card gold" opacity="0.91"/>
+<rect x="625" y="300" width="80" height="70" rx="12" class="card gold" opacity="1.00"/>
+<text x="665" y="341" class="label strong" text-anchor="middle" >S4</text>
+</g><text x="665" y="400" class="tiny muted" text-anchor="middle" >16@5×5</text><g id="lenet-edge-4" >
+<line x1="590" y1="335" x2="617" y2="335" class="wire" marker-end="url(#arrow)"/>
+</g><g id="lenet-stage-5" >
+<rect x="755" y="310" width="105" height="50" rx="12" class="card red" opacity="1.00"/>
+<text x="807.5" y="341" class="label strong" text-anchor="middle" >C5</text>
+</g><text x="807.5" y="390" class="tiny muted" text-anchor="middle" >120</text><g id="lenet-edge-5" >
+<line x1="715" y1="335" x2="747" y2="335" class="wire" marker-end="url(#arrow)"/>
+</g><g id="lenet-stage-6" >
+<rect x="910" y="310" width="105" height="50" rx="12" class="card green" opacity="1.00"/>
+<text x="962.5" y="341" class="label strong" text-anchor="middle" >F6</text>
+</g><text x="962.5" y="390" class="tiny muted" text-anchor="middle" >84</text><g id="lenet-edge-6" >
+<line x1="870" y1="335" x2="902" y2="335" class="wire" marker-end="url(#arrow)"/>
+</g><g id="lenet-stage-7" >
+<rect x="1060" y="310" width="90" height="50" rx="12" class="card slate" opacity="1.00"/>
+<text x="1105" y="341" class="label strong" text-anchor="middle" >Output</text>
+</g><text x="1105" y="390" class="tiny muted" text-anchor="middle" >10</text><g id="lenet-edge-7" >
+<line x1="1025" y1="335" x2="1052" y2="335" class="wire" marker-end="url(#arrow)"/>
+</g>
+</svg>
