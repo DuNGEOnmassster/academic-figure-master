@@ -1,0 +1,243 @@
+{
+  "schema_version": 2,
+  "method": "pdftocairo source-operator extraction with tight content viewBox and hidden semantic edit layer",
+  "figures": [
+    {
+      "id": "lenet-5",
+      "paper": "Gradient-Based Learning Applied to Document Recognition",
+      "figure": "Figure 2",
+      "source_url": "https://leon.bottou.org/publications/pdf/ieee-1998.pdf",
+      "source_pdf_sha256": "2b044160939a2a8ce6c95d7f3203e12a70287404aed9eca52cfed3fc1493aef2",
+      "viewBox": [
+        42.75,
+        328.75,
+        515.5,
+        138.5
+      ],
+      "operator_counts": {
+        "g": 24,
+        "path": 85,
+        "use": 220
+      },
+      "source_operator_sha256": "83688e5b240de286fa97755875ff164af47fbe389ab701731471bf172029dd26",
+      "embedded_raster_components": 0,
+      "visible_text_mode": "source glyph outlines",
+      "semantic_edit_layer": true
+    },
+    {
+      "id": "alexnet",
+      "paper": "ImageNet Classification with Deep Convolutional Neural Networks",
+      "figure": "Figure 2",
+      "source_url": "https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf",
+      "source_pdf_sha256": "90137160c57217953d5f61857e64ca58e85f06e1b13b4f475c918b1b582b9771",
+      "viewBox": [
+        105.75,
+        349.75,
+        398.5,
+        124.5
+      ],
+      "operator_counts": {
+        "g": 39,
+        "path": 426
+      },
+      "source_operator_sha256": "2f54c981612317ecbd2133ff992d653a10439ba879c2e9fcf7921a3e5f6e0088",
+      "embedded_raster_components": 0,
+      "visible_text_mode": "source glyph outlines",
+      "semantic_edit_layer": true
+    },
+    {
+      "id": "vae",
+      "paper": "Auto-Encoding Variational Bayes",
+      "figure": "Figure 1",
+      "source_url": "https://arxiv.org/pdf/1312.6114",
+      "source_pdf_sha256": "bdcb63b79ed88f64f8ee2d43a721930d01dde5441a4dba20ecaa2342b34e017c",
+      "viewBox": [
+        259.75,
+        366.75,
+        91.5,
+        91.5
+      ],
+      "operator_counts": {
+        "g": 7,
+        "path": 13,
+        "use": 5
+      },
+      "source_operator_sha256": "ed50422ec51bc84a2a7416524e933dc1a6abec8aef7f79ccf5ea81600c263755",
+      "embedded_raster_components": 0,
+      "visible_text_mode": "source glyph outlines",
+      "semantic_edit_layer": true
+    },
+    {
+      "id": "gan",
+      "paper": "Generative Adversarial Nets",
+      "figure": "Figure 1",
+      "source_url": "https://arxiv.org/pdf/1406.2661",
+      "source_pdf_sha256": "ff5819e3a7b713c3bd3107b7de3d51fe0a347aa5d8444f0efdcf2345ef0a8b63",
+      "viewBox": [
+        111.75,
+        343.75,
+        383.5,
+        116.5
+      ],
+      "operator_counts": {
+        "g": 8,
+        "use": 19
+      },
+      "source_operator_sha256": "5dfcdb11c49897df90b541f27051880b8da08205b15756c340cd46fe4bfe751c",
+      "embedded_raster_components": 0,
+      "visible_text_mode": "source glyph outlines",
+      "semantic_edit_layer": true
+    },
+    {
+      "id": "resnet-block",
+      "paper": "Deep Residual Learning for Image Recognition",
+      "figure": "Figure 2",
+      "source_url": "https://arxiv.org/pdf/1512.03385",
+      "source_pdf_sha256": "1e0651b6810ecba34a3dbc5b5b0209226f889004607c1f203540a48d64e5a93a",
+      "viewBox": [
+        228.75,
+        364.75,
+        136.5,
+        76.5
+      ],
+      "operator_counts": {
+        "g": 44,
+        "use": 54,
+        "path": 17
+      },
+      "source_operator_sha256": "519af59d17542d8d64075f10a0bc9055be34f3e702b687a6cdd6c97efacae3a4",
+      "embedded_raster_components": 0,
+      "visible_text_mode": "source glyph outlines",
+      "semantic_edit_layer": true
+    },
+    {
+      "id": "unet",
+      "paper": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+      "figure": "Figure 1",
+      "source_url": "https://arxiv.org/pdf/1505.04597",
+      "source_pdf_sha256": "a3172b2124f38e260dc2c7ed968d87c31bc94dbc19a42a7ab3dcbd7534319c44",
+      "viewBox": [
+        141.75,
+        284.75,
+        335.5,
+        223.5
+      ],
+      "operator_counts": {
+        "g": 1,
+        "use": 1
+      },
+      "source_operator_sha256": "af2f8785e8f6af5d80123c5f7db28fd12918b39774046e05b855fd981a1ab1c3",
+      "embedded_raster_components": 0,
+      "visible_text_mode": "source glyph outlines",
+      "semantic_edit_layer": true
+    },
+    {
+      "id": "transformer",
+      "paper": "Attention Is All You Need",
+      "figure": "Figure 1",
+      "source_url": "https://arxiv.org/pdf/1706.03762",
+      "source_pdf_sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+      "viewBox": [
+        249.75,
+        253.75,
+        174.5,
+        323.5
+      ],
+      "operator_counts": {
+        "g": 3,
+        "use": 1
+      },
+      "source_operator_sha256": "89694a4221ba564a3d4919a83ba7243ec1de1324b498d532a65577d807b3d95b",
+      "embedded_raster_components": 2,
+      "visible_text_mode": "source glyph outlines",
+      "semantic_edit_layer": true
+    },
+    {
+      "id": "neural-ode",
+      "paper": "Neural Ordinary Differential Equations",
+      "figure": "Figure 1",
+      "source_url": "https://arxiv.org/pdf/1806.07366",
+      "source_pdf_sha256": "435299cc42b75f9ad43d9aa246c96d3d7bdcc3297aa57f419bdc571b9c25137c",
+      "viewBox": [
+        191.75,
+        336.75,
+        170.5,
+        125.5
+      ],
+      "operator_counts": {
+        "g": 9,
+        "use": 27
+      },
+      "source_operator_sha256": "4ca6e181e9b1bff42338133a8001a7f17779405f62a713c9fd304c1c1ef8305d",
+      "embedded_raster_components": 0,
+      "visible_text_mode": "source glyph outlines",
+      "semantic_edit_layer": true
+    },
+    {
+      "id": "simclr",
+      "paper": "A Simple Framework for Contrastive Learning of Visual Representations",
+      "figure": "Figure 2",
+      "source_url": "https://arxiv.org/pdf/2002.05709",
+      "source_pdf_sha256": "e1b10db76adeb0d21a014b9abcf42f6a6af928540c223f010fa1d8c293d9d105",
+      "viewBox": [
+        194.75,
+        328.75,
+        178.5,
+        138.5
+      ],
+      "operator_counts": {
+        "g": 48,
+        "use": 73,
+        "path": 18
+      },
+      "source_operator_sha256": "d0a945693a2d62bc40581867df51056028970b1fbc24b5cdd5c77a8ec15fc7ba",
+      "embedded_raster_components": 0,
+      "visible_text_mode": "source glyph outlines",
+      "semantic_edit_layer": true
+    },
+    {
+      "id": "ddpm",
+      "paper": "Denoising Diffusion Probabilistic Models",
+      "figure": "Figure 2",
+      "source_url": "https://arxiv.org/pdf/2006.11239",
+      "source_pdf_sha256": "aee5e07a802e8dfd2a386374c94fd61d1d056cb7e1e0fec4f28e8120ff5d8505",
+      "viewBox": [
+        152.75,
+        403.75,
+        300.5,
+        34.5
+      ],
+      "operator_counts": {
+        "g": 55,
+        "path": 10,
+        "use": 46
+      },
+      "source_operator_sha256": "1a140101f83b365f6fecd05f6fbc1fe54db9985499611fad699c546420f24368",
+      "embedded_raster_components": 3,
+      "visible_text_mode": "source glyph outlines",
+      "semantic_edit_layer": true
+    },
+    {
+      "id": "vit",
+      "paper": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+      "figure": "Figure 1",
+      "source_url": "https://arxiv.org/pdf/2010.11929",
+      "source_pdf_sha256": "8ce7b83971a14508ca711a27c875c9b6914c4f6767cf3150fb1ca6c07aa056d6",
+      "viewBox": [
+        144.75,
+        312.75,
+        324.5,
+        166.5
+      ],
+      "operator_counts": {
+        "g": 7,
+        "path": 330,
+        "use": 2
+      },
+      "source_operator_sha256": "fe5269cbe1ad0307e13e912d35b89e48f4139bd4e25b7357d82e9463a9e228b9",
+      "embedded_raster_components": 2,
+      "visible_text_mode": "source glyph outlines",
+      "semantic_edit_layer": true
+    }
+  ]
+}

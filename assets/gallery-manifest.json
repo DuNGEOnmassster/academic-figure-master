@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "license": "Generator code and generic primitives are MIT. Source-faithful paper redraws include citations; source papers and review crops retain their rights, and downstream reuse requirements must be checked.",
+  "license": "Generator code and generic primitives are MIT. Pixel-exact paper operator layers include citations; source papers and review crops retain their rights, and downstream reuse requirements must be checked.",
   "assets": [
     {
       "id": "attention-heads",
@@ -19,8 +19,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only attention-heads"
     },
     {
@@ -40,8 +44,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only convolution-pyramid"
     },
     {
@@ -61,8 +69,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only graph-message-passing"
     },
     {
@@ -82,8 +94,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only causal-dag"
     },
     {
@@ -103,8 +119,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only optimization-landscape"
     },
     {
@@ -124,8 +144,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only uncertainty-bands"
     },
     {
@@ -145,8 +169,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only dataset-pipeline"
     },
     {
@@ -166,8 +194,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only training-loop"
     },
     {
@@ -187,8 +219,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only ensemble-voting"
     },
     {
@@ -208,8 +244,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only bayesian-inference"
     },
     {
@@ -229,8 +269,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only multimodal-fusion"
     },
     {
@@ -250,8 +294,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only ablation-matrix"
     },
     {
@@ -264,20 +312,24 @@
         "architecture",
         "classic"
       ],
-      "reproduction": "faithful-redraw",
+      "reproduction": "pixel-exact-dual-layer",
       "source": {
         "title": "Gradient-Based Learning Applied to Document Recognition",
         "url": "https://leon.bottou.org/publications/pdf/ieee-1998.pdf",
         "figure": "Figure 2"
       },
-      "note": "Source-calibrated editable reconstruction; input glyph and all feature-map planes are native vectors.",
+      "note": "Direct source-operator layer plus a hidden semantic editing layer.",
       "editable": {
         "format": "svg",
-        "text_as_text": true,
+        "text_as_text": false,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "source glyph outlines and source operators",
+        "semantic_edit_layer": true
       },
-      "reproduce": "python scripts/generate_gallery.py --only lenet-5"
+      "source_operator_sha256": "83688e5b240de286fa97755875ff164af47fbe389ab701731471bf172029dd26",
+      "reproduce": "python scripts/extract_pixel_exact_paper_figures.py --only lenet-5"
     },
     {
       "id": "alexnet",
@@ -289,20 +341,24 @@
         "imagenet",
         "architecture"
       ],
-      "reproduction": "faithful-redraw",
+      "reproduction": "pixel-exact-dual-layer",
       "source": {
         "title": "ImageNet Classification with Deep Convolutional Neural Networks",
         "url": "https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf",
         "figure": "Figure 2"
       },
-      "note": "Source-calibrated editable reconstruction preserving the split-GPU topology.",
+      "note": "Direct source-operator layer plus a hidden semantic editing layer.",
       "editable": {
         "format": "svg",
-        "text_as_text": true,
+        "text_as_text": false,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "source glyph outlines and source operators",
+        "semantic_edit_layer": true
       },
-      "reproduce": "python scripts/generate_gallery.py --only alexnet"
+      "source_operator_sha256": "2f54c981612317ecbd2133ff992d653a10439ba879c2e9fcf7921a3e5f6e0088",
+      "reproduce": "python scripts/extract_pixel_exact_paper_figures.py --only alexnet"
     },
     {
       "id": "vae",
@@ -314,20 +370,24 @@
         "graphical-model",
         "variational"
       ],
-      "reproduction": "faithful-redraw",
+      "reproduction": "pixel-exact-dual-layer",
       "source": {
         "title": "Auto-Encoding Variational Bayes",
         "url": "https://arxiv.org/abs/1312.6114",
         "figure": "Figure 1"
       },
-      "note": "Source-calibrated editable reconstruction of the paper's solid generative and dashed recognition edges.",
+      "note": "Direct source-operator layer plus a hidden semantic editing layer.",
       "editable": {
         "format": "svg",
-        "text_as_text": true,
+        "text_as_text": false,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "source glyph outlines and source operators",
+        "semantic_edit_layer": true
       },
-      "reproduce": "python scripts/generate_gallery.py --only vae"
+      "source_operator_sha256": "ed50422ec51bc84a2a7416524e933dc1a6abec8aef7f79ccf5ea81600c263755",
+      "reproduce": "python scripts/extract_pixel_exact_paper_figures.py --only vae"
     },
     {
       "id": "gan",
@@ -339,20 +399,24 @@
         "training-dynamics",
         "distribution"
       ],
-      "reproduction": "faithful-redraw",
+      "reproduction": "pixel-exact-dual-layer",
       "source": {
         "title": "Generative Adversarial Nets",
         "url": "https://arxiv.org/abs/1406.2661",
         "figure": "Figure 1"
       },
-      "note": "Source-calibrated editable four-stage training-dynamics reconstruction.",
+      "note": "Direct source-operator layer plus a hidden semantic editing layer.",
       "editable": {
         "format": "svg",
-        "text_as_text": true,
+        "text_as_text": false,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "source glyph outlines and source operators",
+        "semantic_edit_layer": true
       },
-      "reproduce": "python scripts/generate_gallery.py --only gan"
+      "source_operator_sha256": "5dfcdb11c49897df90b541f27051880b8da08205b15756c340cd46fe4bfe751c",
+      "reproduce": "python scripts/extract_pixel_exact_paper_figures.py --only gan"
     },
     {
       "id": "resnet-block",
@@ -364,20 +428,24 @@
         "residual",
         "skip"
       ],
-      "reproduction": "faithful-redraw",
+      "reproduction": "pixel-exact-dual-layer",
       "source": {
         "title": "Deep Residual Learning for Image Recognition",
         "url": "https://arxiv.org/abs/1512.03385",
         "figure": "Figure 2"
       },
-      "note": "Source-calibrated editable reconstruction of the residual building block.",
+      "note": "Direct source-operator layer plus a hidden semantic editing layer.",
       "editable": {
         "format": "svg",
-        "text_as_text": true,
+        "text_as_text": false,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "source glyph outlines and source operators",
+        "semantic_edit_layer": true
       },
-      "reproduce": "python scripts/generate_gallery.py --only resnet-block"
+      "source_operator_sha256": "519af59d17542d8d64075f10a0bc9055be34f3e702b687a6cdd6c97efacae3a4",
+      "reproduce": "python scripts/extract_pixel_exact_paper_figures.py --only resnet-block"
     },
     {
       "id": "unet",
@@ -389,20 +457,24 @@
         "segmentation",
         "skip"
       ],
-      "reproduction": "faithful-redraw",
+      "reproduction": "pixel-exact-dual-layer",
       "source": {
         "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
         "url": "https://arxiv.org/abs/1505.04597",
         "figure": "Figure 1"
       },
-      "note": "Source-calibrated editable reconstruction with the original arrow color semantics and feature-map hierarchy.",
+      "note": "Direct source-operator layer plus a hidden semantic editing layer.",
       "editable": {
         "format": "svg",
-        "text_as_text": true,
+        "text_as_text": false,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "source glyph outlines and source operators",
+        "semantic_edit_layer": true
       },
-      "reproduce": "python scripts/generate_gallery.py --only unet"
+      "source_operator_sha256": "af2f8785e8f6af5d80123c5f7db28fd12918b39774046e05b855fd981a1ab1c3",
+      "reproduce": "python scripts/extract_pixel_exact_paper_figures.py --only unet"
     },
     {
       "id": "transformer",
@@ -414,20 +486,24 @@
         "attention",
         "encoder-decoder"
       ],
-      "reproduction": "faithful-redraw",
+      "reproduction": "pixel-exact-dual-layer",
       "source": {
         "title": "Attention Is All You Need",
         "url": "https://arxiv.org/abs/1706.03762",
         "figure": "Figure 1"
       },
-      "note": "Source-calibrated editable reconstruction preserving residual paths, cross-attention, and repeated stacks.",
+      "note": "Direct source-operator layer plus a hidden semantic editing layer.",
       "editable": {
         "format": "svg",
-        "text_as_text": true,
+        "text_as_text": false,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": true,
+        "embedded_raster_components": 2,
+        "visible_layer": "source glyph outlines and source operators",
+        "semantic_edit_layer": true
       },
-      "reproduce": "python scripts/generate_gallery.py --only transformer"
+      "source_operator_sha256": "89694a4221ba564a3d4919a83ba7243ec1de1324b498d532a65577d807b3d95b",
+      "reproduce": "python scripts/extract_pixel_exact_paper_figures.py --only transformer"
     },
     {
       "id": "neural-ode",
@@ -439,20 +515,24 @@
         "continuous-depth",
         "solver"
       ],
-      "reproduction": "faithful-redraw",
+      "reproduction": "pixel-exact-dual-layer",
       "source": {
         "title": "Neural Ordinary Differential Equations",
         "url": "https://arxiv.org/abs/1806.07366",
         "figure": "Figure 1"
       },
-      "note": "Source-calibrated editable reconstruction of discrete and continuous transformations.",
+      "note": "Direct source-operator layer plus a hidden semantic editing layer.",
       "editable": {
         "format": "svg",
-        "text_as_text": true,
+        "text_as_text": false,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "source glyph outlines and source operators",
+        "semantic_edit_layer": true
       },
-      "reproduce": "python scripts/generate_gallery.py --only neural-ode"
+      "source_operator_sha256": "4ca6e181e9b1bff42338133a8001a7f17779405f62a713c9fd304c1c1ef8305d",
+      "reproduce": "python scripts/extract_pixel_exact_paper_figures.py --only neural-ode"
     },
     {
       "id": "simclr",
@@ -464,20 +544,24 @@
         "augmentation",
         "representation"
       ],
-      "reproduction": "faithful-redraw",
+      "reproduction": "pixel-exact-dual-layer",
       "source": {
         "title": "A Simple Framework for Contrastive Learning of Visual Representations",
         "url": "https://arxiv.org/abs/2002.05709",
         "figure": "Figure 2"
       },
-      "note": "Source-calibrated editable reconstruction of paired augmentation, encoder, projection, and objectives.",
+      "note": "Direct source-operator layer plus a hidden semantic editing layer.",
       "editable": {
         "format": "svg",
-        "text_as_text": true,
+        "text_as_text": false,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "source glyph outlines and source operators",
+        "semantic_edit_layer": true
       },
-      "reproduce": "python scripts/generate_gallery.py --only simclr"
+      "source_operator_sha256": "d0a945693a2d62bc40581867df51056028970b1fbc24b5cdd5c77a8ec15fc7ba",
+      "reproduce": "python scripts/extract_pixel_exact_paper_figures.py --only simclr"
     },
     {
       "id": "ddpm",
@@ -489,20 +573,24 @@
         "denoising",
         "markov"
       ],
-      "reproduction": "faithful-redraw",
+      "reproduction": "pixel-exact-dual-layer",
       "source": {
         "title": "Denoising Diffusion Probabilistic Models",
         "url": "https://arxiv.org/abs/2006.11239",
         "figure": "Figure 2"
       },
-      "note": "Source-calibrated editable reconstruction; paper thumbnails are replaced by native vector mosaics.",
+      "note": "Direct source-operator layer plus a hidden semantic editing layer; source thumbnails remain named embedded raster components.",
       "editable": {
         "format": "svg",
-        "text_as_text": true,
+        "text_as_text": false,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": true,
+        "embedded_raster_components": 3,
+        "visible_layer": "source glyph outlines and source operators",
+        "semantic_edit_layer": true
       },
-      "reproduce": "python scripts/generate_gallery.py --only ddpm"
+      "source_operator_sha256": "1a140101f83b365f6fecd05f6fbc1fe54db9985499611fad699c546420f24368",
+      "reproduce": "python scripts/extract_pixel_exact_paper_figures.py --only ddpm"
     },
     {
       "id": "vit",
@@ -514,20 +602,24 @@
         "patches",
         "transformer"
       ],
-      "reproduction": "faithful-redraw",
+      "reproduction": "pixel-exact-dual-layer",
       "source": {
         "title": "An Image is Worth 16x16 Words",
         "url": "https://arxiv.org/abs/2010.11929",
         "figure": "Figure 1"
       },
-      "note": "Source-calibrated editable reconstruction; the paper photograph is replaced by a native vector scene.",
+      "note": "Direct source-operator layer plus a hidden semantic editing layer; source photographs remain named embedded raster components.",
       "editable": {
         "format": "svg",
-        "text_as_text": true,
+        "text_as_text": false,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": true,
+        "embedded_raster_components": 2,
+        "visible_layer": "source glyph outlines and source operators",
+        "semantic_edit_layer": true
       },
-      "reproduce": "python scripts/generate_gallery.py --only vit"
+      "source_operator_sha256": "fe5269cbe1ad0307e13e912d35b89e48f4139bd4e25b7357d82e9463a9e228b9",
+      "reproduce": "python scripts/extract_pixel_exact_paper_figures.py --only vit"
     },
     {
       "id": "double-descent",
@@ -550,8 +642,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only double-descent"
     },
     {
@@ -575,8 +671,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only scaling-law"
     },
     {
@@ -600,8 +700,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only cyclical-lr"
     },
     {
@@ -625,8 +729,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only cosine-restarts"
     },
     {
@@ -650,8 +758,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only diffusion-schedules"
     },
     {
@@ -675,8 +787,12 @@
         "format": "svg",
         "text_as_text": true,
         "named_groups": true,
-        "embedded_raster": false
+        "embedded_raster": false,
+        "embedded_raster_components": 0,
+        "visible_layer": "semantic vectors",
+        "semantic_edit_layer": true
       },
+      "source_operator_sha256": null,
       "reproduce": "python scripts/generate_gallery.py --only grokking"
     }
   ]

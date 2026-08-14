@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "purpose": "Review-only source crops for calibrating editable paper redraws. Source papers retain all rights.",
+  "purpose": "Source pages and crop bounds for exact operator extraction and review evidence. Source papers retain all rights.",
   "render_dpi": 220,
   "figures": [
     {
@@ -33,7 +33,7 @@
       "figure": "Figure 1",
       "url": "https://arxiv.org/pdf/1406.2661",
       "pdf_page": 3,
-      "crop_normalized": [0.10, 0.415, 0.91, 0.57]
+      "crop_normalized": [0.10, 0.415, 0.91, 0.59]
     },
     {
       "id": "resnet-block",
@@ -49,7 +49,8 @@
       "figure": "Figure 1",
       "url": "https://arxiv.org/pdf/1505.04597",
       "pdf_page": 2,
-      "crop_normalized": [0.15, 0.045, 0.84, 0.39]
+      "crop_normalized": [0.15, 0.135, 0.84, 0.435],
+      "operator_trim_points": [90, 270, 520, 530]
     },
     {
       "id": "transformer",
@@ -89,7 +90,7 @@
       "figure": "Figure 1",
       "url": "https://arxiv.org/pdf/2010.11929",
       "pdf_page": 3,
-      "crop_normalized": [0.14, 0.11, 0.86, 0.30]
+      "crop_normalized": [0.14, 0.09, 0.86, 0.33]
     }
   ]
 }

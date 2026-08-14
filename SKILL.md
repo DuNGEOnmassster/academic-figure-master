@@ -12,7 +12,8 @@ Create a semantic figure first and compile it into native editable objects. Trea
 Choose one route before drawing:
 
 - **Text or paper → figure:** extract the claim, entities, relations, stages, equations, and required labels.
-- **Existing image → editable reconstruction:** inventory every visible component, connector, label, group, alignment rule, and repeated style before rebuilding it.
+- **Published PDF figure → pixel-exact dual layer:** extract the PDF's source operators first, keep that layer visible, and preserve or build a hidden semantic text-and-component layer for customization.
+- **Existing raster image → editable reconstruction:** inventory every visible component, connector, label, group, alignment rule, and repeated style before rebuilding it.
 - **Existing editable figure → targeted edit:** preserve unaffected object IDs, geometry, typography, and grouping; patch only the requested components.
 - **Data → plot:** use a plotting library for data marks, then combine the exported vector plot with native annotations. Never redraw measured data by eye.
 
@@ -50,25 +51,27 @@ Reuse original primitives from `assets/primitives/` when applicable. Search `ass
 - `tensor-stack.svg`: matrices, feature stacks, and dimension labels;
 - `neural-modules.svg`: encoder, latent, decoder, attention, and merge blocks.
 
-The directory also contains attention, convolution, graph, causal, optimization, uncertainty, data, training, ensemble, Bayesian, multimodal, and ablation sheets. Rebuild the generated gallery with `python scripts/generate_gallery.py`, or pass `--only <asset-id>` to regenerate one asset.
+The directory also contains attention, convolution, graph, causal, optimization, uncertainty, data, training, ensemble, Bayesian, multimodal, and ablation sheets. Rebuild non-paper assets with `python scripts/generate_gallery.py`, or pass `--only <asset-id>` to regenerate one. Paper assets are protected from this command and use `python scripts/extract_pixel_exact_paper_figures.py --only <paper-id>`.
 
 Copy only the needed groups into the deliverable; do not flatten the whole sheet into one image.
 
 ## Reconstruct an existing figure
 
-1. Crop the exact target panel and keep it visible beside the editable render.
+1. Crop the exact target panel and keep it visible beside the editable render. If the source is a PDF, attempt direct source-operator extraction before manual drawing.
 2. Separate structure from appearance. Record panels, reading order, containment, alignment, repeated components, connector topology, and exact object counts.
 3. Transcribe labels exactly. Flag ambiguous text instead of inventing it.
-4. Recreate text as text, arrows as connectors, simple icons as primitives, plots from source data where available, and complex illustrations as separately replaceable assets.
+4. For a semantic/manual reconstruction, recreate text as text, arrows as connectors, simple icons as primitives, plots from source data where available, and complex illustrations as separately replaceable assets. For pixel-exact extraction, retain source glyph outlines in the visible layer and text-as-text in `semantic-edit-layer`.
 5. Maintain a third edge-overlay view: source edges in magenta, redraw edges in cyan, coincident edges in black.
 6. Match in this order: crop/aspect → topology/count → geometry → typography → appearance → small detail. Fix the largest overlay separation after every pass.
 7. Compare again at full view, repository-preview size, and final publication size.
 
-Do not call an output editable when it is a single raster image embedded in SVG, PPTX, or draw.io. If an unavoidable crop remains raster, isolate and label it in the scene manifest.
+Do not call an output editable when it is only a raster image embedded in SVG, PPTX, or draw.io. If a source PDF itself contains bitmap operators, preserve them only in the exact visible layer, assign stable IDs, count them in the manifest, and provide a separate semantic editing layer.
 
 ## Reproduce published figures and curves honestly
 
-Read the original paper before reconstructing a published visual. Classify the result as `faithful-redraw`, `semantic-redraw`, `formula-derived`, `data-recomputed`, `digitized`, or `illustrative-normalized`, and expose that class in the output metadata. Use `faithful-redraw` only when the exact figure number, source crop, side-by-side render, and edge overlay have been reviewed. Preserve scientific entities, topology, direction, equations, technical labels, object counts, and layout. Source crops are review evidence rather than reusable assets and retain the paper's rights.
+Read the original paper before reconstructing a published visual. Classify the result as `pixel-exact-dual-layer`, `faithful-redraw`, `semantic-redraw`, `formula-derived`, `data-recomputed`, `digitized`, or `illustrative-normalized`, and expose that class in the output metadata. Use `pixel-exact-dual-layer` only when the visible layer comes directly from cited PDF operators, the exact figure number and PDF hash are recorded, and source crop, pixel metrics, edge overlay, and hidden-layer isolation pass. Use `faithful-redraw` only for a manually rebuilt figure after the same review evidence has been inspected. Source crops are review evidence rather than reusable assets and retain the paper's rights.
+
+For the pixel-exact route, loop in this order: source crop → operator extraction → tight SVG render → aspect/pixel metrics → edge overlay → crop or operator-trim correction. Do not stop while aspect error exceeds 1%, tolerant cross-renderer pixel match is below 80%, or removing the hidden semantic layer changes even one rendered pixel.
 
 For lines, prefer author-released data or code, then a published formula. If neither is available, generate only a normalized qualitative trend and label it illustrative. Never present synthetic or digitized points as reported measurements. Use the classic examples and source records in `assets/gallery-manifest.json` as patterns.
 
@@ -82,6 +85,8 @@ Run:
 
 ```bash
 python scripts/generate_gallery.py
+python scripts/extract_pixel_exact_paper_figures.py
+python scripts/calibrate_paper_figures.py
 python scripts/validate_repo.py
 ```
 
@@ -90,7 +95,7 @@ For a paper redraw, additionally run the optional calibration harness described 
 Then verify the actual deliverable:
 
 - opens in its native editor without repair warnings;
-- contains editable text and vector objects rather than a disguised bitmap;
+- contains native semantic text and vector objects, or explicitly uses the pixel-exact dual-layer contract rather than a disguised bitmap;
 - has no clipped labels, overlaps, broken connectors, or missing glyphs;
 - preserves equations and scientific directionality;
 - remains legible at final print size and in grayscale;

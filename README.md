@@ -1,18 +1,18 @@
 # Academic Figure Master
 
-A lightweight Codex/Claude skill for publication-ready academic figures that stay **genuinely editable** in SVG, draw.io, or PowerPoint. The repository bridges one-shot image generation and heavyweight manual design: fast enough for daily research, structured enough for precise object-level revision.
+A lightweight Codex/Claude skill for publication-ready academic figures that stay **genuinely editable** in SVG, draw.io, or PowerPoint. Original figures use semantic native objects; pixel-faithful paper reproductions use a dual-layer SVG that separates exact source appearance from convenient text-and-component editing.
 
 ![assets](https://img.shields.io/badge/editable_SVG_assets-35-3972d5) ![paper redraws](https://img.shields.io/badge/classic_paper_redraws-11-7354cf) ![curves](https://img.shields.io/badge/reproducible_curves-6-38a479) ![license](https://img.shields.io/badge/original_assets-MIT-d3a23f)
 
 The current version includes:
 
 - 18 reusable academic-figure primitive sheets;
-- 11 source-calibrated, editable redraws of exact classic-paper figures;
+- 11 pixel-exact, dual-layer reproductions of exact classic-paper figures;
 - 6 reproducible curve templates with explicit fidelity labels;
 - a machine-readable provenance and reproduction manifest;
 - a surveyed catalog of vector models, scientific-figure systems, skills, editors, and asset libraries;
 - daily GitHub metadata, stars, activity, license, and discovery refreshes; and
-- dependency-free core generation, validation, synchronization, and installation scripts, plus an optional source/redraw/edge-overlay calibration harness.
+- dependency-free core generation, validation, synchronization, and installation scripts, plus source-operator extraction and source/redraw/pixel-difference QA harnesses.
 
 ## Install and invoke
 
@@ -69,11 +69,13 @@ Every sheet below is native SVG: text stays text, shapes stay shapes, and reusab
 </tr>
 </table>
 
-## Source-calibrated classic-paper redraws
+## Pixel-exact classic-paper reproductions
 
-Every paper redraw now uses the exact cited Figure rather than a modern concept diagram. Each review plate shows the source crop, editable SVG render, and edge overlay side by side. Magenta is the paper source, cyan is the redraw, and black is overlap. Click a plate to open its editable SVG.
+Every paper reproduction uses the exact cited figure rather than a modern concept diagram. The default visible layer, `source-vector-operators`, is extracted directly from the source PDF: paths, fills, strokes, glyph outlines, and any source image operators are preserved. A second `semantic-edit-layer` contains named text and components and is hidden by default. This makes the checked-in rendering exact while retaining a practical layer for customization.
 
-The original crop is included only as low-resolution review evidence in this private repository; the paper retains its rights. Deliverable SVGs contain no raster image. Where the source uses a photograph or face thumbnail, the SVG discloses and uses an editable vector substitute.
+Each review plate shows the independent PDF crop, the SVG render, and an edge overlay side by side. Magenta is the paper source, cyan is the SVG, and black is overlap. The source crop is review evidence only and the paper retains its rights. Source glyphs are paths in the visible layer; edit wording in the hidden semantic layer. Transformer, DDPM, and ViT contain 2, 3, and 2 named embedded raster operators respectively because those exact source figures contain bitmap content; the manifest discloses this instead of pretending those regions are vectors.
+
+Current hard-gate results in [`assets/comparisons/qa-report.json`](assets/comparisons/qa-report.json): 11/11 semantic layers are pixel-isolated (`1.0000`), maximum tight-content aspect error is `0.63%`, and the minimum independently rasterized PDF↔SVG match is `83.10%` at a 32-level antialiasing tolerance. Cross-renderer scores are not expected to be 100% because Poppler and Sharp antialias the same operators differently; exact provenance is recorded with a SHA-256 hash of each extracted source-operator layer in [`assets/paper-redraws/pixel-exact-manifest.json`](assets/paper-redraws/pixel-exact-manifest.json).
 
 <a href="assets/paper-redraws/lenet-5.svg"><img src="assets/comparisons/lenet-5.png" alt="LeNet-5 Figure 2 source, editable redraw, and edge overlay"></a>
 
@@ -119,18 +121,18 @@ Ho et al. (2020), Figure 2 · [paper](https://arxiv.org/abs/2006.11239)
 
 Dosovitskiy et al. (2020), Figure 1 · [paper](https://arxiv.org/abs/2010.11929)
 
-### Reproduce the paper calibration plates
+### Reproduce the paper SVGs and calibration plates
 
-The SVG gallery itself is dependency-free. Rebuilding the source comparison evidence is an optional QA step:
+Generic assets remain dependency-free. Rebuilding a paper SVG requires Poppler (`pdftocairo` and `pdftoppm`), Pillow, Node.js, and Sharp:
 
 ```bash
-python scripts/generate_gallery.py
 python -m pip install Pillow
 npm install --no-save sharp
+python scripts/extract_pixel_exact_paper_figures.py
 python scripts/calibrate_paper_figures.py
 ```
 
-The harness uses [`references/paper-figure-sources.json`](references/paper-figure-sources.json) for exact PDF URLs, pages, and crop boxes. It writes ignored working files under `tmp/paper-calibration/` and regenerates the committed plates and [`assets/comparisons/qa-report.json`](assets/comparisons/qa-report.json). The six calibration passes and 35-SVG acceptance rules are documented in [`references/fidelity-protocol.md`](references/fidelity-protocol.md).
+The extractor uses [`references/paper-figure-sources.json`](references/paper-figure-sources.json) for exact PDF URLs, pages, crop boxes, and rare operator-level trim overrides. It writes ignored working files under `tmp/pixel-exact-extraction/`, preserves the previous semantic reconstruction as the hidden editing layer, and regenerates the source-operator hashes. The calibration harness writes ignored work under `tmp/paper-calibration/`, then regenerates the committed plates and QA report. The loop and 35-SVG acceptance rules are documented in [`references/fidelity-protocol.md`](references/fidelity-protocol.md).
 
 ## Reproducible classic curves
 
@@ -163,7 +165,7 @@ The label printed in the top-right corner of every SVG states its fidelity:
 | Cosine restarts | Cosine annealing over successively longer restart periods | The SGDR schedule form |
 | Diffusion schedule | `cos²(((t+s)/(1+s))·π/2) / cos²((s/(1+s))·π/2)`, with `s = 0.008` | The normalized cosine cumulative signal schedule |
 
-To reproduce everything deterministically:
+To reproduce all non-paper assets deterministically:
 
 ```bash
 python scripts/generate_gallery.py
@@ -173,21 +175,21 @@ To discover IDs or regenerate one figure:
 
 ```bash
 python scripts/generate_gallery.py --list
-python scripts/generate_gallery.py --only resnet-block
+python scripts/extract_pixel_exact_paper_figures.py --only resnet-block
 python scripts/generate_gallery.py --only diffusion-schedules
 ```
 
-The generated output and its source/provenance record are in [`assets/gallery-manifest.json`](assets/gallery-manifest.json). The original six starter sheets predate the generator and are maintained directly as small editable SVG sources; the other 29 previews are deterministically regenerated by the script.
+The generated output and its source/provenance record are in [`assets/gallery-manifest.json`](assets/gallery-manifest.json). The original six starter sheets predate the generator and are maintained directly as small editable SVG sources. The generator deterministically rebuilds 18 non-paper assets; the 11 paper assets are intentionally protected from that command and can only be replaced through the source-operator extraction pipeline.
 
 ### Reproducing a new paper figure or line
 
 1. Read the original paper and identify the exact figure, equation, architecture, or experiment being represented.
-2. Choose and disclose one fidelity class: `faithful-redraw`, `semantic-redraw`, `formula-derived`, `data-recomputed`, or `illustrative-normalized`.
-3. For a `faithful-redraw`, keep source, redraw, and edge overlay together and calibrate crop/aspect, topology/count, geometry, typography, appearance, then small detail. For a semantic redraw, preserve entities, topology, direction, repeated blocks, and exact technical labels while disclosing that layout differs.
+2. Choose and disclose one fidelity class: `pixel-exact-dual-layer`, `faithful-redraw`, `semantic-redraw`, `formula-derived`, `data-recomputed`, or `illustrative-normalized`.
+3. For `pixel-exact-dual-layer`, extract source PDF operators first, preserve their visible rendering, then add or retain the hidden semantic editing layer. For a manual faithful redraw, keep source, redraw, and edge overlay together and calibrate crop/aspect, topology/count, geometry, typography, appearance, then small detail.
 4. For curves, prefer source data or an official implementation. If unavailable, use the stated formula. If only the trend is known, normalize it and label it illustrative.
 5. Never present synthetic points as reported measurements. A digitized line must identify the original panel, axes, extraction method, and expected error.
 6. Add the paper URL, exact figure number, fidelity, caveat, and one-command reproduction entry to the manifest.
-7. Render at final publication size and repository-preview size; check the edge overlay, labels, clipping, equations, directionality, grayscale readability, and editability.
+7. Loop source crop → SVG render → tight pixel comparison → edge overlay until the validator passes: aspect error ≤1%, tolerant cross-renderer pixel match ≥80%, and hidden-layer isolation exactly 1.0.
 
 ## Start here
 
@@ -204,6 +206,8 @@ The generated output and its source/provenance record are in [`assets/gallery-ma
 
 ```bash
 python scripts/generate_gallery.py
+python scripts/extract_pixel_exact_paper_figures.py
+python scripts/calibrate_paper_figures.py
 python scripts/sync_catalog.py
 python scripts/validate_repo.py
 python -m unittest discover -s tests -v
@@ -213,11 +217,11 @@ The scheduled workflow runs daily at 02:23 UTC. It refreshes repository metadata
 
 ## Design and provenance rules
 
-1. A bitmap embedded in SVG, PPTX, or draw.io is not an editable figure.
-2. Text remains text; connectors remain connectors; repeated components remain reusable groups.
+1. A bitmap embedded in SVG, PPTX, or draw.io is not by itself an editable figure. Exact paper reproduction may retain isolated source bitmap operators only when the manifest names and counts them.
+2. Original figures keep text as text and connectors as connectors. Pixel-exact paper layers may outline glyphs; their semantic editing layer keeps named text and components.
 3. Scientific meaning, exact labels, and topology outrank decorative polish.
-4. Image models may supply visual ideas, but the editable semantic scene is the source of truth.
+4. Image models may supply visual ideas. The semantic scene is the source of truth for original work; the extracted source-operator layer is the pixel source of truth for exact reproduction.
 5. External assets are opt-in and retain source and license metadata.
 6. A semantic redraw is a teaching and authoring aid, not a substitute for citing or consulting the original paper.
 
-Generator code and generic primitive sheets in this repository are MIT-licensed. Paper-inspired semantic redraws include explicit citations; source papers retain their rights, so check downstream reuse requirements for the intended venue. No third-party paper artwork or asset-library files are vendored here.
+Generator code and generic primitive sheets in this repository are MIT-licensed. Exact paper operator layers include explicit citations and retain the source papers' rights; check downstream reuse requirements for the intended venue. The repository does not relicense third-party paper artwork.

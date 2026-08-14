@@ -14,10 +14,11 @@ import os
 import shutil
 import subprocess
 import urllib.request
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 try:
-    from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageOps
+    from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageOps, ImageStat
 except ImportError as exc:  # pragma: no cover - exercised by users without QA extras
     raise SystemExit("Install the optional QA dependency with `python -m pip install Pillow`.") from exc
 
@@ -26,6 +27,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE_MANIFEST = ROOT / "references" / "paper-figure-sources.json"
 DEFAULT_WORK = ROOT / "tmp" / "paper-calibration"
 DEFAULT_OUTPUT = ROOT / "assets" / "comparisons"
+ET.register_namespace("", "http://www.w3.org/2000/svg")
+ET.register_namespace("xlink", "http://www.w3.org/1999/xlink")
 
 
 def download(url: str, target: Path) -> None:
@@ -56,14 +59,13 @@ def crop_normalized(source: Path, box: list[float], target: Path) -> None:
     image.crop(pixels).save(target)
 
 
-def content_crop(image: Image.Image, threshold: int = 247) -> Image.Image:
+def content_crop(image: Image.Image, threshold: int = 247, pad: int = 0) -> Image.Image:
     gray = image.convert("L")
     mask = gray.point(lambda value: 255 if value < threshold else 0)
     bounds = mask.getbbox()
     if not bounds:
         return image.copy()
     left, top, right, bottom = bounds
-    pad = max(5, int(max(right - left, bottom - top) * 0.025))
     return image.crop((max(0, left - pad), max(0, top - pad), min(image.width, right + pad), min(image.height, bottom + pad)))
 
 
@@ -79,6 +81,46 @@ def edge_mask(image: Image.Image) -> Image.Image:
     gray = ImageOps.autocontrast(image.convert("L"))
     edges = gray.filter(ImageFilter.FIND_EDGES).filter(ImageFilter.MaxFilter(3))
     return edges.point(lambda value: 255 if value > 38 else 0)
+
+
+def pixel_metrics(original: Image.Image, redraw: Image.Image) -> dict[str, float]:
+    source = content_crop(original.convert("RGB"), threshold=250)
+    candidate = content_crop(redraw.convert("RGB"), threshold=250)
+    source_ratio = source.width / max(1, source.height)
+    redraw_ratio = candidate.width / max(1, candidate.height)
+    candidate = candidate.resize(source.size, Image.Resampling.LANCZOS)
+    difference = ImageChops.difference(source, candidate)
+    channel_mae = ImageStat.Stat(difference).mean
+    flattened = difference.get_flattened_data() if hasattr(difference, "get_flattened_data") else difference.getdata()
+    pixels = list(flattened)
+    match_16 = sum(1 for pixel in pixels if max(pixel) <= 16) / max(1, len(pixels))
+    match_32 = sum(1 for pixel in pixels if max(pixel) <= 32) / max(1, len(pixels))
+    return {
+        "source_aspect_ratio": round(source_ratio, 4),
+        "redraw_aspect_ratio": round(redraw_ratio, 4),
+        "aspect_ratio_error": round(abs(source_ratio - redraw_ratio) / max(source_ratio, 1e-9), 4),
+        "cross_renderer_pixel_mae": round(sum(channel_mae) / (3 * 255), 5),
+        "cross_renderer_pixel_match_t16": round(match_16, 4),
+        "cross_renderer_pixel_match_t32": round(match_32, 4),
+    }
+
+
+def write_visible_only(source: Path, target: Path) -> None:
+    tree = ET.parse(source)
+    root = tree.getroot()
+    for parent in root.iter():
+        for child in list(parent):
+            if child.get("id") == "semantic-edit-layer":
+                parent.remove(child)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    tree.write(target, encoding="utf-8", xml_declaration=True)
+
+
+def exact_pixel_match(first: Image.Image, second: Image.Image) -> float:
+    if first.size != second.size:
+        return 0.0
+    difference = ImageChops.difference(first.convert("RGB"), second.convert("RGB"))
+    return 1.0 if difference.getbbox() is None else 0.0
 
 
 def comparison_plate(original: Image.Image, redraw: Image.Image, label: str) -> tuple[Image.Image, dict[str, float]]:
@@ -98,24 +140,15 @@ def comparison_plate(original: Image.Image, redraw: Image.Image, label: str) -> 
     draw = ImageDraw.Draw(plate)
     plate.paste(left, (0, header)); plate.paste(middle, (panel_size[0], header)); plate.paste(overlay, (panel_size[0] * 2, header))
     draw.text((16, 12), f"{label} · original source crop", fill="#111")
-    draw.text((panel_size[0] + 16, 12), "editable SVG redraw", fill="#111")
+    draw.text((panel_size[0] + 16, 12), "pixel-exact dual-layer SVG", fill="#111")
     draw.text((panel_size[0] * 2 + 16, 12), "edge overlay · source magenta / redraw cyan / overlap black", fill="#111")
     draw.line((panel_size[0], 0, panel_size[0], plate.height), fill="#d0d0d0")
     draw.line((panel_size[0] * 2, 0, panel_size[0] * 2, plate.height), fill="#d0d0d0")
 
-    source_crop = content_crop(original)
-    redraw_crop = content_crop(redraw)
-    source_ratio = source_crop.width / max(1, source_crop.height)
-    redraw_ratio = redraw_crop.width / max(1, redraw_crop.height)
     intersection = shared.histogram()[255]
     union_mask = ImageChops.lighter(original_edges, redraw_edges)
     union = union_mask.histogram()[255]
-    metrics = {
-        "source_aspect_ratio": round(source_ratio, 4),
-        "redraw_aspect_ratio": round(redraw_ratio, 4),
-        "aspect_ratio_error": round(abs(source_ratio - redraw_ratio) / max(source_ratio, 1e-9), 4),
-        "edge_iou": round(intersection / max(1, union), 4),
-    }
+    metrics = {**pixel_metrics(original, redraw), "edge_iou": round(intersection / max(1, union), 4)}
     return plate, metrics
 
 
@@ -150,6 +183,8 @@ def main() -> int:
     page_root = args.work_root / "pages"
     source_root = args.work_root / "sources"
     redraw_root = args.work_root / "redraws"
+    visible_only_root = args.work_root / "visible-only"
+    visible_render_root = args.work_root / "visible-only-renders"
     for item in figures:
         pdf = pdf_root / f"{item['id']}.pdf"
         if not args.skip_download:
@@ -163,21 +198,50 @@ def main() -> int:
     if not args.skip_svg_render:
         environment = os.environ.copy()
         subprocess.run([args.node, str(ROOT / "scripts" / "render_svgs.mjs"), str(ROOT / "assets" / "paper-redraws"), str(redraw_root)], check=True, env=environment)
+        for item in figures:
+            write_visible_only(
+                ROOT / "assets" / "paper-redraws" / f"{item['id']}.svg",
+                visible_only_root / f"{item['id']}.svg",
+            )
+        subprocess.run(
+            [args.node, str(ROOT / "scripts" / "render_svgs.mjs"), str(visible_only_root), str(visible_render_root)],
+            check=True,
+            env=environment,
+        )
 
     args.output_root.mkdir(parents=True, exist_ok=True)
-    report = {"schema_version": 1, "method": "white-trimmed side-by-side review plus edge overlay", "figures": []}
+    report = {
+        "schema_version": 2,
+        "method": "tight-content PDF/SVG pixel comparison, edge overlay, and hidden-layer isolation",
+        "figures": [],
+    }
     for item in figures:
         source = source_root / f"{item['id']}.png"
         redraw = redraw_root / f"{item['id']}.png"
         plate, metrics = comparison_plate(Image.open(source), Image.open(redraw), f"{item['paper']} · {item['figure']}")
+        visible_only = visible_render_root / f"{item['id']}.png"
+        if not visible_only.exists():
+            raise SystemExit(f"Missing visible-only render: {visible_only}")
+        metrics["semantic_layer_isolation_pixel_match"] = exact_pixel_match(
+            Image.open(redraw), Image.open(visible_only)
+        )
         output = args.output_root / f"{item['id']}.png"
         plate.save(output, optimize=True)
         report["figures"].append({
             "id": item["id"], "paper": item["paper"], "figure": item["figure"], "source_url": item["url"],
-            "source_sha256": sha256(source), "comparison": str(output.relative_to(ROOT)), **metrics,
+            "source_sha256": sha256(source),
+            "comparison": str(output.resolve().relative_to(ROOT)) if output.resolve().is_relative_to(ROOT) else str(output.resolve()),
+            **metrics,
         })
         print(output)
-    (args.output_root / "qa-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    report_path = args.output_root / "qa-report.json"
+    if selected and report_path.exists():
+        previous = json.loads(report_path.read_text(encoding="utf-8"))
+        combined = {item["id"]: item for item in previous.get("figures", [])}
+        combined.update({item["id"]: item for item in report["figures"]})
+        order = [item["id"] for item in manifest["figures"]]
+        report["figures"] = [combined[identifier] for identifier in order if identifier in combined]
+    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return 0
 
 

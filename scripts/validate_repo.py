@@ -58,11 +58,16 @@ def validate(root: Path = ROOT) -> list[str]:
                 errors.append(f"{display_path}: root is not SVG")
             if not svg.get("viewBox"):
                 errors.append(f"{display_path}: viewBox is missing")
+            pixel_exact = svg.get("data-fidelity") == "pixel-exact-source-vector"
             ids: list[str] = []
             for element in svg.iter():
                 local = element.tag.rsplit("}", 1)[-1]
-                if local in {"image", "script", "foreignObject"}:
+                if local in {"script", "foreignObject"}:
                     errors.append(f"{display_path}: forbidden <{local}> element")
+                if local == "image":
+                    href = next((value for key, value in element.attrib.items() if key.endswith("href")), "")
+                    if not pixel_exact or not href.startswith("data:image/"):
+                        errors.append(f"{display_path}: only source-faithful embedded data images are allowed")
                 if element.get("id"):
                     ids.append(str(element.get("id")))
                 for value in element.attrib.values():
@@ -88,7 +93,7 @@ def validate(root: Path = ROOT) -> list[str]:
         gallery_ids = [item["id"] for item in gallery_assets]
         if len(gallery_ids) != len(set(gallery_ids)):
             errors.append("gallery-manifest.json contains duplicate asset ids")
-        allowed_reproduction = {"original", "faithful-redraw", "semantic-redraw", "formula-derived", "illustrative-normalized"}
+        allowed_reproduction = {"original", "faithful-redraw", "semantic-redraw", "pixel-exact-dual-layer", "formula-derived", "illustrative-normalized"}
         for item in gallery_assets:
             relative = str(item["path"])
             if not (asset_root / relative).exists():
@@ -98,25 +103,48 @@ def validate(root: Path = ROOT) -> list[str]:
             if f"assets/{relative}" not in readme:
                 errors.append(f"README does not display assets/{relative}")
             if item.get("category") == "paper":
-                if item.get("reproduction") != "faithful-redraw":
-                    errors.append(f"{item.get('id')}: paper asset must use faithful-redraw after source calibration")
+                if item.get("reproduction") != "pixel-exact-dual-layer":
+                    errors.append(f"{item.get('id')}: paper asset must use pixel-exact-dual-layer")
                 if not (item.get("source") or {}).get("figure"):
-                    errors.append(f"{item.get('id')}: faithful redraw is missing an exact source figure number")
+                    errors.append(f"{item.get('id')}: pixel-exact redraw is missing an exact source figure number")
                 comparison = asset_root / "comparisons" / f"{item.get('id')}.png"
                 if not comparison.exists():
                     errors.append(f"{item.get('id')}: source/redraw/overlay comparison is missing")
+                paper_svg = ET.parse(asset_root / relative).getroot()
+                paper_ids_in_svg = {element.get("id") for element in paper_svg.iter() if element.get("id")}
+                if paper_svg.get("data-fidelity") != "pixel-exact-source-vector":
+                    errors.append(f"{item.get('id')}: visible layer is not marked pixel-exact-source-vector")
+                if "source-vector-operators" not in paper_ids_in_svg:
+                    errors.append(f"{item.get('id')}: source-vector-operators layer is missing")
+                if "semantic-edit-layer" not in paper_ids_in_svg:
+                    errors.append(f"{item.get('id')}: semantic-edit-layer is missing")
         for item in starter_manifest["assets"]:
             relative = str(item["path"])
             if f"assets/{relative}" not in readme:
                 errors.append(f"README does not display assets/{relative}")
         qa_report = json.loads((asset_root / "comparisons" / "qa-report.json").read_text(encoding="utf-8"))
+        exact_report = json.loads((asset_root / "paper-redraws" / "pixel-exact-manifest.json").read_text(encoding="utf-8"))
         qa_ids = [item["id"] for item in qa_report["figures"]]
         paper_ids = [item["id"] for item in gallery_assets if item.get("category") == "paper"]
         if sorted(qa_ids) != sorted(paper_ids):
-            errors.append("paper comparison QA report must cover every faithful redraw exactly once")
+            errors.append("paper comparison QA report must cover every pixel-exact redraw exactly once")
+        exact_ids = [item["id"] for item in exact_report["figures"]]
+        if sorted(exact_ids) != sorted(paper_ids):
+            errors.append("pixel-exact manifest must cover every paper redraw exactly once")
+        gallery_by_id = {item["id"]: item for item in gallery_assets}
+        for item in exact_report["figures"]:
+            for field in ("source_pdf_sha256", "source_operator_sha256"):
+                if not re.fullmatch(r"[0-9a-f]{64}", str(item.get(field, ""))):
+                    errors.append(f"{item.get('id')}: {field} is missing or invalid")
+            if gallery_by_id.get(item["id"], {}).get("source_operator_sha256") != item.get("source_operator_sha256"):
+                errors.append(f"{item.get('id')}: gallery and pixel-exact operator hashes differ")
         for item in qa_report["figures"]:
-            if float(item.get("aspect_ratio_error", 1.0)) > 0.12:
-                errors.append(f"{item.get('id')}: calibrated content aspect-ratio error exceeds 12%")
+            if float(item.get("aspect_ratio_error", 1.0)) > 0.01:
+                errors.append(f"{item.get('id')}: tight content aspect-ratio error exceeds 1%")
+            if float(item.get("cross_renderer_pixel_match_t32", 0.0)) < 0.80:
+                errors.append(f"{item.get('id')}: cross-renderer pixel match falls below 80%")
+            if float(item.get("semantic_layer_isolation_pixel_match", 0.0)) != 1.0:
+                errors.append(f"{item.get('id')}: hidden semantic layer changes visible pixels")
     except (OSError, json.JSONDecodeError, KeyError, TypeError) as exc:
         errors.append(f"asset manifests are invalid: {exc}")
     return errors

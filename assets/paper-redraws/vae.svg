@@ -1,9 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="235" height="255" viewBox="0 0 235 255" role="img" aria-labelledby="svg-title svg-desc">
-  <title id="svg-title">Variational graphical model</title><desc id="svg-desc">Editable reconstruction of Kingma and Welling (2013), Figure 1.</desc><metadata>Source-faithful redraw; source paper Figure 1; solid generative and dashed recognition edges.</metadata>
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="91.5000pt" height="91.5000pt" viewBox="259.7500 366.7500 91.5000 91.5000" role="img" aria-labelledby="svg-title svg-description" data-fidelity="pixel-exact-source-vector">
+<defs>
+<g>
+<g id="glyph-0-0">
+<path d="M 3.453125 -2.453125 L 4.609375 -3.75 C 4.75 -3.890625 4.8125 -3.953125 5.625 -3.953125 L 5.625 -4.421875 C 5.28125 -4.40625 4.765625 -4.390625 4.71875 -4.390625 C 4.46875 -4.390625 3.96875 -4.421875 3.6875 -4.421875 L 3.6875 -3.953125 C 3.828125 -3.953125 3.953125 -3.9375 4.0625 -3.875 C 4.03125 -3.8125 4.03125 -3.78125 3.984375 -3.75 L 3.15625 -2.8125 L 2.171875 -3.953125 L 2.578125 -3.953125 L 2.578125 -4.421875 C 2.3125 -4.421875 1.6875 -4.390625 1.359375 -4.390625 C 1.046875 -4.390625 0.59375 -4.421875 0.265625 -4.421875 L 0.265625 -3.953125 L 0.984375 -3.953125 L 2.53125 -2.125 L 1.21875 -0.65625 C 1.0625 -0.46875 0.703125 -0.46875 0.21875 -0.46875 L 0.21875 0 C 0.5625 -0.015625 1.09375 -0.03125 1.140625 -0.03125 C 1.390625 -0.03125 1.96875 -0.015625 2.15625 0 L 2.15625 -0.46875 C 1.984375 -0.46875 1.796875 -0.515625 1.796875 -0.578125 C 1.796875 -0.59375 1.796875 -0.59375 1.859375 -0.671875 L 2.828125 -1.765625 L 3.921875 -0.46875 L 3.53125 -0.46875 L 3.53125 0 C 3.796875 -0.015625 4.40625 -0.03125 4.734375 -0.03125 C 5.046875 -0.03125 5.5 -0.015625 5.828125 0 L 5.828125 -0.46875 L 5.125 -0.46875 Z M 3.453125 -2.453125 " />
+</g>
+<g id="glyph-0-1">
+<path d="M 4.46875 -4 C 4.5625 -4.109375 4.578125 -4.125 4.578125 -4.21875 C 4.578125 -4.421875 4.4375 -4.421875 4.25 -4.421875 L 0.59375 -4.421875 L 0.484375 -2.6875 L 0.953125 -2.6875 C 1 -3.703125 1.3125 -4.0625 2.34375 -4.0625 L 3.1875 -4.0625 L 0.40625 -0.4375 C 0.3125 -0.328125 0.3125 -0.3125 0.3125 -0.21875 C 0.3125 0 0.453125 0 0.640625 0 L 4.421875 0 L 4.609375 -2.015625 L 4.140625 -2.015625 C 4.046875 -1 3.890625 -0.40625 2.578125 -0.40625 L 1.71875 -0.40625 Z M 4.46875 -4 " />
+</g>
+<g id="glyph-1-0">
+<path d="M 4.359375 -6.671875 C 4.359375 -6.703125 4.390625 -6.8125 4.390625 -6.8125 C 4.390625 -6.828125 4.390625 -6.921875 4.265625 -6.921875 C 4.171875 -6.921875 4.15625 -6.890625 4.109375 -6.71875 L 3.53125 -4.421875 C 1.953125 -4.359375 0.484375 -3.046875 0.484375 -1.6875 C 0.484375 -0.734375 1.1875 0.046875 2.40625 0.125 C 2.328125 0.421875 2.25 0.75 2.171875 1.0625 C 2.046875 1.53125 1.953125 1.90625 1.953125 1.9375 C 1.953125 2.03125 2.03125 2.046875 2.078125 2.046875 C 2.125 2.046875 2.140625 2.03125 2.171875 2 C 2.1875 1.984375 2.25 1.75 2.28125 1.609375 L 2.65625 0.125 C 4.265625 0.0625 5.71875 -1.28125 5.71875 -2.609375 C 5.71875 -3.40625 5.1875 -4.3125 3.796875 -4.421875 Z M 2.453125 -0.09375 C 1.859375 -0.125 1.140625 -0.484375 1.140625 -1.46875 C 1.140625 -2.671875 2 -4.0625 3.484375 -4.203125 Z M 3.734375 -4.203125 C 4.5 -4.15625 5.0625 -3.703125 5.0625 -2.828125 C 5.0625 -1.640625 4.203125 -0.21875 2.71875 -0.09375 Z M 3.734375 -4.203125 " />
+</g>
+<g id="glyph-1-1">
+<path d="M 4.53125 -4.984375 C 4.53125 -5.640625 4.359375 -7.03125 3.34375 -7.03125 C 1.953125 -7.03125 0.421875 -4.21875 0.421875 -1.9375 C 0.421875 -1 0.703125 0.109375 1.609375 0.109375 C 3.015625 0.109375 4.53125 -2.75 4.53125 -4.984375 Z M 1.46875 -3.625 C 1.640625 -4.25 1.84375 -5.046875 2.25 -5.765625 C 2.515625 -6.25 2.875 -6.8125 3.328125 -6.8125 C 3.8125 -6.8125 3.875 -6.171875 3.875 -5.609375 C 3.875 -5.109375 3.796875 -4.609375 3.5625 -3.625 Z M 3.46875 -3.296875 C 3.359375 -2.84375 3.15625 -2 2.765625 -1.28125 C 2.421875 -0.59375 2.046875 -0.109375 1.609375 -0.109375 C 1.28125 -0.109375 1.078125 -0.40625 1.078125 -1.328125 C 1.078125 -1.75 1.140625 -2.328125 1.390625 -3.296875 Z M 3.46875 -3.296875 " />
+</g>
+<g id="glyph-2-0">
+<path d="M 6.921875 -5.15625 C 7.015625 -5.53125 7.1875 -5.828125 7.890625 -5.84375 C 7.9375 -5.84375 8.046875 -5.859375 8.046875 -6.015625 C 8.046875 -6.078125 7.984375 -6.125 7.921875 -6.125 C 7.71875 -6.125 7.21875 -6.09375 7.015625 -6.09375 C 6.796875 -6.09375 6.78125 -6.09375 6.5625 -6.109375 C 6.421875 -6.109375 6.234375 -6.125 6.09375 -6.125 C 6.0625 -6.125 5.9375 -6.125 5.9375 -5.96875 C 5.9375 -5.84375 6.046875 -5.84375 6.09375 -5.84375 C 6.4375 -5.84375 6.703125 -5.765625 6.703125 -5.46875 C 6.703125 -5.421875 6.671875 -5.296875 6.671875 -5.28125 L 5.671875 -1.296875 L 3.609375 -5.953125 C 3.53125 -6.109375 3.53125 -6.125 3.3125 -6.125 L 2.125 -6.125 C 1.953125 -6.125 1.859375 -6.125 1.859375 -5.96875 C 1.859375 -5.84375 1.953125 -5.84375 2.125 -5.84375 C 2.171875 -5.84375 2.5 -5.84375 2.71875 -5.796875 L 1.5 -0.953125 C 1.40625 -0.515625 1.171875 -0.3125 0.546875 -0.28125 C 0.515625 -0.28125 0.390625 -0.265625 0.390625 -0.109375 C 0.390625 -0.09375 0.390625 0 0.515625 0 C 0.625 0 0.859375 -0.015625 0.96875 -0.015625 C 1.109375 -0.03125 1.125 -0.03125 1.421875 -0.03125 C 1.640625 -0.03125 1.65625 -0.03125 1.875 -0.015625 C 2.015625 -0.015625 2.203125 0 2.34375 0 C 2.390625 0 2.5 0 2.5 -0.15625 C 2.5 -0.265625 2.40625 -0.28125 2.328125 -0.28125 C 1.90625 -0.28125 1.734375 -0.421875 1.734375 -0.65625 C 1.734375 -0.71875 1.75 -0.734375 1.78125 -0.859375 L 2.953125 -5.59375 L 5.359375 -0.15625 C 5.421875 -0.015625 5.421875 0 5.515625 0 C 5.625 0 5.640625 -0.03125 5.671875 -0.1875 Z M 6.921875 -5.15625 " />
+</g>
+</g>
+<clipPath id="clip-0">
+<path clip-rule="nonzero" d="M 279 362 L 333 362 L 333 461.5 L 279 461.5 Z M 279 362 " />
+</clipPath>
+</defs>
+<title id="svg-title">Auto-Encoding Variational Bayes - Figure 1</title><desc id="svg-description">Pixel-exact source-vector extraction for review and editable reconstruction.</desc><metadata id="provenance">{"reproduction":"pixel-exact-source-vector","paper":"Auto-Encoding Variational Bayes","figure":"Figure 1","source_url":"https://arxiv.org/pdf/1312.6114","pdf_page":2,"source_pdf_sha256":"bdcb63b79ed88f64f8ee2d43a721930d01dde5441a4dba20ecaa2342b34e017c","visible_text_mode":"source glyph outlines"}</metadata><g id="source-vector-operators" data-role="pixel-exact-visible-layer"><path fill-rule="nonzero" fill="rgb(87.5%, 87.5%, 87.5%)" fill-opacity="1" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 9.962125 -0.0010625 C 9.962125 5.502844 5.501188 9.963781 0.0011875 9.963781 C -5.502719 9.963781 -9.963656 5.502844 -9.963656 -0.0010625 C -9.963656 -5.501062 -5.502719 -9.962 0.0011875 -9.962 C 5.501188 -9.962 9.962125 -5.501062 9.962125 -0.0010625 Z M 9.962125 -0.0010625 " transform="matrix(1, 0, 0, -1, 305.991, 430.913)" id="source-path-0001" />
+<g fill="rgb(0%, 0%, 0%)" fill-opacity="1" id="source-g-0002">
+<use xlink:href="#glyph-0-0" x="302.968" y="433.127" id="source-use-0003" />
+</g>
+<path fill-rule="nonzero" fill="rgb(100%, 100%, 100%)" fill-opacity="1" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 9.962125 48.670813 C 9.962125 54.174719 5.501188 58.63175 0.0011875 58.63175 C -5.502719 58.63175 -9.963656 54.174719 -9.963656 48.670813 C -9.963656 43.166906 -5.502719 38.709875 0.0011875 38.709875 C 5.501188 38.709875 9.962125 43.166906 9.962125 48.670813 Z M 9.962125 48.670813 " transform="matrix(1, 0, 0, -1, 305.991, 430.913)" id="source-path-0004" />
+<g fill="rgb(0%, 0%, 0%)" fill-opacity="1" id="source-g-0005">
+<use xlink:href="#glyph-0-1" x="303.445" y="384.457" id="source-use-0006" />
+</g>
+<g fill="rgb(0%, 0%, 0%)" fill-opacity="1" id="source-g-0007">
+<use xlink:href="#glyph-1-0" x="261.348" y="384.733" id="source-use-0008" />
+</g>
+<g fill="rgb(0%, 0%, 0%)" fill-opacity="1" id="source-g-0009">
+<use xlink:href="#glyph-1-1" x="344.699" y="385.702" id="source-use-0010" />
+</g>
+<path fill="none" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="2.98883 2.98883" stroke-miterlimit="10" d="M -38.510531 48.670813 L -10.971469 48.670813 " transform="matrix(1, 0, 0, -1, 305.991, 430.913)" id="source-path-0011" />
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -5.203634 2.33591 L 0.300273 -0.0000275 L -5.203634 -2.335965 Z M -5.203634 2.33591 " transform="matrix(1, 0, 0, -1, 295.02004, 382.24216)" id="source-path-0012" />
+<path fill="none" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 38.509 48.670813 L 10.969938 48.670813 " transform="matrix(1, 0, 0, -1, 305.991, 430.913)" id="source-path-0013" />
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -5.202103 2.335965 L 0.297897 0.0000275 L -5.202103 -2.33591 Z M -5.202103 2.335965 " transform="matrix(-1, 0, 0, 1, 316.96196, 382.24216)" id="source-path-0014" />
+<path fill="none" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 38.509 45.510656 L 7.087125 8.373938 " transform="matrix(1, 0, 0, -1, 305.991, 430.913)" id="source-path-0015" />
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -5.204938 2.336027 L 0.299179 -0.00188899 L -5.203272 -2.334671 Z M -5.204938 2.336027 " transform="matrix(-0.64592, 0.76334, 0.76334, 0.64592, 313.0775, 422.53847)" id="source-path-0016" />
+<path fill="none" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="2.98883 2.98883" stroke-miterlimit="10" d="M -7.186312 7.186438 C -16.643344 16.643469 -16.643344 32.026281 -7.756625 40.913 " transform="matrix(1, 0, 0, -1, 305.991, 430.913)" id="source-path-0017" />
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -5.203338 2.33593 L 0.29889 -0.000859143 L -5.203338 -2.337648 Z M -5.203338 2.33593 " transform="matrix(0.7071, -0.7071, -0.7071, -0.7071, 298.23336, 389.9998)" id="source-path-0018" />
+<path fill="none" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.0011875 38.510656 L 0.0011875 10.971594 " transform="matrix(1, 0, 0, -1, 305.991, 430.913)" id="source-path-0019" />
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -5.203759 2.337125 L 0.300147 0.0011875 L -5.203759 -2.33475 Z M -5.203759 2.337125 " transform="matrix(0, 1, 1, 0, 305.991, 419.94204)" id="source-path-0020" />
+<g fill="rgb(0%, 0%, 0%)" fill-opacity="1" id="source-g-0021">
+<use xlink:href="#glyph-2-0" x="307.818" y="452.582" id="source-use-0022" />
+</g>
+<g clip-path="url(#clip-0)" id="source-g-0023">
+<path fill="none" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 16.536344 62.354406 L -16.537875 62.354406 C -18.737094 62.354406 -20.52225 60.56925 -20.52225 58.366125 L -20.52225 -21.204187 C -20.52225 -23.403406 -18.737094 -25.188562 -16.537875 -25.188562 L 16.536344 -25.188562 C 18.739469 -25.188562 20.524625 -23.403406 20.524625 -21.204187 L 20.524625 58.366125 C 20.524625 60.56925 18.739469 62.354406 16.536344 62.354406 Z M 16.536344 62.354406 " transform="matrix(1, 0, 0, -1, 305.991, 430.913)" id="source-path-0024" />
+</g>
+</g><svg width="91.5000" height="91.5000" viewBox="0 0 235 255" role="img" aria-labelledby="semantic-svg-title semantic-svg-desc" id="semantic-edit-layer" data-role="editable-text-and-component-layer" x="259.7500" y="366.7500" preserveAspectRatio="xMidYMid meet" style="display:none">
+  <title id="semantic-svg-title">Variational graphical model</title><desc id="semantic-svg-desc">Editable reconstruction of Kingma and Welling (2013), Figure 1.</desc><metadata>Source-faithful redraw; source paper Figure 1; solid generative and dashed recognition edges.</metadata>
   <defs>
-    <marker id="paper-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#111"/></marker>
-    <marker id="paper-arrow-gray" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#777"/></marker>
+    <marker id="semantic-paper-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#111" /></marker>
+    <marker id="semantic-paper-arrow-gray" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#777" /></marker>
     <style>
     .sans{font-family:Arial,Helvetica,sans-serif;fill:#111}.serif{font-family:'Times New Roman',Times,serif;fill:#111}
     .t9{font-size:9px}.t10{font-size:10px}.t11{font-size:11px}.t12{font-size:12px}.t13{font-size:13px}.t14{font-size:14px}.t16{font-size:16px}
@@ -14,30 +67,30 @@
     .cyan-stroke{fill:none;stroke:#42a3b8;stroke-width:1.5}.green-stroke{fill:none;stroke:#5a9e55;stroke-width:1.5}.black-dash{fill:none;stroke:#111;stroke-width:1.5;stroke-dasharray:3 3}
     </style>
   </defs>
-  <rect width="235" height="255" fill="#fff"/>
-  <g id="vae-content" transform="scale(.82,1)">
-<g id="plate" >
-<rect x="82" y="28" width="122" height="210" rx="9" class="light"/>
+  <rect width="235" height="255" fill="#fff" />
+  <g id="semantic-vae-content" transform="scale(.82,1)">
+<g id="semantic-plate">
+<rect x="82" y="28" width="122" height="210" rx="9" class="light" />
 <text x="185" y="224" class="serif t16 italic">N</text>
 </g>
-<g id="latent-z" >
-<circle cx="143" cy="91" r="28" fill="#fff" stroke="#111" stroke-width="1.5"/>
+<g id="semantic-latent-z">
+<circle cx="143" cy="91" r="28" fill="#fff" stroke="#111" stroke-width="1.5" />
 <text x="143" y="99" class="serif t16 italic" text-anchor="middle">z</text>
 </g>
-<g id="observed-x" >
-<circle cx="143" cy="190" r="28" fill="#ddd" stroke="#111" stroke-width="1.5"/>
+<g id="semantic-observed-x">
+<circle cx="143" cy="190" r="28" fill="#ddd" stroke="#111" stroke-width="1.5" />
 <text x="143" y="198" class="serif t16 italic" text-anchor="middle">x</text>
 </g>
-<g id="generative-model" >
-<line x1="143" y1="119" x2="143" y2="135" class="mid" marker-end="url(#paper-arrow)"/>
-<path d="M248 63 L174 84" class="mid" marker-end="url(#paper-arrow)"/>
-<path d="M248 63 L169 172" class="mid" marker-end="url(#paper-arrow)"/>
+<g id="semantic-generative-model">
+<line x1="143" y1="119" x2="143" y2="135" class="mid" marker-end="url(#semantic-paper-arrow)" />
+<path d="M248 63 L174 84" class="mid" marker-end="url(#semantic-paper-arrow)" />
+<path d="M248 63 L169 172" class="mid" marker-end="url(#semantic-paper-arrow)" />
 <text x="260" y="61" class="serif t16 italic">θ</text>
 </g>
-<g id="recognition-model" >
-<path d="M116 177 C82 151 88 116 116 101" class="black-dash" marker-end="url(#paper-arrow)"/>
-<path d="M31 75 L114 87" class="black-dash" marker-end="url(#paper-arrow)"/>
+<g id="semantic-recognition-model">
+<path d="M116 177 C82 151 88 116 116 101" class="black-dash" marker-end="url(#semantic-paper-arrow)" />
+<path d="M31 75 L114 87" class="black-dash" marker-end="url(#semantic-paper-arrow)" />
 <text x="14" y="78" class="serif t16 italic">φ</text>
 </g>
 </g>
-</svg>
+</svg></svg>
