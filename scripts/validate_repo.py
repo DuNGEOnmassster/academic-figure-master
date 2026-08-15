@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import re
+import struct
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -106,8 +107,42 @@ def validate(root: Path = ROOT) -> list[str]:
 
     readme_path = root / "README.md"
     readme = readme_path.read_text(encoding="utf-8") if readme_path.exists() else ""
+    readme_zh_path = root / "README.zh-CN.md"
+    readme_zh = readme_zh_path.read_text(encoding="utf-8") if readme_zh_path.exists() else ""
     if "python scripts/install_skill.py --target dsh" not in readme:
         errors.append("README is missing the DSH installation command")
+    for name, document, counterpart in (
+        ("README.md", readme, "README.zh-CN.md"),
+        ("README.zh-CN.md", readme_zh, "README.md"),
+    ):
+        if not document:
+            errors.append(f"{name} is missing")
+            continue
+        if counterpart not in document:
+            errors.append(f"{name} is missing the language switch to {counterpart}")
+        if "assets/branding/academic-figure-master-logo.png" not in document[:1000]:
+            errors.append(f"{name} must show the repository logo at the top")
+        if "python scripts/install_skill.py --target all" not in document[:5000]:
+            errors.append(f"{name} must put the all-agent install command near the top")
+        for target in ("codex", "claude", "cursor", "dsh"):
+            if f"--target {target}" not in document[:8000]:
+                errors.append(f"{name} is missing the {target} installation command")
+
+    logo_path = root / "assets" / "branding" / "academic-figure-master-logo.png"
+    try:
+        header = logo_path.read_bytes()[:26]
+        if header[:8] != b"\x89PNG\r\n\x1a\n" or header[12:16] != b"IHDR":
+            errors.append("repository logo is not a valid PNG")
+        elif len(header) < 26:
+            errors.append("repository logo PNG header is truncated")
+        else:
+            width, height = struct.unpack(">II", header[16:24])
+            if width != height or width < 512:
+                errors.append("repository logo must be a square PNG of at least 512 px")
+            if header[25] not in {4, 6}:
+                errors.append("repository logo must contain an alpha channel")
+    except OSError as exc:
+        errors.append(f"repository logo is missing or unreadable: {exc}")
     if not (root / ".github" / "workflows" / "release.yml").exists():
         errors.append("tag-driven GitHub release workflow is missing")
     try:
