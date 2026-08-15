@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
@@ -8,7 +9,8 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from scripts.generate_gallery import ASSETS, generate
-from scripts.install_skill import install
+from scripts.install_skill import install, target_path
+from scripts.sync_dsh import build_snapshot
 from scripts.sync_catalog import passes_discovery_filter, render_markdown, sync_catalog
 from scripts.validate_repo import ROOT, validate
 
@@ -82,6 +84,44 @@ class ToolTests(unittest.TestCase):
             self.assertTrue((destination / "assets" / "examples" / "figure-spec.json").exists())
             self.assertTrue((destination / "assets" / "gallery-manifest.json").exists())
             json.loads((destination / "references" / "catalog-sources.json").read_text(encoding="utf-8"))
+
+    def test_dsh_target_uses_dsh_home(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            previous = os.environ.get("DSH_HOME")
+            os.environ["DSH_HOME"] = temporary
+            try:
+                expected = Path(temporary) / "skills" / "academic-figure-master"
+                self.assertEqual(target_path("dsh"), expected.resolve())
+            finally:
+                if previous is None:
+                    os.environ.pop("DSH_HOME", None)
+                else:
+                    os.environ["DSH_HOME"] = previous
+
+    def test_dsh_sync_preserves_verified_pin(self) -> None:
+        repository = {
+            "default_branch": "master",
+            "html_url": "https://github.com/deepseek-ai/deepseek-harness",
+            "pushed_at": "2026-08-15T00:00:00Z",
+        }
+        commit = {
+            "sha": "a" * 40,
+            "html_url": f"https://github.com/deepseek-ai/deepseek-harness/commit/{'a' * 40}",
+            "commit": {"committer": {"date": "2026-08-15T00:00:00Z"}},
+        }
+        npm = {"dist-tags": {"latest": "0.1.0-rc.6"}, "time": {"0.1.0-rc.6": "2026-08-15T00:00:00Z"}}
+        previous = {
+            "verified": {
+                "commit": "b" * 40,
+                "source_cli_version": "0.1.0-rc.5",
+                "npm_cli_version": "0.1.0-rc.5",
+            }
+        }
+        snapshot = build_snapshot(repository, commit, None, npm, previous)
+        self.assertEqual(snapshot["upstream"]["latest_commit"], "a" * 40)
+        self.assertEqual(snapshot["upstream"]["npm"]["version"], "0.1.0-rc.6")
+        self.assertEqual(snapshot["verified"], previous["verified"])
+        self.assertFalse(snapshot["delivery"]["plugin_bundle_required"])
 
     def test_gallery_is_deterministic_and_complete(self) -> None:
         self.assertEqual(len(ASSETS), 29)

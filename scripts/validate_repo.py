@@ -33,6 +33,28 @@ def validate(root: Path = ROOT) -> list[str]:
     if not agent_path.exists() or "$academic-figure-master" not in agent_path.read_text(encoding="utf-8"):
         errors.append("agents/openai.yaml is missing or has a stale default prompt")
 
+    version_path = root / "VERSION"
+    try:
+        version = version_path.read_text(encoding="utf-8").strip()
+        if not re.fullmatch(r"\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?", version):
+            errors.append("VERSION is not a semantic version")
+    except OSError as exc:
+        errors.append(f"VERSION is missing or unreadable: {exc}")
+
+    dsh_path = root / "references" / "dsh-compatibility.json"
+    try:
+        dsh = json.loads(dsh_path.read_text(encoding="utf-8"))
+        if dsh.get("upstream", {}).get("repository") != "deepseek-ai/deepseek-harness":
+            errors.append("DSH compatibility record points to a non-official repository")
+        if not re.fullmatch(r"[0-9a-f]{40}", str(dsh.get("upstream", {}).get("latest_commit", ""))):
+            errors.append("DSH upstream commit is missing or invalid")
+        if not re.fullmatch(r"[0-9a-f]{40}", str(dsh.get("verified", {}).get("commit", ""))):
+            errors.append("DSH verified commit is missing or invalid")
+        if dsh.get("delivery", {}).get("plugin_bundle_required") is not False:
+            errors.append("DSH delivery must remain a native filesystem skill unless an executable plugin is added")
+    except (OSError, json.JSONDecodeError, TypeError) as exc:
+        errors.append(f"dsh-compatibility.json is invalid: {exc}")
+
     source_path = root / "references" / "catalog-sources.json"
     try:
         sources = json.loads(source_path.read_text(encoding="utf-8"))
@@ -84,6 +106,10 @@ def validate(root: Path = ROOT) -> list[str]:
 
     readme_path = root / "README.md"
     readme = readme_path.read_text(encoding="utf-8") if readme_path.exists() else ""
+    if "python scripts/install_skill.py --target dsh" not in readme:
+        errors.append("README is missing the DSH installation command")
+    if not (root / ".github" / "workflows" / "release.yml").exists():
+        errors.append("tag-driven GitHub release workflow is missing")
     try:
         starter_manifest = json.loads((asset_root / "manifest.json").read_text(encoding="utf-8"))
         gallery_manifest = json.loads((asset_root / "gallery-manifest.json").read_text(encoding="utf-8"))

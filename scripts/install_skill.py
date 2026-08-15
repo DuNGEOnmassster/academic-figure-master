@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install this repository as a Codex or Claude skill using a link or copy."""
+"""Install this repository as a Codex, Claude, or DSH skill using a link or copy."""
 
 from __future__ import annotations
 
@@ -11,12 +11,12 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PAYLOAD = ("SKILL.md", "agents", "assets", "references", "scripts", "LICENSE")
+PAYLOAD = ("SKILL.md", "VERSION", "agents", "assets", "references", "scripts", "LICENSE")
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--target", choices=("codex", "claude", "path"), default="codex")
+    parser.add_argument("--target", choices=("codex", "claude", "dsh", "path"), default="codex")
     parser.add_argument("--path", type=Path, help="Required when --target path is used.")
     parser.add_argument("--mode", choices=("link", "copy"), default="link")
     parser.add_argument("--force", action="store_true", help="Replace an existing installation.")
@@ -30,6 +30,9 @@ def target_path(target: str, explicit: Path | None = None) -> Path:
         return explicit.expanduser().resolve()
     if target == "claude":
         return (Path.home() / ".claude" / "skills" / "academic-figure-master").resolve()
+    if target == "dsh":
+        dsh_root = Path(os.environ.get("DSH_HOME", str(Path.home() / ".dsh"))).expanduser()
+        return (dsh_root / "skills" / "academic-figure-master").resolve()
     codex_root = Path(os.environ.get("CODEX_HOME", str(Path.home() / ".codex"))).expanduser()
     return (codex_root / "skills" / "academic-figure-master").resolve()
 
