@@ -1,0 +1,62 @@
+name: GitHub release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing v-prefixed tag to release"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          ref: ${{ inputs.tag || github.ref }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Resolve and verify version
+        id: version
+        env:
+          INPUT_TAG: ${{ inputs.tag }}
+          REF_TAG: ${{ github.ref_name }}
+        run: |
+          tag="${INPUT_TAG:-$REF_TAG}"
+          expected="v$(tr -d '[:space:]' < VERSION)"
+          test "$tag" = "$expected" || { echo "tag $tag does not match VERSION ($expected)"; exit 1; }
+          git rev-parse "$tag^{commit}" >/dev/null
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+      - name: Validate release payload
+        run: |
+          python scripts/validate_repo.py
+          python -m unittest discover -s tests -v
+      - name: Build versioned archives
+        env:
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          mkdir -p dist
+          git archive --format=tar.gz --prefix="academic-figure-master-$TAG/" -o "dist/academic-figure-master-$TAG.tar.gz" "$TAG"
+          git archive --format=zip --prefix="academic-figure-master-$TAG/" -o "dist/academic-figure-master-$TAG.zip" "$TAG"
+          cd dist
+          sha256sum "academic-figure-master-$TAG.tar.gz" "academic-figure-master-$TAG.zip" > SHA256SUMS
+      - name: Create or update GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist/* --clobber
+          else
+            gh release create "$TAG" dist/* --generate-notes --verify-tag
+          fi

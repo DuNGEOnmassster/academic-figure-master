@@ -1,8 +1,8 @@
 # Academic Figure Master
 
-A lightweight Codex/Claude skill for publication-ready academic figures that stay **genuinely editable** in SVG, draw.io, or PowerPoint. Original figures use semantic native objects; pixel-faithful paper reproductions use a dual-layer SVG that separates exact source appearance from convenient text-and-component editing.
+A lightweight Codex/Claude/DeepSeek Harness skill for publication-ready academic figures. The implemented artifact pipeline is strongest for **genuinely editable SVG**; draw.io and PowerPoint currently have authoring contracts but not repository-native compilers. Original figures use semantic native objects; pixel-faithful paper reproductions use a dual-layer SVG that separates exact source appearance from convenient text-and-component editing.
 
-![assets](https://img.shields.io/badge/editable_SVG_assets-35-3972d5) ![paper redraws](https://img.shields.io/badge/classic_paper_redraws-11-7354cf) ![curves](https://img.shields.io/badge/reproducible_curves-6-38a479) ![license](https://img.shields.io/badge/original_assets-MIT-d3a23f)
+![assets](https://img.shields.io/badge/editable_SVG_assets-35-3972d5) ![paper redraws](https://img.shields.io/badge/classic_paper_redraws-11-7354cf) ![curves](https://img.shields.io/badge/reproducible_curves-6-38a479) ![DSH](https://img.shields.io/badge/DSH_npm_verified-0.1.0--rc.6-4b6bfb) ![license](https://img.shields.io/badge/original_assets-MIT-d3a23f)
 
 The current version includes:
 
@@ -12,7 +12,22 @@ The current version includes:
 - a machine-readable provenance and reproduction manifest;
 - a surveyed catalog of vector models, scientific-figure systems, skills, editors, and asset libraries;
 - daily GitHub metadata, stars, activity, license, and discovery refreshes; and
-- dependency-free core generation, validation, synchronization, and installation scripts, plus source-operator extraction and source/redraw/pixel-difference QA harnesses.
+- dependency-free core generation, validation, synchronization, and installation scripts, plus source-operator extraction and source/redraw/pixel-difference QA harnesses; and
+- native DSH skill installation, a pinned compatibility record, daily upstream checks, and tag-driven GitHub releases.
+
+### Capability boundary
+
+| Request | Current status | What is delivered |
+|---|---|---|
+| Install as a Codex, Claude, or DSH skill | **Ready** | One-command symlink or copy installation |
+| Generate a new academic figure | **Ready for SVG through an agent** | Semantic SVG assembled from the skill workflow and 18 primitive sheets |
+| Edit an existing SVG locally | **Ready through an agent** | Object-level patches that preserve unrelated stable IDs and groups |
+| Reproduce a cited PDF figure | **Ready for the 11 registered figures; extensible** | Pixel-exact visible PDF-operator layer, hidden semantic edit layer, comparison plate, and QA metrics |
+| Convert an arbitrary raster screenshot into clean editable SVG | **Workflow ready, no one-command model backend** | Component inventory, reconstruction protocol, overlays, and editability checks; quality still depends on the agent/model doing the reconstruction |
+| Emit native draw.io or PPTX directly from repository scripts | **Not implemented yet** | Format-specific contracts and agent guidance exist, but there is no checked-in draw.io/PPTX compiler or exporter |
+| Call GPT Image, Recraft, InternSVG, or another vector model | **Not bundled** | The landscape describes adapter candidates; credentials and hosted model adapters remain external |
+
+In other words: after skill installation, a capable coding agent can directly create or modify SVG files using these instructions and assets. Installation alone is not a standalone image model, and the repository does not yet turn an arbitrary prompt into PPTX/draw.io without an agent runtime.
 
 ## Install and invoke
 
@@ -22,7 +37,17 @@ After cloning the private repository:
 python scripts/install_skill.py --target codex
 ```
 
-The default installation is a symbolic link, so repository updates are immediately available to Codex. Use `--mode copy` for an isolated copy, `--target claude` for Claude, or `--target path --path /absolute/destination` for a custom directory.
+The default installation is a symbolic link, so repository updates are immediately available to the selected agent. Use `--mode copy` for an isolated copy, `--target claude` for Claude, `--target dsh` for DeepSeek Harness, or `--target path --path /absolute/destination` for a custom directory.
+
+For DSH:
+
+```bash
+python scripts/install_skill.py --target dsh
+cd ../deepseek-harness
+pnpm dsh web
+```
+
+Then open `http://127.0.0.1:3080`, configure a model in **Settings → Models**, select a workspace, and ask the agent to load `academic-figure-master`. DSH discovers the linked skill at `$DSH_HOME/skills/academic-figure-master` (`~/.dsh` by default); no JavaScript plugin bundle is required. See [`references/dsh-integration.md`](references/dsh-integration.md) for the skill/plugin distinction and the verified source-checkout layout.
 
 Example request:
 
@@ -201,6 +226,8 @@ The generated output and its source/provenance record are in [`assets/gallery-ma
 - [`references/figure-ir.md`](references/figure-ir.md) — semantic intermediate representation
 - [`references/fidelity-protocol.md`](references/fidelity-protocol.md) — original/redraw/overlay calibration loop and 35-SVG acceptance rules
 - [`references/output-contracts.md`](references/output-contracts.md) — SVG, draw.io, and PPTX editability rules
+- [`references/dsh-integration.md`](references/dsh-integration.md) — DSH native-skill deployment, plugin model, update policy, and verified version
+- [`references/dsh-compatibility.json`](references/dsh-compatibility.json) — machine-readable upstream and tested DSH pins
 
 ## Refresh and verify
 
@@ -209,11 +236,14 @@ python scripts/generate_gallery.py
 python scripts/extract_pixel_exact_paper_figures.py
 python scripts/calibrate_paper_figures.py
 python scripts/sync_catalog.py
+python scripts/sync_dsh.py
 python scripts/validate_repo.py
 python -m unittest discover -s tests -v
 ```
 
-The scheduled workflow runs daily at 02:23 UTC. It refreshes repository metadata and star deltas, discovers candidates from bounded GitHub searches, validates the repository, and commits only the generated catalog snapshot. Discovered entries are leads, not endorsements; license and real editable-output behavior require human review before integration.
+The scheduled workflow runs daily at 02:23 UTC. It refreshes repository metadata and star deltas, discovers candidates from bounded GitHub searches, checks the official DSH repository/npm version, validates the repository, and commits only generated metadata. A new DSH commit advances `upstream` in the compatibility record but never silently advances the separately tested `verified` pin. Discovered entries are leads, not endorsements; license and real editable-output behavior require human review before integration.
+
+GitHub releases are versioned by [`VERSION`](VERSION). After verification, push a matching tag such as `v0.1.0`; the release workflow validates the skill, runs the unit tests, builds `.tar.gz` and `.zip` archives with SHA-256 checksums, and creates or updates the GitHub Release.
 
 ## Design and provenance rules
 

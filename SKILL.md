@@ -102,4 +102,4 @@ Then verify the actual deliverable:
 - records the source and license of every external asset;
 - includes both the editable source and a rendered preview.
 
-For a survey refresh, run `python scripts/sync_catalog.py`. For local installation after cloning, run `python scripts/install_skill.py --target codex`.
+For a survey refresh, run `python scripts/sync_catalog.py`. For DSH compatibility metadata, run `python scripts/sync_dsh.py`. For local installation after cloning, run `python scripts/install_skill.py --target codex`, `--target claude`, or `--target dsh`. Read [references/dsh-integration.md](references/dsh-integration.md) before proposing a DSH plugin: this repository is already loadable as a native filesystem skill, while executable tools or UI extensions require a separate bundle.

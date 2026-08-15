@@ -1,4 +1,4 @@
-name: daily catalog sync
+name: daily catalog and DSH sync
 
 on:
   schedule:
@@ -24,7 +24,9 @@ jobs:
       - name: Refresh GitHub metadata and discoveries
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/sync_catalog.py
+        run: |
+          python scripts/sync_catalog.py
+          python scripts/sync_dsh.py
       - name: Validate repository
         run: |
           python scripts/validate_repo.py
@@ -33,10 +35,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add references/catalog-snapshot.json references/catalog-latest.md
+          git add references/catalog-snapshot.json references/catalog-latest.md references/dsh-compatibility.json
           if git diff --cached --quiet; then
             echo "Catalog is already current."
             exit 0
           fi
-          git commit -m "chore: refresh academic figure catalog"
+          git commit -m "chore: refresh catalog and DSH compatibility"
           git push
