@@ -9,7 +9,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from scripts.generate_gallery import ASSETS, generate
-from scripts.install_skill import install, target_path
+from scripts.install_skill import GLOBAL_TARGETS, install, install_targets, target_path
 from scripts.sync_dsh import build_snapshot
 from scripts.sync_catalog import passes_discovery_filter, render_markdown, sync_catalog
 from scripts.validate_repo import ROOT, validate
@@ -83,7 +83,14 @@ class ToolTests(unittest.TestCase):
             self.assertTrue((destination / "SKILL.md").exists())
             self.assertTrue((destination / "assets" / "examples" / "figure-spec.json").exists())
             self.assertTrue((destination / "assets" / "gallery-manifest.json").exists())
+            self.assertTrue((destination / "assets" / "branding" / "academic-figure-master-logo.png").exists())
             json.loads((destination / "references" / "catalog-sources.json").read_text(encoding="utf-8"))
+
+    def test_link_install_is_idempotent(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            destination = Path(temporary) / "academic-figure-master"
+            self.assertEqual(install(destination, "link")["status"], "installed")
+            self.assertEqual(install(destination, "link")["status"], "already-installed")
 
     def test_dsh_target_uses_dsh_home(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -97,6 +104,34 @@ class ToolTests(unittest.TestCase):
                     os.environ.pop("DSH_HOME", None)
                 else:
                     os.environ["DSH_HOME"] = previous
+
+    def test_cursor_target_uses_cursor_home(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            previous = os.environ.get("CURSOR_HOME")
+            os.environ["CURSOR_HOME"] = temporary
+            try:
+                expected = Path(temporary) / "skills" / "academic-figure-master"
+                self.assertEqual(target_path("cursor"), expected.resolve())
+            finally:
+                if previous is None:
+                    os.environ.pop("CURSOR_HOME", None)
+                else:
+                    os.environ["CURSOR_HOME"] = previous
+
+    def test_all_target_installs_every_global_client(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            destinations = {name: Path(temporary) / name / "academic-figure-master" for name in GLOBAL_TARGETS}
+            original = target_path
+            try:
+                import scripts.install_skill as installer
+
+                installer.target_path = lambda target, explicit=None: destinations[target]
+                results = install_targets("all", "copy", False)
+            finally:
+                installer.target_path = original
+            self.assertEqual([item["target"] for item in results], list(GLOBAL_TARGETS))
+            for destination in destinations.values():
+                self.assertTrue((destination / "SKILL.md").exists())
 
     def test_dsh_sync_preserves_verified_pin(self) -> None:
         repository = {

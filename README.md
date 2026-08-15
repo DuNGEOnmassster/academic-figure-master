@@ -1,8 +1,41 @@
-# Academic Figure Master
+<p align="center">
+  <img src="assets/branding/academic-figure-master-logo.png" alt="Academic Figure Master logo" width="220">
+</p>
 
-A lightweight Codex/Claude/DeepSeek Harness skill for publication-ready academic figures. The implemented artifact pipeline is strongest for **genuinely editable SVG**; draw.io and PowerPoint currently have authoring contracts but not repository-native compilers. Original figures use semantic native objects; pixel-faithful paper reproductions use a dual-layer SVG that separates exact source appearance from convenient text-and-component editing.
+<h1 align="center">Academic Figure Master</h1>
+
+<p align="center">
+  <a href="README.md"><b>English</b></a> · <a href="README.zh-CN.md">简体中文</a>
+</p>
+
+<p align="center"><b>Editable, publication-ready academic figures for agent workflows.</b></p>
+
+A lightweight Codex/Claude Code/Cursor/DeepSeek Harness skill for publication-ready academic figures. The implemented artifact pipeline is strongest for **genuinely editable SVG**; draw.io and PowerPoint currently have authoring contracts but not repository-native compilers. Original figures use semantic native objects; pixel-faithful paper reproductions use a dual-layer SVG that separates exact source appearance from convenient text-and-component editing.
 
 ![assets](https://img.shields.io/badge/editable_SVG_assets-35-3972d5) ![paper redraws](https://img.shields.io/badge/classic_paper_redraws-11-7354cf) ![curves](https://img.shields.io/badge/reproducible_curves-6-38a479) ![DSH](https://img.shields.io/badge/DSH_npm_verified-0.1.0--rc.6-4b6bfb) ![license](https://img.shields.io/badge/original_assets-MIT-d3a23f)
+
+## Install everywhere in one command
+
+Already cloned? Install this checkout globally into **Codex, Claude Code (CC), Cursor, and DeepSeek Harness**:
+
+```bash
+python scripts/install_skill.py --target all
+```
+
+Fresh install from this private repository with an authenticated GitHub CLI:
+
+```bash
+gh repo clone DuNGEOnmassster/academic-figure-master && cd academic-figure-master && python scripts/install_skill.py --target all
+```
+
+| Agent | Install only this target | Global destination | Invoke |
+|---|---|---|---|
+| Codex | `python scripts/install_skill.py --target codex` | `~/.codex/skills/academic-figure-master` | `$academic-figure-master` |
+| Claude Code (CC) | `python scripts/install_skill.py --target claude` | `~/.claude/skills/academic-figure-master` | `/academic-figure-master` or ask Claude to use it |
+| Cursor | `python scripts/install_skill.py --target cursor` | `~/.cursor/skills/academic-figure-master` | `/academic-figure-master` or automatic discovery |
+| DeepSeek Harness | `python scripts/install_skill.py --target dsh` | `$DSH_HOME/skills/academic-figure-master` | Ask DSH to load `academic-figure-master` |
+
+The default mode creates symbolic links, so `git pull` updates every linked client immediately. Use `--mode copy` for isolated snapshots, `--force` to replace an old installation, or `--target path --path /absolute/destination` for another Agent Skills-compatible client. Start a new agent session after installation so its skill catalog refreshes. Cursor's supported directories are documented in the [official Agent Skills guide](https://cursor.com/docs/skills).
 
 The current version includes:
 
@@ -11,7 +44,7 @@ The current version includes:
 - 6 reproducible curve templates with explicit fidelity labels;
 - a machine-readable provenance and reproduction manifest;
 - a surveyed catalog of vector models, scientific-figure systems, skills, editors, and asset libraries;
-- daily GitHub metadata, stars, activity, license, and discovery refreshes; and
+- daily GitHub metadata, stars, activity, license, and discovery refreshes;
 - dependency-free core generation, validation, synchronization, and installation scripts, plus source-operator extraction and source/redraw/pixel-difference QA harnesses; and
 - native DSH skill installation, a pinned compatibility record, daily upstream checks, and tag-driven GitHub releases.
 
@@ -19,7 +52,7 @@ The current version includes:
 
 | Request | Current status | What is delivered |
 |---|---|---|
-| Install as a Codex, Claude, or DSH skill | **Ready** | One-command symlink or copy installation |
+| Install as a Codex, Claude, Cursor, or DSH skill | **Ready** | One-command symlink or copy installation, including an `all` target |
 | Generate a new academic figure | **Ready for SVG through an agent** | Semantic SVG assembled from the skill workflow and 18 primitive sheets |
 | Edit an existing SVG locally | **Ready through an agent** | Object-level patches that preserve unrelated stable IDs and groups |
 | Reproduce a cited PDF figure | **Ready for the 11 registered figures; extensible** | Pixel-exact visible PDF-operator layer, hidden semantic edit layer, comparison plate, and QA metrics |
@@ -29,15 +62,7 @@ The current version includes:
 
 In other words: after skill installation, a capable coding agent can directly create or modify SVG files using these instructions and assets. Installation alone is not a standalone image model, and the repository does not yet turn an arbitrary prompt into PPTX/draw.io without an agent runtime.
 
-## Install and invoke
-
-After cloning the private repository:
-
-```bash
-python scripts/install_skill.py --target codex
-```
-
-The default installation is a symbolic link, so repository updates are immediately available to the selected agent. Use `--mode copy` for an isolated copy, `--target claude` for Claude, `--target dsh` for DeepSeek Harness, or `--target path --path /absolute/destination` for a custom directory.
+## Invoke
 
 For DSH:
 
