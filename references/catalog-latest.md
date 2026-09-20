@@ -1,6 +1,6 @@
 # Academic figure catalog — latest snapshot
 
-Generated: `2026-09-19T07:23:57Z`. Curated: **42**. Discovered candidates: **34** (4 new relative to the previous snapshot).
+Generated: `2026-09-20T07:47:20Z`. Curated: **42**. Discovered candidates: **35** (5 new relative to the previous snapshot).
 
 Stars are a discovery signal, not a quality score. A candidate is not executable or endorsed until its license, outputs, and edit behavior are reviewed.
 
@@ -8,47 +8,47 @@ Stars are a discovery signal, not a quality score. A candidate is not executable
 
 | Repository | Category | Stars | Δ | License | Last push | Readiness |
 |---|---|---:|---:|---|---|---|
-| [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | agent-skill | 45,552 | +135 | MIT | 2026-09-14 | reference |
-| [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills) | agent-skill | 43,138 | +192 | Apache-2.0 | 2026-09-19 | reference |
-| [Agents365-ai/drawio-skill](https://github.com/Agents365-ai/drawio-skill) | agent-skill | 9,460 | +18 | MIT | 2026-09-14 | use-now |
-| [pengjunchi0/codex-visio-paper-figure-skill](https://github.com/pengjunchi0/codex-visio-paper-figure-skill) | agent-skill | 904 | +3 | MIT | 2026-08-16 | reference |
+| [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | agent-skill | 45,689 | +137 | MIT | 2026-09-14 | reference |
+| [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills) | agent-skill | 43,345 | +207 | Apache-2.0 | 2026-09-19 | reference |
+| [Agents365-ai/drawio-skill](https://github.com/Agents365-ai/drawio-skill) | agent-skill | 9,488 | +28 | MIT | 2026-09-14 | use-now |
+| [pengjunchi0/codex-visio-paper-figure-skill](https://github.com/pengjunchi0/codex-visio-paper-figure-skill) | agent-skill | 910 | +6 | MIT | 2026-08-16 | reference |
 | [Will-hxw/drawio-diagram-builder](https://github.com/Will-hxw/drawio-diagram-builder) | agent-skill | 410 | +0 | MIT | 2026-07-02 | reference |
-| [Azhi-ss/academic-figure-skills](https://github.com/Azhi-ss/academic-figure-skills) | agent-skill | 117 | +2 | MIT | 2026-09-14 | reference |
+| [Azhi-ss/academic-figure-skills](https://github.com/Azhi-ss/academic-figure-skills) | agent-skill | 120 | +3 | MIT | 2026-09-14 | reference |
 | [sxy1499894281/drawio-reconstruction-skill](https://github.com/sxy1499894281/drawio-reconstruction-skill) | agent-skill | 28 | +0 | MIT | 2026-08-28 | watch |
 | [pengqianhan/codex-paper-figure-skill](https://github.com/pengqianhan/codex-paper-figure-skill) | agent-skill | 10 | +0 | MIT | 2026-08-28 | reference |
 | [entyro/paper-figure-to-svg-skill](https://github.com/entyro/paper-figure-to-svg-skill) | agent-skill | 1 | +0 | MIT | 2026-07-04 | watch |
-| [lucide-icons/lucide](https://github.com/lucide-icons/lucide) | asset-library | 24,597 | +18 | — | 2026-09-18 | use-now |
-| [tabler/tabler-icons](https://github.com/tabler/tabler-icons) | asset-library | 21,720 | +13 | MIT | 2026-09-18 | use-now |
-| [rough-stuff/rough](https://github.com/rough-stuff/rough) | asset-library | 21,188 | +2 | MIT | 2024-07-28 | use-now |
-| [dair-ai/ml-visuals](https://github.com/dair-ai/ml-visuals) | asset-library | 17,396 | +2 | MIT | 2023-02-13 | use-now |
-| [garrettj403/SciencePlots](https://github.com/garrettj403/SciencePlots) | asset-library | 9,241 | +2 | MIT | 2026-06-23 | use-now |
-| [hfg-gmuend/openmoji](https://github.com/hfg-gmuend/openmoji) | asset-library | 4,556 | -1 | CC-BY-SA-4.0 | 2026-08-12 | reference |
-| [duerrsimon/bioicons](https://github.com/duerrsimon/bioicons) | asset-library | 1,738 | +0 | MIT | 2026-09-15 | use-now |
+| [lucide-icons/lucide](https://github.com/lucide-icons/lucide) | asset-library | 24,616 | +19 | — | 2026-09-19 | use-now |
+| [tabler/tabler-icons](https://github.com/tabler/tabler-icons) | asset-library | 21,733 | +13 | MIT | 2026-09-18 | use-now |
+| [rough-stuff/rough](https://github.com/rough-stuff/rough) | asset-library | 21,189 | +1 | MIT | 2024-07-28 | use-now |
+| [dair-ai/ml-visuals](https://github.com/dair-ai/ml-visuals) | asset-library | 17,397 | +1 | MIT | 2023-02-13 | use-now |
+| [garrettj403/SciencePlots](https://github.com/garrettj403/SciencePlots) | asset-library | 9,243 | +2 | MIT | 2026-06-23 | use-now |
+| [hfg-gmuend/openmoji](https://github.com/hfg-gmuend/openmoji) | asset-library | 4,557 | +1 | CC-BY-SA-4.0 | 2026-08-12 | reference |
+| [duerrsimon/bioicons](https://github.com/duerrsimon/bioicons) | asset-library | 1,740 | +2 | MIT | 2026-09-20 | use-now |
 | [keesey/phylopic](https://github.com/keesey/phylopic) | asset-library | 30 | +0 | MIT | 2026-09-18 | reference |
-| [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) | editor-export | 132,379 | +110 | MIT | 2026-09-18 | reference |
-| [DayuanJiang/next-ai-draw-io](https://github.com/DayuanJiang/next-ai-draw-io) | editor-export | 35,941 | +27 | Apache-2.0 | 2026-09-19 | use-now |
-| [jgraph/drawio](https://github.com/jgraph/drawio) | editor-export | 8,216 | +21 | Apache-2.0 | 2026-09-16 | use-now |
-| [SVG-Edit/svgedit](https://github.com/SVG-Edit/svgedit) | editor-export | 7,838 | +2 | MIT | 2026-08-05 | use-now |
-| [gitbrent/PptxGenJS](https://github.com/gitbrent/PptxGenJS) | editor-export | 6,177 | +1 | MIT | 2025-11-28 | use-now |
-| [scanny/python-pptx](https://github.com/scanny/python-pptx) | editor-export | 3,535 | +1 | MIT | 2024-08-07 | use-now |
+| [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) | editor-export | 132,478 | +99 | MIT | 2026-09-19 | reference |
+| [DayuanJiang/next-ai-draw-io](https://github.com/DayuanJiang/next-ai-draw-io) | editor-export | 35,962 | +21 | Apache-2.0 | 2026-09-19 | use-now |
+| [jgraph/drawio](https://github.com/jgraph/drawio) | editor-export | 8,236 | +20 | Apache-2.0 | 2026-09-16 | use-now |
+| [SVG-Edit/svgedit](https://github.com/SVG-Edit/svgedit) | editor-export | 7,838 | +0 | MIT | 2026-08-05 | use-now |
+| [gitbrent/PptxGenJS](https://github.com/gitbrent/PptxGenJS) | editor-export | 6,180 | +3 | MIT | 2025-11-28 | use-now |
+| [scanny/python-pptx](https://github.com/scanny/python-pptx) | editor-export | 3,535 | +0 | MIT | 2024-08-07 | use-now |
 | [ZJU-REAL/SVGenius](https://github.com/ZJU-REAL/SVGenius) | evaluation | 79 | +0 | Apache-2.0 | 2025-11-10 | use-now |
 | [mti-lab/SVGEditBench](https://github.com/mti-lab/SVGEditBench) | evaluation | 38 | +0 | MIT | 2024-10-17 | use-now |
-| [BIT-DataLab/Edit-Banana](https://github.com/BIT-DataLab/Edit-Banana) | scientific-figure-system | 5,484 | +1 | AGPL-3.0 | 2026-09-13 | watch |
-| [ResearAI/AutoFigure-Edit](https://github.com/ResearAI/AutoFigure-Edit) | scientific-figure-system | 4,267 | +0 | MIT | 2026-07-25 | use-now |
-| [OpenDCAI/Paper2Any](https://github.com/OpenDCAI/Paper2Any) | scientific-figure-system | 2,795 | +1 | Apache-2.0 | 2026-08-31 | use-now |
-| [llmsresearch/paperbanana](https://github.com/llmsresearch/paperbanana) | scientific-figure-system | 2,371 | +5 | MIT | 2026-09-17 | use-now |
-| [ResearAI/AutoFigure](https://github.com/ResearAI/AutoFigure) | scientific-figure-system | 1,893 | +0 | MIT | 2026-06-26 | reference |
-| [datawhalechina/happy-figure](https://github.com/datawhalechina/happy-figure) | scientific-figure-system | 437 | +2 | — | 2026-06-03 | reference |
+| [BIT-DataLab/Edit-Banana](https://github.com/BIT-DataLab/Edit-Banana) | scientific-figure-system | 5,487 | +3 | AGPL-3.0 | 2026-09-13 | watch |
+| [ResearAI/AutoFigure-Edit](https://github.com/ResearAI/AutoFigure-Edit) | scientific-figure-system | 4,270 | +3 | MIT | 2026-07-25 | use-now |
+| [OpenDCAI/Paper2Any](https://github.com/OpenDCAI/Paper2Any) | scientific-figure-system | 2,795 | +0 | Apache-2.0 | 2026-08-31 | use-now |
+| [llmsresearch/paperbanana](https://github.com/llmsresearch/paperbanana) | scientific-figure-system | 2,372 | +1 | MIT | 2026-09-17 | use-now |
+| [ResearAI/AutoFigure](https://github.com/ResearAI/AutoFigure) | scientific-figure-system | 1,896 | +3 | MIT | 2026-06-26 | reference |
+| [datawhalechina/happy-figure](https://github.com/datawhalechina/happy-figure) | scientific-figure-system | 437 | +0 | — | 2026-06-03 | reference |
 | [HaozheZhao/Crafter](https://github.com/HaozheZhao/Crafter) | scientific-figure-system | 158 | +0 | MIT | 2026-06-20 | watch |
-| [visioncortex/vtracer](https://github.com/visioncortex/vtracer) | vector-engine | 7,067 | +13 | MIT | 2026-09-17 | use-now |
+| [visioncortex/vtracer](https://github.com/visioncortex/vtracer) | vector-engine | 7,075 | +8 | MIT | 2026-09-17 | use-now |
 | [BachiLi/diffvg](https://github.com/BachiLi/diffvg) | vector-engine | 1,274 | +0 | Apache-2.0 | 2025-05-17 | use-now |
-| [joanrod/star-vector](https://github.com/joanrod/star-vector) | vector-model | 4,592 | +0 | Apache-2.0 | 2025-11-07 | use-now |
-| [OmniSVG/OmniSVG](https://github.com/OmniSVG/OmniSVG) | vector-model | 2,625 | +1 | Apache-2.0 | 2026-03-01 | use-now |
+| [joanrod/star-vector](https://github.com/joanrod/star-vector) | vector-model | 4,593 | +1 | Apache-2.0 | 2025-11-07 | use-now |
+| [OmniSVG/OmniSVG](https://github.com/OmniSVG/OmniSVG) | vector-model | 2,625 | +0 | Apache-2.0 | 2026-03-01 | use-now |
 | [SagiPolaczek/NeuralSVG](https://github.com/SagiPolaczek/NeuralSVG) | vector-model | 1,421 | +0 | MIT | 2025-12-15 | reference |
-| [ximinng/LLM4SVG](https://github.com/ximinng/LLM4SVG) | vector-model | 666 | +0 | MIT | 2025-05-22 | reference |
+| [ximinng/LLM4SVG](https://github.com/ximinng/LLM4SVG) | vector-model | 667 | +1 | MIT | 2025-05-22 | reference |
 | [ximinng/SVGDreamerV2](https://github.com/ximinng/SVGDreamerV2) | vector-model | 452 | +0 | MIT | 2024-12-13 | reference |
 | [kingnobro/Chat2SVG](https://github.com/kingnobro/Chat2SVG) | vector-model | 249 | +0 | — | 2025-04-02 | reference |
-| [hmwang2002/InternSVG](https://github.com/hmwang2002/InternSVG) | vector-model | 124 | +1 | Apache-2.0 | 2026-02-06 | watch |
+| [hmwang2002/InternSVG](https://github.com/hmwang2002/InternSVG) | vector-model | 124 | +0 | Apache-2.0 | 2026-02-06 | watch |
 | [OpenVGLab/OmniSVG-train](https://github.com/OpenVGLab/OmniSVG-train) | vector-model | 42 | +0 | — | 2026-01-19 | reference |
 
 ## Discovered candidates
@@ -57,34 +57,35 @@ Top 50 candidates by a lightweight relevance heuristic. Review before promotion 
 
 | Repository | Proposed category | Stars | License | Last push | Queries | New |
 |---|---|---:|---|---|---|---|
+| [thanhlamauto/weekly-research-slides](https://github.com/thanhlamauto/weekly-research-slides) | agent-skill | 1 | MIT | 2026-09-20 | diagram-reconstruction | yes |
 | [PhenX/Trazor](https://github.com/PhenX/Trazor) | vector-model | 52 | MIT | 2026-09-16 | image-to-svg | no |
 | [ZiChenWang114514/chemdraw-skill](https://github.com/ZiChenWang114514/chemdraw-skill) | agent-skill | 11 | MIT | 2026-09-18 | figure-skills | no |
 | [Robertmorrisluminousenergy177/paper-deep-reading-skill](https://github.com/Robertmorrisluminousenergy177/paper-deep-reading-skill) | agent-skill | 1 | MIT | 2026-09-18 | figure-skills | no |
-| [Amplepeak/GraphVis](https://github.com/Amplepeak/GraphVis) | scientific-figure-system | 0 | GPL-3.0 | 2026-09-17 | scientific-figures | no |
+| [U235-beta/scientific-figure-generator](https://github.com/U235-beta/scientific-figure-generator) | scientific-figure-system | 0 | MIT | 2026-09-19 | scientific-figures | yes |
 | [xls0Jacker/paper-reading-notes](https://github.com/xls0Jacker/paper-reading-notes) | agent-skill | 0 | MIT | 2026-09-18 | figure-skills | no |
-| [xuzhougeng/ScientificFigureLibrary](https://github.com/xuzhougeng/ScientificFigureLibrary) | scientific-figure-system | 81 | MIT | 2026-09-18 | scientific-figures | no |
+| [xuzhougeng/ScientificFigureLibrary](https://github.com/xuzhougeng/ScientificFigureLibrary) | scientific-figure-system | 83 | MIT | 2026-09-20 | scientific-figures | no |
 | [yushiran/Academic-Figure-Figma-CC-Skills](https://github.com/yushiran/Academic-Figure-Figma-CC-Skills) | agent-skill | 5 | — | 2026-09-16 | figure-skills | no |
-| [surPoudel/make-my-figure](https://github.com/surPoudel/make-my-figure) | scientific-figure-system | 4 | MIT | 2026-09-18 | scientific-figures | no |
-| [Mishrakshitij/paper-figure-creation-skill](https://github.com/Mishrakshitij/paper-figure-creation-skill) | agent-skill | 1 | MIT | 2026-09-18 | figure-skills | no |
+| [sepahead/cortexel](https://github.com/sepahead/cortexel) | scientific-figure-system | 4 | MIT | 2026-09-19 | scientific-figures | yes |
+| [Mishrakshitij/paper-figure-creation-skill](https://github.com/Mishrakshitij/paper-figure-creation-skill) | agent-skill | 1 | MIT | 2026-09-19 | figure-skills | no |
 | [figurelabs-ai/figurelabs-plugins](https://github.com/figurelabs-ai/figurelabs-plugins) | scientific-figure-system | 1 | — | 2026-09-18 | scientific-figures | no |
-| [yuntaolu/image-to-editable-omnigraffle](https://github.com/yuntaolu/image-to-editable-omnigraffle) | scientific-figure-system | 1 | MIT | 2026-09-17 | scientific-figures | no |
-| [CharlesMish/figurestead](https://github.com/CharlesMish/figurestead) | scientific-figure-system | 0 | MIT | 2026-09-19 | scientific-figures | yes |
-| [anshu957/my-scientific-research-skills](https://github.com/anshu957/my-scientific-research-skills) | scientific-figure-system | 0 | MIT | 2026-09-18 | scientific-figures | yes |
+| [CharlesMish/figurestead](https://github.com/CharlesMish/figurestead) | scientific-figure-system | 0 | MIT | 2026-09-20 | scientific-figures | no |
+| [U235-beta/scientific-molecule-publicator](https://github.com/U235-beta/scientific-molecule-publicator) | scientific-figure-system | 0 | MIT | 2026-09-19 | scientific-figures | yes |
+| [anshu957/my-scientific-research-skills](https://github.com/anshu957/my-scientific-research-skills) | scientific-figure-system | 0 | MIT | 2026-09-18 | scientific-figures | no |
 | [api-evangelist/lica](https://github.com/api-evangelist/lica) | vector-model | 0 | — | 2026-09-19 | new-svg-models | no |
 | [beihzb/lit-report-skill](https://github.com/beihzb/lit-report-skill) | agent-skill | 0 | MIT | 2026-09-17 | figure-skills | no |
 | [cheesss/robotics-paper-figure](https://github.com/cheesss/robotics-paper-figure) | agent-skill | 0 | MIT | 2026-09-16 | figure-skills | no |
-| [huang-haocheng/html-architecture-figure-skill](https://github.com/huang-haocheng/html-architecture-figure-skill) | agent-skill | 0 | MIT | 2026-09-18 | figure-skills | yes |
+| [huang-haocheng/html-architecture-figure-skill](https://github.com/huang-haocheng/html-architecture-figure-skill) | agent-skill | 0 | MIT | 2026-09-18 | figure-skills | no |
 | [lostlight530/sci-render-kit](https://github.com/lostlight530/sci-render-kit) | scientific-figure-system | 0 | MIT | 2026-09-19 | scientific-figures | no |
-| [ome/figure](https://github.com/ome/figure) | scientific-figure-system | 0 | AGPL-3.0 | 2026-09-18 | scientific-figures | yes |
+| [ome/figure](https://github.com/ome/figure) | scientific-figure-system | 0 | AGPL-3.0 | 2026-09-18 | scientific-figures | no |
 | [scopewu/qrcode.vue](https://github.com/scopewu/qrcode.vue) | vector-model | 826 | MIT | 2026-09-15 | image-to-svg | no |
 | [lorrisc/PixelToPath](https://github.com/lorrisc/PixelToPath) | vector-model | 38 | MIT | 2026-09-18 | image-to-svg | no |
-| [pbauermeister/dfd](https://github.com/pbauermeister/dfd) | vector-model | 22 | GPL-3.0 | 2026-09-18 | image-to-svg | no |
+| [pbauermeister/dfd](https://github.com/pbauermeister/dfd) | vector-model | 22 | GPL-3.0 | 2026-09-19 | image-to-svg | no |
+| [connectedGraph/astra-model-inspector](https://github.com/connectedGraph/astra-model-inspector) | vector-model | 1 | — | 2026-09-15 | new-svg-models | no |
 | [JasonYozza14/Skill-Research-Figure](https://github.com/JasonYozza14/Skill-Research-Figure) | agent-skill | 0 | — | 2026-09-18 | figure-skills | no |
 | [SolenmeChiara/ASCII_ART_MCP](https://github.com/SolenmeChiara/ASCII_ART_MCP) | vector-model | 0 | MIT | 2026-08-26 | new-svg-models | no |
 | [ahmedalhamdi2119-svg/JARVIS-AI-Assistant](https://github.com/ahmedalhamdi2119-svg/JARVIS-AI-Assistant) | vector-model | 0 | MIT | 2026-09-10 | new-svg-models | no |
-| [connectedGraph/astra-model-inspector](https://github.com/connectedGraph/astra-model-inspector) | vector-model | 0 | — | 2026-09-15 | new-svg-models | no |
 | [eric-patton/photo-gen](https://github.com/eric-patton/photo-gen) | vector-model | 0 | MIT | 2026-08-30 | new-svg-models | no |
-| [wakalaka6/scientific-figure-agent](https://github.com/wakalaka6/scientific-figure-agent) | scientific-figure-system | 0 | — | 2026-09-17 | scientific-figures | no |
+| [hackering4/TUNA](https://github.com/hackering4/TUNA) | scientific-figure-system | 0 | — | 2026-09-20 | scientific-figures | yes |
 | [xuhjkvkk/intelligence-observatory](https://github.com/xuhjkvkk/intelligence-observatory) | vector-model | 0 | MIT | 2026-09-17 | new-svg-models | no |
 | [xy-lo/paper-reading](https://github.com/xy-lo/paper-reading) | agent-skill | 0 | — | 2026-09-16 | figure-skills | no |
 | [JoJohanse/pelican-bicycle-benchmark](https://github.com/JoJohanse/pelican-bicycle-benchmark) | vector-model | 3 | — | 2026-09-14 | new-svg-models | no |
