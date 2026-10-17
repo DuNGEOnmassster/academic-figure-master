@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-16T07:18:22Z",
-  "created_since": "2026-02-18",
+  "generated_at": "2026-10-17T07:02:03Z",
+  "created_since": "2026-02-19",
   "summary": {
     "curated": 42,
-    "discovered": 35,
-    "new_discovered": 6,
+    "discovered": 34,
+    "new_discovered": 1,
     "errors": 0
   },
   "curated": [
@@ -13,16 +13,16 @@
       "repo": "K-Dense-AI/scientific-agent-skills",
       "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
       "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
-      "stars": 50826,
-      "forks": 4515,
-      "open_issues": 41,
+      "stars": 51726,
+      "forks": 4580,
+      "open_issues": 43,
       "license": "MIT",
       "archived": false,
       "fork": false,
       "owner_type": "Organization",
       "default_branch": "main",
       "created_at": "2025-10-19T20:54:15Z",
-      "updated_at": "2026-10-16T07:15:18Z",
+      "updated_at": "2026-10-17T06:59:16Z",
       "pushed_at": "2026-10-15T23:57:39Z",
       "topics": [
         "agent-skills",
@@ -48,25 +48,25 @@
       "integration": "scientific visualization and schematic workflows",
       "why": "Broad scientific skill ecosystem and distribution model.",
       "curated": true,
-      "previous_stars": 49696,
-      "stars_delta": 1130,
+      "previous_stars": 50826,
+      "stars_delta": 900,
       "is_new": false
     },
     {
       "repo": "Yuan1z0825/nature-skills",
       "url": "https://github.com/Yuan1z0825/nature-skills",
       "description": "符合nature论文学术表达和科研绘图的Skill",
-      "stars": 48589,
-      "forks": 2525,
-      "open_issues": 3,
+      "stars": 48805,
+      "forks": 2534,
+      "open_issues": 14,
       "license": "Apache-2.0",
       "archived": false,
       "fork": false,
       "owner_type": "User",
       "default_branch": "main",
       "created_at": "2026-04-24T03:11:46Z",
-      "updated_at": "2026-10-16T07:14:33Z",
-      "pushed_at": "2026-10-16T02:35:24Z",
+      "updated_at": "2026-10-17T06:58:23Z",
+      "pushed_at": "2026-10-16T16:10:49Z",
       "topics": [
         "codex-skills",
         "nature",
@@ -77,16 +77,16 @@
       "integration": "Nature-style academic figure and writing patterns",
       "why": "Large, fast-moving academic skill repository with explicit figure positioning.",
       "curated": true,
-      "previous_stars": 48376,
-      "stars_delta": 213,
+      "previous_stars": 48589,
+      "stars_delta": 216,
       "is_new": false
     },
     {
       "repo": "Agents365-ai/drawio-skill",
       "url": "https://github.com/Agents365-ai/drawio-skill",
       "description": "Agent skill that turns natural language, code, Terraform/K8s, SQL, OpenAPI, AsyncAPI, Protobuf and GraphQL sources into editable, tested draw.io architecture diagrams: incremental sync, multi-view projection, drift diff, CI architecture tests, whiteboard derasterize, interactive HTML/PPTX/Mermaid exports.",
-      "stars": 10179,
-      "forks": 738,
+      "stars": 10193,
+      "forks": 774,
       "open_issues": 0,
       "license": "MIT",
       "archived": false,
@@ -94,7 +94,7 @@
       "owner_type": "User",
       "default_branch": "main",
       "created_at": "2026-03-03T16:54:59Z",
-      "updated_at": "2026-10-16T06:58:02Z",
+      "updated_at": "2026-10-17T05:36:08Z",
       "pushed_at": "2026-10-11T11:22:56Z",
       "topics": [
         "agent-skills",
@@ -123,15 +123,15 @@
       "integration": "draw.io generation, reconstruction, and QA patterns",
       "why": "Mature native draw.io skill with image reconstruction and a large shape surface.",
       "curated": true,
-      "previous_stars": 10155,
-      "stars_delta": 24,
+      "previous_stars": 10179,
+      "stars_delta": 14,
       "is_new": false
     },
     {
       "repo": "pengjunchi0/codex-visio-paper-figure-skill",
       "url": "https://github.com/pengjunchi0/codex-visio-paper-figure-skill",
       "description": "科研绘图skill、论文绘图skill、图片转visio等可编辑格式，将生成图转化为论文可编辑图，便于作者调整绘图细节",
-      "stars": 1034,
+      "stars": 1040,
       "forks": 50,
       "open_issues": 3,
       "license": "MIT",
@@ -140,7 +140,7 @@
       "owner_type": "User",
       "default_branch": "main",
       "created_at": "2026-05-28T02:03:07Z",
-      "updated_at": "2026-10-16T00:43:12Z",
+      "updated_at": "2026-10-17T06:43:30Z",
       "pushed_at": "2026-08-16T02:19:56Z",
       "topics": [
         "academic-figures",
@@ -156,15 +156,15 @@
       "integration": "paper figure to editable Visio/SVG workflow",
       "why": "Strong market signal for image-to-editable research figure reconstruction.",
       "curated": true,
-      "previous_stars": 1032,
-      "stars_delta": 2,
+      "previous_stars": 1034,
+      "stars_delta": 6,
       "is_new": false
     },
     {
       "repo": "Will-hxw/drawio-diagram-builder",
       "url": "https://github.com/Will-hxw/drawio-diagram-builder",
       "description": "Portable agent skill for research-style editable draw.io diagrams and screenshot-driven refinement",
-      "stars": 412,
+      "stars": 413,
       "forks": 13,
       "open_issues": 1,
       "license": "MIT",
@@ -173,7 +173,7 @@
       "owner_type": "User",
       "default_branch": "main",
       "created_at": "2026-06-29T21:47:40Z",
-      "updated_at": "2026-10-16T01:51:40Z",
+      "updated_at": "2026-10-17T06:19:26Z",
       "pushed_at": "2026-07-02T00:21:36Z",
       "topics": [],
       "category": "agent-skill",
@@ -181,8 +181,8 @@
       "integration": "research-style draw.io workflow",
       "why": "Portable skill focused on research diagrams and screenshot-driven refinement.",
       "curated": true,
-      "previous_stars": 413,
-      "stars_delta": -1,
+      "previous_stars": 412,
+      "stars_delta": 1,
       "is_new": false
     },
     {
@@ -220,8 +220,8 @@
       "integration": "figure planning, palette, JSON spec, and one-command distribution patterns",
       "why": "Focused academic figure skill pack with benchmark examples and npx-based installation.",
       "curated": true,
-      "previous_stars": 156,
-      "stars_delta": 2,
+      "previous_stars": 158,
+      "stars_delta": 0,
       "is_new": false
     },
     {
@@ -291,8 +291,8 @@
       "integration": "image-generation reference to native draw.io workflow",
       "why": "Uses generated imagery only as reference, then rebuilds a native draw.io deliverable.",
       "curated": true,
-      "previous_stars": 18,
-      "stars_delta": 1,
+      "previous_stars": 19,
+      "stars_delta": 0,
       "is_new": false
     },
     {
@@ -324,17 +324,17 @@
       "repo": "lucide-icons/lucide",
       "url": "https://github.com/lucide-icons/lucide",
       "description": "Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons.",
-      "stars": 25061,
-      "forks": 1644,
-      "open_issues": 426,
+      "stars": 25091,
+      "forks": 1646,
+      "open_issues": 425,
       "license": null,
       "archived": false,
       "fork": false,
       "owner_type": "Organization",
       "default_branch": "main",
       "created_at": "2020-06-08T15:36:21Z",
-      "updated_at": "2026-10-16T07:09:43Z",
-      "pushed_at": "2026-10-16T06:07:35Z",
+      "updated_at": "2026-10-17T06:15:30Z",
+      "pushed_at": "2026-10-17T06:06:42Z",
       "topics": [
         "feather-icons",
         "figma",
@@ -352,24 +352,24 @@
       "integration": "general-purpose SVG icon fallback",
       "why": "Consistent open icon system with simple editable strokes.",
       "curated": true,
-      "previous_stars": 25030,
-      "stars_delta": 31,
+      "previous_stars": 25061,
+      "stars_delta": 30,
       "is_new": false
     },
     {
       "repo": "tabler/tabler-icons",
       "url": "https://github.com/tabler/tabler-icons",
       "description": "A set of over 6200 free MIT-licensed high-quality SVG icons for you to use in your web projects.",
-      "stars": 22332,
+      "stars": 22345,
       "forks": 1240,
-      "open_issues": 82,
+      "open_issues": 83,
       "license": "MIT",
       "archived": false,
       "fork": false,
       "owner_type": "Organization",
       "default_branch": "main",
       "created_at": "2020-02-27T15:10:04Z",
-      "updated_at": "2026-10-16T05:16:41Z",
+      "updated_at": "2026-10-17T05:52:49Z",
       "pushed_at": "2026-10-15T22:56:56Z",
       "topics": [
         "bootstrap-icons",
@@ -392,15 +392,15 @@
       "integration": "general-purpose SVG icon fallback",
       "why": "Large consistent MIT-licensed SVG icon set.",
       "curated": true,
-      "previous_stars": 22318,
-      "stars_delta": 14,
+      "previous_stars": 22332,
+      "stars_delta": 13,
       "is_new": false
     },
     {
       "repo": "rough-stuff/rough",
       "url": "https://github.com/rough-stuff/rough",
       "description": "Create graphics with a hand-drawn, sketchy, appearance",
-      "stars": 21269,
+      "stars": 21272,
       "forks": 665,
       "open_issues": 42,
       "license": "MIT",
@@ -409,7 +409,7 @@
       "owner_type": "Organization",
       "default_branch": "master",
       "created_at": "2016-12-13T09:12:55Z",
-      "updated_at": "2026-10-16T06:38:44Z",
+      "updated_at": "2026-10-17T05:33:57Z",
       "pushed_at": "2024-07-28T21:12:58Z",
       "topics": [
         "canvas",
@@ -424,8 +424,8 @@
       "integration": "hand-drawn vector rendering",
       "why": "Small programmable primitive for controlled hand-drawn arrows and shapes.",
       "curated": true,
-      "previous_stars": 21264,
-      "stars_delta": 5,
+      "previous_stars": 21269,
+      "stars_delta": 3,
       "is_new": false
     },
     {
@@ -463,7 +463,7 @@
       "repo": "garrettj403/SciencePlots",
       "url": "https://github.com/garrettj403/SciencePlots",
       "description": "Matplotlib styles for scientific plotting",
-      "stars": 9291,
+      "stars": 9294,
       "forks": 820,
       "open_issues": 19,
       "license": "MIT",
@@ -472,7 +472,7 @@
       "owner_type": "User",
       "default_branch": "master",
       "created_at": "2018-08-13T16:23:03Z",
-      "updated_at": "2026-10-15T13:16:29Z",
+      "updated_at": "2026-10-17T06:52:02Z",
       "pushed_at": "2026-06-23T07:51:51Z",
       "topics": [
         "cjk-fonts",
@@ -490,15 +490,15 @@
       "integration": "publication plotting styles",
       "why": "Consistent journal-style Matplotlib output for data panels.",
       "curated": true,
-      "previous_stars": 9290,
-      "stars_delta": 1,
+      "previous_stars": 9291,
+      "stars_delta": 3,
       "is_new": false
     },
     {
       "repo": "hfg-gmuend/openmoji",
       "url": "https://github.com/hfg-gmuend/openmoji",
       "description": "Open source emojis for designers, developers and everyone else!",
-      "stars": 4563,
+      "stars": 4566,
       "forks": 270,
       "open_issues": 80,
       "license": "CC-BY-SA-4.0",
@@ -507,7 +507,7 @@
       "owner_type": "Organization",
       "default_branch": "master",
       "created_at": "2017-12-13T10:20:56Z",
-      "updated_at": "2026-10-15T01:45:45Z",
+      "updated_at": "2026-10-17T05:12:32Z",
       "pushed_at": "2026-08-12T09:57:57Z",
       "topics": [
         "colorfont",
@@ -522,14 +522,14 @@
       "why": "Broad vector pictogram set; attribution and share-alike terms require care.",
       "curated": true,
       "previous_stars": 4563,
-      "stars_delta": 0,
+      "stars_delta": 3,
       "is_new": false
     },
     {
       "repo": "duerrsimon/bioicons",
       "url": "https://github.com/duerrsimon/bioicons",
       "description": "A library of free open source icons for science illustrations in biology and chemistry",
-      "stars": 1766,
+      "stars": 1769,
       "forks": 104,
       "open_issues": 70,
       "license": "MIT",
@@ -538,7 +538,7 @@
       "owner_type": "User",
       "default_branch": "main",
       "created_at": "2021-04-08T09:38:07Z",
-      "updated_at": "2026-10-14T12:49:39Z",
+      "updated_at": "2026-10-16T14:42:54Z",
       "pushed_at": "2026-10-15T00:07:42Z",
       "topics": [
         "biology",
@@ -553,7 +553,7 @@
       "why": "Searchable scientific vectors with per-icon licenses and attribution.",
       "curated": true,
       "previous_stars": 1766,
-      "stars_delta": 0,
+      "stars_delta": 3,
       "is_new": false
     },
     {
@@ -596,16 +596,16 @@
       "repo": "excalidraw/excalidraw",
       "url": "https://github.com/excalidraw/excalidraw",
       "description": "Virtual whiteboard for sketching hand-drawn like diagrams",
-      "stars": 133960,
-      "forks": 15695,
-      "open_issues": 3321,
+      "stars": 134018,
+      "forks": 15703,
+      "open_issues": 3325,
       "license": "MIT",
       "archived": false,
       "fork": false,
       "owner_type": "Organization",
       "default_branch": "master",
       "created_at": "2020-01-02T01:04:43Z",
-      "updated_at": "2026-10-16T07:10:42Z",
+      "updated_at": "2026-10-17T06:52:23Z",
       "pushed_at": "2026-10-15T09:11:06Z",
       "topics": [
         "canvas",
@@ -621,25 +621,25 @@
       "integration": "hand-drawn diagram interaction patterns",
       "why": "Best-known lightweight sketch-diagram experience and editable scene model.",
       "curated": true,
-      "previous_stars": 133899,
-      "stars_delta": 61,
+      "previous_stars": 133960,
+      "stars_delta": 58,
       "is_new": false
     },
     {
       "repo": "DayuanJiang/next-ai-draw-io",
       "url": "https://github.com/DayuanJiang/next-ai-draw-io",
       "description": "Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.",
-      "stars": 36272,
-      "forks": 3853,
-      "open_issues": 41,
+      "stars": 36291,
+      "forks": 3851,
+      "open_issues": 40,
       "license": "Apache-2.0",
       "archived": false,
       "fork": false,
       "owner_type": "User",
       "default_branch": "main",
       "created_at": "2025-03-23T15:03:48Z",
-      "updated_at": "2026-10-16T06:59:52Z",
-      "pushed_at": "2026-10-16T07:01:31Z",
+      "updated_at": "2026-10-17T06:11:18Z",
+      "pushed_at": "2026-10-17T06:13:02Z",
       "topics": [
         "ai",
         "architecture-diagram",
@@ -660,16 +660,16 @@
       "integration": "natural-language draw.io editing UI and MCP",
       "why": "Large open AI-plus-draw.io editor with a usable interaction surface.",
       "curated": true,
-      "previous_stars": 36256,
-      "stars_delta": 16,
+      "previous_stars": 36272,
+      "stars_delta": 19,
       "is_new": false
     },
     {
       "repo": "jgraph/drawio",
       "url": "https://github.com/jgraph/drawio",
       "description": "draw.io is a JavaScript, client-side editor for general diagramming.",
-      "stars": 8806,
-      "forks": 1318,
+      "stars": 8826,
+      "forks": 1321,
       "open_issues": 37,
       "license": "Apache-2.0",
       "archived": false,
@@ -677,7 +677,7 @@
       "owner_type": "Organization",
       "default_branch": "dev",
       "created_at": "2016-09-06T12:59:15Z",
-      "updated_at": "2026-10-16T06:51:08Z",
+      "updated_at": "2026-10-17T05:39:27Z",
       "pushed_at": "2026-10-08T21:48:25Z",
       "topics": [
         "diagram",
@@ -689,8 +689,8 @@
       "integration": "native draw.io editor and XML target",
       "why": "Primary editable diagram format and desktop/browser editor.",
       "curated": true,
-      "previous_stars": 8772,
-      "stars_delta": 34,
+      "previous_stars": 8806,
+      "stars_delta": 20,
       "is_new": false
     },
     {
@@ -719,15 +719,15 @@
       "integration": "embeddable browser SVG editor",
       "why": "Lightweight open editor for element-level SVG refinement.",
       "curated": true,
-      "previous_stars": 7876,
-      "stars_delta": 2,
+      "previous_stars": 7878,
+      "stars_delta": 0,
       "is_new": false
     },
     {
       "repo": "gitbrent/PptxGenJS",
       "url": "https://github.com/gitbrent/PptxGenJS",
       "description": "Build PowerPoint presentations with JavaScript. Works with Node, React, web browsers, and more.",
-      "stars": 6277,
+      "stars": 6280,
       "forks": 964,
       "open_issues": 305,
       "license": "MIT",
@@ -736,7 +736,7 @@
       "owner_type": "User",
       "default_branch": "master",
       "created_at": "2016-02-23T02:15:29Z",
-      "updated_at": "2026-10-16T03:42:15Z",
+      "updated_at": "2026-10-17T06:47:15Z",
       "pushed_at": "2025-11-28T20:17:14Z",
       "topics": [
         "es6-powerpoint",
@@ -762,8 +762,8 @@
       "integration": "native PowerPoint compiler",
       "why": "JavaScript path for editable slides and figure canvases.",
       "curated": true,
-      "previous_stars": 6273,
-      "stars_delta": 4,
+      "previous_stars": 6277,
+      "stars_delta": 3,
       "is_new": false
     },
     {
@@ -854,8 +854,8 @@
       "owner_type": "Organization",
       "default_branch": "main",
       "created_at": "2026-01-16T10:34:52Z",
-      "updated_at": "2026-10-15T22:29:09Z",
-      "pushed_at": "2026-09-23T01:11:09Z",
+      "updated_at": "2026-10-17T05:24:48Z",
+      "pushed_at": "2026-10-17T05:24:45Z",
       "topics": [
         "ai",
         "data",
@@ -879,7 +879,7 @@
       "repo": "ResearAI/AutoFigure-Edit",
       "url": "https://github.com/ResearAI/AutoFigure-Edit",
       "description": "",
-      "stars": 4356,
+      "stars": 4360,
       "forks": 287,
       "open_issues": 16,
       "license": "MIT",
@@ -888,7 +888,7 @@
       "owner_type": "User",
       "default_branch": "main",
       "created_at": "2026-02-03T18:50:36Z",
-      "updated_at": "2026-10-16T06:07:38Z",
+      "updated_at": "2026-10-17T05:35:48Z",
       "pushed_at": "2026-07-25T06:48:38Z",
       "topics": [],
       "category": "scientific-figure-system",
@@ -896,8 +896,8 @@
       "integration": "text/reference-to-editable-SVG pipeline",
       "why": "Open scientific illustration system with component editing and reference-guided style.",
       "curated": true,
-      "previous_stars": 4348,
-      "stars_delta": 8,
+      "previous_stars": 4356,
+      "stars_delta": 4,
       "is_new": false
     },
     {
@@ -905,7 +905,7 @@
       "url": "https://github.com/OpenDCAI/Paper2Any",
       "description": "Turn paper/text/topic into editable research figures, technical route diagrams, and presentation slides.",
       "stars": 2812,
-      "forks": 197,
+      "forks": 196,
       "open_issues": 8,
       "license": "Apache-2.0",
       "archived": false,
@@ -929,8 +929,8 @@
       "integration": "paper/image to PPTX, SVG, and draw.io",
       "why": "Closest broad open implementation to the desired editable multi-format product surface.",
       "curated": true,
-      "previous_stars": 2809,
-      "stars_delta": 3,
+      "previous_stars": 2812,
+      "stars_delta": 0,
       "is_new": false
     },
     {
@@ -975,15 +975,15 @@
       "integration": "community PaperBanana implementation",
       "why": "Runnable multi-provider implementation; unofficial and should not be confused with Google Research.",
       "curated": true,
-      "previous_stars": 2401,
-      "stars_delta": 3,
+      "previous_stars": 2404,
+      "stars_delta": 0,
       "is_new": false
     },
     {
       "repo": "ResearAI/AutoFigure",
       "url": "https://github.com/ResearAI/AutoFigure",
       "description": "",
-      "stars": 1926,
+      "stars": 1927,
       "forks": 142,
       "open_issues": 13,
       "license": "MIT",
@@ -992,7 +992,7 @@
       "owner_type": "User",
       "default_branch": "main",
       "created_at": "2025-12-17T11:11:01Z",
-      "updated_at": "2026-10-16T02:53:13Z",
+      "updated_at": "2026-10-16T11:19:59Z",
       "pushed_at": "2026-06-26T10:50:54Z",
       "topics": [],
       "category": "scientific-figure-system",
@@ -1000,7 +1000,7 @@
       "integration": "long-form paper-to-figure patterns and FigureBench",
       "why": "Predecessor and benchmark source for long-context scientific illustration.",
       "curated": true,
-      "previous_stars": 1925,
+      "previous_stars": 1926,
       "stars_delta": 1,
       "is_new": false
     },
@@ -1008,7 +1008,7 @@
       "repo": "datawhalechina/happy-figure",
       "url": "https://github.com/datawhalechina/happy-figure",
       "description": "🎨 把时间还给逻辑，用 AI  绘就你的科研故事",
-      "stars": 468,
+      "stars": 469,
       "forks": 14,
       "open_issues": 1,
       "license": null,
@@ -1017,7 +1017,7 @@
       "owner_type": "Organization",
       "default_branch": "main",
       "created_at": "2026-03-16T09:57:36Z",
-      "updated_at": "2026-10-15T11:58:01Z",
+      "updated_at": "2026-10-16T11:40:01Z",
       "pushed_at": "2026-10-13T09:39:02Z",
       "topics": [],
       "category": "scientific-figure-system",
@@ -1025,8 +1025,8 @@
       "integration": "scientific figure prompting and workflow knowledge",
       "why": "Chinese-language practical figure playbook and examples.",
       "curated": true,
-      "previous_stars": 465,
-      "stars_delta": 3,
+      "previous_stars": 468,
+      "stars_delta": 1,
       "is_new": false
     },
     {
@@ -1058,8 +1058,8 @@
       "repo": "visioncortex/vtracer",
       "url": "https://github.com/visioncortex/vtracer",
       "description": "Raster to Vector Graphics Converter",
-      "stars": 7307,
-      "forks": 505,
+      "stars": 7315,
+      "forks": 507,
       "open_issues": 13,
       "license": "MIT",
       "archived": false,
@@ -1067,7 +1067,7 @@
       "owner_type": "Organization",
       "default_branch": "master",
       "created_at": "2020-10-23T03:58:35Z",
-      "updated_at": "2026-10-16T05:48:14Z",
+      "updated_at": "2026-10-17T02:34:06Z",
       "pushed_at": "2026-10-12T19:15:31Z",
       "topics": [
         "image-procesing",
@@ -1080,8 +1080,8 @@
       "integration": "fast local raster tracing fallback",
       "why": "Lightweight local raster-to-SVG converter; useful for isolated assets, not semantic diagrams.",
       "curated": true,
-      "previous_stars": 7296,
-      "stars_delta": 11,
+      "previous_stars": 7307,
+      "stars_delta": 8,
       "is_new": false
     },
     {
@@ -1105,16 +1105,16 @@
       "integration": "differentiable rendering and vector fitting",
       "why": "Foundational differentiable rasterizer used by many vector optimization methods.",
       "curated": true,
-      "previous_stars": 1287,
-      "stars_delta": 2,
+      "previous_stars": 1289,
+      "stars_delta": 0,
       "is_new": false
     },
     {
       "repo": "joanrod/star-vector",
       "url": "https://github.com/joanrod/star-vector",
       "description": "StarVector is a foundation model for SVG generation that transforms vectorization into a code generation task. Using a vision-language modeling architecture, StarVector processes both visual and textual inputs to produce high-quality SVG code with remarkable precision.",
-      "stars": 4626,
-      "forks": 261,
+      "stars": 4629,
+      "forks": 262,
       "open_issues": 51,
       "license": "Apache-2.0",
       "archived": false,
@@ -1122,7 +1122,7 @@
       "owner_type": "User",
       "default_branch": "main",
       "created_at": "2023-12-11T03:53:55Z",
-      "updated_at": "2026-10-16T04:23:32Z",
+      "updated_at": "2026-10-17T06:46:33Z",
       "pushed_at": "2025-11-07T20:31:24Z",
       "topics": [
         "llm",
@@ -1135,8 +1135,8 @@
       "integration": "image-to-svg and text-to-svg model adapter",
       "why": "Open multimodal SVG code generator with public weights and benchmarks.",
       "curated": true,
-      "previous_stars": 4622,
-      "stars_delta": 4,
+      "previous_stars": 4626,
+      "stars_delta": 3,
       "is_new": false
     },
     {
@@ -1144,7 +1144,7 @@
       "url": "https://github.com/OmniSVG/OmniSVG",
       "description": "[NeurIPS 2025] OmniSVG is the first family of end-to-end multimodal SVG generators that leverage pre-trained Vision-Language Models (VLMs), capable of generating complex and detailed SVGs, from simple icons to intricate anime characters.",
       "stars": 2642,
-      "forks": 108,
+      "forks": 109,
       "open_issues": 36,
       "license": "Apache-2.0",
       "archived": false,
@@ -1349,8 +1349,8 @@
       "owner_type": "User",
       "default_branch": "main",
       "created_at": "2026-10-15T04:27:07Z",
-      "updated_at": "2026-10-15T10:43:13Z",
-      "pushed_at": "2026-10-15T10:26:24Z",
+      "updated_at": "2026-10-16T08:27:42Z",
+      "pushed_at": "2026-10-16T08:27:38Z",
       "topics": [
         "academic-presentation",
         "agent-skills",
@@ -1379,15 +1379,15 @@
         "figure-skills"
       ],
       "relevance": 43,
-      "previous_stars": null,
+      "previous_stars": 0,
       "stars_delta": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "repo": "PhenX/Trazor",
       "url": "https://github.com/PhenX/Trazor",
       "description": "Raster image (PNG, JPEG) to SVG converter, entirely in your browser",
-      "stars": 61,
+      "stars": 63,
       "forks": 4,
       "open_issues": 1,
       "license": "MIT",
@@ -1396,7 +1396,7 @@
       "owner_type": "User",
       "default_branch": "main",
       "created_at": "2026-08-21T15:58:53Z",
-      "updated_at": "2026-10-14T08:11:34Z",
+      "updated_at": "2026-10-17T06:51:37Z",
       "pushed_at": "2026-10-16T00:00:36Z",
       "topics": [
         "image-to-svg",
@@ -1416,14 +1416,14 @@
       ],
       "relevance": 38,
       "previous_stars": 61,
-      "stars_delta": 0,
+      "stars_delta": 2,
       "is_new": false
     },
     {
       "repo": "zhoy0409-debug/polish-sci-figures",
       "url": "https://github.com/zhoy0409-debug/polish-sci-figures",
       "description": "Scientific figure toolkit and Figure Studio: editable templates, local statistics, multi-panel editing and SVG/PNG/TIFF export, with skills for Codex and Claude. | 科研绘图与组图编辑：模板作图、统计分析、精修排版及高清导出。",
-      "stars": 42,
+      "stars": 45,
       "forks": 3,
       "open_issues": 1,
       "license": "MIT",
@@ -1432,8 +1432,8 @@
       "owner_type": "User",
       "default_branch": "main",
       "created_at": "2026-07-14T18:51:58Z",
-      "updated_at": "2026-10-15T19:55:11Z",
-      "pushed_at": "2026-10-16T02:14:41Z",
+      "updated_at": "2026-10-17T06:26:55Z",
+      "pushed_at": "2026-10-17T06:29:46Z",
       "topics": [
         "academic-figures",
         "agent-skills",
@@ -1457,8 +1457,8 @@
         "scientific-figures"
       ],
       "relevance": 38,
-      "previous_stars": 40,
-      "stars_delta": 2,
+      "previous_stars": 42,
+      "stars_delta": 3,
       "is_new": false
     },
     {
@@ -1510,8 +1510,8 @@
       "repo": "ZiChenWang114514/chemdraw-skill",
       "url": "https://github.com/ZiChenWang114514/chemdraw-skill",
       "description": "ChemDraw Skill for any AI agent: editable chemical structures, SAR and substrate-scope figures, paper figure reconstruction, and ChemDraw automation via MCP or Python/CLI.",
-      "stars": 19,
-      "forks": 1,
+      "stars": 20,
+      "forks": 2,
       "open_issues": 0,
       "license": "MIT",
       "archived": false,
@@ -1519,7 +1519,7 @@
       "owner_type": "User",
       "default_branch": "main",
       "created_at": "2026-07-13T20:28:01Z",
-      "updated_at": "2026-10-16T02:18:22Z",
+      "updated_at": "2026-10-17T02:00:27Z",
       "pushed_at": "2026-10-14T15:56:26Z",
       "topics": [
         "agent-skills",
@@ -1543,7 +1543,7 @@
         "figure-skills"
       ],
       "relevance": 38,
-      "previous_stars": 18,
+      "previous_stars": 19,
       "stars_delta": 1,
       "is_new": false
     },
@@ -1576,9 +1576,9 @@
         "scientific-figures"
       ],
       "relevance": 35,
-      "previous_stars": null,
+      "previous_stars": 3,
       "stars_delta": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "repo": "Robertmorrisluminousenergy177/paper-deep-reading-skill",
@@ -1659,8 +1659,8 @@
         "figure-skills"
       ],
       "relevance": 30,
-      "previous_stars": 19,
-      "stars_delta": 1,
+      "previous_stars": 20,
+      "stars_delta": 0,
       "is_new": false
     },
     {
@@ -1676,8 +1676,8 @@
       "owner_type": "User",
       "default_branch": "main",
       "created_at": "2026-10-05T10:54:36Z",
-      "updated_at": "2026-10-16T06:16:11Z",
-      "pushed_at": "2026-10-16T06:20:43Z",
+      "updated_at": "2026-10-17T06:46:09Z",
+      "pushed_at": "2026-10-17T06:53:51Z",
       "topics": [],
       "category": "scientific-figure-system",
       "curated": false,
@@ -1714,6 +1714,32 @@
       "previous_stars": 1,
       "stars_delta": 0,
       "is_new": false
+    },
+    {
+      "repo": "nmrtist/plotium",
+      "url": "https://github.com/nmrtist/plotium",
+      "description": "Scientific data analysis and figure preparation",
+      "stars": 1,
+      "forks": 0,
+      "open_issues": 0,
+      "license": "GPL-3.0",
+      "archived": false,
+      "fork": false,
+      "owner_type": "User",
+      "default_branch": "main",
+      "created_at": "2026-10-17T02:03:01Z",
+      "updated_at": "2026-10-17T02:20:47Z",
+      "pushed_at": "2026-10-17T02:57:31Z",
+      "topics": [],
+      "category": "scientific-figure-system",
+      "curated": false,
+      "matched_queries": [
+        "scientific-figures"
+      ],
+      "relevance": 27,
+      "previous_stars": null,
+      "stars_delta": 0,
+      "is_new": true
     },
     {
       "repo": "CharlesMish/figurestead",
@@ -1763,9 +1789,9 @@
         "scientific-figures"
       ],
       "relevance": 27,
-      "previous_stars": null,
+      "previous_stars": 0,
       "stars_delta": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "repo": "NOKIAXU/paper-deep-reader",
@@ -1789,9 +1815,9 @@
         "figure-skills"
       ],
       "relevance": 27,
-      "previous_stars": null,
+      "previous_stars": 0,
       "stars_delta": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "repo": "Neotheonevd/neo-autoresearch-tools",
@@ -1820,32 +1846,6 @@
       "is_new": false
     },
     {
-      "repo": "TTS577/severs-scirep-16s",
-      "url": "https://github.com/TTS577/severs-scirep-16s",
-      "description": "Figure-generation scripts for: Multicenter evaluation of the EasySeq Full-Length 16S Sequencing kit for bacterial identification in clinical samples (Severs et al., Scientific Reports)",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "license": "MIT",
-      "archived": false,
-      "fork": false,
-      "owner_type": "User",
-      "default_branch": "main",
-      "created_at": "2026-10-14T09:37:03Z",
-      "updated_at": "2026-10-15T07:15:42Z",
-      "pushed_at": "2026-10-15T07:12:37Z",
-      "topics": [],
-      "category": "scientific-figure-system",
-      "curated": false,
-      "matched_queries": [
-        "scientific-figures"
-      ],
-      "relevance": 27,
-      "previous_stars": 0,
-      "stars_delta": 0,
-      "is_new": false
-    },
-    {
       "repo": "api-evangelist/lica",
       "url": "https://github.com/api-evangelist/lica",
       "description": "Lica — independent third-party profile of a public API surface, by API Evangelist. Lica is an AI research company building a substrate to train and evaluate AI models to be capable design partners across expressions of taste and consumption. Its research spans spatial reasoning and composition, layout generation and editing, vector-graphics (SVG) u",
@@ -1858,8 +1858,8 @@
       "owner_type": "Organization",
       "default_branch": "main",
       "created_at": "2026-07-30T14:07:44Z",
-      "updated_at": "2026-10-11T23:20:45Z",
-      "pushed_at": "2026-10-11T23:20:42Z",
+      "updated_at": "2026-10-16T20:10:11Z",
+      "pushed_at": "2026-10-16T20:10:08Z",
       "topics": [
         "apis-json",
         "artificial-intelligence",
@@ -1922,8 +1922,8 @@
       "owner_type": "User",
       "default_branch": "main",
       "created_at": "2026-06-19T08:30:33Z",
-      "updated_at": "2026-10-15T15:52:19Z",
-      "pushed_at": "2026-10-15T15:52:15Z",
+      "updated_at": "2026-10-16T10:26:02Z",
+      "pushed_at": "2026-10-16T10:25:59Z",
       "topics": [
         "accessibility",
         "data-visualization",
@@ -2015,36 +2015,10 @@
       "is_new": false
     },
     {
-      "repo": "lorrisc/PixelToPath",
-      "url": "https://github.com/lorrisc/PixelToPath",
-      "description": "Transform PNG image to SVG - Open source utility software.",
-      "stars": 37,
-      "forks": 3,
-      "open_issues": 0,
-      "license": "MIT",
-      "archived": false,
-      "fork": false,
-      "owner_type": "User",
-      "default_branch": "main",
-      "created_at": "2025-06-06T22:54:34Z",
-      "updated_at": "2026-10-08T11:13:42Z",
-      "pushed_at": "2026-10-08T11:13:38Z",
-      "topics": [],
-      "category": "vector-model",
-      "curated": false,
-      "matched_queries": [
-        "image-to-svg"
-      ],
-      "relevance": 22,
-      "previous_stars": 37,
-      "stars_delta": 0,
-      "is_new": false
-    },
-    {
       "repo": "houtini-ai/gemini-mcp",
       "url": "https://github.com/houtini-ai/gemini-mcp",
       "description": "Google Gemini MCP - Use Google's visual, video and chat capabilities in your AI Assistant. Uses MCP Apps to preview created images, landing pages, SVGs and video",
-      "stars": 35,
+      "stars": 34,
       "forks": 11,
       "open_issues": 1,
       "license": "Apache-2.0",
@@ -2053,7 +2027,7 @@
       "owner_type": "Organization",
       "default_branch": "main",
       "created_at": "2025-09-23T15:49:23Z",
-      "updated_at": "2026-10-15T22:01:35Z",
+      "updated_at": "2026-10-16T12:31:43Z",
       "pushed_at": "2026-10-14T22:14:57Z",
       "topics": [
         "ai-tools",
@@ -2080,8 +2054,8 @@
         "image-to-svg"
       ],
       "relevance": 22,
-      "previous_stars": 34,
-      "stars_delta": 1,
+      "previous_stars": 35,
+      "stars_delta": -1,
       "is_new": false
     },
     {
@@ -2097,8 +2071,8 @@
       "owner_type": "User",
       "default_branch": "main",
       "created_at": "2026-07-17T18:09:51Z",
-      "updated_at": "2026-10-15T13:42:50Z",
-      "pushed_at": "2026-10-15T13:42:43Z",
+      "updated_at": "2026-10-17T04:36:41Z",
+      "pushed_at": "2026-10-17T04:36:37Z",
       "topics": [],
       "category": "scientific-figure-system",
       "curated": false,
@@ -2106,9 +2080,9 @@
         "scientific-figures"
       ],
       "relevance": 19,
-      "previous_stars": null,
+      "previous_stars": 1,
       "stars_delta": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "repo": "connectedGraph/astra-model-inspector",
@@ -2203,9 +2177,9 @@
         "scientific-figures"
       ],
       "relevance": 19,
-      "previous_stars": null,
+      "previous_stars": 0,
       "stars_delta": 0,
-      "is_new": true
+      "is_new": false
     },
     {
       "repo": "agarwalastitwa027-svg/mini-jev-multimodal",
