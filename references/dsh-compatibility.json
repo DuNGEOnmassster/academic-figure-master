@@ -11,8 +11,8 @@
     "github_release": null,
     "npm": {
       "package": "@deepseek-ai/dsh",
-      "version": "0.2.0-rc.2",
-      "published_at": "2026-09-29T09:56:27.792Z",
+      "version": "0.2.1-rc.2",
+      "published_at": "2026-10-17T08:36:31.655Z",
       "url": "https://www.npmjs.com/package/@deepseek-ai%2Fdsh"
     }
   },
