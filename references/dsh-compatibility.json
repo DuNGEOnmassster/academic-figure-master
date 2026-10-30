@@ -4,15 +4,15 @@
     "repository": "deepseek-ai/deepseek-harness",
     "repository_url": "https://github.com/deepseek-ai/deepseek-harness",
     "default_branch": "master",
-    "latest_commit": "f3803c96974ad4a94195fb97e5c637e9c2a3afe3",
-    "latest_commit_url": "https://github.com/deepseek-ai/deepseek-harness/commit/f3803c96974ad4a94195fb97e5c637e9c2a3afe3",
-    "latest_commit_at": "2026-10-27T18:17:58Z",
-    "repository_pushed_at": "2026-10-28T02:48:17Z",
+    "latest_commit": "ce7073d51254c26cd63b22a60835b8f948deb447",
+    "latest_commit_url": "https://github.com/deepseek-ai/deepseek-harness/commit/ce7073d51254c26cd63b22a60835b8f948deb447",
+    "latest_commit_at": "2026-10-29T16:13:15Z",
+    "repository_pushed_at": "2026-10-30T06:54:11Z",
     "github_release": null,
     "npm": {
       "package": "@deepseek-ai/dsh",
-      "version": "0.2.1-rc.2",
-      "published_at": "2026-10-17T08:36:31.655Z",
+      "version": "0.2.1-rc.5",
+      "published_at": "2026-10-29T14:15:23.355Z",
       "url": "https://www.npmjs.com/package/@deepseek-ai%2Fdsh"
     }
   },
