@@ -1,0 +1,9 @@
+{
+  "evidence_scope": "illustrative",
+  "note": "Schema example only: replace local paths and unknown fields with authorized real assets before extracting. The files below are not bundled research results.",
+  "media": [
+    {"id": "case01-proxy", "kind": "video", "path": "media/proxy.mp4", "source": "unknown", "world": "example-world", "case": "case01", "attempt": "attempt02", "status": "unknown", "role": "proxy", "pair_id": "case01-final", "timestamps": [0.5, 2.0, 4.0]},
+    {"id": "case01-output", "kind": "video", "path": "media/final.mp4", "source": "unknown", "world": "example-world", "case": "case01", "attempt": "attempt02", "status": "unknown", "role": "output", "pair_id": "case01-final", "timestamps": [0.5, 2.0, 4.0]},
+    {"id": "case01-reference", "kind": "image", "path": "media/reference.png", "source": "unknown", "world": "example-world", "case": "case01", "attempt": "unknown", "status": "unknown", "role": "reference"}
+  ]
+}

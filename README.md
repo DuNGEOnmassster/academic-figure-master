@@ -10,7 +10,7 @@
 
 <p align="center"><b>Editable, publication-ready academic figures for agent workflows.</b></p>
 
-A lightweight Codex/Claude Code/Cursor/DeepSeek Harness skill for publication-ready academic figures. The implemented artifact pipeline is strongest for **genuinely editable SVG**; draw.io and PowerPoint currently have authoring contracts but not repository-native compilers. Original figures use semantic native objects; pixel-faithful paper reproductions use a dual-layer SVG that separates exact source appearance from convenient text-and-component editing.
+A lightweight Codex/Claude Code/Cursor/DeepSeek Harness skill for publication-ready academic figures. The implemented artifact pipeline is strongest for **genuinely editable SVG**. PowerPoint has dedicated teaser/pipeline workflows and optional native primitives for an available agent runtime; draw.io has an authoring contract. Original figures use semantic native objects; pixel-faithful paper reproductions use a dual-layer SVG that separates exact source appearance from convenient text-and-component editing.
 
 ![assets](https://img.shields.io/badge/editable_SVG_assets-35-3972d5) ![paper redraws](https://img.shields.io/badge/classic_paper_redraws-11-7354cf) ![curves](https://img.shields.io/badge/reproducible_curves-6-38a479) ![DSH](https://img.shields.io/badge/DSH_npm_verified-0.1.0--rc.6-4b6bfb) ![license](https://img.shields.io/badge/original_assets-MIT-d3a23f)
 
@@ -37,6 +37,30 @@ gh repo clone DuNGEOnmassster/academic-figure-master && cd academic-figure-maste
 
 The default mode creates symbolic links, so `git pull` updates every linked client immediately. Use `--mode copy` for isolated snapshots, `--force` to replace an old installation, or `--target path --path /absolute/destination` for another Agent Skills-compatible client. Start a new agent session after installation so its skill catalog refreshes. Cursor's supported directories are documented in the [official Agent Skills guide](https://cursor.com/docs/skills).
 
+## `/teaser` and `/pipeline`
+
+Version 0.2.0 installs **three skill folders**: `academic-figure-master`, `teaser`, and `pipeline`. Run the installer again after `git pull` to add the two new entrypoints; updating the original link alone does not register new skill names. Each mode receives its supporting references, scripts and assets in both link and copy installations.
+
+- **`/teaser`**: dense real-result montage, chronological frame groups, short capability tabs and a separate project-title strip. No method flowchart inside the teaser.
+- **`/pipeline`**: explicit inputs, native editable network blocks, condition routes, real matched outputs, and source-supported training/review/feedback insets.
+
+Both default to the configurable **Comic Sans MS, warm paper and dark ink** profile, with restrained functional accents. They guide an authoring agent to deliver editable PPTX, rendered PDF, PNG, captions and provenance; an Overleaf patch is included when requested. Real research outputs are never replaced with AI-generated “results”. See the [teaser guide](references/teaser.md), [pipeline guide](references/pipeline.md) and [production/export guide](references/handcrafted-figures.md).
+
+After installation, start a new session. [Claude Code](https://code.claude.com/docs/en/skills) and [Cursor](https://cursor.com/docs/skills) expose named skills through slash invocation. In Codex use `$teaser` / `$pipeline` or select the skill through its skill picker; this installer does not add arbitrary native Codex slash commands. Other hosts can load the matching skill by name. The main skill also recognizes `/teaser` and `/pipeline` in request text.
+
+```text
+/teaser Read ./paper/main.tex and select real outputs from ./results.
+Create a compact capability montage with editable labels, PPTX/PDF and a caption.
+
+/pipeline Read ./paper/main.tex and ./technical-guide.html.
+Show every actual input, the supported network structure and matched real outputs.
+Deliver PPTX/PDF, a caption and an Overleaf patch preserving existing labels.
+```
+
+For a custom destination, `--target path --path /absolute/skills/academic-figure-master` also installs sibling `teaser` and `pipeline` directories. Use `--main-only` to keep the legacy single-skill installation. Existing unrelated short-name skills cause a conflict instead of being overwritten; review the destination before using `--force`.
+
+The optional `scripts/handcrafted.mjs` supplies native PowerPoint primitives when `@oai/artifact-tool` is already available. FFmpeg frame extraction and OOXML editability/font inventories have portable Python CLIs. These helpers do not bundle an agent model, fonts, Office or a PDF renderer, and do not choose scientifically representative examples automatically.
+
 The current version includes:
 
 - 18 reusable academic-figure primitive sheets;
@@ -57,7 +81,8 @@ The current version includes:
 | Edit an existing SVG locally | **Ready through an agent** | Object-level patches that preserve unrelated stable IDs and groups |
 | Reproduce a cited PDF figure | **Ready for the 11 registered figures; extensible** | Pixel-exact visible PDF-operator layer, hidden semantic edit layer, comparison plate, and QA metrics |
 | Convert an arbitrary raster screenshot into clean editable SVG | **Workflow ready, no one-command model backend** | Component inventory, reconstruction protocol, overlays, and editability checks; quality still depends on the agent/model doing the reconstruction |
-| Emit native draw.io or PPTX directly from repository scripts | **Not implemented yet** | Format-specific contracts and agent guidance exist, but there is no checked-in draw.io/PPTX compiler or exporter |
+| Create teaser/pipeline PPTX with an agent | **Workflow + optional native primitives** | Dedicated installed skills, style profile, real-media extraction and OOXML audit; PPTX/PDF authoring runtime remains external |
+| Compile arbitrary prompts to draw.io/PPTX without an agent | **Not bundled** | Format contracts and primitive helpers are not a standalone prompt compiler |
 | Call GPT Image, Recraft, InternSVG, or another vector model | **Not bundled** | The landscape describes adapter candidates; credentials and hosted model adapters remain external |
 
 In other words: after skill installation, a capable coding agent can directly create or modify SVG files using these instructions and assets. Installation alone is not a standalone image model, and the repository does not yet turn an arbitrary prompt into PPTX/draw.io without an agent runtime.

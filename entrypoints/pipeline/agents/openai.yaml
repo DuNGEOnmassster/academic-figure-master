@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Pipeline"
+  short_description: "Draw editable scientific method architectures"
+  default_prompt: "Use $pipeline to draw this method with explicit inputs, network architecture and outputs."

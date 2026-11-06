@@ -35,6 +35,30 @@ gh repo clone DuNGEOnmassster/academic-figure-master && cd academic-figure-maste
 
 默认使用符号链接，因此以后在仓库执行 `git pull`，所有已链接客户端会立即获得更新。需要相互隔离的快照可加 `--mode copy`；覆盖旧安装可加 `--force`；其他兼容 Agent Skills 的客户端可使用 `--target path --path /绝对路径`。安装完成后新开一个 Agent 会话，让 skill catalog 重新扫描。Cursor 支持的目录见[官方 Agent Skills 文档](https://cursor.com/docs/skills)。
 
+## `/teaser` 和 `/pipeline`
+
+0.2.0 默认部署三个独立 skill：`academic-figure-master`、`teaser`、`pipeline`。已有用户先 `git pull`，再运行一次安装命令，才能注册新增入口；只更新旧的主 skill 链接不会增加两个新名字。link 和 copy 模式都为每个入口配齐 references、scripts 和 assets。
+
+- **`/teaser`**：真实结果帧组成紧凑拼贴，组内按时间排列，用短标签突出能力，项目大标题单独占窄条，主体不放方法框图。
+- **`/pipeline`**：明确所有实际 input、可编辑 network architecture、condition 路径和配对 output；只为有依据的训练、审核或反馈机制增加小面板。
+
+默认采用可调整的 **Comic Sans MS + 暖纸底 + 深墨线条** 风格，功能色只用于必要对象。由执行 skill 的 Agent 交付可编辑 PPTX、渲染 PDF、PNG、caption 和素材溯源；请求时额外整理 Overleaf patch。真实结果不能用生成图片替代。详见 [teaser](references/teaser.md)、[pipeline](references/pipeline.md) 和[制作与导出检查](references/handcrafted-figures.md)。
+
+安装后新开会话。[Claude Code](https://code.claude.com/docs/en/skills) 和 [Cursor](https://cursor.com/docs/skills) 支持按 skill 名进行 slash 调用。Codex 使用 `$teaser` / `$pipeline` 或在 skill picker 中选择；本安装器不会给 Codex 注册任意原生 slash command。其他客户端可以要求加载对应名字，主 skill 也能识别请求文字中的 `/teaser` 和 `/pipeline`。
+
+```text
+/teaser 阅读 ./paper/main.tex，从 ./results 的真实结果中挑选帧，
+绘制紧凑的能力展示拼贴，交付可编辑 PPTX、PDF 和 caption。
+
+/pipeline 阅读 ./paper/main.tex 和 ./technical-guide.html，
+写清实际输入、网络结构和配对输出，交付 PPTX/PDF、caption，
+并准备保持现有 label 的 Overleaf patch。
+```
+
+自定义 `--target path --path /绝对路径/skills/academic-figure-master` 会同时创建同级 `teaser`、`pipeline`；加 `--main-only` 可保留旧的单 skill 安装。短名称已有其他 skill 时会报冲突，检查目标后再决定是否使用 `--force`。
+
+附带 `scripts/handcrafted.mjs` 原生 PPTX 绘制辅助（需要已有 `@oai/artifact-tool`）、FFmpeg 抽帧与 SHA256 溯源、PPTX 原生对象和字体声明审计。这些工具不内置 Agent 模型、字体、Office 或 PDF 渲染器，也不会自动判断科研样例是否有代表性。
+
 调用示例：
 
 ```text
@@ -53,7 +77,8 @@ gh repo clone DuNGEOnmassster/academic-figure-master && cd academic-figure-maste
 | 局部修改已有 SVG | **可直接使用** | 对象级 patch，不扰动未修改的分组 |
 | 复现论文 PDF 中的经典图 | **已有 11 张，可扩展** | PDF operator 精确可见层、隐藏语义编辑层、对比板和像素 QA |
 | 任意截图自动拆成干净 SVG | **流程具备，非独立一键模型** | 组件盘点、重建、overlay 和可编辑性检查；最终质量仍依赖执行该流程的 Agent/模型 |
-| 直接输出原生 draw.io/PPTX | **尚未实现仓库级编译器** | 已有格式契约和 Agent 指南，但还没有原生 exporter |
+| 通过 Agent 生成 teaser/pipeline PPTX | **专用流程 + 可选原生绘制辅助** | 独立入口、风格配置、真实素材抽帧与 OOXML 审计；需外部 PPTX/PDF 运行环境 |
+| 无 Agent 将任意 prompt 编译为 draw.io/PPTX | **未内置** | 格式契约和图元辅助不等于独立 prompt 编译器 |
 | 直接调用 GPT Image、Recraft、InternSVG | **尚未内置** | 已整理候选 adapter；模型凭据和 provider 仍由外部配置 |
 
 当前包含 35 张可编辑 SVG：18 张通用科研素材、11 张经典论文图、6 张可复现曲线，并附带来源、复现命令和质量门槛。

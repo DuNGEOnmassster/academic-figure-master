@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Teaser"
+  short_description: "Create real-result academic teaser montages"
+  default_prompt: "Use $teaser to create an editable paper teaser from these real outputs."

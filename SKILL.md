@@ -7,6 +7,10 @@ description: Create, reconstruct, and refine publication-ready academic figures 
 
 Create a semantic figure first and compile it into native editable objects. Treat image generators as optional visual ideation tools, never as the source of truth for labels, geometry, or scientific relationships.
 
+## Result teaser and method pipeline
+
+Recognize `/teaser` or `$teaser` as a real-result montage request and `/pipeline` or `$pipeline` as a method-architecture request. The installer deploys separate `teaser` and `pipeline` skills as well as this main skill. Read only the selected [teaser](references/teaser.md) or [pipeline](references/pipeline.md) guide plus [handcrafted production](references/handcrafted-figures.md). For a paired request, compose two distinct figures: capability evidence versus explicit input/network/output dataflow. Default this mode to the configurable warm-paper, dark-ink, Comic Sans MS profile; retain other styles for unrelated figures. Prefer genuine matched photos and native editable PPTX objects. Never synthesize research results or invent architecture details.
+
 ## Route the request
 
 Choose one route before drawing:
@@ -81,7 +85,7 @@ Translate each revision into an object-level patch such as `change connector:e3 
 
 ## Validate before delivery
 
-Run:
+For `/teaser` and `/pipeline`, validate the actual deliverable using [handcrafted production](references/handcrafted-figures.md); do not regenerate unrelated gallery assets. For changes to this skill repository and its registered gallery, run:
 
 ```bash
 python scripts/generate_gallery.py

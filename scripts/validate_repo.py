@@ -34,6 +34,25 @@ def validate(root: Path = ROOT) -> list[str]:
     if not agent_path.exists() or "$academic-figure-master" not in agent_path.read_text(encoding="utf-8"):
         errors.append("agents/openai.yaml is missing or has a stale default prompt")
 
+    for mode in ("teaser", "pipeline"):
+        entry = root / "entrypoints" / mode
+        try:
+            mode_text = (entry / "SKILL.md").read_text(encoding="utf-8")
+            if not re.match(rf"^---\nname: {mode}\ndescription: [^\n]+\n---\n", mode_text):
+                errors.append(f"{mode}: invalid skill entrypoint metadata")
+            if f"${mode}" not in (entry / "agents" / "openai.yaml").read_text(encoding="utf-8"):
+                errors.append(f"{mode}: stale UI invocation prompt")
+            if not (root / "references" / f"{mode}.md").is_file():
+                errors.append(f"{mode}: mode guide is missing")
+        except OSError as exc:
+            errors.append(f"{mode}: incomplete installation payload: {exc}")
+    try:
+        profile = json.loads((root / "assets" / "styles" / "handcrafted-paper.json").read_text(encoding="utf-8"))
+        if not profile.get("font") or not all(re.fullmatch(r"#[0-9A-Fa-f]{6}", value) for value in profile["colors"].values()):
+            errors.append("handcrafted profile has invalid typography or colors")
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        errors.append(f"handcrafted style profile is invalid: {exc}")
+
     version_path = root / "VERSION"
     try:
         version = version_path.read_text(encoding="utf-8").strip()

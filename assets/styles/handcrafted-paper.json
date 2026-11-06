@@ -1,0 +1,16 @@
+{
+  "name": "handcrafted-paper",
+  "font": "Comic Sans MS",
+  "colors": {
+    "ink": "#252D32", "paper": "#FFFDF8", "cream": "#F1E9D9",
+    "rust": "#A55731", "rustFill": "#EAC9AF",
+    "blue": "#355E72", "blueFill": "#D1E0E6",
+    "teal": "#35685C", "tealFill": "#D8E6DC",
+    "warm": "#786E61", "gray": "#E8E6DF"
+  },
+  "roles": {"blue": "conditions or frozen parameters", "rust": "adaptation or trainable parameters", "teal": "accepted evidence or feedback"},
+  "teaser_recipe": {"rows": 4, "groups_per_row": 2, "frames_per_group": 3, "title": "separate narrow mosaic or margin", "labels": "short capability tabs"},
+  "pipeline_recipe": {"main_panel_fraction": 0.65, "secondary_insets": "only supported review/training/evaluation mechanisms", "network": "native meaningful internal blocks", "samples": "matched world/case/attempt"},
+  "geometry": {"outline_variation_at_2400px": 1, "photograph_masks": "mild corner rounding", "arrow_endpoints": "exact semantic coordinates"},
+  "note": "Configurable profile, not a required grid, universal color semantics or font license. Adapt to the paper and explicit user preferences."
+}
